@@ -21,18 +21,23 @@ export function Procurar(){
             const response = await fetch(endpoint, options);
     const result = await response.json();
     alert(`Is this your full name: ${result.data}`);
+    
   };
     
 
     return(
-        <> 
-        <h1>Rota de pagamentos</h1> 
-            <form onSubmit={handleSubmit}>
+        <>
+       <h1>Rota de pagamentos</h1> 
+           <form onSubmit={handleSubmit}>
                 <label htmlFor="codigo">First </label>
                     <input type="text" id="codigo"name="codigo" required />
 
-                    <button type="submit">Submit</button>
+                     <button type="submit">Submit</button>
             </form>
-        </>
+
+           
+</>
+            
+        
     )
 }
