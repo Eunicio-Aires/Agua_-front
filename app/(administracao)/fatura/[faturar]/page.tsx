@@ -42,7 +42,7 @@ export default async function Page({ params }: { params: {faturar: Cliente } }) 
           
           
           
-          {/* <Numero _id={zon._id} _idCl={posts.clientId._id} /> */}
+          <Numero _id={zon._id}  />
         </div>
        
         </div> 
