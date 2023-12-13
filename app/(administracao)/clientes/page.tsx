@@ -21,32 +21,11 @@ export default async function Zona() {
   
   const clientes = await fetch('http://localhost:3000/api/areas',{cache:"no-cache"});
     const resp = await clientes.json();
-    const dadta = await resp.allAreas
-  // console.log(dadta)
+    const dadta = await resp.allAreas;
   
 
-
   return (
-    // <div className="mx-auto container py-20 px-6">
-    //    <h2  className="text-center text-4xl font-bold text-blue-800">Area do Cliente</h2>
-    //   <section className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-    //   <div className="rounded">
-     
-    //   {/* <div className="flex lg:flex-row items-center gap-5 mt-5"> */}
-    //   {dadta.map((zon:any) => (
-    //     <div key={zon._id}
-    //       className="  items-center w-96 lg:w-1/3 p-3 m-3 border border-gray-300 rounded"><Link href={`/clientes/${zon._id}`}>
-       
-    //       <div className="text-center">
-    //         <h2 className="text-4xl font-bold text-blue-200 pb-2">{zon.zona}</h2>
-    //         <h4 className="inline text-gray-500 text-md"><BsPersonFill className="inline"/>{zon.cliente.length}</h4>
-    //       </div>
-    //       </Link>
-    //     </div>
-    //    ))}
-    //     </div>
-    //   {/* </div> */}
-    // </section>
+ 
 
     <section className="text-gray-600 body-font">
 <div className="container px-5 py-24 mx-auto max-w-7x1">
@@ -61,7 +40,7 @@ export default async function Zona() {
   {dadta.map((zon:any) => (
     <div key={zon._id} className="xl:w-1/3 md:w-1/2 p-4 border-8 rounded-xl">  
       <div className="bg-white p-6 rounded-lg">
-        {/* <img className="lg:h-60 xl:h-56 md:h-64 sm:h-72 xs:h-72 h-72  rounded w-full object-cover object-center mb-6" src="https://kuyou.id/content/images/ctc_2020021605150668915.jpg" alt="Image Size 720x400"> */}
+       
         <h3 className="tracking-widest tx-gradient-to-r from-red-700 to-indigo-600 text-xs font-medium title-font">{zon.cliente.filter((cliente: { estado: string; }) => cliente.estado === "Activo").length } </h3>
         <h1 className="text-xl text-gray-900 font-medium title-font mb-4">{zon.zona}</h1>
         <div >
