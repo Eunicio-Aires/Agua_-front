@@ -10,9 +10,9 @@ interface Cliente {
   __v: number;
 }
 export async function TopCards(){
-  const clientes = await fetch('http://localhost:3000/api/todos',{cache:"no-cache"});
-  const resp = await clientes.json();
-  const client = await resp.data.allClientes
+  const clientes = await fetch('http://localhost:3000/api/todos',{cache:"no-cache"}).then((res) => res.json());
+  // const resp = await clientes.json();
+  const client = await clientes.data.allClientes
   
   
   

@@ -3,7 +3,7 @@ import { Movitel } from '@/components/pagamento/Movitel';
 import { Numero } from '@/components/Numero'
 import { Footer } from '@/components/Foter'
 import { Modal } from '@/components/Modal'
-import { InforF } from '@/components/InforF';
+
 import {BsPersonFill, BsThreeDotsVertical} from 'react-icons/bs'
 
 type Faturas={

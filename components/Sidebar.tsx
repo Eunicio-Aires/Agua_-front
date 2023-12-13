@@ -1,7 +1,7 @@
 import Link from "next/link"
 import React, { Children } from "react"
 import Header from "./Header" 
-import TopCards from "./TopCards"
+
 // import BarChart from "./BarChart"
 import RecentOrders from "./RecentOrders"
 import Image from "next/image"
