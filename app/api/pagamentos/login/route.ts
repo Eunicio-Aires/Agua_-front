@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
  
 export async function POST(request: NextRequest) { 
   const resb = await request.json()
-  const res = await fetch('http://localhost:3001/adm/procurarid', {
+  const res = await fetch('https://agua-p.vercel.app/adm/procurarid', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

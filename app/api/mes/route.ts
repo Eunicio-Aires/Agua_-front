@@ -5,7 +5,7 @@ export async function POST(req: Request) {
   const body = await req.json(); // Parse the incoming JSON body
 
   try {
-    const response = await fetch('http://localhost:3001/adm/criarMes', {
+    const response = await fetch('https://agua-p.vercel.app/adm/criarMes', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

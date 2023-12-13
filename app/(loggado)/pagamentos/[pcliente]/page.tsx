@@ -20,7 +20,7 @@ interface Cliente{
  faturas:Faturas[]
 }
 export default async function Page({ params }: { params: {pcliente: Cliente}}){
-    const cliente = await fetch(`http://localhost:3001/adm/clientpr/${params.pcliente}`,{cache:"no-cache"}).then((res) => res.json()); 
+    const cliente = await fetch(`https://agua-p.vercel.app/adm/clientpr/${params.pcliente}`,{cache:"no-cache"}).then((res) => res.json()); 
     
     const fatura = await cliente.client.faturas
     const fatur = cliente.client.faturas.filter((fatura:Faturas) => fatura.estado === "Nao pago")

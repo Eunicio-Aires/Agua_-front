@@ -6,7 +6,7 @@ export async function POST(request:NextRequest,{params}:any) {
   
 //   const body = await request.json();
   try {
-    const response = await fetch(`http://localhost:3001/adm/pagarNume/${id}`,{
+    const response = await fetch(`https://agua-p.vercel.app/adm/pagarNume/${id}`,{
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

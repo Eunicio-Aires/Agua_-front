@@ -7,7 +7,7 @@ export async function POST(request:NextRequest,{params}:any) {
   const idm = await ids[1]
   const body = await request.json();
   try {
-    const response = await fetch(`http://localhost:3001/adm/addfatura/${idc}/${idm}`,{
+    const response = await fetch(`https://agua-p.vercel.app/adm/addfatura/${idc}/${idm}`,{
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

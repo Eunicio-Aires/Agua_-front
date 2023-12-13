@@ -5,7 +5,7 @@ export async function POST(request: Request) {
   const { searchParams } = new URL(request.url)
   const _id = searchParams.get('id')
   const _idm = searchParams.get('idm')
-  const res = await fetch(`http://localhost:3001/adm/addfatura/${_id}/${_idm}`, {
+  const res = await fetch(`https://agua-p.vercel.app/adm/addfatura/${_id}/${_idm}`, {
     headers: {
       'Content-Type': 'application/json',
     //   'API-Key': process.env.DATA_API_KEY,

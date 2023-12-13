@@ -33,7 +33,7 @@ export function Numero({_id}:Fatura){
         
         alert(` ${result}`);
        
-          router.refresh()
+          // router.refresh()
           // router.push(`pagamentos/${_id}`)
 
     

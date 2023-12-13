@@ -22,7 +22,7 @@ interface Zona {
 export default async function Page({ params }: { params: {zona: Zona } }) {
   
 
-    const posts = await fetch(`http://localhost:3001/adm/area/${params.zona}`,{cache:"no-cache"}).then((res) => res.json());
+    const posts = await fetch(`https://agua-p.vercel.app/adm/area/${params.zona}`,{cache:"no-cache"}).then((res) => res.json());
     const client = await posts.area.cliente
     const _id = await posts.area._id
     
