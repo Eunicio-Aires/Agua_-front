@@ -30,7 +30,7 @@ export default async function Page({ params }: { params: {zona: Zona } }) {
       <div> 
         {/* @ts-expect-error Async Server Component */}
        <TopCards/>
-      <Suspense fallback={<p>Carregando Conteudo</p>} > 
+      <Suspense fallback={<p>Carregandoo Conteudo</p>} > 
       <OtherUsers _idZona={_id}  />
       </Suspense>       
         
