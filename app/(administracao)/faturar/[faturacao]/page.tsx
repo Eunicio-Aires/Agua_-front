@@ -17,7 +17,7 @@ interface Mes {
     
 }
 export default async function Page({ params }:{ params:{faturacao:Mes}}) {
-    const posts = await fetch(`http://localhost:3001/adm/mesunic/${params.faturacao}`,{cache:"no-cache"}).then((res) => res.json());
+    const posts = await fetch(`https://agua-p.vercel.app/adm/mesunic/${params.faturacao}`,{cache:"no-cache"}).then((res) => res.json());
     const mes = await posts.mes._id;
 
     return (
