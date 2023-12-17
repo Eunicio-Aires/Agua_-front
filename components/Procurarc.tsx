@@ -34,7 +34,7 @@ export  function Procurarc(props:Mes){
         }
         const JSONdata = JSON.stringify(data)
      
-        const endpoint = 'http://localhost:3000/api/procurar'
+        const endpoint = 'https://localhost:3000/api/procurar'
  
         const options = {
          

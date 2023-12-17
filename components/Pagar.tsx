@@ -19,7 +19,7 @@ export  function  Registar({_idc,_idf}:Dados) {
       };
   
       const JSONdata = JSON.stringify(data);
-      const endpoint = `http://localhost:3101/consumidor/${_idf}`;
+      const endpoint = `https://agua-p.vercel.app/adm/consumidor/${_idf}`;
   
       const options: RequestInit = {
         method: 'POST',

@@ -9,7 +9,7 @@ export async function Detalhes({_id}:Cliente){
             <> <p>Dados do cliente</p> </>
         )
     }
-    const cliente = await fetch(`http://localhost:3001/adm/clientpr/${_id}`,{cache:'no-cache'}).then((res) => res.json())
+    const cliente = await fetch(`https://agua-p.vercel.app/adm/clientpr/${_id}`,{cache:'no-cache'}).then((res) => res.json())
     return(
         <>
         <h1>Testando</h1>

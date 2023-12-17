@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import  { SyntheticEvent } from 'react';
 
 export default  function DefinirValor(){
-    const metro =  fetch('http://localhost:3101/verMetros');
+    const metro =  fetch('https://agua-p.vercel.app/adm/verMetros');
     
     const handleSubmit = async (event: SyntheticEvent) => {
         event.preventDefault();
@@ -11,7 +11,7 @@ export default  function DefinirValor(){
             zona:(event.target as HTMLFormElement).zona.value
           };
           const  JSONdata = JSON.stringify(data);
-          const endpoint = 'http://localhost:3101/metrosCubicos';
+          const endpoint = 'https://agua-p.vercel.app/adm/metrosCubicos';
       
           const options: RequestInit = {
             method: 'POST', 

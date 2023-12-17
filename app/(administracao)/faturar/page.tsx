@@ -1,12 +1,13 @@
 
-import { Meses }  from '@/components/Meses'
+// import { Meses }  from '@/components/Meses'
 
-export default function Mes(){
+export default function Faturar(){
 
   return(
     <div className="">
-    {/* @ts-expect-error */}
-    <Meses/>
+    
+   
+    {/* <Meses/> */}
     </div>
   )
 }

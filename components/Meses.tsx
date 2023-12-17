@@ -14,7 +14,7 @@ interface Mes{
 
 export async function Meses(mes:Mes){
     const response = await fetch('http://localhost:3000/api/faturar',{cache:"no-cache"}).then((res) => res.json());
-    // console.log(response) 
+    
   
 return(
 

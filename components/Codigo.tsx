@@ -23,7 +23,7 @@ export function Codigo(){
     };
 
     const JSONdata = JSON.stringify(data);
-    const endpoint = `http://localhost:3101/encotrar`;
+    const endpoint = `https://agua-p.vercel.app/adm/encotrar`;
 
     const options: RequestInit = {
       method: 'POST',

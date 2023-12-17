@@ -20,7 +20,7 @@ export  function GerarFatura({_id}:Cliente){
             
           };
           const JSONdata = JSON.stringify(data);
-    const endpoint = `http://localhost:3001/adm/addfatura/${_id}`;
+    const endpoint = `https://agua-p.vercel.app/adm/addfatura/${_id}`;
 
     const options: RequestInit = {
       method: 'POST',

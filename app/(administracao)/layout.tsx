@@ -59,7 +59,7 @@ export default function RootLayout({
                             <RxDashboard size={13 } />
                         </div>
                     </Link>
-                    <Link href='/fatura'>
+                    <Link href='/'>
                         <div className="bg-gray-100 hover:bg-gray-200 text-black my-4 p-3 rounded-lg inline-block"  >
                             <RxDashboard size={13} />
                         </div>

@@ -1,5 +1,5 @@
 import Link from "next/link"
-export default async function Meses(){
+export default async  function Meses(){
     const response = await  fetch('http://localhost:3000/api/faturar',{cache:"no-cache"}).then((res) => res.json());
     const meses = await response.data.mesesl
     return(

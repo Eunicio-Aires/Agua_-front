@@ -12,7 +12,7 @@ export default function Procura(){
             
           };
           const JSONdata = JSON.stringify(data);
-    const endpoint = `http://localhost:3101/buscar`;
+    const endpoint = `https://agua-p.vercel.app/adm/buscar`;
 
     const options: RequestInit = {
       method: 'GET',

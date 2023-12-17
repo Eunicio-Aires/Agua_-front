@@ -1,40 +1,50 @@
-import {Suspense} from 'react'
+
+//  import { useState } from "react" 
 import Link from "next/link"
 import React, { SyntheticEvent } from 'react';
-import {BsPersonFill, BsThreeDotsVertical} from 'react-icons/bs'
+import {BsDatabase, BsPersonFill, BsThreeDotsVertical} from 'react-icons/bs'
 import {Registar} from '@/components/Registar'
 import Zona from "../page";
 import { TopCards } from '@/components/TopCards'
 import OtherUsers from "@/components/outros";
 
-type Client ={
-  _id:String;
-  nome:String;
-  apelido:String;
-  faturas:[]
-}
-interface Zona {
-  _id:String;
-  zona:String;
-  clientes:Client
-}
-
-export default async function Page({ params }: { params: {zona: Zona } }) {
+// type Client ={
+//   _id:String;
+//   nome:String;
+//   apelido:String;
+//   faturas:[]
+// }
+// interface Zona {
+//   _id:String;
   
+// }
 
-    const posts = await fetch(`https://agua-p.vercel.app/adm/area/${params.zona}`,{cache:"no-cache"}).then((res) => res.json());
-    const client = await posts.area.cliente
-    const _id = await posts.area._id
     
+    // const id = params.zona
+    // const posts =  fetch(`http://localhost:3000/api/areas/${id}`,{cache:"no-cache"});
+    // const area  = poats.json();
+    // console.log(posts)
+    // const client = await posts.product.area.cliente
+    // const _id = await posts.product.area._id
+   
+    // const getZonaId = async () =>{
+    //   try{
+
+    //   }catch(error){
+    //     console.log(error)
+    //   }
+    // }
+    export default function Clientes(){
     return (
       <div> 
-        {/* @ts-expect-error Async Server Component */}
-       <TopCards/>
-      <Suspense fallback={<p>Carregandoo Conteudo</p>} > 
+           {/* <p>{params.id}</p>         */}
+
+       {/* <TopCards/> 
+       
       <OtherUsers _idZona={_id}  />
-      </Suspense>       
+           
         
-      <h3 className='text-2xl text-center text-green-400'>{ posts.area.zona}</h3>
+      <h3 className='text-2xl text-center text-green-400'>{ posts.product.area.zona}</h3>
        <Registar _id={_id} /> 
        <div className="p-4">
        
@@ -72,8 +82,9 @@ export default async function Page({ params }: { params: {zona: Zona } }) {
          ))}
      </ul> 
      </div>
-     </div>
+     </div> */}
      </div>
 
     )
   }  
+
