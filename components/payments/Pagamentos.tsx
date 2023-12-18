@@ -1,8 +1,20 @@
 import {BsPersonFill, BsThreeDotsVertical} from 'react-icons/bs'
+
+
+async function getData(){
+  const res = await fetch('http://localhost:3000/api/faturar',{cache:"no-cache"})
+
+  if(!res.ok){
+    throw new Error('Failed to fetch data')
+  }
+  return res.json()
+}
+
 export  default async  function Pagamentos(){
-    const response = await  fetch('http://localhost:3000/api/faturar',{cache:"no-cache"}).then((res) => res.json());
+    // const response = await  fetch('http://localhost:3000/api/faturar',{cache:"no-cache"}).then((res) => res.json());
+    const response = await getData()
     const faturasPagas = response.data.ultimo[0].faturas.filter((fatura: { estado: string; }) => fatura.estado === "Pago");
-    // console.log(faturasPagas)
+    
     return(
         <div className="w-full col-span-1 relative lg:h-[70vh] h-[50vh] m-auto p-4 border rounded-lg bg-white overflow-scroll">
             <h1>Pagamentos</h1>

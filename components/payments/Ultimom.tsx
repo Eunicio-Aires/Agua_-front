@@ -1,7 +1,24 @@
-'use-client'
+// 'use-client'
+// export default function Page({ data }) {
+//   // Render data...
+// }
 
-export async function Ultimom(){
-    const response = await  fetch('http://localhost:3000/api/faturar',{cache:"no-cache"}).then((res) => res.json());
+async function getData(){
+  const res = await fetch('http://localhost:3000/api/faturar',{cache:"no-cache"})
+
+  if(!res.ok){
+    throw new Error('Failed to fetch data')
+  }
+  return res.json()
+}
+ 
+
+
+export default async function  Ultimom(){
+  const data = await getData()
+  const response = await data;
+  // console.log(response)
+    // const response = await  fetch('http://localhost:3000/api/faturar',{cache:"no-cache"}).then((res) => res.json());
     const ultimom = await response.data.ultimo[0].faturas.length;
 
     const faturasNaoPagas = response.data.ultimo[0].faturas.filter((fatura: { estado: string; }) => fatura.estado === "Nao pago");
@@ -28,6 +45,7 @@ export async function Ultimom(){
 
     return( 
         <div>
+          <h1>testando</h1>
             <h1>{response.data.ultimo[0].mes}</h1>
         <div className=" grid lg:grid-cols-5 gap-4 p-4">  
         
@@ -59,3 +77,4 @@ export async function Ultimom(){
       </div>
     )
 }
+

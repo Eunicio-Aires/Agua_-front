@@ -16,19 +16,25 @@ interface Mes {
     _id:String;
     
 }
-export default async function Page({ params }:{ params:{faturacao:Mes}}) {
+// export default  function Page({ params }:{ params:{faturacao:Mes}}) {
     // const posts = await fetch(`https://agua-p.vercel.app/adm/mesunic/${params.faturacao}`,{cache:"no-cache"}).then((res) => res.json());
     // const mes = await posts.mes._id;
 
-    return (
-       <div className="container mx-auto px-4 py-14 sm:px-6 xl:px-12">
+    // return (
+    //    <div className="container mx-auto px-4 py-14 sm:px-6 xl:px-12">
             {/* <h1 className="text-center text-3xl font-bold tracking-normal sm:text-4xl lg:text-4xl mt-3">{posts.mes.mes}</h1> */}
             {/* <h2>{posts.mes._id}</h2> */}
             {/* <Procurarc _id={mes}/> */}
 
            
-
+{/* 
         </div>
             
     ) 
-}
+} */}
+
+export default function Page({ params }: { params: { faturacao: string } }) {
+    const area = fetch(`http://localhost:3000/faturar/${params.faturacao}`,{cache:"no-cache"}).then((res) => res.json());
+    console.log(area)
+    return <div>My Post: {}</div>
+  }

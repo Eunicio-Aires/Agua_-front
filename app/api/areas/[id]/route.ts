@@ -1,15 +1,25 @@
-import {NextResponse,NextRequest} from 'next/server';
+import { NextRequest,NextResponse } from 'next/server';
 
 
-export  function GET(
+export async function GET(
     request: Request,
     { params }: { params: { id: string } }
   ) {
-    const id = params.id // 'a', 'b', or 'c'
+    const id = params.id 
 
-    const res =  fetch(`https://agua-p.vercel.app/adm/area/${id}`,{cache:"no-cache"})
-
-    // const product =  res.json()
- 
-    return NextResponse.json({ res })
+    const res = await fetch(`https://agua-p.vercel.app/adm/area/${id}`,{cache:"no-cache"})
+    const product = await res.json()
+    return NextResponse.json({ product })
   }
+
+// export async function GET(request: Request) {
+//   const { searchParams } = new URL(request.url)
+//   const id = searchParams.get('id')
+  
+//     const res = await fetch(`https://agua-p.vercel.app/adm/area/${id}`)
+//     const product = await res.json()
+   
+//     return NextResponse.json( {product} )
+
+  
+// }
