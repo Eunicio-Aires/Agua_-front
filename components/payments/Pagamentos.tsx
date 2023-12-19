@@ -1,18 +1,18 @@
 import {BsPersonFill, BsThreeDotsVertical} from 'react-icons/bs'
+import Pagament from "@/lib/pagamentos";
+// async function getData(){
+//   const res = await fetch('http://localhost:3000/api/faturar',{cache:"no-cache"})
 
-
-async function getData(){
-  const res = await fetch('http://localhost:3000/api/faturar',{cache:"no-cache"})
-
-  if(!res.ok){
-    throw new Error('Failed to fetch data')
-  }
-  return res.json()
-}
+//   if(!res.ok){
+//     throw new Error('Failed to fetch data')
+//   }
+//   return res.json()
+// }
 
 export  default async  function Pagamentos(){
     // const response = await  fetch('http://localhost:3000/api/faturar',{cache:"no-cache"}).then((res) => res.json());
-    const response = await getData()
+    // const response = await getData()
+    const response = await Pagament();
     const faturasPagas = response.data.ultimo[0].faturas.filter((fatura: { estado: string; }) => fatura.estado === "Pago");
     
     return(
