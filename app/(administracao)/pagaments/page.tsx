@@ -5,19 +5,21 @@ import BarChart from '@/components/payments/BarChart'
 import Pagamentos from '@/components/payments/Pagamentos'
 import Meses      from '@/components/payments/Meses'
 import Link from "next/link"
+import Pagamentoss from "@/lib/pagamentos"
 
-async function getData(){
-  const res = await fetch('http://localhost:3000/api/faturar',{cache:"no-cache"})
+// async function getData(){
+//   const res = await fetch('http://localhost:3000/api/faturar',{cache:"no-cache"})
 
-  if(!res.ok){
-    throw new Error('Failed to fetch data')
-  }
-  return res.json()
-} 
+//   if(!res.ok){
+//     throw new Error('Failed to fetch data')
+//   }
+//   return res.json()
+// } 
 
 
 export default async function Pagaments(){
-  const response = await getData()
+  const response = await Pagamentoss();
+  
   const faturasPagas = response.data.ultimo[0].faturas.filter((fatura: { estado: string; }) => fatura.estado === "Pago");
         
         return(
