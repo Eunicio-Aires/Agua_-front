@@ -1,4 +1,4 @@
-// 'use-client'
+'use client'
 // export default function Page({ data }) {
 //   // Render data...
 // }
@@ -14,12 +14,12 @@ async function getData(){
  
 
 
-export default async function  Ultimom(){
-  const data = await getData()
-  const response = await data;
+export  async   function  Ultimom(){
+  const data = await  getData()
+  const response = await  data;
   // console.log(response)
     // const response = await  fetch('http://localhost:3000/api/faturar',{cache:"no-cache"}).then((res) => res.json());
-    const ultimom = await response.data.ultimo[0].faturas.length;
+    const ultimom =   response.data.ultimo[0].faturas.length;
 
     const faturasNaoPagas = response.data.ultimo[0].faturas.filter((fatura: { estado: string; }) => fatura.estado === "Nao pago");
 

@@ -3,7 +3,7 @@ export default async function RegisCliente({
 }:{params:{registarc:string}}){
     const zonaUnic = await fetch(`http://localhost:3101/zonaSeleciona/${params.registarc}`,{cache:"no-cache"});
     const zonaSl =await zonaUnic.json();
-    console.log(zonaSl)
+    
     return (
     <>
     <p>Ola: {zonaSl.zonasl.zona}</p>
