@@ -1,10 +1,10 @@
 
-import  Header  from '@/components/Header'
-import { Ultimom } from '@/components/payments/Ultimom'
-import BarChart from '@/components/payments/BarChart'
-import Pagamentos from '@/components/payments/Pagamentos'
-import Meses      from '@/components/payments/Meses'
-import Link from "next/link"
+// import  Header  from '@/components/Header'
+// import { Ultimom } from '@/components/payments/Ultimom'
+// import BarChart from '@/components/payments/BarChart'
+// import Pagamentos from '@/components/payments/Pagamentos'
+// import Meses      from '@/components/payments/Meses'
+// import Link from "next/link"
 import Pagamentoss from "@/lib/pagamentos"
 
 // async function getData(){
