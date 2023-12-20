@@ -1,4 +1,4 @@
-'use client'
+
 // import  Header  from '@/components/Header'
 // import { Ultimom } from '@/components/payments/Ultimom'
 // import BarChart from '@/components/payments/BarChart'
@@ -17,10 +17,10 @@ import Pagamentoss from "@/lib/pagamentos"
 // } 
 
 
-export default  function Pagaments(){
-  const response =  Pagamentoss();
+export default async  function Pagaments(){
+  const response = await Pagamentoss();
   
-  // const faturasPagas = response.data.ultimo[0].faturas.filter((fatura: { estado: string; }) => fatura.estado === "Pago");
+  const faturasPagas = await response.data.ultimo[0].faturas.filter((fatura: { estado: string; }) => fatura.estado === "Pago");
         
         return(
             <div>
@@ -37,7 +37,7 @@ export default  function Pagaments(){
       </tr>
     </thead> 
     <tbody>
-    {/* {faturasPagas.map((mes:any)=>(
+    {faturasPagas.map((mes:any)=>(
       <tr key={mes._id}>
         <th></th> 
         <td>{mes.mes}</td>
@@ -47,7 +47,7 @@ export default  function Pagaments(){
         <td>{mes.formaDePagamento}</td> 
        
       </tr>
-       ))} */}
+       ))}
 
 </tbody> 
     {/* </tfoot> */}
