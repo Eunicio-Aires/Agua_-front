@@ -37,7 +37,7 @@ export default async function Pagaments(){
       </tr>
     </thead> 
     <tbody>
-    {faturasPagas.map((mes:any)=>(
+    {/* {faturasPagas.map((mes:any)=>(
       <tr key={mes._id}>
         <th></th> 
         <td>{mes.mes}</td>
@@ -47,7 +47,7 @@ export default async function Pagaments(){
         <td>{mes.formaDePagamento}</td> 
        
       </tr>
-       ))}
+       ))} */}
 
 </tbody> 
     {/* </tfoot> */}
