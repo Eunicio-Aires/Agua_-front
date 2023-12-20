@@ -19,7 +19,7 @@ export default async  function Meses(){
     const {data} = await getData()
     
     const meses = await data.mesesl;
-    console.log(meses)
+    // console.log(meses)
     return(
       
 
