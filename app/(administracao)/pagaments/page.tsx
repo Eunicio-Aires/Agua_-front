@@ -18,9 +18,9 @@ import Pagamentoss from "@/lib/pagamentos"
 
 
 export default async function Pagaments(){
-  const response = await Pagamentoss();
+  // const response = await Pagamentoss();
   
-  const faturasPagas = response.data.ultimo[0].faturas.filter((fatura: { estado: string; }) => fatura.estado === "Pago");
+  // const faturasPagas = response.data.ultimo[0].faturas.filter((fatura: { estado: string; }) => fatura.estado === "Pago");
         
         return(
             <div>
