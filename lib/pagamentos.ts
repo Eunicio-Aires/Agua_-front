@@ -1,5 +1,9 @@
 export default async function Pagamentoss(){
-    const res = await fetch('http://localhost:3000/api/faturar',{cache:"no-cache"})
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+
+// Use baseUrl conforme necessário em seu código
+
+    const res = await fetch(`${baseUrl}/api/faturar`,{cache:"no-cache"})
 
     if(!res.ok){
       throw new Error('Failed to fetch data')
