@@ -10,9 +10,8 @@ async function getData(){
 }
 
 export  default async  function Pagamentos(){
-    // const response = await  fetch('http://localhost:3000/api/faturar',{cache:"no-cache"}).then((res) => res.json());
-    // const response = await getData()
-    const response = await Pagament();
+    
+    const response = await getData();
     const faturasPagas = response.data.ultimo[0].faturas.filter((fatura: { estado: string; }) => fatura.estado === "Pago");
     
     return(

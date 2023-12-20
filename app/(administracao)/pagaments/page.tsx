@@ -32,8 +32,8 @@ export default async  function Pagaments(){
 
         {/* @ts-ignore  */}
             <Ultimom/>
-           
-            
+           {/* @ts-ignore  */}
+            <Pagamentos/>
 
            
 
