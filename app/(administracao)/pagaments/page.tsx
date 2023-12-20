@@ -1,4 +1,4 @@
-
+'use client'
 // import  Header  from '@/components/Header'
 // import { Ultimom } from '@/components/payments/Ultimom'
 // import BarChart from '@/components/payments/BarChart'
@@ -17,8 +17,8 @@ import Pagamentoss from "@/lib/pagamentos"
 // } 
 
 
-export default async function Pagaments(){
-  // const response = await Pagamentoss();
+export default  function Pagaments(){
+  const response =  Pagamentoss();
   
   // const faturasPagas = response.data.ultimo[0].faturas.filter((fatura: { estado: string; }) => fatura.estado === "Pago");
         
