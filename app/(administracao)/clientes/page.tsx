@@ -14,14 +14,14 @@ import OtherUsers from "@/components/outros";
 
 
 
-type Zona = {
-  _id: any;
-  zona: string;
-}
+// type Zona = {
+//   _id: any;
+//   zona: string;
+// }
 
-type ZonasProps = {
-  zonas: Zona[];
-}
+// type ZonasProps = {
+//   zonas: Zona[];
+// }
 
 async function getDataClientes(){
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;

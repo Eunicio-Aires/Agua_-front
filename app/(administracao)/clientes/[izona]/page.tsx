@@ -51,12 +51,12 @@ interface Zona {
     //   }
     // }
     export default async function Clientes({ params }: { params: { zona: string } }){
-     const id = await params.zona
-    const area = await fetch(`http://localhost:3000/api/areas/${id}`,{cache:"no-cache"});
-    const areas = await area.json();
+    //  const id = await params.zona
+    // const area = await fetch(`http://localhost:3000/api/areas/${id}`,{cache:"no-cache"});
+    // const areas = await area.json();
     // const area  = await product.area
       
-    console.log(areas) 
+    // console.log(areas) 
     // const client = await posts.product.area.cliente
     // const _id = await posts.product.area._id
     return (
