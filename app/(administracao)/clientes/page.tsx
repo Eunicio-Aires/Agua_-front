@@ -34,21 +34,21 @@ async function getDataClientes(){
 }
 
 
-async function getDataZona(){
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
-  const res = await fetch(`${baseUrl}/api/faturar`,{cache:"no-cache"})
+// async function getDataZona(){
+//   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+//   const res = await fetch(`${baseUrl}/api/faturar`,{cache:"no-cache"})
 
-  if(!res.ok){
-    throw new Error('Failed to fetch data')
-  }
-  return res.json()
-}
+//   if(!res.ok){
+//     throw new Error('Failed to fetch data')
+//   }
+//   return res.json()
+// }
 
 
 export default async function Zona() {
-  const response = await getDataZona();
+  // const response = await getDataZona();
   const responseC= await getDataClientes();
-  const dadta    = await response.data.mesesl
+  // const dadta    = await response.data.mesesl
   const clients = await responseC.data.allClientes
   const numero  = await responseC.data.allClientes.filter((cliente:any) => cliente.estado === "Activo").length
   const ativos  = await responseC.data.allClientes.filter((cliente:any) => cliente.estado === "Activo")
