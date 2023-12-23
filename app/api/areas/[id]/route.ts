@@ -9,7 +9,7 @@ export async function GET(
 
     const res = await fetch(`https://agua-p.vercel.app/adm/area/${id}`,{cache:"no-cache"})
     const product = await res.json()
-    return NextResponse.json({ product })
+    return NextResponse.json( product )
   }
 
 // export async function GET(request: Request) {

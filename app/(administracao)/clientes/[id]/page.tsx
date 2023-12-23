@@ -14,10 +14,26 @@ import OtherUsers from "@/components/outros";
 //   apelido:String;
 //   faturas:[]
 // }
-// interface Zona {
-//   _id:String;
+interface Zona {
+  _id:String;
   
+}
+
+// async function getData({ params }: { params: { zona: string } }) {
+//   const id = await params.zona
+//   const res = await fetch(`http://localhost:3000/api/areas/${id}`,{cache:"no-cache"}`)
+//   // The return value is *not* serialized
+//   // You can return Date, Map, Set, etc.
+ 
+//   if (!res.ok) {
+//     // This will activate the closest `error.js` Error Boundary
+//     throw new Error('Failed to fetch data')
+//   }
+ 
+//   return res.json()
 // }
+
+
 
     
     // const id = params.zona
@@ -34,17 +50,25 @@ import OtherUsers from "@/components/outros";
     //     console.log(error)
     //   }
     // }
-    export default function Clientes(){
+    export default async function Clientes({ params }: { params: { zona: string } }){
+     const id = await params.zona
+    const area = await fetch(`http://localhost:3000/api/areas/${id}`,{cache:"no-cache"});
+    const areas = await area.json();
+    // const area  = await product.area
+      
+    console.log(areas) 
+    // const client = await posts.product.area.cliente
+    // const _id = await posts.product.area._id
     return (
       <div> 
            {/* <p>{params.id}</p>         */}
 
-       {/* <TopCards/> 
+       {/* <TopCards/>  */}
        
-      <OtherUsers _idZona={_id}  />
+      {/* <OtherUsers _idZona={_id}  /> */}
            
         
-      <h3 className='text-2xl text-center text-green-400'>{ posts.product.area.zona}</h3>
+      {/* <h3 className='text-2xl text-center text-green-400'>{ posts.product.area.zona}</h3>
        <Registar _id={_id} /> 
        <div className="p-4">
        
@@ -61,7 +85,7 @@ import OtherUsers from "@/components/outros";
 
      <ul>
       
-     {client.map((zon:any) => (
+     {area.map((zon:any) => (
       <li key={zon._id} className="bg-gray-50 hover:bg-gray-100 rounded-lg my-3 grid md:grid-cols-4 sm:grid-cols-3 grid-cols-2 items-center justify-between cursor-poiter"> 
       
         <div className="flex items-center">

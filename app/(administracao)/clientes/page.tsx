@@ -1,11 +1,15 @@
 
-import Link from "next/link"
-import { BsPersonFill,BsThreeDotsVertical } from "react-icons/bs"
+// import { BsPersonFill,BsThreeDotsVertical } from "react-icons/bs"
 import Head from 'next/head';
 import Header from "@/components/Header";
 import { RegistarZona } from "@/components/RegistarZona"; 
-import { Cliente } from "@/components/Clientes";
+// import { Cliente }  from "@/components/Clientes";
 import { Registar } from "@/components/Registar";
+import {BsDatabase, BsPersonFill, BsThreeDotsVertical} from 'react-icons/bs'
+// import {Registar} from '@/components/Registar'
+// import Zona from "../page";
+// import  TopCards  from '@/components/TopCards'
+import OtherUsers from "@/components/outros";
 
 
 
@@ -19,45 +23,149 @@ type ZonasProps = {
   zonas: Zona[];
 }
 
+async function getDataClientes(){
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  const res = await fetch(`${baseUrl}/api/todos`,{cache:"no-cache"})
+
+  if(!res.ok){
+    throw new Error('Failed to fetch data')
+  }
+  return res.json()
+}
+
+
+async function getDataZona(){
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  const res = await fetch(`${baseUrl}/api/faturar`,{cache:"no-cache"})
+
+  if(!res.ok){
+    throw new Error('Failed to fetch data')
+  }
+  return res.json()
+}
+
 
 export default async function Zona() {
- 
-  // console.log(dadta)
+  const response = await getDataZona();
+  const responseC= await getDataClientes();
+  const dadta    = await response.data.mesesl
+  const clients = await responseC.data.allClientes
+  const numero  = await responseC.data.allClientes.filter((cliente:any) => cliente.estado === "Activo").length
+  const ativos  = await responseC.data.allClientes.filter((cliente:any) => cliente.estado === "Activo")
+  const seativo = await responseC.data.allClientes.filter((cliente: any) => cliente.estado !== "Activo");
+  // const posts    = await response.data.mesesl
+  //  const client = await response.product.area.cliente
+  //  const _id = await response.product.area._id
+  console.log(clients)
 
   return (
  
 
     <section className="text-gray-600 body-font">
 
-{/* 
-<div className="container px-5 py-24 mx-auto max-w-7x1">
-  <div className="flex flex-wrap w-full mb-4 p-4">
-   <div className="w-full mb-6 lg:mb-0">
-      <h1 className="sm:text-4xl text-5xl font-medium title-font mb-2 text-gray-900">Detalhes</h1>
-      <div className="h-1 w-20 bg-indigo-500 rounded"></div>
-    </div>
-  </div>
-  <div className="flex flex-wrap -m-4">
+<div className=" grid lg:grid-cols-5 gap-4 p-4">  
+            <div className="lg:col-span-2 col-span-1 bg-white flex justify-between w-full border p-4 rounded-lg">
+              <div className="flex flex-col w-full pb-4">
+                <p className="text-2xl font-bold">{ativos.length}</p>
+                <p className="text-gray-600">Daily Revenue  </p>
+              </div>
+              <p className="bg-green-200 flex justify-center items-center p-2 rounded-lg">
+                <span className='text-green-700 text-lg'>+18</span>
+              </p>
+            </div>
+            <div className="lg:col-span-2 col-span-1 bg-white flex justify-between w-full border p-4 rounded-lg">
+              <div className="flex flex-col w-full pb-4">
+              <p className="text-2xl font-bold">{seativo.length}</p>
+                <p className="text-gray-600">Daily Revenue</p>
+              </div>
+              <p className="bg-green-200 flex justify-center items-center p-2 rounded-lg">
+                <span className='text-green-700 text-lg'>+18</span>
+              </p>
+            </div>
+            <div className="bg-white flex justify-btween w-full p-4 rounded">
+              <div className=" flex flex-col w-full pb-4">
+                <p className="text-2xl font-bold">7,846</p>
+                <p className="text-gray-600">Daily Revenue</p>
+              </div>
+            </div>
+          </div>
+
+<div className="w-full col-span-1 relative lg:h-[70vh] h-[50vh] m-auto p-4 border rounded-lg bg-white overflow-scroll">
+            
+            <div className="overflow-x-auto">
+  <table className="table table-xs table-pin-rows table-pin-cols">
+    <thead>
+      <tr>
+        <th></th> 
+        <td>Nome</td> 
+        <td>Codigo</td> 
+        <td>F.N Pagas</td> 
+        <td>F.Pagamento</td>
+        <th></th> 
+      </tr>
+    </thead> 
+    <tbody>
+    {ativos.map((mes:any)=>(
+      <tr key={mes._id}>
+        <th></th> 
+        <td>{mes.nome}</td>
+        <td>{mes.codigo}</td> 
+        <td>{mes.faturas.filter((fatura:any) => fatura.estado === "Nao pago").length}</td> 
          
-  {dadta.allAreas.map((zon:any) => ( 
-    <div key={zon._id} className="xl:w-1/3 md:w-1/2 p-4 border-8 rounded-xl">  
-      <div className="bg-white p-6 rounded-lg">
+        <td>{mes.contacto}</td> 
        
-        <h3 className="tracking-widest tx-gradient-to-r from-red-700 to-indigo-600 text-xs font-medium title-font">{zon.cliente.filter((cliente: { estado: string; }) => cliente.estado === "Activo").length } </h3>
-        <h1 className="text-xl text-gray-900 font-medium title-font mb-4">{zon.zona}</h1>
-        <div >
-          <Link className="btn btn-xs btn-accent" href={`/clientes/${zon._id}`}>Activ</Link>
-          <Link className="btn btn-xs btn-error" href={`/clientes/${zon._id}`}>Desati</Link>
+      </tr>
+       ))}
+
+</tbody> 
+    {/* </tfoot> */}
+  </table>
+     
+ 
+</div>
+           
         </div>
-      </div>
-    </div>
-     ))}
+        {/* <div className="p-4">
+     
+     <div className="w-full n-auto p-4 border rounded-lg bg-white overflow-y-auto">
+     
+       <div className="my-3 p-2 grid md:grid-cols-5 sm:grid-cols-3 grid-cols-2 items-center justify-between cursor-pointer">
+         <span>Nome </span> 
+         <span className="sm:text-left text-right">Codigo</span>
+         <span className="hidden md:grid">F.Nao pagas</span>
+         <span className="hidden md:grid">Cotatato</span> 
+         <span className="hidden md:grid">Gerar fatura</span>
+      </div> 
+
+     
+
+  <ul>
    
+  {clients.map((zon:any) => (
+   <li key={zon._id} className="bg-gray-50 hover:bg-gray-100 rounded-lg my-3 grid md:grid-cols-5 sm:grid-cols-3 grid-cols-2 items-center justify-between cursor-poiter"> 
+   
+     <div className="flex items-center">
+       <div className="bg-purple-100 p-1 rounded-sm"> */}
+             {/* <BsPersonFill className=""></BsPersonFill> */}
+        {/* </div>
+       <p className="pl-2">{zon.nome}</p> 
+     </div>
+     <p className="text-gray-600 sm:text-left text-rigth">{zon.codigo}</p>
+     <p className="hidden md:flex">{zon.faturas.filter((fatura:any) => fatura.estado === "Nao pago").length }</p>  
+     <p className="hidden md:flex">{zon.contato}</p> */}
+     {/* <p className="hidden md:flex"> <Link href= {`/fatura/${zon._id}`}>Gerar{zon.contato}</Link>  </p> */}
   
-    
-  </div>
-  </div> */}
+   {/* </li>
    
+      ))}
+  </ul> 
+  </div>
+  </div>  */}
+
+  
+
+   
+
 
 </section>
   );

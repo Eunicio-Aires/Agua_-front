@@ -14,7 +14,7 @@ export async function TopCards(){
   // const resp = await clientes.json();
   const client = await clientes.data.allClientes
   
-  
+  console.log(client)
   
     return (
         
