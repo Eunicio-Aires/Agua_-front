@@ -7,7 +7,7 @@ type mes = {
 
 async function getData(){
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
-  const res = await fetch(`${baseUrl}/api/faturar`,{cache:"no-cache"})
+  const res = await fetch(`http://localhost:3000/api/faturar`,{cache:"no-cache"})
 
   if(!res.ok){
     throw new Error('Failed to fetch data')

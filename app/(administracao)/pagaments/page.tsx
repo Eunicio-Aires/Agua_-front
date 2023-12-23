@@ -30,11 +30,7 @@ export default async  function Pagaments(){
         return(
           <div>
 
-        {/* @ts-ignore  */}
-            <Ultimom/>
-           {/* @ts-ignore  */}
-            <Pagamentos/>
-
+      
            
 
              {/* <div className="overflow-x-auto">

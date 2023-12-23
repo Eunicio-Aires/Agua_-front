@@ -14,10 +14,10 @@ import OtherUsers from "@/components/outros";
 //   apelido:String;
 //   faturas:[]
 // }
-interface Zona {
-  _id:String;
+// interface Zona {
+//   _id:String;
   
-}
+// }
 
 // async function getData({ params }: { params: { zona: string } }) {
 //   const id = await params.zona
@@ -50,7 +50,7 @@ interface Zona {
     //     console.log(error)
     //   }
     // }
-    export default async function Clientes({ params }: { params: { zona: string } }){
+    export default async function Clientes(){
     //  const id = await params.zona
     // const area = await fetch(`http://localhost:3000/api/areas/${id}`,{cache:"no-cache"});
     // const areas = await area.json();

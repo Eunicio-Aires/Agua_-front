@@ -24,8 +24,8 @@ import OtherUsers from "@/components/outros";
 // }
 
 async function getDataClientes(){
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
-  const res = await fetch(`${baseUrl}/api/todos`,{cache:"no-cache"})
+  // const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  const res = await fetch(`https://agua-front.vercel.app/api/todos`,{cache:"no-cache"})
 
   if(!res.ok){
     throw new Error('Failed to fetch data')
@@ -34,29 +34,18 @@ async function getDataClientes(){
 }
 
 
-// async function getDataZona(){
-//   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
-//   const res = await fetch(`${baseUrl}/api/faturar`,{cache:"no-cache"})
 
-//   if(!res.ok){
-//     throw new Error('Failed to fetch data')
-//   }
-//   return res.json()
-// }
 
 
 export default async function Zona() {
-  // const response = await getDataZona();
+
   const responseC= await getDataClientes();
-  // const dadta    = await response.data.mesesl
-  const clients = await responseC.data.allClientes
-  const numero  = await responseC.data.allClientes.filter((cliente:any) => cliente.estado === "Activo").length
-  const ativos  = await responseC.data.allClientes.filter((cliente:any) => cliente.estado === "Activo")
-  const seativo = await responseC.data.allClientes.filter((cliente: any) => cliente.estado !== "Activo");
-  // const posts    = await response.data.mesesl
-  //  const client = await response.product.area.cliente
-  //  const _id = await response.product.area._id
-  console.log(clients)
+  
+  const clients = await responseC.allClientes
+  const numero  = await responseC.allClientes.filter((cliente:any) => cliente.estado === "Activo").length
+  const ativos  = await responseC.allClientes.filter((cliente:any) => cliente.estado === "Activo")
+  const seativo = await responseC.allClientes.filter((cliente: any) => cliente.estado !== "Activo");
+  
 
   return (
  
@@ -118,49 +107,20 @@ export default async function Zona() {
        ))}
 
 </tbody> 
-    {/* </tfoot> */}
+   
   </table>
      
  
 </div>
            
         </div>
-        {/* <div className="p-4">
-     
-     <div className="w-full n-auto p-4 border rounded-lg bg-white overflow-y-auto">
-     
-       <div className="my-3 p-2 grid md:grid-cols-5 sm:grid-cols-3 grid-cols-2 items-center justify-between cursor-pointer">
-         <span>Nome </span> 
-         <span className="sm:text-left text-right">Codigo</span>
-         <span className="hidden md:grid">F.Nao pagas</span>
-         <span className="hidden md:grid">Cotatato</span> 
-         <span className="hidden md:grid">Gerar fatura</span>
-      </div> 
 
-     
 
-  <ul>
-   
-  {clients.map((zon:any) => (
-   <li key={zon._id} className="bg-gray-50 hover:bg-gray-100 rounded-lg my-3 grid md:grid-cols-5 sm:grid-cols-3 grid-cols-2 items-center justify-between cursor-poiter"> 
-   
-     <div className="flex items-center">
-       <div className="bg-purple-100 p-1 rounded-sm"> */}
-             {/* <BsPersonFill className=""></BsPersonFill> */}
-        {/* </div>
-       <p className="pl-2">{zon.nome}</p> 
-     </div>
-     <p className="text-gray-600 sm:text-left text-rigth">{zon.codigo}</p>
-     <p className="hidden md:flex">{zon.faturas.filter((fatura:any) => fatura.estado === "Nao pago").length }</p>  
-     <p className="hidden md:flex">{zon.contato}</p> */}
-     {/* <p className="hidden md:flex"> <Link href= {`/fatura/${zon._id}`}>Gerar{zon.contato}</Link>  </p> */}
-  
-   {/* </li>
-   
-      ))}
-  </ul> 
-  </div>
-  </div>  */}
+
+
+
+
+        
 
   
 
