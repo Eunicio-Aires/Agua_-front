@@ -10,7 +10,7 @@ import { NextResponse } from 'next/server'
 
 async function getData(){
   // const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
-  const res = await fetch(`https://agua-front.vercel.app/api/faturar`,{cache:"no-cache"})
+  const res = await fetch(`http://localhost:3000/api/faturar`,{cache:"no-cache"})
   // const res = await  Pagamentoss();
   // const response = await res.json() 
   
@@ -33,9 +33,10 @@ export default async  function Pagaments(){
             
             <div className=''>
             
-            <Chart/>
+           
 
-             {/* <div className="overflow-x-auto p-4">
+             <div className="overflow-x-auto p-4">
+             <Chart/>
     <table className="table table-xs table-pin-rows table-pin-cols">
     <thead>
     <tr>
@@ -65,7 +66,7 @@ export default async  function Pagaments(){
     </table>
     
     
-   </div> */}
+   </div>
             </div>
           
           
