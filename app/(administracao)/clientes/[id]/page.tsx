@@ -50,7 +50,9 @@ import OtherUsers from "@/components/outros";
     //     console.log(error)
     //   }
     // }
-    export default async function Clientes(){
+    export default function Page({ params }: { params: { id: string } }) {
+      // return <div>My Post: {params.slug}</div>
+    // }
     //  const id = await params.zona
     // const area = await fetch(`http://localhost:3000/api/areas/${id}`,{cache:"no-cache"});
     // const areas = await area.json();
@@ -62,7 +64,7 @@ import OtherUsers from "@/components/outros";
     return (
       <div> 
            {/* <p>{params.id}</p>         */}
-
+           <div>My Post: {params.id}</div>
        {/* <TopCards/>  */}
        
       {/* <OtherUsers _idZona={_id}  /> */}
