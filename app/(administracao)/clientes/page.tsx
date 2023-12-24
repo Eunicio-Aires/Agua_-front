@@ -23,21 +23,21 @@
 //   zonas: Zona[];
 // }
 
-async function getDataClientes(){
-  // const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
-  const res = await fetch(`https://agua-front.vercel.app/api/todos`,{cache:"no-cache"})
+// async function getDataClientes(){
+  
+//   const res = await fetch(`https://agua-front.vercel.app/api/todos`,{cache:"no-cache"})
 
-  if(!res.ok){
-    throw new Error('Failed to fetch data')
-  }
-  return res.json()
-}
+//   if(!res.ok){
+//     throw new Error('Failed to fetch data')
+//   }
+//   return res.json()
+// }
 
 export default async function Zona() {
 
-  const responseC= await getDataClientes();
+  // const responseC= await getDataClientes();
   
-  const clients = await responseC.allClientes
+  // const clients = await responseC.allClientes
   // const numero  = await responseC.allClientes.filter((cliente:any) => cliente.estado === "Activo").length
   // const ativos  = await responseC.allClientes.filter((cliente:any) => cliente.estado === "Activo")
   // const seativo = await responseC.allClientes.filter((cliente: any) => cliente.estado !== "Activo");
@@ -75,7 +75,7 @@ export default async function Zona() {
             </div>
           </div> */}
 
-<div className="w-full col-span-1 relative lg:h-[70vh] h-[50vh] m-auto p-4 border rounded-lg bg-white overflow-scroll">
+{/* <div className="w-full col-span-1 relative lg:h-[70vh] h-[50vh] m-auto p-4 border rounded-lg bg-white overflow-scroll">
             
             <div className="overflow-x-auto">
   <table className="table table-xs table-pin-rows table-pin-cols">
@@ -109,7 +109,7 @@ export default async function Zona() {
  
 </div>
            
-        </div>
+        </div> */}
 
 </section>
   );
