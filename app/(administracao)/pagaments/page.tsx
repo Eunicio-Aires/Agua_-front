@@ -31,7 +31,7 @@ export default async  function Pagaments(){
 
           
             
-            <div className=''>
+            <div className='w-80'>
             
             <Charts/>
 
