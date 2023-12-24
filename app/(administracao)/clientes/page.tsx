@@ -52,14 +52,14 @@ export default async function Zona() {
 
 
 {/* Put this part before </body> tag */}
-{/* <input type="checkbox" id="my_modal_7" className="modal-toggle" />
+<input type="checkbox" id="my_modal_7" className="modal-toggle" />
 <div className="modal" role="dialog">
   <div className="modal-box">
     <h3 className="text-lg font-bold">Hello!</h3>
     <p className="py-4">This modal works with a hidden checkbox!</p>
   </div>
   <label className="modal-backdrop" htmlFor="my_modal_7">Close</label>
-</div> */}
+</div>
 
 
 
@@ -91,7 +91,7 @@ export default async function Zona() {
             </div>
           </div> */}
                   {/* modal button */}
-          {/* <label htmlFor="my_modal_7" className="btn">No Cliente</label> */}
+          <label htmlFor="my_modal_7" className="btn">No Cliente</label>
           <h1>Novo cliente</h1>
 
 {/* <div className="w-full col-span-1 relative lg:h-[70vh] h-[50vh] m-auto p-4 border rounded-lg bg-white overflow-scroll">
