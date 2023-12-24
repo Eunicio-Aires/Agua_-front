@@ -47,6 +47,23 @@ export default async function Zona() {
 
     <section className="text-gray-600 body-font">
 
+      
+      {/* The button to open modal */}
+<label htmlFor="my_modal_7" className="btn">open modal</label>
+
+{/* Put this part before </body> tag */}
+<input type="checkbox" id="my_modal_7" className="modal-toggle" />
+<div className="modal" role="dialog">
+  <div className="modal-box">
+    <h3 className="text-lg font-bold">Hello!</h3>
+    <p className="py-4">This modal works with a hidden checkbox!</p>
+  </div>
+  <label className="modal-backdrop" htmlFor="my_modal_7">Close</label>
+</div>
+
+
+
+
 <div className=" grid lg:grid-cols-5 gap-4 p-4">  
             <div className="lg:col-span-2 col-span-1 bg-white flex justify-between w-full border p-4 rounded-lg">
               <div className="flex flex-col w-full pb-4">
