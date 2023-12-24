@@ -2,28 +2,28 @@
 import  Header  from '@/components/Header'
 import { Ultimom } from '@/components/payments/Ultimom'
 import BarChart from '@/components/payments/BarChart'
-import Pagamentos from '@/components/payments/Pagamentos'
+import  Pagamentos  from '@/components/payments/Pagamentos'
 import Meses      from '@/components/payments/Meses'
 import Link from "next/link"
-import Pagamentoss from "@/lib/pagamentos"
+// import  Pagamentoss  from "@/lib/pagamentos"
 import { NextResponse } from 'next/server'
 
-// async function getData(){
-//   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
-//   const res = await fetch(`${baseUrl}/api/faturar`,{cache:"no-cache"})
-//   // const res = await  Pagamentoss();
-//   // const response = await res.json() 
+async function getData(){
+  // const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  const res = await fetch(`https://agua-front.vercel.app/api/faturar`,{cache:"no-cache"})
+  // const res = await  Pagamentoss();
+  // const response = await res.json() 
   
-//   if(!res.ok){
-//     throw new Error('Failed to fetch data')
-//   }
-//   return res.json()
-// } 
+  if(!res.ok){
+    throw new Error('Failed to fetch data')
+  }
+  return res.json()
+} 
 
 
 export default async  function Pagaments(){
-  // const response = await getData();
-  // const faturasPagas = await response.data.ultimo[0].faturas.filter((fatura: { estado: string; }) => fatura.estado === "Pago")
+  const response = await getData();
+  const faturasPagas = await response.data.ultimo[0].faturas.filter((fatura: { estado: string; }) => fatura.estado === "Pago")
   
   
         
@@ -31,9 +31,8 @@ export default async  function Pagaments(){
           <div>
 
       
-           
 
-             {/* <div className="overflow-x-auto">
+             <div className="overflow-x-auto">
     <table className="table table-xs table-pin-rows table-pin-cols">
     <thead>
     <tr>
@@ -60,10 +59,10 @@ export default async  function Pagaments(){
     
     </tbody> 
     {/* </tfoot> */}
-    {/* </table> */}
+    </table>
     
     
-    {/* // </div> */}
+   </div>
             </div>
           
           

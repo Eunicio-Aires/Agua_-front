@@ -92,7 +92,7 @@ export default async function Zona() {
     {clients.map((mes:any)=>(
       <tr key={mes._id}>
         <th></th> 
-        <td>{mes.nome} </td>
+        <td>{mes.nome} {mes.apelido} </td>
         <td>{mes.codigo}</td> 
         <td>{mes.faturas.filter((fatura:any) => fatura.estado === "Nao pago").length}</td> 
          

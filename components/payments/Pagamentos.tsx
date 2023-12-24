@@ -1,10 +1,11 @@
+
 import {BsPersonFill, BsThreeDotsVertical} from 'react-icons/bs'
 import Pagament from "@/lib/pagamentos";
 
 
 async function getData(){
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
-  const res = await fetch(`https://agua-front.vercel.app/api/ares`,{cache:"no-cache"})
+  // const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  const res = await fetch(`https://agua-front.vercel.app/api/areas`,{cache:"no-cache"})
 
   if(!res.ok){
     throw new Error('Failed to fetch data')
@@ -13,9 +14,9 @@ async function getData(){
 }
 
 export  default async  function Pagamentos(){
-    
+    // const response = await fetch(`https://agua-front.vercel.app/api/areas`,{cache:"no-cache"})
     const response = await getData();
-    const faturasPagas = response.data.ultimo[0].faturas.filter((fatura: { estado: string; }) => fatura.estado === "Pago");
+    const faturasPagas = await response.data.ultimo[0].faturas.filter((fatura: { estado: string; }) => fatura.estado === "Pago");
     
     return(
         <div className="w-full col-span-1 relative lg:h-[70vh] h-[50vh] m-auto p-4 border rounded-lg bg-white overflow-scroll">
@@ -39,7 +40,6 @@ export  default async  function Pagamentos(){
         <td>{mes.mes}</td>
         <td>{mes.consumo}</td> 
         <td>{mes.valor}</td> 
-         
         <td>{mes.formaDePagamento}</td> 
        
       </tr>
