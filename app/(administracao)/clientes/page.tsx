@@ -5,7 +5,7 @@ import { MdEdit } from "react-icons/md";
 // import Header from "@/components/Header";
 // import { RegistarZona } from "@/components/RegistarZona"; 
 // import { Cliente }  from "@/components/Clientes";
-// import { Registar } from "@/components/Registar";
+import  Registar  from "@/components/Registar";
 // import {BsDatabase, BsPersonFill, BsThreeDotsVertical} from 'react-icons/bs'
 // import {Registar} from '@/components/Registar'
 // import Zona from "../page";
@@ -57,6 +57,7 @@ export default async function Zona() {
   <div className="modal-box">
     <h3 className="text-lg font-bold">Hello!</h3>
     <p className="py-4">This modal works with a hidden checkbox!</p>
+    <Registar/>
   </div>
   <label className="modal-backdrop" htmlFor="my_modal_7">Close</label>
 </div>

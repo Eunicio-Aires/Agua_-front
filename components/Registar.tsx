@@ -1,4 +1,4 @@
-'use client' 
+ 
 
 import React, { SyntheticEvent } from 'react';
 import { useRouter } from 'next/navigation';
@@ -11,7 +11,7 @@ interface Zona {
   
 }
 
-  export  function  Registar({_id}:Zona) {
+  export default  function  Registar() {
     const router = useRouter()
     const [isButtonDisabled, setButtonDisabled] = useState(false);
   const handleSubmi = async (event: SyntheticEvent) => {
@@ -30,7 +30,7 @@ interface Zona {
     };
 
     const JSONdata = JSON.stringify(data);
-    const endpoint = `http://localhost:3000/api/registar/${_id}`;
+    const endpoint = `http://localhost:3000/api/registar/`;
 
     const options: RequestInit = {
       method: 'POST',
