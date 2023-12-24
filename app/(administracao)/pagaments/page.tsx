@@ -1,7 +1,7 @@
 
 import  Header  from '@/components/Header'
 import { Ultimom } from '@/components/payments/Ultimom'
-import BarChart from '@/components/payments/BarChart'
+import Charts from '@/components/Charts'
 import  Pagamentos  from '@/components/payments/Pagamentos'
 import Meses      from '@/components/payments/Meses'
 import Link from "next/link"
@@ -28,8 +28,8 @@ export default async  function Pagaments(){
   
         
         return(
-          <div>
-
+          <div className='p-4 grid md:grid-cols-3 grid-cols-1 gap-4'>
+            <Charts/>
       
 
              <div className="overflow-x-auto">
