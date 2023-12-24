@@ -97,7 +97,7 @@ export default async function Zona() {
         <td>{mes.faturas.filter((fatura:any) => fatura.estado === "Nao pago").length}</td> 
          
         <td>{mes.telefone}</td> 
-        <td> <Link href={`/cliente/${mes._id}`} ><MdEdit /></Link> </td> 
+        <td> <Link href={`/clientes/${mes._id}`} ><MdEdit /></Link> </td> 
        
       </tr>
        ))}
