@@ -28,8 +28,11 @@ export default async  function Pagaments(){
   
         
         return(
-          <div className='p-4 grid md:grid-cols-3 grid-cols-1 gap-4'>
+
+          <div>
             <Charts/>
+            <div className='p-4 grid md:grid-cols-3 grid-cols-1 gap-4'>
+            
       
 
              <div className="overflow-x-auto">
@@ -64,6 +67,8 @@ export default async  function Pagaments(){
     
    </div>
             </div>
+          </div>
+          
           
           
 
