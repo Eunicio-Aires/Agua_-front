@@ -67,6 +67,8 @@ export default async  function Pagaments(){
     
     
    </div>
+   {/* @ts-ignore  */}
+   <Meses/>
             </div>
           
           

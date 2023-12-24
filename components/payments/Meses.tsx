@@ -55,7 +55,7 @@ export default async  function Meses(){
         data-ripple-light="true">Faturar</Link>
       </div>
     </div>
-     )) }
+     ))}
    
     
     

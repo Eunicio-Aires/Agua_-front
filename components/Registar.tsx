@@ -11,7 +11,7 @@ interface Zona {
   
 }
 
-  export default  function  Registar() {
+  export   function  Registar() {
     const router = useRouter()
     const [isButtonDisabled, setButtonDisabled] = useState(false);
   const handleSubmi = async (event: SyntheticEvent) => {
