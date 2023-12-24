@@ -50,8 +50,23 @@ import OtherUsers from "@/components/outros";
     //     console.log(error)
     //   }
     // }
-    export default function Page({ params }: { params: { id: string } }) {
-      // return <div>My Post: {params.slug}</div>
+
+
+    // async function getDataId({ params }: { params: { id: string } }){
+  
+    //   const res = await fetch(`https://agua-front.vercel.app/api/todos`,{cache:"no-cache"})
+    
+    //   if(!res.ok){
+    //     throw new Error('Failed to fetch data')
+    //   }
+    //   return res.json()
+    // }
+
+    export default async function ClienteId({ params }: { params: { id: string } }){
+      const posts = await fetch(`https://agua-front.vercel.app/api/clienteId/${params.id}`).then((res) => res.json())
+      const dados = await posts.clientId.nome
+     console.log(dados)
+      // const posts = await fetch('https://.../posts').then((res) => res.json())
     // }
     //  const id = await params.zona
     // const area = await fetch(`http://localhost:3000/api/areas/${id}`,{cache:"no-cache"});
@@ -63,8 +78,8 @@ import OtherUsers from "@/components/outros";
     // const _id = await posts.product.area._id
     return (
       <div> 
-           {/* <p>{params.id}</p>         */}
-           <div>My Post: {params.id}</div>
+           <div>{dados} </div>
+           {/* <div>My Post: {params.id}</div> */}
        {/* <TopCards/>  */}
        
       {/* <OtherUsers _idZona={_id}  /> */}
@@ -113,4 +128,7 @@ import OtherUsers from "@/components/outros";
 
     )
   }  
+
+
+
 
