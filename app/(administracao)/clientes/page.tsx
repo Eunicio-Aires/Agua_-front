@@ -1,4 +1,5 @@
-
+import Link from "next/link";
+import { MdEdit } from "react-icons/md";
 // import { BsPersonFill,BsThreeDotsVertical } from "react-icons/bs"
 // import Head from 'next/head';
 // import Header from "@/components/Header";
@@ -84,18 +85,19 @@ export default async function Zona() {
         <td>Codigo</td> 
         <td>F.N Pagas</td> 
         <td>F.Pagamento</td>
-        <th></th> 
+        <th>Mais</th> 
       </tr>
     </thead> 
     <tbody>
     {clients.map((mes:any)=>(
       <tr key={mes._id}>
         <th></th> 
-        <td>{mes.nome}</td>
+        <td>{mes.nome} </td>
         <td>{mes.codigo}</td> 
         <td>{mes.faturas.filter((fatura:any) => fatura.estado === "Nao pago").length}</td> 
          
         <td>{mes.contacto}</td> 
+        <td> <Link href={`/cliente/${mes._id}`} ><MdEdit /></Link> </td> 
        
       </tr>
        ))}
