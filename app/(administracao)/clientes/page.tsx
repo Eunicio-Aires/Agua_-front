@@ -37,8 +37,8 @@ export default async function Zona() {
   
   const clients = await responseC.allClientes
   // const numero  = await responseC.allClientes.filter((cliente:any) => cliente.estado === "Activo").length
-  // const ativos  = await responseC.allClientes.filter((cliente:any) => cliente.estado === "Activo")
-  // const seativo = await responseC.allClientes.filter((cliente: any) => cliente.estado !== "Activo");
+  const ativos  = await responseC.allClientes.filter((cliente:any) => cliente.estado === "Activo")
+  const seativo = await responseC.allClientes.filter((cliente: any) => cliente.estado !== "Activo");
   
 
   return (
@@ -46,7 +46,7 @@ export default async function Zona() {
 
     <section className="text-gray-600 body-font">
 
-{/* <div className=" grid lg:grid-cols-5 gap-4 p-4">  
+<div className=" grid lg:grid-cols-5 gap-4 p-4">  
             <div className="lg:col-span-2 col-span-1 bg-white flex justify-between w-full border p-4 rounded-lg">
               <div className="flex flex-col w-full pb-4">
                 <p className="text-2xl font-bold">{ativos.length}</p>
@@ -71,7 +71,7 @@ export default async function Zona() {
                 <p className="text-gray-600">Daily Revenue</p>
               </div>
             </div>
-          </div> */}
+          </div>
 
 <div className="w-full col-span-1 relative lg:h-[70vh] h-[50vh] m-auto p-4 border rounded-lg bg-white overflow-scroll">
             
