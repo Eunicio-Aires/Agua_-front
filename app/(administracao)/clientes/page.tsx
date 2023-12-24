@@ -90,8 +90,8 @@ export default async function Zona() {
               </div>
             </div>
           </div>
-        
-          <label htmlFor="my_modal_7" className="btn">open modal</label>
+                  {/* modal button */}
+          <label htmlFor="my_modal_7" className="btn">No Cliente</label>
 
 <div className="w-full col-span-1 relative lg:h-[70vh] h-[50vh] m-auto p-4 border rounded-lg bg-white overflow-scroll">
             
