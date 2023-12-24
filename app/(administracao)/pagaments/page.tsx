@@ -1,7 +1,7 @@
 
 import  Header  from '@/components/Header'
 import { Ultimom } from '@/components/payments/Ultimom'
-import Charts from '@/components/Charts'
+import Chart from '@/components/Charts'
 import  Pagamentos  from '@/components/payments/Pagamentos'
 import Meses      from '@/components/payments/Meses'
 import Link from "next/link"
@@ -33,7 +33,7 @@ export default async  function Pagaments(){
             
             <div className='w-80'>
             
-            <Charts/>
+            <Chart/>
 
              {/* <div className="overflow-x-auto p-4">
     <table className="table table-xs table-pin-rows table-pin-cols">
