@@ -47,9 +47,9 @@ export default async function Zona() {
 
     <section className="text-gray-600 body-font">
 
-      
+
       {/* The button to open modal */}
-<label htmlFor="my_modal_7" className="btn">open modal</label>
+
 
 {/* Put this part before </body> tag */}
 <input type="checkbox" id="my_modal_7" className="modal-toggle" />
@@ -90,6 +90,8 @@ export default async function Zona() {
               </div>
             </div>
           </div>
+        
+          <label htmlFor="my_modal_7" className="btn">open modal</label>
 
 <div className="w-full col-span-1 relative lg:h-[70vh] h-[50vh] m-auto p-4 border rounded-lg bg-white overflow-scroll">
             
