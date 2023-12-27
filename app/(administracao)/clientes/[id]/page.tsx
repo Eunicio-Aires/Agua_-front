@@ -65,6 +65,7 @@ import OtherUsers from "@/components/outros";
     export default async function ClienteId({ params }: { params: { id: string } }){
       const posts = await fetch(`https://agua-front.vercel.app/api/clienteId/${params.id}`).then((res) => res.json())
       const dados = await posts.clientId.nome
+      const faturasNaPagas = await posts.clientI.faturas.filter((faturas: { faturas: string; }) => faturas.faturas === "Pago")
      console.log(dados)
       // const posts = await fetch('https://.../posts').then((res) => res.json())
     // }
@@ -78,7 +79,7 @@ import OtherUsers from "@/components/outros";
     // const _id = await posts.product.area._id
     return (
       <div> 
-          <h1 className="text-3xl font-medium text-center mt-3">{dados}</h1>
+          <h1 className="text-3xl font-medium text-center mt-3">{dados} {posts.clientId.apelido}</h1>
 
            
            {/* <div>My Post: {params.id}</div> */}
@@ -139,9 +140,10 @@ import OtherUsers from "@/components/outros";
         <th>Last Login</th> 
         <th>Favorite Color</th>
       </tr>
-    </thead> 
+    </thead>  
     <tbody>
-      <tr>
+    {faturasNaPagas.map((fatura:any)=>(
+      <tr key={fatura._id }>
         <th>1</th> 
         <td>Cy Ganderton</td> 
         <td>Quality Control Specialist</td> 
@@ -150,7 +152,7 @@ import OtherUsers from "@/components/outros";
         <td>12/16/2020</td> 
         <td>Blue</td>
       </tr>
-     
+      ))}
     </tbody> 
     <tfoot>
       <tr>
