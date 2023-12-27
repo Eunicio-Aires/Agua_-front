@@ -66,7 +66,7 @@ import OtherUsers from "@/components/outros";
       const posts = await fetch(`https://agua-front.vercel.app/api/clienteId/${params.id}`).then((res) => res.json())
       const dados = await posts.clientId.nome
       // const faturasNaPagas = await posts.clientI.faturas.filter((faturas: { faturas: string; }) => faturas.faturas === "Pago")
-    //  console.log(dados)
+     console.log(dados)
       // const posts = await fetch('https://.../posts').then((res) => res.json())
     // }
     //  const id = await params.zona
