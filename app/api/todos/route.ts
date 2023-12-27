@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server'
  
 export function GET(request: Request) {
-  return fetch('https://agua-p.vercel.app/adm/todos', { cache: "no-cache" })
+  return fetch('https://agua-p.vercel.app/adm/tod', { cache: "no-cache" })
     .then(res => res.json())
     .then(respo => {
       // Faça algo com respo
