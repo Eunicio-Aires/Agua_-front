@@ -35,12 +35,12 @@ async function getDataClientes(){
 
 export default async function Zona() {
 
-  // const responseC= await getDataClientes();
+  const responseC= await getDataClientes();
   
-  // const clients = await responseC.allClientes
+  const clients = await responseC.allClientes
   // const numero  = await responseC.allClientes.filter((cliente:any) => cliente.estado === "Activo").length
-  // const ativos  = await responseC.allClientes.filter((cliente:any) => cliente.estado === "Activo")
-  // const seativo = await responseC.allClientes.filter((cliente: any) => cliente.estado !== "Activo");
+  const ativos  = await responseC.allClientes.filter((cliente:any) => cliente.estado === "Activo")
+  const seativo = await responseC.allClientes.filter((cliente: any) => cliente.estado !== "Activo");
   
 
   return (
@@ -66,7 +66,7 @@ export default async function Zona() {
 
 
 
-{/* <div className=" grid lg:grid-cols-5 gap-4 p-4">  
+<div className=" grid lg:grid-cols-5 gap-4 p-4">  
             <div className="lg:col-span-2 col-span-1 bg-white flex justify-between w-full border p-4 rounded-lg">
               <div className="flex flex-col w-full pb-4">
                 <p className="text-2xl font-bold">{ativos.length}</p>
@@ -91,7 +91,7 @@ export default async function Zona() {
                 <p className="text-gray-600">Daily Revenue</p>
               </div>
             </div>
-          </div> */}
+          </div>
                   {/* modal button */}
           <label htmlFor="my_modal_7" className="btn">No Cliente</label>
           <h1>Novo cliente</h1>
@@ -110,7 +110,7 @@ export default async function Zona() {
         <th>Mais</th> 
       </tr>
     </thead> 
-    {/* <tbody>
+    <tbody>
     {clients.map((mes:any)=>(
       <tr key={mes._id}>
         <th></th> 
@@ -124,7 +124,7 @@ export default async function Zona() {
       </tr>
        ))}
 
-</tbody>  */}
+</tbody> 
    
   </table>
      
