@@ -81,14 +81,9 @@ import OtherUsers from "@/components/outros";
 
 
 <div role="tablist" className="tabs tabs-lifted">
-  <input type="radio" name="my_tabs_2" role="tab" className="tab" aria-label="Tab 1" />
-  <div role="tabpanel" className="tab-content bg-base-100 border-base-300 rounded-box p-6">Tab content 1</div>
-
-  <input type="radio" name="my_tabs_2" role="tab" className="tab" aria-label="Tab 2" checked />
-  <div role="tabpanel" className="tab-content bg-base-100 border-base-300 rounded-box p-6">Tab content 2</div>
-
-  <input type="radio" name="my_tabs_2" role="tab" className="tab" aria-label="Tab 3" />
-  <div role="tabpanel" className="tab-content bg-base-100 border-base-300 rounded-box p-6">Tab content 3</div>
+  <a role="tab" className="tab">Tab 1</a>
+  <a role="tab" className="tab tab-active [--tab-bg:yellow] [--tab-border-color:orange] text-primary">Tab 2</a>
+  <a role="tab" className="tab">Tab 3</a>
 </div>
            <div>{dados} </div>
            {/* <div>My Post: {params.id}</div> */}
