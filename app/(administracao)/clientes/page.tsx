@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { resolve } from "path";
 import { MdEdit } from "react-icons/md";
 // import { BsPersonFill,BsThreeDotsVertical } from "react-icons/bs"
 // import Head from 'next/head';
@@ -23,7 +24,7 @@ import { MdEdit } from "react-icons/md";
 
 
 async function getDataClientes(){
-  
+  await new Promise ((resolve)=> setTimeout(resolve,1000));
   const res = await fetch(`https://agua-front.vercel.app//api/todos `,{cache:"no-cache"})
 
   if(!res.ok){
