@@ -65,7 +65,7 @@ export default async function Zona() {
 
 
 
-{/* <div className=" grid lg:grid-cols-5 gap-4 p-4">  
+<div className=" grid lg:grid-cols-5 gap-4 p-4">  
             <div className="lg:col-span-2 col-span-1 bg-white flex justify-between w-full border p-4 rounded-lg">
               <div className="flex flex-col w-full pb-4">
                 <p className="text-2xl font-bold">{ativos.length}</p>
@@ -90,12 +90,12 @@ export default async function Zona() {
                 <p className="text-gray-600">Daily Revenue</p>
               </div>
             </div>
-          </div> */}
+          </div>
                   {/* modal button */}
           <label htmlFor="my_modal_7" className="btn">No Cliente</label>
           <h1>Novo cliente</h1>
 
-{/* <div className="w-full col-span-1 relative lg:h-[70vh] h-[50vh] m-auto p-4 border rounded-lg bg-white overflow-scroll">
+<div className="w-full col-span-1 relative lg:h-[70vh] h-[50vh] m-auto p-4 border rounded-lg bg-white overflow-scroll">
             
             <div className="overflow-x-auto">
   <table className="table table-xs table-pin-rows table-pin-cols">
@@ -130,7 +130,7 @@ export default async function Zona() {
  
 </div>
            
-        </div> */}
+        </div>
 
 </section>
   );
