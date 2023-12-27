@@ -65,8 +65,9 @@ import OtherUsers from "@/components/outros";
     export default async function ClienteId({ params }: { params: { id: string } }){
       const posts = await fetch(`https://agua-front.vercel.app/api/clienteId/${params.id}`).then((res) => res.json())
       const dados = await posts.clientId.nome
+      // const dadosm = await posts.clientId.faturaNaop
       // const faturasNaPagas = await posts.clientI.faturas.filter((faturas: { faturas: string; }) => faturas.faturas === "Pago")
-     console.log(dados)
+    //  console.log(dadosm)
       // const posts = await fetch('https://.../posts').then((res) => res.json())
     // }
     //  const id = await params.zona
@@ -141,8 +142,8 @@ import OtherUsers from "@/components/outros";
         <th>Favorite Color</th>
       </tr>
     </thead>  
-    <tbody>
-    {posts.clientId.faturaNaop.map((fatura:any)=>(
+    {/* <tbody>
+    {dadosm.map((fatura:any)=>(
       <tr key={fatura._id }>
         <th>1</th> 
         <td>Cy Ganderton</td> 
@@ -153,7 +154,7 @@ import OtherUsers from "@/components/outros";
         <td>Blue</td>
       </tr>
       ))}
-    </tbody> 
+    </tbody>  */}
     <tfoot>
       <tr>
         <th></th> 
