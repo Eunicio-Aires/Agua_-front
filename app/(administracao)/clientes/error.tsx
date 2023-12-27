@@ -3,7 +3,7 @@
 export default function error(error:any){
     return(
         <>
-            erro verificado...
+            <p>{error.error.message}</p>
         </>
     )
 }

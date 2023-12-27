@@ -25,7 +25,7 @@ import { MdEdit } from "react-icons/md";
 
 async function getDataClientes(){
   await new Promise ((resolve)=> setTimeout(resolve,1000));
-  const res = await fetch(`https://agua-front.vercel.ap/api/todos `,{cache:"no-cache"})
+  const res = await fetch(`https://agua-front.vercel.app/api/todos `,{cache:"no-cache"})
 
   if(!res.ok){
     throw new Error('Failed to fetch data')
