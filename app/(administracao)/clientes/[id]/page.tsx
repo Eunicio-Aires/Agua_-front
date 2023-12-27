@@ -3,6 +3,7 @@
 import Link from "next/link"
 import React, { SyntheticEvent } from 'react';
 import {BsDatabase, BsPersonFill, BsThreeDotsVertical} from 'react-icons/bs'
+import { MdDone } from "react-icons/md";
 import {Registar} from '@/components/Registar'
 import Zona from "../page";
 import { TopCards } from '@/components/TopCards'
@@ -82,6 +83,7 @@ import OtherUsers from "@/components/outros";
     return (
       <div> 
           <h1 className="text-3xl font-medium text-center mt-3">{dados} {posts.clientId.apelido}</h1>
+          <p className="text-center">{posts.clientId.codigo}</p>
 
            
            {/* <div>My Post: {params.id}</div> */}
@@ -146,17 +148,17 @@ import OtherUsers from "@/components/outros";
     <tbody>
     {faturasNaoPagas.map((fatura:any)=>(
       <tr key={fatura._id }>
-        <th>1</th> 
-        <td>Cy Ganderton</td> 
-        <td>Quality Control Specialist</td> 
-        <td>Littel, Schaden and Vandervort</td> 
-        <td>Canada</td> 
-        <td>12/16/2020</td> 
+        <th className="bg-gradient-to-r from-red-500 to-orange-500">{fatura.estado}</th> 
+        <td>{fatura.mes}</td> 
+        <td>{fatura.consumo}</td> 
+        <td>{fatura.valor}</td>
+        <td>{fatura.leitura}</td> 
+        <td>{fatura.createdAt}</td> 
         <td>Blue</td>
       </tr>
       ))}
     </tbody> 
-    <tfoot>
+    {/* <tfoot>
       <tr>
         <th></th> 
         <th>Name</th> 
@@ -166,7 +168,7 @@ import OtherUsers from "@/components/outros";
         <th>Last Login</th> 
         <th>Favorite Color</th>
       </tr>
-    </tfoot>
+    </tfoot> */}
   </table>
 </div>
 
