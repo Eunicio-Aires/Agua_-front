@@ -3,7 +3,9 @@
 export default function error(error:any){
     return(
         <>
-            <p>{error.error.message}</p>
+
+        <p>Erro na ao efetuar a busca</p>
+            {/* <p>{error.error.message}</p> */}
         </>
     )
 }

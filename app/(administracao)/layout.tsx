@@ -87,7 +87,7 @@ export default function RootLayout({
                 </div>
                 
             </div>
-            <main className="min-h-scren  h-full w-full">
+            <main className="min-h-scren  h-full w-full p-5">
                 
                 {children}</main>
             </div>
