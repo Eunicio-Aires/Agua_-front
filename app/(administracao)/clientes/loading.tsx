@@ -1,7 +1,7 @@
 export default function loading(){
 
     return(
-        <span className="loanding"> 
+        <span className="loading"> 
 
         </span>
     )
