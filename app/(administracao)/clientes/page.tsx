@@ -8,7 +8,7 @@ import { MdEdit } from "react-icons/md";
 // import { Cliente }  from "@/components/Clientes";
 
 // import {BsDatabase, BsPersonFill, BsThreeDotsVertical} from 'react-icons/bs'
-// import {Registar} from '@/components/Registar'
+import { Registar } from '@/components/Registar'
 // import Zona from "../page";
 // import  TopCards  from '@/components/TopCards'
 // import OtherUsers from "@/components/outros";
@@ -92,9 +92,11 @@ export default async function Zona() {
               </div>
             </div>
           </div>
+
+          <Registar/>
                   {/* modal button */}
-          <label htmlFor="my_modal_7" className="btn">No Cliente</label>
-          <h1>Novo cliente</h1>
+          {/* <label htmlFor="my_modal_7" className="btn">No Cliente</label> */}
+          
 
 <div className="w-full col-span-1 relative lg:h-[70vh] h-[50vh] m-auto p-4 border rounded-lg bg-white overflow-scroll">
             

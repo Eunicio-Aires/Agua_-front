@@ -32,7 +32,9 @@ export default async  function Pagaments(){
           
             
             <div className=''>
-            
+             {/* @ts-ignore  */}
+             <Ultimom/>
+
            
 
              <div className="overflow-x-auto p-4">

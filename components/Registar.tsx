@@ -1,4 +1,4 @@
-
+"use client"
 
 import React, { SyntheticEvent } from 'react';
 import { useRouter } from 'next/navigation';
