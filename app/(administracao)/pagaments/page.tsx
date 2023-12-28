@@ -35,6 +35,9 @@ export default async  function Pagaments(){
              {/* @ts-ignore  */}
              <Ultimom/>
 
+             {/* @ts-ignore  */}
+             <Meses/>
+
            
 
              <div className="overflow-x-auto p-4">

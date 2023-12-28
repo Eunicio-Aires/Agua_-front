@@ -107,6 +107,26 @@ interface Zona {
       </label>
       <input className="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4" id="whatsupp" name="whatsupp" type="Number" placeholder="90210"/>
     </div>
+
+    <label className="form-control w-full max-w-xs">
+  <div className="label">
+    <span className="label-text">Pick the best fantasy franchise</span>
+    <span className="label-text-alt">Alt label</span>
+  </div>
+  <select className="select select-bordered">
+    <option disabled selected>Pick one</option> 
+    <option>Star Wars</option>
+    <option>Harry Potter</option>
+    <option>Lord of the Rings</option>
+    <option>Planet of the Apes</option>
+    <option>Star Trek</option>
+  </select>
+  <div className="label">
+    <span className="label-text-alt">Alt label</span>
+    <span className="label-text-alt">Alt label</span>
+  </div>
+</label>
+
   </div>
   <button className="btn btn-outline btn-accent mt-2" type="submit">Registar</button>
   </form>
