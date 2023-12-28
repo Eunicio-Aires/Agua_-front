@@ -69,6 +69,7 @@ import OtherUsers from "@/components/outros";
       const dadosm = await posts.clientId.faturas
       // const faturasNaPagas = await posts.clientI.faturas.filter((faturas: { faturas: string; }) => faturas.faturas === "Pago")
       const faturasNaoPagas = posts.clientId.faturas.filter((fatura: any) => fatura.estado !== "Pago");
+      const faturasPagas = posts.clientId.faturas.filter((fatura: any) => fatura.estado === "Pago").slice(-10);
      console.log(dadosm)
       // const posts = await fetch('https://.../posts').then((res) => res.json())
     // }
@@ -84,6 +85,7 @@ import OtherUsers from "@/components/outros";
       <div> 
           <h1 className="text-3xl font-medium text-center mt-3">{dados} {posts.clientId.apelido}</h1>
           <p className="text-center">{posts.clientId.codigo}</p>
+          <h1 className="text-red-800">{faturasNaoPagas.length}</h1>
 
            
            {/* <div>My Post: {params.id}</div> */}
@@ -137,11 +139,11 @@ import OtherUsers from "@/components/outros";
     <thead>
       <tr>
         <th></th> 
-        <th>Name</th> 
-        <th>Job</th> 
-        <th>company</th> 
-        <th>location</th> 
-        <th>Last Login</th> 
+        <th>Mes</th> 
+        <th>Consumo</th> 
+        <th>VaLor</th> 
+        <th>Leitura</th> 
+        <th>Data de L </th> 
         <th>Favorite Color</th>
       </tr>
     </thead>  
@@ -156,6 +158,17 @@ import OtherUsers from "@/components/outros";
         <td>{fatura.createdAt}</td> 
         <td>Blue</td>
       </tr>
+      ))}
+      {faturasPagas.map((faturas:any)=>(
+           <tr key={faturas._id }>
+           <th className="bg-gradient-to-r from-blue-600 to-violet-600">{faturas.estado}</th> 
+           <td>{faturas.mes}</td> 
+           <td>{faturas.consumo}</td> 
+           <td>{faturas.valor}</td>
+           <td>{faturas.leitura}</td> 
+           <td>{faturas.createdAt}</td> 
+           <td>Blue</td>
+         </tr>
       ))}
     </tbody> 
     {/* <tfoot>
