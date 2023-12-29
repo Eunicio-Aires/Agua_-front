@@ -30,8 +30,8 @@ export function Numero({_id}:Fatura){
           };
           const response = await fetch(endpoint, options);
         const result = await response.json();
-        console.log(result)
-        alert(` ${result}`);
+        console.log(result.response)
+        alert(` ${result.response}`);
        
           // router.refresh()
           // router.push(`pagamentos/${_id}`)
