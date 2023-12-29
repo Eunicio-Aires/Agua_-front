@@ -32,8 +32,7 @@ export default async  function Pagaments(){
           
             
             <div className=''>
-             {/* @ts-ignore  */}
-             <Ultimom/>
+             
 
             
 
