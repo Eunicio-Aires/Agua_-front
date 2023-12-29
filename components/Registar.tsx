@@ -10,6 +10,14 @@ interface Zona {
   _id:String;
   
 }
+async function getMeses(){
+  const res = await fetch(`https://agua-front.vercel.app/api/areas`,{cache:"no-cache"})
+  
+  if(!res.ok){
+    throw new Error('Failed to fetch data')
+  }
+  return res.json()
+}
 
   export   function  Registar() {
     const router = useRouter()

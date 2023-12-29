@@ -3,6 +3,8 @@
 import Link from "next/link"
 import React, { SyntheticEvent } from 'react';
 import {BsDatabase, BsPersonFill, BsThreeDotsVertical} from 'react-icons/bs'
+import { AiTwotoneEdit } from "react-icons/ai";
+import { GiPayMoney } from "react-icons/gi";
 import { MdDone } from "react-icons/md";
 import {Registar} from '@/components/Registar'
 import Zona from "../page";
@@ -156,7 +158,7 @@ import OtherUsers from "@/components/outros";
         <td>{fatura.valor}</td>
         <td>{fatura.leitura}</td> 
         <td>{fatura.createdAt}</td> 
-        <td>Blue</td>
+        <td><GiPayMoney/> <AiTwotoneEdit /></td>
       </tr>
       ))}
       {faturasPagas.map((faturas:any)=>(
