@@ -15,7 +15,7 @@ interface Fatura{
           event.preventDefault(); 
           setButtonDisabled(true);
 
-      const endpoint = `http://localhost:3000/api/pagarNum/${_id}`;
+      const endpoint = `https://agua-front.vercel.app/api/pagarNum/${_id}`;
       const options: RequestInit = {
               method: 'POST',
               headers: {

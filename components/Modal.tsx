@@ -17,7 +17,7 @@ export function Modal({_id, _idCl}:Fatura){
   
     {/* <p className="py-4">Confirme o valor antes de introduzir o pin</p> */}
     <p className="text-center text-xs mt-3">Se pretende parcelar a fatura aproxime ao fornecedor para negoceacao</p>
-    < Numero _id={_id}  />
+    < Numero _id={_id} />
     <div className="modal-action">
    
      <a href="#" className="">
