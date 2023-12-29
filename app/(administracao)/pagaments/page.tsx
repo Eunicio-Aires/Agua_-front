@@ -47,7 +47,7 @@ export default async  function Pagaments(){
     <td>Mes</td> 
     <td>Consumo</td> 
     <td>Valor</td> 
-    <td>F.Pagamento</td>
+    <td>F.Pagamentoo</td>
     <th></th> 
     </tr>
     </thead> 
