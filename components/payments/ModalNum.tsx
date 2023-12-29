@@ -29,7 +29,7 @@ export function ModalNum({_id}:Fatura){
             };
             const response = await fetch(endpoint, options);
           const result = await response.json();
-          
+          console.log(result)
           alert(` ${result}`);
          
           // revalidateTag
