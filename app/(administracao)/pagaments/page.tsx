@@ -40,7 +40,7 @@ export default async  function Pagaments(){
 
              <div className="overflow-x-auto p-4">
              <Chart/>
-    <table className="table table-xs table-pin-rows table-pin-cols">
+    {/* <table className="table table-xs table-pin-rows table-pin-cols">
     <thead>
     <tr>
     <th></th> 
@@ -66,7 +66,7 @@ export default async  function Pagaments(){
     
     </tbody> 
    
-    </table>
+    </table> */}
     
     
    </div>
