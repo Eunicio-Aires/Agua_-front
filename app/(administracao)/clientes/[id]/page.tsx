@@ -158,7 +158,7 @@ import OtherUsers from "@/components/outros";
         <td>{fatura.valor}</td>
         <td>{fatura.leitura}</td> 
         <td>{fatura.createdAt}</td> 
-        <td><GiPayMoney/> <AiTwotoneEdit /></td>
+        <td>pagar</td>
       </tr>
       ))}
       {faturasPagas.map((faturas:any)=>(
