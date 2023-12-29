@@ -23,7 +23,7 @@ async function getData(){
 
 export default async  function Pagaments(){
   const response = await getData();
-  const faturasPagas = await response.data.ultimo[0].faturas.filter((fatura: { estado: string; }) => fatura.estado === "Pago")
+  // const faturasPagas = await response.data.ultimo[0].faturas.filter((fatura: { estado: string; }) => fatura.estado === "Pago")
   
   
         
