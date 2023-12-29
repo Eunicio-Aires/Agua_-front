@@ -2,7 +2,10 @@
 //  import { useState } from "react" 
 import Link from "next/link"
 import React, { SyntheticEvent } from 'react';
+import { Movitel } from '@/components/pagamento/Movitel';
+import { Modal } from '@/components/Modal'
 import {BsDatabase, BsPersonFill, BsThreeDotsVertical} from 'react-icons/bs'
+import { ModalNum } from "@/components/payments/ModalNum";
 import { AiTwotoneEdit } from "react-icons/ai";
 import { GiPayMoney } from "react-icons/gi";
 import { MdDone } from "react-icons/md";
@@ -158,7 +161,9 @@ import OtherUsers from "@/components/outros";
         <td>{fatura.valor}</td>
         <td>{fatura.leitura}</td> 
         <td>{fatura.createdAt}</td> 
-        <td>pagar</td>
+        <td><Movitel /></td>
+        <td><Modal _id={fatura._id} _idCl={fatura._id}/></td>
+        <td><ModalNum _id={fatura._id} /></td>
       </tr>
       ))}
       {faturasPagas.map((faturas:any)=>(

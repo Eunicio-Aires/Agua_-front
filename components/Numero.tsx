@@ -20,7 +20,7 @@ export function Numero({_id}:Fatura){
             numero: (event.target as HTMLFormElement).numero.value,
           };
           const JSONdata = JSON.stringify(data);
-        const endpoint = `http://localhost:3000/api/pagarFatura/${_id}`;
+        const endpoint = `https://agua-front.vercel.app/api/pagarFatura/${_id}`;
         const options: RequestInit = {
             method: 'POST',
             headers: {
