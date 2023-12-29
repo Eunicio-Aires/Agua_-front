@@ -14,7 +14,7 @@ export async function POST(request:NextRequest,{params}:any) {
     //   body: JSON.stringify(body),
     });
     // const data = await response.json();
-    // console.log(ids);
+    // console.log(response);
     return NextResponse.json(response); 
   } catch (error) {
     return NextResponse.json({ error: 'An error occurred' }, { status: 500 });
