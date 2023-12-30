@@ -10,7 +10,8 @@ import { NextResponse } from 'next/server'
 
 // }
 export function GET(request: Request) {
-  return fetch('https://agua-p.vercel.app/adm/meses',{cache: "no-cache" })
+  return fetch('https://agua-p.vercel.app/adm/meses',{
+    cache: 'no-cache'})
     .then(res => res.json())
     .then(respo => {
       return new Response(JSON.stringify(respo), {
@@ -20,7 +21,7 @@ export function GET(request: Request) {
       });
     })
     .catch(error => {
-      console.error('Erro ao obter dados:', error);
+      console.error('Errro ao obter dados:', error);
       return new Response('Erro ao obter dados', { status: 500 });
     });
 }
