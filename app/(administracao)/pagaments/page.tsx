@@ -10,7 +10,7 @@ import { NextResponse } from 'next/server'
 
 async function getData(){
   // const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
-  const res = await fetch(`https://agua-front.vercel.app/api/faturar`,{cache:"no-cache"})
+  const res = await fetch(`https://agua-front.vercel.app/api/faturar`,{cache:"no-store"})
   // const res = await  Pagamentoss();
   // const response = await res.json() 
   
@@ -24,7 +24,7 @@ async function getData(){
 export default async  function Pagaments(){
   const response = await getData();
   const faturasPagas = await response.ultimo[0].faturas.filter((fatura: { estado: string; }) => fatura.estado === "Pago")
-  
+ 
   
         
         return(
