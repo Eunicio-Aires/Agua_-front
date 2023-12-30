@@ -23,7 +23,7 @@ export  function Mes(){
     const endpoint = 'https://agua-front.vercel.app/api/mes'
 
     const options: RequestInit = {
-      method: 'POST', 
+      method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },

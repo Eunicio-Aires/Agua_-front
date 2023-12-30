@@ -12,13 +12,7 @@ export function ModalNum({_id}:Fatura){
 
       const handleSubm = async (event: SyntheticEvent) => {
           event.preventDefault();
-          
-          
-  
-          // const data = {
-          //     numero: (event.target as HTMLFormElement).numero.value,
-          //   };
-          //   const JSONdata = JSON.stringify(data);
+        
           const endpoint = `https://agua-front.vercel.app/api/pagarNum/${_id}`;
           const options: RequestInit = {
               method: 'POST',
@@ -31,12 +25,7 @@ export function ModalNum({_id}:Fatura){
           const result = await response.json();
           console.log(result)
           alert(` ${result}`);
-         
-          // revalidateTag
-            // router.refresh()
-          //   router.push(`pagamentos/${_id}`)
-  
-      
+          
       };
      
    return(

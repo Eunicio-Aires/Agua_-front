@@ -23,7 +23,7 @@ async function getData(){
 
 export default async  function Pagaments(){
   const response = await getData();
-  // const faturasPagas = await response.data.ultimo[0].faturas.filter((fatura: { estado: string; }) => fatura.estado === "Pago")
+  const faturasPagas = await response.data.ultimo[0].faturas.filter((fatura: { estado: string; }) => fatura.estado === "Pago")
   
   
         
@@ -32,15 +32,10 @@ export default async  function Pagaments(){
           
             
             <div className=''>
-             
-
-            
-
-           
 
              <div className="overflow-x-auto p-4">
              <Chart/>
-    {/* <table className="table table-xs table-pin-rows table-pin-cols">
+    <table className="table table-xs table-pin-rows table-pin-cols">
     <thead>
     <tr>
     <th></th> 
@@ -66,7 +61,7 @@ export default async  function Pagaments(){
     
     </tbody> 
    
-    </table> */}
+    </table>
     
     
    </div>
