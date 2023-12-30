@@ -7,7 +7,7 @@ import Meses      from '@/components/payments/Meses'
 import Link from "next/link"
 // import  Pagamentoss  from "@/lib/pagamentos"
 import { NextResponse } from 'next/server'
-
+export const dynamic = 'force-dynamic';
 async function getData(){
   // const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
   const res = await fetch(`https://agua-front.vercel.app/api/faturar`,{cache:"no-store"})
