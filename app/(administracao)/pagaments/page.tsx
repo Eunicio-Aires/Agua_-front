@@ -11,22 +11,21 @@ import { NextResponse } from 'next/server'
 
 
 
-export const dynamic = 'force-dynamic';
-async function getData(){
-  // const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
-  const res = await fetch(`https://agua-front.vercel.app/api/faturar`)
-  // const res = await  Pagamentoss();
-  // const response = await res.json() 
+
+// async function getData(){
   
-  if(!res.ok){
-    throw new Error('Failed to fetch data')
-  }
-  return res.json()
-} 
+//   const res = await fetch(`https://agua-front.vercel.app/api/faturar`)
+   
+  
+//   if(!res.ok){
+//     throw new Error('Failed to fetch data')
+//   }
+//   return res.json()
+// } 
 
 
 export default async  function Pagaments(){
-  const response = await getData();
+  const response = await  fetch(`https://agua-front.vercel.app/api/faturar`,{cache:"no-cache"}).then((res) => res.json())
   const faturasPagas = await response.ultimo[0].faturas.filter((fatura: { estado: string; }) => fatura.estado === "Pago")
  
   
