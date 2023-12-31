@@ -9,12 +9,24 @@ import Link from "next/link"
 import { NextResponse } from 'next/server'
 
 
+// const url = 'https://agua-front.vercel.app/api/faturar';
 
+
+// const fetchData = async ()=>{
+//   await new Promise((resolve)=>setTimeout(resolve,1000));
+//   const response = await fetch(url)
+
+//   if(!response.ok){
+//     throw new Error('Falid to  fetch ')
+//   }
+//   const data = await response.json()
+//   return data;
+// }
 
 
 async function getData(){
   
-  const res = await fetch(`https://agua-front.vercel.app/api/faturar`,{cache:"no-cache"})
+  const res = await fetch(`https://agua-p.vercel.app/adm/meses`,{cache:"no-cache"})
    
   
   if(!res.ok){
