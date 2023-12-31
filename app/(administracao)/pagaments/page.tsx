@@ -24,21 +24,21 @@ import { NextResponse } from 'next/server'
 // }
 
 
-async function getData(){
+// async function getData(){
   
-  const res = await fetch(`https://agua-p.vercel.app/adm/meses`,{cache:"no-cache"})
+//   const res = await fetch(`https://agua-p.vercel.app/adm/meses`,{cache:"no-cache"})
    
   
-  if(!res.ok){
-    throw new Error('Failed to fetch data')
-  }
-  return res.json()
-} 
+//   if(!res.ok){
+//     throw new Error('Failed to fetch data')
+//   }
+//   return res.json()
+// } 
 
 
-export default async  function Pagaments(){
-  const response = await  getData()
-  const faturasPagas = await response.ultimo[0].faturas.filter((fatura: { estado: string; }) => fatura.estado === "Pago")
+export default   function Pagaments(){
+  // const response = await  getData()
+  // const faturasPagas = await response.ultimo[0].faturas.filter((fatura: { estado: string; }) => fatura.estado === "Pago")
  
   
         
@@ -47,8 +47,9 @@ export default async  function Pagaments(){
           
             
             <div className=''>
-
-             <div className="overflow-x-auto p-4">
+              {/* @ts-ignore  */}
+              <Pagamentos/>
+             {/* <div className="overflow-x-auto p-4">
              <Chart/>
     <table className="table table-xs table-pin-rows table-pin-cols">
     <thead>
@@ -79,7 +80,7 @@ export default async  function Pagaments(){
     </table>
     
     
-   </div>
+   </div> */}
    
             </div>
           

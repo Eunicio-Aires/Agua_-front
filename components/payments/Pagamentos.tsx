@@ -5,7 +5,7 @@ import Pagament from "@/lib/pagamentos";
 
 async function getData(){
   // const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
-  const res = await fetch(`https://agua-front.vercel.app/api/areas`,{cache:"no-cache"})
+  const res = await fetch(`https://agua-p.vercel.app/adm/meses`,{cache:"no-cache"})
 
   if(!res.ok){
     throw new Error('Failed to fetch data')
