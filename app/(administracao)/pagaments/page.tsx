@@ -77,8 +77,8 @@ export default async  function Pagaments(){
               {/* <Pagamentos/> */}
               {/* @ts-ignore  */}
               < Ultimom/> 
-             {/* <div className="overflow-x-auto p-4">
-             <Chart/>
+             <div className="overflow-x-auto p-4">
+             
                     <table className="table table-xs table-pin-rows table-pin-cols">
                     <thead>
                     <tr>
@@ -108,7 +108,7 @@ export default async  function Pagaments(){
                     </table>
     
     
-   </div> */}
+   </div>
 
 
 
