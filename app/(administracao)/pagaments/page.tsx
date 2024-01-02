@@ -111,6 +111,9 @@ export default async  function Pagaments(){
 
         </div>
 
+
+        <Chart/>
+
    
 
 
