@@ -3,20 +3,20 @@
 //   // Render data...
 // }
 
-// async function getData(){
-//   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
-//   const res = await fetch(`https://agua-p.vercel.app/adm/meses`,{cache:"no-cache"})
+async function getData(){
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  const res = await fetch(`https://agua-p.vercel.app/adm/meses`,{cache:"no-cache"})
 
-//   if(!res.ok){
-//     throw new Error('Failed to fetch data')
-//   }
-//   return res.json()
-// }
+  if(!res.ok){
+    throw new Error('Failed to fetch data')
+  }
+  return res.json()
+}
  
 
 
 export  async   function  Ultimom(){
-  // const data = await  getData()
+  const data = await  getData()
   // const response = await  data;
   //   const ultimom =   response.data.ultimo[0].faturas.length;
   //   const faturasNaoPagas = response.data.ultimo[0].faturas.filter((fatura: { estado: string; }) => fatura.estado === "Nao pago");
