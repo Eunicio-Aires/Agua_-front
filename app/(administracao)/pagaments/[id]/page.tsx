@@ -13,11 +13,11 @@
 export default async function UnicoMes({ params }: { params: { id: string } }){
     const id = params.id
     const res = await fetch(`https://agua-p.vercel.app/adm/mesunic/${id}`,{cache:"no-cache"}).then((res) => res.json())
-    
+    console.log(res)
 
     return(
         <>
-            <p>My Post: {res.mes.id}</p>
+            <p>My Post: {res.mes.mes}</p>
         </>
     )
 }
