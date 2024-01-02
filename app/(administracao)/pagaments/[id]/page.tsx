@@ -20,10 +20,10 @@ export default async function UnicoMes({ params }: { params: { id: string } }){
     console.log(res)
 
     return(
-        <>
-            {/* <p>My Post: {valorTotal}</p> */}
-
-            <div id="main-content" className="h-full w-max  bg-gray-50 relative overflow-y-auto lg:ml-64">
+        
+            
+        <div>
+            <div  className="h-full w-max  bg-gray-50 relative overflow-y-auto lg:ml-64">
          <main>
             <div className="pt-6 px-4">
                <div className="w-max grid grid-cols-1 xl:grid-cols-2 2xl:grid-cols-3 gap-4">
@@ -407,6 +407,7 @@ export default async function UnicoMes({ params }: { params: { id: string } }){
             </div>
          </main>
         </div>
-        </>
+        </div>
+        
     )
 }
