@@ -50,36 +50,36 @@ export default   function Pagaments(){
               {/* @ts-ignore  */}
               {/* <Pagamentos/> */}
               {/* @ts-ignore  */}
-              {/* < Ultimom/>  */}
+              < Ultimom/> 
              {/* <div className="overflow-x-auto p-4">
              <Chart/>
-    <table className="table table-xs table-pin-rows table-pin-cols">
-    <thead>
-    <tr>
-    <th></th> 
-    <td>Mes</td> 
-    <td>Consumo</td> 
-    <td>Valor</td> 
-    <td>F.Pagamentoo</td>
-    <th></th> 
-    </tr>
-    </thead> 
-    <tbody>
-    {faturasPagas.map((mes:any)=>(
-    <tr key={mes._id}>
-    <th></th> 
-    <td>{mes.mes}</td>
-    <td>{mes.consumo}</td> 
-    <td>{mes.valor}</td> 
-    
-    <td>{mes.formaDePagamento}</td> 
-    
-    </tr>
-    ))}
-    
-    </tbody> 
-   
-    </table>
+                    <table className="table table-xs table-pin-rows table-pin-cols">
+                    <thead>
+                    <tr>
+                    <th></th> 
+                    <td>Mes</td> 
+                    <td>Consumo</td> 
+                    <td>Valor</td> 
+                    <td>F.Pagamentoo</td>
+                    <th></th> 
+                    </tr>
+                    </thead> 
+                    <tbody>
+                    {faturasPagas.map((mes:any)=>(
+                    <tr key={mes._id}>
+                    <th></th> 
+                    <td>{mes.mes}</td>
+                    <td>{mes.consumo}</td> 
+                    <td>{mes.valor}</td> 
+                    
+                    <td>{mes.formaDePagamento}</td> 
+                    
+                    </tr>
+                    ))}
+                    
+                    </tbody> 
+                  
+                    </table>
     
     
    </div> */}
