@@ -3,28 +3,28 @@ import Link from "next/link"
 
 
 
-// async function getData(){
-//   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
-//   const res = await fetch(`https://agua-front.vercel.app/api/faturar`,{cache:"no-cache"})
+async function getData(){
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  const res = await fetch(`https://agua-front.vercel.app/api/faturar`,{cache:"no-cache"})
 
-//   if(!res.ok){
-//     throw new Error('Failed to fetch data')
-//   }
-//   return res.json()
-// }
+  if(!res.ok){
+    throw new Error('Failed to fetch data')
+  }
+  return res.json()
+}
 
 export default async  function Meses(){
-  const res = await fetch(`https://agua-front.vercel.app/api/faturar`,{cache:"no-cache"})
+
   
-    const data = await res.json();
     
-    const meses = await data.data.mesesl;
+    
+    // const meses = await data.data.mesesl;
     // console.log(meses)
     return(
       
 
 <section className="text-gray-600 body-font">
-<div className="container px-5 py-24 mx-auto max-w-7x1">
+{/* <div className="container px-5 py-24 mx-auto max-w-7x1">
   <div className="flex flex-wrap w-full mb-4 p-4">
     <div className="w-full mb-6 lg:mb-0">
       <h1 className="sm:text-4xl text-5xl font-medium title-font mb-2 text-gray-900">Detalhes</h1>
@@ -60,7 +60,7 @@ export default async  function Meses(){
     
     
   </div>
-  </div>
+  </div> */}
 
 </section>
  

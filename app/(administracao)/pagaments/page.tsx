@@ -24,22 +24,20 @@ import { NextResponse } from 'next/server'
 // }
 
 
-// async function getData(){
+async function getData(){
   
-//   const res = await fetch(`https://agua-p.vercel.app/adm/meses`,{cache:"no-cache"}).then((res) => res.json())
+  const res = await fetch(`https://agua-p.vercel.app/adm/meses`,{cache:"no-cache"})
    
   
-//   if(!res.ok){
-//     throw new Error('Failed to fetch data')
-//   }
-//   return {
-//     props: { res }
-//   };
-// } 
+  if(!res.ok){
+    throw new Error('Failed to fetch data')
+  }
+  return res.json()
+} 
 
 
 export default async  function Pagaments(){
-  // const response = await  getData()
+  const response = await  getData()
   // const faturasPagas = await response.ultimo[0].faturas.filter((fatura: { estado: string; }) => fatura.estado === "Pago")
  
   
