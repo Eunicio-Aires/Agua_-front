@@ -18,17 +18,17 @@ async function getData(){
 export  async   function  Ultimom(){
   const data = await  getData()
   const response = await  data;
-    const ultimom =   response.data.ultimo[0].faturas.length;
-    const faturasNaoPagas = response.data.ultimo[0].faturas.filter((fatura: { estado: string; }) => fatura.estado === "Nao pago");
-    const faturasPagas = response.data.ultimo[0].faturas.filter((fatura: { estado: string; }) => fatura.estado === "Pago");
+    const ultimom =   response.ultimo[0].faturas.length;
+    const faturasNaoPagas = response.ultimo[0].faturas.filter((fatura: { estado: string; }) => fatura.estado === "Nao pago");
+    const faturasPagas = response.ultimo[0].faturas.filter((fatura: { estado: string; }) => fatura.estado === "Pago");
     const totalValorFaturasNaoPagas = faturasNaoPagas.reduce((total: any, fatura: { valor: any; }) => total + fatura.valor, 0);
     const numeroDeFaturasNaoPagas = faturasNaoPagas.length;
     const numeroDeFaturasPagas = faturasPagas.length
-    const totalValorTodasFaturas = response.data.ultimo.reduce((total: any, mes: { faturas: any[]; }) => {
+    const totalValorTodasFaturas = response.ultimo.reduce((total: any, mes: { faturas: any[]; }) => {
         const valorFaturasMes = mes.faturas.reduce((subtotal, fatura) => subtotal + fatura.valor, 0);
         return total + valorFaturasMes;
     }, 0);
-    const totalValorFaturasPagas = response.data.ultimo.reduce((total: any, mes: { faturas: any[]; }) => {
+    const totalValorFaturasPagas = response.ultimo.reduce((total: any, mes: { faturas: any[]; }) => {
         const valorFaturasMes = mes.faturas
             .filter(fatura => fatura.estado === "Pago")
             .reduce((subtotal, fatura) => subtotal + fatura.valor, 0);
@@ -40,7 +40,7 @@ export  async   function  Ultimom(){
     return( 
         <div>
          
-            <h1>{response.data.ultimo[0].mes}</h1>
+            {/* <h1>{response.ultimo[0].mes}</h1> */}
         <div className=" grid lg:grid-cols-5 gap-4 p-4">  
         
         <div className="lg:col-span-2 col-span-1 bg-white flex justify-between w-full border p-4 rounded-lg">
