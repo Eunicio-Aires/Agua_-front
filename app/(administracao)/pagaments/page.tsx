@@ -8,6 +8,18 @@ import Link from "next/link"
 // import  Pagamentoss  from "@/lib/pagamentos"
 import { NextResponse } from 'next/server'
 
+interface Fatura {
+  _id: string;
+  mes: string;
+  leitura: number;
+  estado: string;
+  createdAt: string;
+  updatedAt: string;
+  __v: number;
+  formaDePagamento?: string; // Pode ser opcional se nem sempre estiver presente
+  consumo?: number; // Adicione outras propriedades se necessário
+  valor?: number;
+}
 
 // const url = 'https://agua-front.vercel.app/api/faturar';
 
@@ -102,7 +114,7 @@ export default async  function Pagaments(){
     </div>
   </div>
   <div className="flex flex-wrap -m-4">
-  {meses.map((mes:any)=>(
+  {meses.map((mes:Fatura)=>(
      
     <div key={mes._id} className="xl:w-1/3 md:w-1/2 p-4 border-8 rounded-xl"> 
     
