@@ -21,7 +21,7 @@ export default async function UnicoMes({ params }: { params: { id: string } }){
 
     return(
         <>
-            <p>My Post: {valorTotal}</p>
+            {/* <p>My Post: {valorTotal}</p> */}
 
             <div id="main-content" className="h-full w-full bg-gray-50 relative overflow-y-auto lg:ml-64">
          <main>
