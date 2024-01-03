@@ -371,7 +371,7 @@ export default async function UnicoMes({ params }: { params: { id: string } }){
                      </div>
                   </div>
                   <div className="bg-white shadow rounded-lg p-4 sm:p-6 xl:p-8 ">
-                     <h3 className="text-xl leading-none font-bold text-gray-900 mb-10">Acquisition Overview</h3>
+                     <h3 className="text-xl leading-none font-bold text-gray-900 mb-10">Formas de Pagamento</h3>
                      <div className="block w-full overflow-x-auto">
                         <table className="items-center w-full bg-transparent border-collapse">
                            <thead>
@@ -416,10 +416,11 @@ export default async function UnicoMes({ params }: { params: { id: string } }){
                               </tr>
                               <tr className="text-gray-500">
                                  <th className="border-t-0 px-4 align-middle text-sm font-normal whitespace-nowrap p-4 text-left">Emola</th>
-                                 <td className="border-t-0 px-4 align-middle text-xs font-medium text-gray-900 whitespace-nowrap p-4">3,105</td>
+                                 <td className="border-t-0 px-4 align-middle text-xs font-medium text-gray-900 whitespace-nowrap p-4">0</td>
+                                 <td className="border-t-0 px-4 align-middle text-xs font-medium text-gray-900 whitespace-nowrap p-4">0</td>
                                  <td className="border-t-0 px-4 align-middle text-xs whitespace-nowrap p-4">
                                     <div className="flex items-center">
-                                       <span className="mr-2 text-xs font-medium">18%</span>
+                                       <span className="mr-2 text-xs font-medium">0%</span>
                                        <div className="relative w-full">
                                           <div className="w-full bg-gray-200 rounded-sm h-2">
                                              {/* <div className="bg-teal-400 h-2 rounded-sm" style="width: 18%"></div> */}

@@ -13,7 +13,7 @@ export function ModalNum({_id}:Fatura){
       const handleSubm = async (event: SyntheticEvent) => {
           event.preventDefault();
         
-          const endpoint = `https://agua-front.vercel.app/api/pagarNum/${_id}`;
+          const endpoint = `https://agua-p.vercel.app/adm/pagarNume/${_id}`;
           const options: RequestInit = {
               method: 'POST',
               headers: {
@@ -23,7 +23,7 @@ export function ModalNum({_id}:Fatura){
             };
             const response = await fetch(endpoint, options);
           const result = await response.json();
-          console.log(result)
+          // console.log(result)
           alert(` ${result}`);
           
       };
