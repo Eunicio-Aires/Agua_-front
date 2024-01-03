@@ -23,7 +23,7 @@ export default async function UnicoMes({ params }: { params: { id: string } }){
     return(
         
             
-        <div>
+        
             <div  className="h-full w-max  bg-gray-50 overflow-y-auto lg:ml-64">
          <main>
             <div className="pt-6 px-4">
@@ -408,7 +408,7 @@ export default async function UnicoMes({ params }: { params: { id: string } }){
             </div>
          </main>
         </div>
-        </div>
+        
         
     )
 }
