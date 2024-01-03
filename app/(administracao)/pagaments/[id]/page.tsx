@@ -45,14 +45,14 @@ export default async function UnicoMes({ params }: { params: { id: string } }){
     const valorTotal = await  res.mes.faturas.reduce((soma:any, fatura:any) => soma + (fatura.valor || 0), 0)
 
     const faturasPagas: Fatura[] = await res.mes.faturas.filter((fatura: Fatura) => fatura.estado === "Pago");
-    const NfaturasPagas: Fatura[] = await res.mes.faturas.filter((fatura: Fatura) => fatura.estado === "Pago").length
+    const nfaturasPagas: number = await res.mes.faturas.filter((fatura: Fatura) => fatura.estado === "Pago").length
     const percentagemFaturasPagas: number = await (faturasPagas.length / numFatu) * 100;
 
     // Calcular a soma dos valores das faturas pagas
     const somaValoresFaturasPagas: number = await faturasPagas.reduce((soma, fatura) => soma + (fatura.valor || 0), 0);
 
     const faturasNaoPagas: Fatura[] = await res.mes.faturas.filter((fatura: Fatura) => fatura.estado === "Nao pago");
-    const nfaturasNaoPagas: Fatura[] = await res.mes.faturas.filter((fatura: Fatura) => fatura.estado === "Nao pago").length;
+    const nfaturasNaoPagas: number = await res.mes.faturas.filter((fatura: Fatura) => fatura.estado === "Nao pago").length;
     const percentagemNaoFaturasPagas: number = await (faturasNaoPagas.length / numFatu) * 100;
     
 
@@ -93,7 +93,7 @@ export default async function UnicoMes({ params }: { params: { id: string } }){
                            <span className="text-2xl sm:text-3xl leading-none font-bold text-gray-900">{somaValoresFaturasPagas}</span>
                            <h3 className="text-base font-normal text-gray-500">Valor total Pago</h3>
                         </div>
-                        <p className="ml-2 text-xs">{ NfaturasPagas }</p>
+                        <p className="ml-2 text-xs">{nfaturasPagas}</p>
                         <div className="ml-5 w-0 flex items-center justify-end flex-1 text-green-500 text-base font-bold">
                            {percentagemNaoFaturasPagas}%
                            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
