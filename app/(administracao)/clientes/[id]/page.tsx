@@ -174,7 +174,7 @@ import OtherUsers from "@/components/outros";
            <td>{faturas.valor}</td>
            <td>{faturas.leitura}</td> 
            <td>{faturas.createdAt}</td> 
-           <td>pagar</td>
+           <td>{faturas.formaDePagamento}</td>
          </tr>
       ))}
     </tbody> 
