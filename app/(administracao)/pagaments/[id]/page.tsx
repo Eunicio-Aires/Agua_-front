@@ -66,6 +66,12 @@ export default async function UnicoMes({ params }: { params: { id: string } }){
    const numeroFaturasNumerario: number = await faturasNumerario.length;
    const somaValoresFaturasNumerario: number = await faturasNumerario.reduce((soma, fatura) => soma + (fatura.valor || 0), 0);
    const percentagemFaturasNumerario: number = await (faturasNumerario.length / todasFaturas.length) * 100;
+
+
+   const faturasMpesa: Fatura[] = await todasFaturas.filter((fatura: Fatura) => fatura.formaDePagamento === "M-pesa");
+   const numeroFaturasMpesa: number = await faturasMpesa.length;
+   const somaValoresFaturasMpesa: number = await faturasMpesa.reduce((soma, fatura) => soma + (fatura.valor || 0), 0);
+   const percentagemFaturasMpesa: number = await (faturasMpesa.length / todasFaturas.length) * 100;
    
 
     
@@ -384,7 +390,7 @@ export default async function UnicoMes({ params }: { params: { id: string } }){
                                  <td className="border-t-0 px-4 align-middle text-xs font-medium text-gray-900 whitespace-nowrap p-4">{somaValoresFaturasNumerario}</td>
                                  <td className="border-t-0 px-4 align-middle text-xs whitespace-nowrap p-4">
                                     <div className="flex items-center">
-                                       <span className="mr-2 text-xs font-medium">30%</span>
+                                       <span className="mr-2 text-xs font-medium">{percentagemFaturasNumerario}%</span>
                                        <div className="relative w-full">
                                           <div className="w-full bg-gray-200 rounded-sm h-2">
                                              {/* <div className="bg-cyan-600 h-2 rounded-sm" style="width: 30%"></div> */}
@@ -394,11 +400,12 @@ export default async function UnicoMes({ params }: { params: { id: string } }){
                                  </td>
                               </tr>
                               <tr className="text-gray-500">
-                                 <th className="border-t-0 px-4 align-middle text-sm font-normal whitespace-nowrap p-4 text-left">Numerario</th>
-                                 <td className="border-t-0 px-4 align-middle text-xs font-medium text-gray-900 whitespace-nowrap p-4">{somaValoresFaturasNumerario}</td>
+                                 <th className="border-t-0 px-4 align-middle text-sm font-normal whitespace-nowrap p-4 text-left">M-pesa</th>
+                                 <td className="border-t-0 px-4 align-middle text-xs font-medium text-gray-900 whitespace-nowrap p-4">{numeroFaturasMpesa}</td>
+                                 <td className="border-t-0 px-4 align-middle text-xs font-medium text-gray-900 whitespace-nowrap p-4">{somaValoresFaturasMpesa}</td>
                                  <td className="border-t-0 px-4 align-middle text-xs whitespace-nowrap p-4">
                                     <div className="flex items-center">
-                                       <span className="mr-2 text-xs font-medium">{percentagemFaturasNumerario}%</span>
+                                       <span className="mr-2 text-xs font-medium">{percentagemFaturasMpesa}%</span>
                                        <div className="relative w-full">
                                           <div className="w-full bg-gray-200 rounded-sm h-2">
                                              {/* <div class="bg-orange-300 h-2 rounded-sm" style="width: 24%"></div> */}
