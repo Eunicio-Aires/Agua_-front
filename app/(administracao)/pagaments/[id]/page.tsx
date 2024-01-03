@@ -13,9 +13,7 @@
 export default async function UnicoMes({ params }: { params: { id: string } }){
     const id = params.id
     const res = await fetch(`https://agua-p.vercel.app/adm/mesunic/${id}`,{cache:"no-cache"}).then((res) => res.json())
-    if(!res.ok){
-      throw new Error('Failed to fetch data')
-    }
+   
     const numFatu = await res.mes.faturas.length;
     const faturass = await res.mes.faturas;
     const valorTotal = await  res.mes.faturas.reduce((soma:any, fatura:any) => soma + (fatura.valor || 0), 0)
