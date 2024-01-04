@@ -69,7 +69,7 @@ import OtherUsers from "@/components/outros";
     // }
 
     export default async function ClienteId({ params }: { params: { id: string } }){
-      const posts = await fetch(`https://agua-front.vercel.app/api/clienteId/${params.id}`).then((res) => res.json())
+      const posts = await fetch(`https://agua-front.vercel.app/api/clienteId/${params.id}`,{ cache: 'no-store'}).then((res) => res.json())
       const dados = await posts.clientId.nome
       const dadosm = await posts.clientId.faturas
       // const faturasNaPagas = await posts.clientI.faturas.filter((faturas: { faturas: string; }) => faturas.faturas === "Pago")
