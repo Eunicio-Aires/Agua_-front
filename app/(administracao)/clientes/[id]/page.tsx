@@ -73,7 +73,7 @@ import OtherUsers from "@/components/outros";
       const dados = await posts.clientId.nome
       const dadosm = await posts.clientId.faturas
       // const faturasNaPagas = await posts.clientI.faturas.filter((faturas: { faturas: string; }) => faturas.faturas === "Pago")
-      const faturasNaoPagas = posts.clientId.faturas.filter((fatura: any) => fatura.estado !== "Pago");
+      const faturasNaoPagas = posts.clientId.faturas.filter((fatura: any) => fatura.estado === "Nao pago");
       const faturasPagas = posts.clientId.faturas.filter((fatura: any) => fatura.estado === "Pago").slice(-10);
      console.log(dadosm)
       // const posts = await fetch('https://.../posts').then((res) => res.json())
