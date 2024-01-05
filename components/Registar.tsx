@@ -38,7 +38,7 @@ interface Zona {
     };
 
     const JSONdata = JSON.stringify(data);
-    const endpoint = `http://localhost:3000/api/registar/${id}`;
+    const endpoint = `https://agua-p.vercel.app/adm/cliente/${id}`;
 
     const options: RequestInit = {
       method: 'POST',
