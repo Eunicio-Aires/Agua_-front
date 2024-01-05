@@ -10,16 +10,16 @@ interface Zona {
   _id:String;
   
 }
-async function getMeses(){
-  const res = await fetch(`https://agua-front.vercel.app/api/areas`,{cache:"no-cache"})
+// async function getMeses(){
+//   const res = await fetch(`https://agua-front.vercel.app/api/areas`,{cache:"no-cache"})
   
-  if(!res.ok){
-    throw new Error('Failed to fetch data')
-  }
-  return res.json()
-}
+//   if(!res.ok){
+//     throw new Error('Failed to fetch data')
+//   }
+//   return res.json()
+// }
 
-  export   function  Registar() {
+  export   function  Registar({id}:any) {
     const router = useRouter()
     const [isButtonDisabled, setButtonDisabled] = useState(false);
   const handleSubmi = async (event: SyntheticEvent) => {
@@ -38,7 +38,7 @@ async function getMeses(){
     };
 
     const JSONdata = JSON.stringify(data);
-    const endpoint = `http://localhost:3000/api/registar/`;
+    const endpoint = `http://localhost:3000/api/registar/${id}`;
 
     const options: RequestInit = {
       method: 'POST',
