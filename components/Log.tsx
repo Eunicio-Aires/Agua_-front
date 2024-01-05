@@ -17,7 +17,7 @@ export  function Log() {
     
       };
       const JSONdata = JSON.stringify(data);
-      const endpoint = `https://agua-front.vercel.app/pagamentos/login`;
+      const endpoint = `https://agua-p.vercel.app/pagamentos/login`;
       const options: RequestInit = {
         method: 'POST',
         headers: {
