@@ -23,7 +23,7 @@ export function GET(request: Request) {
       });
     })
     .catch(error => {
-      console.error('Erro ao obter dados:', error);
+      // console.error('Erro ao obter dados:', error);
 
       // Retornar uma resposta de erro ou fazer outra coisa
       return new Response('Erro ao obter dados', { status: 500 });
