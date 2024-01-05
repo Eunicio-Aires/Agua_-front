@@ -5,7 +5,8 @@ export default async function NCliente(){
         <div>
             {zonas.allAreas.map((zona:any)=>(
             <div  key={zona._id } >
-                contalksd
+                <p>{zona._id}</p>
+                <p>{zona.zona}</p>
             </div>
 
           ))}
