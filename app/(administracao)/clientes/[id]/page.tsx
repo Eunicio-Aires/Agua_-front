@@ -75,7 +75,7 @@ import OtherUsers from "@/components/outros";
       // const faturasNaPagas = await posts.clientI.faturas.filter((faturas: { faturas: string; }) => faturas.faturas === "Pago")
       const faturasNaoPagas = posts.clientId.faturas.filter((fatura: any) => fatura.estado === "Nao pago");
       const faturasPagas = posts.clientId.faturas.filter((fatura: any) => fatura.estado === "Pago").slice(-10);
-     console.log(dadosm)
+     
       // const posts = await fetch('https://.../posts').then((res) => res.json())
     // }
     //  const id = await params.zona
@@ -149,7 +149,7 @@ import OtherUsers from "@/components/outros";
         <th>VaLor</th> 
         <th>Leitura</th> 
         <th>Data de L </th> 
-        <th>Favorite Color</th>
+        <th>Forma de Pagamento</th>
       </tr>
     </thead>  
     <tbody>
