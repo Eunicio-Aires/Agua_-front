@@ -1,13 +1,13 @@
 
 import { NextRequest, NextResponse } from 'next/server'
  
-export async function POST(request:NextRequest,{params}:any) {
-  const ids = await params.id;
-  const idc = await ids[0];
+export async function POST(request:NextRequest,{ params }: { params: { id: string } }) {
+  // const ids = await params.id;
+  // const idc = await ids[0];
   
   const body = await request.json();
   try {
-    const response = await fetch(`https://agua-p.vercel.app/adm/cliente/${idc}`,{
+    const response = await fetch(`https://agua-p.vercel.app/adm/cliente/${params.id}`,{
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
