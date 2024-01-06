@@ -34,7 +34,7 @@ export  function Procurarc(props:Mes){
         }
         const JSONdata = JSON.stringify(data)
      
-        const endpoint = 'https://localhost:3000/api/procurar'
+        const endpoint = 'https://agua-front.vercel.app/api/procurar'
  
         const options = {
          
