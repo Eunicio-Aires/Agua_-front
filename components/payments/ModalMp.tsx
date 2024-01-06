@@ -16,7 +16,7 @@ export function ModalMp({_id}:Fatura){
   <h3 className="font-bold text-lg text-red-600">M-pesa</h3>
   
     {/* <p className="py-4">Confirme o valor antes de introduzir o pin</p> */}
-    <p className="text-center text-xs mt-3">Se pretende parcelar a fatura aproxime ao fornecedor para negoceacao</p>
+    <p className="text-center text-xs mt-3">Se pretende parcelar fatura aproxime ao fornecedor para negoceacao</p>
     < Numero _id={_id}  />
     <div className="modal-action">
    
