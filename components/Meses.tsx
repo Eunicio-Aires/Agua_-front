@@ -13,7 +13,7 @@ interface Mes{
 }
 
 export async function Meses(mes:Mes){
-    const response = await fetch('http://localhost:3000/api/faturar',{cache:"no-cache"}).then((res) => res.json());
+    const response = await fetch('https://agua-p.vercel.app/adm/meses',{cache:"no-cache"}).then((res) => res.json());
     
   
 return(
