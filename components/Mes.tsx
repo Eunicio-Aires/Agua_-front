@@ -72,18 +72,18 @@ export  function Mes(){
         <label htmlFor="mes"></label>
         <select name="mes" id="mes" className="select select-success w-full max-w-xs">
   <option disabled selected>Seleciona o mes</option>
-  <option>Janeiro</option>
-  <option>Fevereiro</option>
-  <option>Março</option>
-  <option>Abril</option>
-  <option>Maio</option>
-  <option>Junho</option>
-  <option>Julho</option>
-  <option>Agosto</option>
-  <option>Setembro</option>
-  <option>Outubro</option>
-  <option>Novembro</option>
-  <option>Dezembro</option>
+          <option>Janeiro</option>
+          <option>Fevereiro</option>
+          <option>Março</option>
+          <option>Abril</option>
+          <option>Maio</option>
+          <option>Junho</option>
+          <option>Julho</option>
+          <option>Agosto</option>
+          <option>Setembro</option>
+          <option>Outubro</option>
+          <option>Novembro</option>
+          <option>Dezembro</option>
 </select>
         {/* <label htmlFor="mes">MEs</label>
         <input type="text" id="mes" name="mes" required /> */}
