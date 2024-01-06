@@ -23,7 +23,7 @@ export default async function Page({ params }:{ params:{faturacao:Mes}}) {
     return (
        <div className="container mx-auto px-4 py-14 sm:px-6 xl:px-12">
             <h1 className="text-center text-3xl font-bold tracking-normal sm:text-4xl lg:text-4xl mt-3">{posts.mes.mes}</h1> 
-            <h2>{posts.mes._id}</h2> 
+            
         <Procurarc _id={mes}/>
 
            

@@ -19,7 +19,7 @@ export async function Meses(mes:Mes){
 return(
 
 <section className="text-gray-600 body-font">
-  <div className="container px-5 py-24 mx-auto max-w-7x1">
+  {/* <div className="container px-5 py-24 mx-auto max-w-7x1">
     <div className="flex flex-wrap w-full mb-4 p-4">
       <div className="w-full mb-6 lg:mb-0">
         <h1 className="sm:text-4xl text-5xl font-medium title-font mb-2 text-gray-900">News</h1>
@@ -30,7 +30,7 @@ return(
     {response.mesesl.map((mes:any)=>(
       <div key= {mes._id} className="xl:w-1/3 md:w-1/2 p-4 border-8">
         <div className="bg-white p-6 rounded-lg">
-          {/* <img className="lg:h-60 xl:h-56 md:h-64 sm:h-72 xs:h-72 h-72  rounded w-full object-cover object-center mb-6" src="https://kuyou.id/content/images/ctc_2020021605150668915.jpg" alt="Image Size 720x400"> */}
+         
           
           <h1 className="text-lg text-gray-900 font-medium title-font mb-4">{mes.mes}</h1> 
           <h3 className="tracking-widest text-indigo-500 text-xs font-medium title-font">Faturado: {mes.faturas.length}</h3>
@@ -42,7 +42,7 @@ return(
        ))} 
       
     </div>
-  </div>
+  </div> */}
 
 
   
@@ -56,10 +56,10 @@ return(
     <div className="rounded-t mb-0 px-4 py-3 border-0">
       <div className="flex flex-wrap items-center">
         <div className="relative w-full px-4 max-w-full flex-grow flex-1">
-          <h3 className="font-semibold text-base text-blueGray-700">Page Visits</h3>
+          <h3 className="font-semibold text-base text-blueGray-700">Faturacao</h3>
         </div>
         <div className="relative w-full px-4 max-w-full flex-grow flex-1 text-right">
-          <button className="bg-indigo-500 text-white active:bg-indigo-600 text-xs font-bold uppercase px-3 py-1 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button">See all</button>
+          <button className="bg-indigo-500 text-white active:bg-indigo-600 text-xs font-bold uppercase px-3 py-1 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button">Ver</button>
         </div>
       </div>
     </div>
@@ -85,7 +85,7 @@ return(
 
         <tbody>
         {response.mesesl.map((mes:any)=>(
-          <tr key= {mes._id}>
+          <tr key= {mes._id} className="hover-gray-light transition">
             <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
             { mes.mes }
             </th>
