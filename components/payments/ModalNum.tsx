@@ -28,7 +28,7 @@ export function ModalNum(_id:Fatura){
             const result = await response.json();
             alert(` ${result._id}`);
           }catch(error){
-            alert(`${_id}`)
+            alert(error)
           }
          
           // console.log(result)
