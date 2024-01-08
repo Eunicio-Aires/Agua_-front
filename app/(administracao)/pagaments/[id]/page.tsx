@@ -93,7 +93,7 @@ export default async function UnicoMes({ params }: { params: { id: string } }){
                            <span className="text-2xl sm:text-3xl leading-none font-bold text-gray-900">{valorTotal}</span>
                            <h3 className="text-base font-normal text-gray-500">Valor total lido</h3>
                         </div>
-                        <p className="ml-2 text-xs">{numFatu}</p>
+                        {/* <p className="ml-2 text-xs">{numFatu}</p> */}
                         <div className="ml-5 w-0 flex items-center justify-end flex-1 text-green-500 text-base font-bold">
                            100%
                            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -108,7 +108,7 @@ export default async function UnicoMes({ params }: { params: { id: string } }){
                            <span className="text-2xl sm:text-3xl leading-none font-bold text-gray-900">{somaValoresFaturasPagas}</span>
                            <h3 className="text-base font-normal text-gray-500">Valor total Pago</h3>
                         </div>
-                        <p className="ml-2 text-xs">{nfaturasPagas}</p>
+                        {/* <p className="ml-2 text-xs">{nfaturasPagas}</p> */}
                         <div className="ml-5 w-0 flex items-center justify-end flex-1 text-green-500 text-base font-bold">
                            {percentagemFaturasPagas}%
                            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -124,7 +124,7 @@ export default async function UnicoMes({ params }: { params: { id: string } }){
                            <h3 className="text-base font-normal text-gray-500">Faturas Nao Pagas</h3>
 
                         </div>
-                        <p>{nfaturasNaoPagas}</p>
+                        {/* <p>{nfaturasNaoPagas}</p> */}
                         <div className="ml-5 w-0 flex items-center justify-end flex-1 text-red-500 text-base font-bold">
                            {percentagemNaoFaturasPagas}%
                            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
