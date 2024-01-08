@@ -208,7 +208,7 @@ export default async  function Pagaments(){
               </div>
               <div>
               {meses.map((mes:Mes)=>(
-                <div key={mes._id } className="flex justify-between border-t text-sm font-normal mt-4 space-x-4">
+              <Link href={`/pagaments/${mes._id}` } key={mes._id } > <div  className="flex justify-between border-t text-sm font-normal mt-4 space-x-4">
                   <div className="px-2 flex">
                     <span>{mes.mes}</span>
                   </div>
@@ -222,12 +222,12 @@ export default async  function Pagaments(){
                     <span>N. Pago {mes.faturas.filter((fatura: { estado: String ; }) => fatura.estado === "Nao pago").length}</span>
                   </div>
                   <div className="px-2">
-                    <select>
+                    {/* <select>
                       <option>Admin</option>
                       <option>User</option>
-                    </select>
+                    </select> */}
                   </div>
-                </div>
+                </div> </Link> 
                  ))}
 
               </div>
