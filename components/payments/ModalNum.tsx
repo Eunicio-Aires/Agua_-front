@@ -8,13 +8,13 @@ interface Fatura{
   _id:String;
 // _idCl:String;
 }
-export function ModalNum({id}:any){
+export function ModalNum({_id}:Fatura){
 
   const handleSubmit = async (event: SyntheticEvent) => {
     event.preventDefault();
         
           // const endpoint = `https://agua-p.vercel.app/adm/pagarNume/${_id}`;
-          const endpoint = `https://agua-p.vercel.app/adm/pagarNume/${id}`;
+          const endpoint = `https://agua-p.vercel.app/adm/pagarNume/${_id}`;
           const options: RequestInit = {
             method: 'POST', 
             headers: {
