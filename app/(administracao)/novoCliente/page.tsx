@@ -4,13 +4,13 @@ export default async function NCliente(){
     return(
       
           
-<section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-4 py-12">
+<section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-4 py-12 bg-current">
     <div className="text-center pb-12">
         <h2 className="text-base font-bold text-indigo-600">
-            We have the best equipment
+            Selecione o Area
         </h2>
         <h1 className="font-bold text-3xl md:text-4xl lg:text-5xl font-heading text-gray-900">
-            Check our awesome team members
+            
         </h1>
     </div>
     
