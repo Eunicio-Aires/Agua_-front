@@ -13,7 +13,7 @@ export function Formda(ligacoes:Ligacao){
           leitura:(event.target as HTMLFormElement).leitura.value,
         }
         const JSONdata = JSON.stringify(data)    
-        const endpoint = `http://localhost:3000/api/faturap/${_id}/${_idm}`
+        const endpoint = `https://agua-p.vercel.app/adm/addfatura/${_id}/${_idm}`
         const options = {        
           method: 'POST',
           headers: {
