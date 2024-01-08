@@ -8,7 +8,7 @@ interface Fatura{
   _id:any;
 
 }
-export function ModalNum({_id}:any){
+export function ModalNum(_id:Fatura){
 
   const handleSubmit = async (event: SyntheticEvent) => {
     event.preventDefault();
