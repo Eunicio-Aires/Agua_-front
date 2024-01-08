@@ -22,10 +22,17 @@ export function ModalNum({_id}:any){
             },
             // body: JSONdata,
           };
-          const response = await fetch(endpoint, options);
-          const result = await response.json();
+
+          try{
+            const response = await fetch(endpoint, options);
+            const result = await response.json();
+            alert(` ${result._id}`);
+          }catch(error){
+            alert(error)
+          }
+         
           // console.log(result)
-          alert(` ${result._id}`);
+         
           
       };
      
