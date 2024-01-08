@@ -18,7 +18,7 @@ export  function RegistarZona(){
       // zona: event.target.zona.value
     };
     const JSONdata = JSON.stringify(data)
-    const endpoint = 'http://localhost:3000/api/novaArea';
+    const endpoint = 'https://agua-front.vercel.app/api/novaArea';
 
     const options: RequestInit = {
       method: 'POST', 
