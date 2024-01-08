@@ -54,6 +54,60 @@ interface Resultado{
 
         </div>
         <Formda _id={resulte._id} _idm={_id}/> 
+
+
+        <div className="overflow-x-auto m-4">
+  <table className="table table-xs">
+    <thead>
+      <tr>
+        <th></th> 
+        <th>Mes</th> 
+        <th>Consumo</th> 
+        <th>VaLor</th> 
+        <th>Leitura</th> 
+        <th>Data de L </th> 
+        <th>Forma de Pagamento</th>
+      </tr>
+    </thead>  
+    <tbody>
+    {resulte.faturas.filter((fatura: { estado: string; }) => fatura.estado === "Nao pago").map((faturas:any)=>(
+      <tr key={faturas._id }>
+        <th className="bg-gradient-to-r from-red-500 to-orange-500">{faturas.estado}</th> 
+        <td>{faturas.mes}</td> 
+        <td>{faturas.consumo}</td> 
+        <td>{faturas.valor}</td>
+        <td>{faturas.leitura}</td> 
+        <td>{faturas.createdAt}</td> 
+        {/* <td><Movitel /></td>
+        <td><Modal _id={fatura._id} _idCl={fatura._id}/></td>
+        <td><ModalNum _id={fatura._id} /></td> */}
+      </tr>
+      ))}
+      {resulte.faturas.filter((fatura: { estado: string; }) => fatura.estado === "Pago").map((fatur:any)=>(
+           <tr key={fatur._id }>
+           <th className="bg-gradient-to-r from-blue-600 to-violet-600">{fatur.estado}</th> 
+           <td>{fatur.mes}</td> 
+           <td>{fatur.consumo}</td> 
+           <td>{fatur.valor}</td>
+           <td>{fatur.leitura}</td> 
+           <td>{fatur.createdAt}</td> 
+           <td>{fatur.formaDePagamento}</td>
+         </tr>
+      ))}
+    </tbody> 
+    {/* <tfoot>
+      <tr>
+        <th></th> 
+        <th>Name</th> 
+        <th>Job</th> 
+        <th>company</th> 
+        <th>location</th> 
+        <th>Last Login</th> 
+        <th>Favorite Color</th>
+      </tr>
+    </tfoot> */}
+  </table>
+</div>
         </div>
       ) : (
         <p>Nenhum resultado para exibir</p>
