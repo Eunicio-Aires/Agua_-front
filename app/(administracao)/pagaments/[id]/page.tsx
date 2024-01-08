@@ -173,7 +173,10 @@ export default async function UnicoMes({ params }: { params: { id: string } }){
                                              Operacao
                                           </th>
                                           <th scope="col" className="p-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                             Hora e Data
+                                             Leitura
+                                          </th>
+                                          <th scope="col" className="p-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                             Estado
                                           </th>
                                           <th scope="col" className="p-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                                              Valor
@@ -187,10 +190,13 @@ export default async function UnicoMes({ params }: { params: { id: string } }){
                                              <span className="font-semibold">{mes.consumo}</span>
                                           </td>
                                           <td className="p-4 whitespace-nowrap text-sm font-normal text-gray-500">
-                                          {mes.date}
+                                          {mes.leitura}
+                                          </td>
+                                          <td className="p-4 whitespace-nowrap text-sm font-normal text-gray-500">
+                                          {mes.estado}
                                           </td>
                                           <td className="p-4 whitespace-nowrap text-sm font-semibold text-gray-900">
-                                          {mes.formaDePagamento}
+                                          {mes.valor}
                                           </td>
                                        </tr>
                                         ))}
