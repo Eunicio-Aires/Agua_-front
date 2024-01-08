@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { resolve } from "path";
 import { MdEdit } from "react-icons/md";
+import  { BiUserPlus } from "react-icons/bi";
 // import { BsPersonFill,BsThreeDotsVertical } from "react-icons/bs"
 // import Head from 'next/head';
 // import Header from "@/components/Header";
@@ -92,7 +93,9 @@ export default async function Zona() {
               </div>
             </div>
           </div>
-
+          <Link href='/novoCliente' className="btn btn-outline btn-success">
+          <BiUserPlus/>
+          </Link>
           <Registar/>
                   {/* modal button */}
           {/* <label htmlFor="my_modal_7" className="btn">No Cliente</label> */}
