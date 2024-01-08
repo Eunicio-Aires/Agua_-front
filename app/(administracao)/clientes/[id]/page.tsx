@@ -142,7 +142,7 @@ import OtherUsers from "@/components/outros";
 <div className="overflow-x-auto m-4">
   <table className="table table-xs">
     <thead>
-      <tr>
+      <tr className='bg-gray-100'>
         <th></th> 
         <th>Mes</th> 
         <th>Consumo</th> 
@@ -167,7 +167,7 @@ import OtherUsers from "@/components/outros";
       </tr>
       ))}
       {faturasPagas.map((faturas:any)=>(
-           <tr key={faturas._id }>
+           <tr className="hover:bg-hover" key={faturas._id }>
            <th className="bg-gradient-to-r from-blue-600 to-violet-600">{faturas.estado}</th> 
            <td>{faturas.mes}</td> 
            <td>{faturas.consumo}</td> 
