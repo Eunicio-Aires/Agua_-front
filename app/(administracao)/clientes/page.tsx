@@ -96,7 +96,7 @@ export default async function Zona() {
           <Link href='/novoCliente' className="btn btn-outline btn-success">
           <BiUserPlus/>
           </Link>
-          <Registar/>
+          {/* <Registar/> */}
                   {/* modal button */}
           {/* <label htmlFor="my_modal_7" className="btn">No Cliente</label> */}
           
