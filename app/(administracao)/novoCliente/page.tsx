@@ -13,9 +13,10 @@ export default async function NCliente(){
             Check our awesome team members
         </h1>
     </div>
+    
+    <div  className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
     {zonas.allAreas.map((zona:any)=>(
-    <div key={zona._id } className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div   className="w-full bg-white rounded-lg p-12 flex flex-col justify-center items-center">
+        <div key= {zona._id } className="w-full bg-white rounded-lg p-12 flex flex-col justify-center items-center">
             
             <div className="text-center">
                 <p className="text-xl text-gray-700 font-bold mb-2">{zona.zona}</p>
@@ -23,9 +24,9 @@ export default async function NCliente(){
                 <Link href={`/novoCliente/${zona._id}`}>selecionar</Link>
             </div>
         </div>
-       
+       ))}
     </div>
-     ))}
+     
 </section>
 
 
