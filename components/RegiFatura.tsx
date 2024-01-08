@@ -27,8 +27,31 @@ interface Resultado{
   
  
          <div > 
+
+         <div className="flex items-center justify-center h-screen bg-red-100">
+      <div className="bg-white rounded-2xl border shadow-x1 p-10 max-w-lg">
+        <div className="flex flex-col items-center space-y-4">
+          <h1 className="font-bold text-2xl text-gray-700 w-4/6 text-center">
+            NewsLetters
+          </h1>
+          <p className="text-sm text-gray-500 text-center w-5/6">
+            Hello, please enter your email address to subscribe our newsletters.
+          </p>
+          <input
+            type="text"
+            placeholder="Email"
+            className="border-2 rounded-lg w-full h-12 px-4"
+          />
+          <button
+            className="bg-blue-400 text-white rounded-md hover:bg-gray-500 font-semibold px-4 py-3 w-full"
+          >
+            Subscribe
+          </button>
+        </div>
+      </div>
+    </div>
          
-         <div>
+         {/* <div>
          
          <div className="flex flex-wrap -m-4">
          {resulte.faturas.filter((fatura: { estado: string; }) => fatura.estado === "Nao pago").map((faturas:any)=>(
@@ -38,18 +61,18 @@ interface Resultado{
             <p className='text-xs'>{faturas.valor} Mts</p>
             <p className='text-xs'>U.L-{faturas.leitura}</p>
             <p className='text-red-600'>{faturas.estado}</p> 
-            {/* < Numero _id={faturas._id}/> */}
+            
             <div className='flex justify-between mt-3'>
             < ModalMp _id={faturas._id}/>
             < ModalNum _id={faturas._id} />
-            {/* < PagarNum _id={faturas._id}/> */}
+            
             </div>
             
             </div>
           </div>
          ))} 
          </div>
-         </div>
+         </div> */}
             
 
         </div>
