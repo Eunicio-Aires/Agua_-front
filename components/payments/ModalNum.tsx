@@ -14,7 +14,7 @@ export function ModalNum({_id}:Fatura){
           event.preventDefault();
         
           const endpoint = `https://agua-p.vercel.app/adm/pagarNume/${_id}`;
-          const options = {
+          const options:RequestInit = {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',
@@ -31,8 +31,8 @@ export function ModalNum({_id}:Fatura){
    return(
     <div>
        <div className='mt-3'>
-              <form onSubmit={handleSubm }>
-              <button type="submit" className="btn  btn-accent mt-3">Pagar</button>
+              <form onSubmit={handleSubm}>
+              <button type="submit" className="btn   mt-2">Pagar</button>
           </form>
           </div>
     </div>
