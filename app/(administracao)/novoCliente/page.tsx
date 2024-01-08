@@ -28,7 +28,7 @@ export default async function NCliente(){
             
             <div className="text-center">
                 <p className="text-xl text-gray-700 font-bold mb-2">{zona.zona}</p>
-                <p className="text-base text-gray-400 font-normal">{zona.clientes.length}</p>
+                <p className="text-base text-gray-400 font-normal">{zona.cliente.length}</p>
             </div>
         </div>
        
