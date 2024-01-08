@@ -10,18 +10,19 @@ interface Fatura{
 }
 export function ModalNum({_id}:any){
 
-      const handleSubm = async (event: SyntheticEvent) => {
-          event.preventDefault();
+  const handleSubmit = async (event: SyntheticEvent) => {
+    event.preventDefault();
         
+          // const endpoint = `https://agua-p.vercel.app/adm/pagarNume/${_id}`;
           const endpoint = `https://agua-p.vercel.app/adm/pagarNume/${_id}`;
-          const options:RequestInit = {
-              method: 'POST',
-              headers: {
-                'Content-Type': 'application/json',
-              },
-              // body: JSONdata,
-            }
-            const response = await fetch(endpoint, options);
+          const options: RequestInit = {
+            method: 'POST', 
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            // body: JSONdata,
+          };
+          const response = await fetch(endpoint, options);
           const result = await response.json();
           // console.log(result)
           alert(` ${result._id}`);
@@ -31,7 +32,7 @@ export function ModalNum({_id}:any){
    return(
     <div>
        <div className='mt-3'>
-              <form onSubmit={handleSubm}>
+              <form onSubmit={handleSubmit}>
               <button type="submit" className="btn   mt-2">Pagar</button>
           </form>
           </div>

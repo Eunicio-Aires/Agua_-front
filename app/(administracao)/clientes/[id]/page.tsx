@@ -163,7 +163,7 @@ import OtherUsers from "@/components/outros";
         <td>{fatura.createdAt}</td> 
         <td><Movitel /></td>
         <td><Modal _id={fatura._id} _idCl={fatura._id}/></td>
-        <td><ModalNum _id={fatura._id} /></td>
+        <td><ModalNum _id={fatura._id } /></td>
       </tr>
       ))}
       {faturasPagas.map((faturas:any)=>(
