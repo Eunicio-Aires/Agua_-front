@@ -70,10 +70,10 @@ interface Zona {
   return (
     <div>
     <div className="transition ease-in-out delay-150"> 
-    <button className=' btn btn-outline btn-success ml-6'  onClick={buttonHandler}>
+    {/* <button className=' btn btn-outline btn-success ml-6'  onClick={buttonHandler}>
       {iseBlueBoxShown ? "Fechar" : <BiUserPlus/> }
     </button> 
-    {iseBlueBoxShown && <div className="flex items-center justify-center p-12 " >
+    {iseBlueBoxShown && <div className="flex items-center justify-center p-12 " > */}
 
   
 
@@ -139,7 +139,8 @@ interface Zona {
   <button className="btn btn-outline btn-accent mt-2" type="submit">Registar</button>
   </form>
 </div> 
-    </div>}
+    </div>   
+  // }
     </div>
 
     
