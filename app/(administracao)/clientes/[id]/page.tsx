@@ -90,7 +90,7 @@ import OtherUsers from "@/components/outros";
       <div> 
           <h1 className="text-3xl font-medium text-center mt-3">{dados} {posts.clientId.apelido}</h1>
           <p className="text-center">{posts.clientId.codigo}</p>
-          <h1 className="text-red-800">{faturasNaoPagas.length}</h1>
+          <h1 className="text-red-800">{faturasNaoPagas.length}</h1> 
 
            
            {/* <div>My Post: {params.id}</div> */}

@@ -6,15 +6,15 @@ import Link from 'next/link';
 import { revalidateTag } from 'next/cache';
 interface Fatura{
   _id:String;
-// _idCl:String;
+_idCl:String;
 }
-export function ModalNum({_id}:any){
+export function ModalNum({_id}:Fatura){
 
   const handleSubmit = async (event: SyntheticEvent) => {
     event.preventDefault();
         
           // const endpoint = `https://agua-p.vercel.app/adm/pagarNume/${_id}`;
-          const endpoint = `https://agua-p.vercel.app/adm/pagarNume/${_id}`;
+          const endpoint = `https://agua-p.vercel.app/adm/pagarNume/${_id}`
           const options: RequestInit = {
             method: 'POST', 
             headers: {
@@ -22,9 +22,9 @@ export function ModalNum({_id}:any){
             },
             // body: JSONdata,
           };
-          const response = await fetch(endpoint, options);
+          
           try{
-            
+            const response = await fetch(endpoint, options);
             const result = await response.json();
             alert(` ${result._id}`);
           }catch(error){
