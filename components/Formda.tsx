@@ -1,6 +1,7 @@
 'use client' 
 import React, {useState, SyntheticEvent } from 'react';
 
+
 interface Ligacao{
     _id:String;
     _idm:String
