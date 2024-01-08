@@ -68,7 +68,7 @@ interface Resultado{
         <th>VaLor</th> 
         <th>Leitura</th> 
         <th>Data de L </th> 
-        <th>Forma de Pagamento</th>
+        <th>Forma de </th>
       </tr>
     </thead>  
     <tbody>
