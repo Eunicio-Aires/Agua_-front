@@ -28,7 +28,7 @@ export function ModalNum({_id}:any){
             const result = await response.json();
             alert(` ${result._id}`);
           }catch(error){
-            alert(error)
+            alert(`${_id}`)
           }
          
           // console.log(result)
