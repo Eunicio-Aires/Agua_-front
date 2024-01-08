@@ -123,7 +123,7 @@ export default async  function Pagaments(){
 
 
 {/* ____________________________________MESES____________________________________ */}
-<div className="container px-5 py-24 mx-auto max-w-7x1">
+{/* <div className="container px-5 py-24 mx-auto max-w-7x1">
   <div className="flex flex-wrap w-full mb-4 p-4">
     <div className="w-full mb-6 lg:mb-0">
       <h1 className="sm:text-4xl text-5xl font-medium title-font mb-2 text-gray-900">Detalhes</h1>
@@ -149,7 +149,7 @@ export default async  function Pagaments(){
 
         <p className="leading-relaxed text-base">Pagas{mes.faturas.filter((fatura: { estado: String; }) => fatura.estado === "Pago").length}</p>
         
-        {/* <p className="leading-relaxed text-base">Pagas{mes.faturas.filter((fatura: { estado: String; }) => fatura.estado === "Pago")}</p>  */}
+       
         <Link href={`/pagaments/${mes._id}`} className="middle none center mr-4 rounded-lg bg-blue-500 py-3 px-6 font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
         data-ripple-light="true">Faturar</Link>
       </div>
@@ -159,7 +159,7 @@ export default async  function Pagaments(){
     
     
   </div>
-  </div>
+  </div> */}
 
   <div className="bg-gray-50 ">
   {/* <nav>
