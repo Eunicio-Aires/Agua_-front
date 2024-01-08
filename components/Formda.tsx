@@ -25,7 +25,7 @@ export function Formda(ligacoes:Ligacao){
         const result  = await response.json()
         // const _id = await result._id
         // setResultId(result);
-        console.log(result)
+        // console.log(result)
         alert(`Is this your full name: ${result._id}`)
       }
     const { _id, _idm } = ligacoes;
