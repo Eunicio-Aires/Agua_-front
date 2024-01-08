@@ -80,13 +80,13 @@ export default async function UnicoMes({ params }: { params: { id: string } }){
         
             
         
-       <div  className="h-full w-max  bg-gray-50 overflow-y-auto lg:ml-7">
+       <div  className="h-full w-11/12  bg-gray-50 overflow-y-auto lg:ml-7">
          <main>
             <div className="pt-6 px-4">
 
                      {/* cards */}
 
-               <div className="mt-4 w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 mb-4">
+               <div className="mt-4 w-max grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 mb-4">
                   <div className="bg-white shadow rounded-lg p-4 sm:p-6 xl:p-8 ">
                      <div className="flex items-center">
                         <div className="flex-shrink-0">
