@@ -50,10 +50,12 @@ interface Zona {
 
     const response = await fetch(endpoint, options);
     const result = await response.json();
-    console.log(result)
+    const resul = await result._id
+    router.push(`/cliente/${resul}`)
+    // router.refresh()
     
     alert(`Registo Efetuado`);
-    // router.refresh()
+    
    
   };
   const [iseBlueBoxShown, setIsBlueBoxShown] = useState(false);
