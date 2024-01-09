@@ -17,9 +17,9 @@ export function ModalNum(_id:Fatura){
           const endpoint = `https://agua-p.vercel.app/adm/pagarNume/${_id}`
           const options: RequestInit = {
             method: 'POST', 
-            headers: {
-              'Content-Type': 'application/json',
-            },
+            // headers: {
+            //   'Content-Type': 'application/json',
+            // },
             // body: JSONdata,
           };
           
