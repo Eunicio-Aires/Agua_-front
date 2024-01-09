@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { Numero } from '@/components/Numero'
 import React, { SyntheticEvent } from 'react';import { useState } from 'react';
 import Link from 'next/link';
-import { revalidateTag } from 'next/cache';
+import { revalidatePath, revalidateTag } from 'next/cache';
 interface Fatura{
   _id:any;
 
@@ -47,6 +47,7 @@ export function ModalNum(props:Fatura){
       alert(`Resposta do backend:`);
     } catch (error ) {
       alert( `${props._id},${error}`);
+      revalidatePath('/clietes')
     }
   };
   return (
