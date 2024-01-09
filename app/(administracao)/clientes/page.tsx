@@ -24,23 +24,23 @@ import { Registar } from '@/components/Registar'
 
 
 
-async function getDataClientes(){
-  await new Promise ((resolve)=> setTimeout(resolve,1000));
-  const res = await fetch(`https://agua-front.vercel.app/api/todos`,{cache:"no-store"})
+// async function getDataClientes(){
+//   await new Promise ((resolve)=> setTimeout(resolve,1000));
+//   const res = await fetch(`https://agua-front.vercel.app/api/todos`,{cache:"no-store"})
 
-  if(!res.ok){
-    throw new Error('Failed to fetch data')
-  }
-  return res.json()
-}
+//   if(!res.ok){
+//     throw new Error('Failed to fetch data')
+//   }
+//   return res.json()
+// }
 
 export default async function Zona() {
-  // const responseC = await fetch(`https://agua-p.vercel.app/adm/todos`,{cache:"no-cache"})
+  const responseC = await fetch(`https://agua-p.vercel.app/adm/todos`,{cache:"no-cache"}).then((res) => res.json());
 
-  const responseC= await getDataClientes();
+  // const responseC= await getDataClientes();
   
   const clients = await responseC.allClientes
-  // const numero  = await responseC.allClientes.filter((cliente:any) => cliente.estado === "Activo").length
+  const numero  = await responseC.allClientes.filter((cliente:any) => cliente.estado === "Activo").length
   const ativos  = await responseC.allClientes.filter((cliente:any) => cliente.estado === "Activo")
   const seativo = await responseC.allClientes.filter((cliente: any) => cliente.estado !== "Activo");
   
