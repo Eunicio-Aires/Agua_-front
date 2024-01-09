@@ -2,6 +2,7 @@
 import React, {useState, SyntheticEvent } from 'react';
 import { RegisFatura } from './RegiFatura';
 import { Detalhes } from './Detalhes';
+import { revalidateTag } from 'next/cache';
 
 interface Faturas{
   _id:String;
@@ -49,6 +50,7 @@ export  function Procurarc(props:Mes){
         const result:Result  = await response.json()
         
         setResultId(result);
+        revalidateTag
         
       }
       return (

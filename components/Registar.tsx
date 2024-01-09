@@ -55,7 +55,7 @@ interface Zona {
       router.push(`/cliente/${id}`)
     }catch(error){
       // alert(`Erro`);
-      router.push(`/clientes/${id}`)
+      router.push(`/clientes/`)
     }
    
     // router.refresh()
