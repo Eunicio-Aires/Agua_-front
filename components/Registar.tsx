@@ -48,13 +48,18 @@ interface Zona {
       body: JSONdata,
     };
 
-    const response = await fetch(endpoint, options);
-    const result = await response.json();
-    const resul = await result._id
-    router.push(`/cliente/${resul}`)
+    try{
+      const response = await fetch(endpoint, options);
+      const result = await response.json();
+      const resul = await result._id
+      router.push(`https://agua-front.vercel.app/cliente/${resul}`)
+    }catch(error){
+      alert(`Erro`);
+    }
+   
     // router.refresh()
     
-    alert(`Registo Efetuado`);
+   
     
    
   };
