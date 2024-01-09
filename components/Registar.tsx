@@ -55,7 +55,7 @@ interface Zona {
       router.push(`https://agua-front.vercel.app/cliente/${resul}`)
     }catch(error){
       // alert(`Erro`);
-      router.push(`https://agua-front.vercel.app/cliente/${resul}`)
+      router.push(`https://agua-front.vercel.app/cliente/${id}`)
     }
    
     // router.refresh()
