@@ -49,8 +49,9 @@ export function ModalNum(props:Fatura){
       revalidatePath('/clietes')
     } catch (error ) {
       
-      revalidatePath('/clietes')
-      alert( `${props._id}`);
+      // revalidatePath('/clietes')
+      // router.push('/clietes')
+      // alert( `${props._id}`);
     }
   };
   return (
