@@ -118,16 +118,16 @@ export default async  function Pagaments(){
             <div>
               <div className="flex justify-between bg-gradient-to-tr from-indigo-600 to-purple-600 rounded-md py-2 px-4 text-white font-bold text-md">
                 <div>
-                  <span>Name</span>
+                  <span>Mes</span>
                 </div>
                 <div>
-                  <span>Email</span>
+                  <span>Percent</span>
                 </div>
                 <div>
-                  <span>Role</span>
+                  <span>F. Pagas</span>
                 </div>
                 <div>
-                  <span>Time</span>
+                  <span>FN. Pags</span>
                 </div>
                 <div>
                   <span>Edit</span>
@@ -143,10 +143,10 @@ export default async  function Pagaments(){
                     <span>{(mes.faturas.filter((fatura: { estado: any; }) => fatura.estado === "Pago").length /mes.faturas.length )*100}%</span>
                   </div>
                   <div className="px-2">
-                    <span>Pagas {mes.faturas.filter((fatura: { estado: String; }) => fatura.estado === "Pago").length}</span>
+                    <span> {mes.faturas.filter((fatura: { estado: String; }) => fatura.estado === "Pago").length}</span>
                   </div>
                   <div className="px-2">
-                    <span>N. Pago {mes.faturas.filter((fatura: { estado: String ; }) => fatura.estado === "Nao pago").length}</span>
+                    <span> {mes.faturas.filter((fatura: { estado: String ; }) => fatura.estado === "Nao pago").length}</span>
                   </div>
                   <div className="px-2">
                     {/* <select>
