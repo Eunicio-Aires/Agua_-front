@@ -5,10 +5,10 @@ import React, { SyntheticEvent } from 'react';import { useState } from 'react';
 import Link from 'next/link';
 import { revalidateTag } from 'next/cache';
 interface Fatura{
-  id:any;
+  _id:any;
 
 }
-export function ModalNum(_id:Fatura){
+export function ModalNum({_id}:Fatura){
 
   // const [_id, setId] = useState<string>('');
 
