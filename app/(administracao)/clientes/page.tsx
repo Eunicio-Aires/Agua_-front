@@ -26,7 +26,7 @@ import { Registar } from '@/components/Registar'
 
 async function getDataClientes(){
   await new Promise ((resolve)=> setTimeout(resolve,1000));
-  const res = await fetch(`https://agua-front.vercel.app/api/todos`,{cache:"no-cache"})
+  const res = await fetch(`https://agua-front.vercel.app/api/todos`,{cache:"no-store"})
 
   if(!res.ok){
     throw new Error('Failed to fetch data')
@@ -35,6 +35,7 @@ async function getDataClientes(){
 }
 
 export default async function Zona() {
+  // const responseC = await fetch(`https://agua-p.vercel.app/adm/todos`,{cache:"no-cache"})
 
   const responseC= await getDataClientes();
   
