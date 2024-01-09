@@ -48,8 +48,9 @@ export function ModalNum(props:Fatura){
       alert(`Resposta do backend:`);
       revalidatePath('/clietes')
     } catch (error ) {
-      alert( `${props._id}`);
+      
       revalidatePath('/clietes')
+      alert( `${props._id}`);
     }
   };
   return (

@@ -102,9 +102,8 @@ export default async function Zona() {
           {/* <label htmlFor="my_modal_7" className="btn">No Cliente</label> */}
           
 
-<div className="w-full col-span-1 relative lg:h-[70vh] h-[50vh] m-auto p-4 border rounded-lg bg-white overflow-scroll">
-            
-            <div className="overflow-x-auto">
+<div className="w-full col-span-1 relative lg:h-[70vh] h-[50vh] m-auto p-4 border rounded-lg bg-white overflow-scroll">          
+  <div className="overflow-x-auto">
   <table className="table table-xs table-pin-rows table-pin-cols">
     <thead>
       <tr>
@@ -133,10 +132,7 @@ export default async function Zona() {
 </tbody> 
    
   </table>
-     
- 
-</div>
-           
+</div>        
         </div>
 
 </section>
