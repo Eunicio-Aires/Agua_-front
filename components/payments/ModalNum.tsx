@@ -44,9 +44,9 @@ export function ModalNum(_id:Fatura){
 
       // Manipula a resposta do backend, se necessário
       const data = await response.json();
-      console.log('Resposta do backend:', data);
+      alert('Resposta do backend:', data);
     } catch (error) {
-      console.error('Erro na requisição:', error);
+      alert('Erro na requisição:', error);
     }
   };
   return (
