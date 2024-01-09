@@ -52,10 +52,10 @@ interface Zona {
       const response = await fetch(endpoint, options);
       const result = await response.json();
       const resul = await result._id
-      router.push(`https://agua-front.vercel.app/cliente/${resul}`)
+      router.push(`/cliente/${id}`)
     }catch(error){
       // alert(`Erro`);
-      router.push(`https://agua-front.vercel.app/clientes/${id}`)
+      router.push(`/clientes/${id}`)
     }
    
     // router.refresh()
