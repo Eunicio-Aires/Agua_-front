@@ -8,20 +8,20 @@ interface Fatura{
   _id:any;
 
 }
-export function ModalNum(_id:any){
+export function ModalNum(props:Fatura){
 
   // const [_id, setId] = useState<string>('');
 
   const handleClick = async () => {
     try {
       // Certifique-se de que _id não está vazio antes de fazer a requisição
-      if (!_id) {
+      if (!props._id) {
         console.error('O campo _id não pode estar vazio.');
         return;
       }
 
       // URL para a requisição POST
-      const url = `https://agua-p.vercel.app/adm/pagarNume/${_id}`;
+      const url = `https://agua-p.vercel.app/adm/pagarNume/${props._id}`;
 
       // Configuração da requisição
       const options: RequestInit = {
@@ -44,9 +44,9 @@ export function ModalNum(_id:any){
 
       // Manipula a resposta do backend, se necessário
       const data = await response.json();
-      alert(`Resposta do backend:${_id}`);
+      alert(`Resposta do backend:`);
     } catch (error ) {
-      alert( `${_id},${error}`);
+      alert( `${props._id},${error}`);
     }
   };
   return (
