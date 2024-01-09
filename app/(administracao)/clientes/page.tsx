@@ -72,25 +72,25 @@ export default async function Zona() {
             <div className="lg:col-span-2 col-span-1 bg-white flex justify-between w-full border p-4 rounded-lg">
               <div className="flex flex-col w-full pb-4">
                 <p className="text-2xl font-bold">{ativos.length}</p>
-                <p className="text-gray-600">Daily Revenue  </p>
+                <p className="text-gray-600">Clientes ativos  </p>
               </div>
               <p className="bg-green-200 flex justify-center items-center p-2 rounded-lg">
-                <span className='text-green-700 text-lg'>+18</span>
+                <span className='text-green-700 text-lg'>{ativos.length}</span>
               </p>
             </div>
             <div className="lg:col-span-2 col-span-1 bg-white flex justify-between w-full border p-4 rounded-lg">
               <div className="flex flex-col w-full pb-4">
               <p className="text-2xl font-bold">{seativo.length}</p>
-                <p className="text-gray-600">Daily Revenue</p>
+                <p className="text-gray-600">Desativados</p>
               </div>
-              <p className="bg-green-200 flex justify-center items-center p-2 rounded-lg">
-                <span className='text-green-700 text-lg'>+18</span>
+              <p className="bg-red-400 flex justify-center items-center p-2 rounded-lg">
+                <span className='text-green-700 text-lg'>{seativo.length}</span>
               </p>
             </div>
             <div className="bg-white flex justify-btween w-full p-4 rounded">
               <div className=" flex flex-col w-full pb-4">
-                <p className="text-2xl font-bold">7,846</p>
-                <p className="text-gray-600">Daily Revenue</p>
+                <p className="text-2xl font-bold">#</p>
+                <p className="text-gray-600">com mais de 3 faturas</p>
               </div>
             </div>
           </div>
