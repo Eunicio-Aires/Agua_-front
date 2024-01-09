@@ -44,9 +44,9 @@ export function ModalNum(_id:Fatura){
 
       // Manipula a resposta do backend, se necessário
       const data = await response.json();
-      alert('Resposta do backend:');
-    } catch (error) {
-      alert( error);
+      alert(`Resposta do backend:${_id}`);
+    } catch (error ) {
+      alert( `${_id},${error}`);
     }
   };
   return (
