@@ -10,42 +10,91 @@ interface Fatura{
 }
 export function ModalNum(_id:Fatura){
 
-  const handleSubmit = async (event: SyntheticEvent) => {
-    event.preventDefault();
+  // const [_id, setId] = useState<string>('');
+
+  const handleClick = async () => {
+    try {
+      // Certifique-se de que _id não está vazio antes de fazer a requisição
+      if (!_id) {
+        console.error('O campo _id não pode estar vazio.');
+        return;
+      }
+
+      // URL para a requisição POST
+      const url = `https://agua-p.vercel.app/adm/pagarNume/${_id}`;
+
+      // Configuração da requisição
+      const options: RequestInit = {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          // Adicione headers adicionais se necessário
+        },
+        // Adicione corpo da requisição se necessário
+        // body: JSON.stringify({ chave: 'valor' })
+      };
+
+      // Faz a requisição usando fetch
+      const response = await fetch(url, options);
+
+      // Verifica se a requisição foi bem-sucedida
+      if (!response.ok) {
+        throw new Error(`Erro na requisição: ${response.statusText}`);
+      }
+
+      // Manipula a resposta do backend, se necessário
+      const data = await response.json();
+      console.log('Resposta do backend:', data);
+    } catch (error) {
+      console.error('Erro na requisição:', error);
+    }
+  };
+  return (
+    <div>
+      {/* Input para inserir o valor de _id */}
+      {/* <input type="text" value={_id} onChange={(e) => setId(e.target.value)} /> */}
+
+      {/* Botão que chama a função handleClick ao ser clicado */}
+      <button onClick={handleClick}>Clique para Pagar</button>
+    </div>
+  );
+
+  // const handleSubmit = async (event: SyntheticEvent) => {
+  //   event.preventDefault();
         
-          // const endpoint = `https://agua-p.vercel.app/adm/pagarNume/${_id}`;
-          const endpoint = `https://agua-p.vercel.app/adm/pagarNume/${_id}`
-          const options: RequestInit = {
-            method: 'POST', 
-            // headers: {
-            //   'Content-Type': 'application/json',
-            // },
-            // body: JSONdata,
-          };
           
-          try{
-            const response = await fetch(endpoint, options);
-            const result = await response.json();
-            alert(` ${result._id}`);
-          }catch(error){
-            alert(error)
-          }
+  //         const endpoint = `https://agua-p.vercel.app/adm/pagarNume/${_id}`
+  //         const options: RequestInit = {
+  //           method: 'POST', 
+  //           headers: {
+  //             'Content-Type': 'application/json',
+  //           },
+           
+  //         };
+          
+  //         try{
+  //           const response = await fetch(endpoint, options);
+  //           const result = await response.json();
+  //           alert(` ${result._id}`);
+  //         }catch(error){
+  //           alert(error)
+  //         }
           
            
          
          
-          // console.log(result)
+          
          
           
-      };
+  //     };
      
-   return(
-    <div>
-       <div className='mt-3'>
-              <form onSubmit={handleSubmit}>
-              <button type="submit" className="btn   mt-2">Pagar</button>
-          </form>
-          </div>
-    </div>
-   )
+  //  return(
+  //   <div>
+  //      <div className='mt-3'>
+  //             <form onSubmit={handleSubmit}>
+  //             <button type="submit" className="btn   mt-2">Pagar</button>
+  //         </form>
+  //         </div>
+  //   </div>
+  //  )
 }
