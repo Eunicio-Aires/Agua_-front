@@ -8,7 +8,7 @@ interface Fatura{
   _id:any;
 
 }
-export function ModalNum({_id}:Fatura){
+export function ModalNum(_id:any){
 
   // const [_id, setId] = useState<string>('');
 
