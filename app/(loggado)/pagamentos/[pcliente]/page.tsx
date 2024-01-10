@@ -33,13 +33,13 @@ export default async function Page({ params }: { params: {pcliente: Cliente}}){
 //         <div className=''> 
 //              <NavBar/> 
             
-//             <div className='h-28 bg-gradient-to-r from-indigo-400 to-cyan-400 static'> 
-//             <h2 className='pt-2 mt-3  text-center  text-2xl font-bold'>{cliente.client.nome}</h2>
-//             <div className='flex justify-between px-4 pt-4 '>
-//             <p className="text-sm">P. Pagar: {fatur.length}</p>
-//             <h2>estado:{cliente.client.estado}</h2>
-//         </div>
-//         </div>
+        //     <div className='h-28 bg-gradient-to-r from-indigo-400 to-cyan-400 static'> 
+        //     <h2 className='pt-2 mt-3  text-center  text-2xl font-bold'>{cliente.client.nome}</h2>
+        //     <div className='flex justify-between px-4 pt-4 '>
+        //     <p className="text-sm">P. Pagar: {fatur.length}</p>
+        //     <h2>estado:{cliente.client.estado}</h2>
+        // </div>
+        // </div>
        
 //             <div className=' bg-gradient-to-r from-cyan-10  justify-items-center'>
 //             <div  className=" mt-5">
@@ -138,6 +138,18 @@ export default async function Page({ params }: { params: {pcliente: Cliente}}){
 
 
 <section className="py-1 bg-blueGray-50">
+
+      
+<div className='h-28 bg-gradient-to-r from-indigo-400 to-cyan-400 static'> 
+            <h2 className='pt-2 mt-3  text-center  text-2xl font-bold'>{cliente.client.nome}</h2>
+            <div className='flex justify-between px-4 pt-4 '>
+            <p className="text-sm">P. Pagar: {fatur.length}</p>
+            <h2>estado:{cliente.client.estado}</h2>
+        </div>
+        </div>
+
+        
+<NavBar/> 
 <div className="w-full xl:w-8/12 mb-12 xl:mb-0 px-4 mx-auto mt-24">
   <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded ">
     {/* <div class="rounded-t mb-0 px-4 py-3 border-0">

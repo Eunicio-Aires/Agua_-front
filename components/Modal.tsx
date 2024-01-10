@@ -8,14 +8,13 @@ export function Modal({_id, _idCl}:Fatura){
   return(
     <div>
   
-{/* The button to open modal */}
+
 <a href="#my_modal_8" className="btn"><h3 className="text-red-600">M-pesa</h3></a>
 
 <div className="modal" id="my_modal_8">
   <div className="modal-box">
   <h3 className="font-bold text-lg text-red-600">M-pesa</h3>
-  
-    {/* <p className="py-4">Confirme o valor antes de introduzir o pin</p> */}
+
     <p className="text-center text-xs mt-3">Se pretende parcelar a fatura aproxime ao fornecedor para negoceacao</p>
     < Numero _id={_id} />
     <div className="modal-action">
@@ -29,7 +28,7 @@ export function Modal({_id, _idCl}:Fatura){
      </a>
      
     </div>
-    {/* <p className="text-center text-xs">Se pretende parcelar a fatura aproxime ao fornecedor para negoceacao</p> */}
+  
   </div>
   
 </div>
