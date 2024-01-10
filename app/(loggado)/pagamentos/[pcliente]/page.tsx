@@ -187,7 +187,8 @@ export default async function Page({ params }: { params: {pcliente: Cliente}}){
         {faturUl.map((zon:any) => ( 
           <tr key={zon._id} >
             <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
-            {zon.mes}
+           
+            <Movitel /> <Modal _id={zon._id} _idCl={cliente.client._id}/>
             </th>
             <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
             {zon.valor} 
@@ -196,8 +197,8 @@ export default async function Page({ params }: { params: {pcliente: Cliente}}){
             {zon.consumo}/{zon.leitura}
             </td>
             <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-              <i className="fas fa-arrow-up text-emerald-500 mr-4"></i>
-              <Movitel /> <Modal _id={zon._id} _idCl={cliente.client._id}/>
+              <i className="fas fa-arrow-up text-emerald-500 mr-4">i</i>
+              {zon.mes}
             </td>
           </tr>
           ))}
