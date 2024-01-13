@@ -101,7 +101,7 @@ export default async function Page({ params }: { params: {pcliente: Cliente}}){
     <h2 className="mb-4 font-bold text-xl text-gray-600">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic, consequuntur.</h2>
     <div className="grid w-full sm:grid-cols-2 xl:grid-cols-4 gap-6">
 
-    {faturUl.map((zon:any) => ( 
+    {fatur.map((zon:any) => ( 
       <div  key={zon._id}  className="relative flex flex-col shadow-md rounded-xl overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300 max-w-sm">
         <a href="" className="hover:text-orange-600 absolute z-30 top-2 right-0 mt-2 mr-3">
           {/* <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6">
