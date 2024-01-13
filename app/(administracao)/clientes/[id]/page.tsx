@@ -13,6 +13,7 @@ import {Registar} from '@/components/Registar'
 import Zona from "../page";
 import { TopCards } from '@/components/TopCards'
 import OtherUsers from "@/components/outros";
+import Editar from "@/components/clientes/Editar";
 
 // type Client ={
 //   _id:String;
@@ -193,7 +194,7 @@ import OtherUsers from "@/components/outros";
 </div>
 
 
-
+<Editar props={posts} />
 
      </div>
 

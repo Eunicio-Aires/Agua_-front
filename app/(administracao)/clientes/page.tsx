@@ -4,6 +4,7 @@ import { resolve } from "path";
 import { MdEdit } from "react-icons/md";
 import  { BiUserPlus } from "react-icons/bi";
 import  SearchInPut  from '@/components/Search/SearchInPut'
+
 // import { BsPersonFill,BsThreeDotsVertical } from "react-icons/bs"
 // import Head from 'next/head';
 // import Header from "@/components/Header";
@@ -15,9 +16,6 @@ import { Registar } from '@/components/Registar'
 // import Zona from "../page";
 // import  TopCards  from '@/components/TopCards'
 // import OtherUsers from "@/components/outros";
-
-
-
 
 // type Zona = {
 //   _id: any;
@@ -82,6 +80,7 @@ export default async function Zona() {
                 <span className='text-green-700 text-lg'>{ativos.length}</span>
               </p>
             </div>
+            
             <div className="lg:col-span-2 col-span-1 bg-white flex justify-between w-full border p-4 rounded-lg">
               <div className="flex flex-col w-full pb-4">
               <p className="text-2xl font-bold">{seativo.length}</p>
@@ -140,6 +139,7 @@ export default async function Zona() {
   </table>
 </div>        
         </div>
+      
 
 </section>
   );
