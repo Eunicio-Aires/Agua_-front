@@ -104,27 +104,27 @@ export default async function Page({ params }: { params: {pcliente: Cliente}}){
     {faturUl.map((zon:any) => ( 
       <div  key={zon._id}  className="relative flex flex-col shadow-md rounded-xl overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300 max-w-sm">
         <a href="" className="hover:text-orange-600 absolute z-30 top-2 right-0 mt-2 mr-3">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6">
+          {/* <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6">
             <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
-          </svg>
+          </svg> */}
         </a>
         {/* <a href="" className="z-20 absolute h-full w-full top-0 left-0 ">&nbsp;</a> */}
         <div className="h-auto overflow-hidden">
           <div className="h-44 overflow-hidden relative">
             <h2 className="text-orange-600  text-sm text-center mt-3">{zon.mes}</h2>
             <h4 className="mt-2">{zon.valor}</h4>
-          </div>
-          <table className=" text-center">
+
+            <table className=" text-center">
           <thead className="border-b">
             <tr>
               <th scope="col" className="text-sm font-medium text-gray-900 px-6 py-4">
-                Class
+                Consumo/m
               </th>
               <th scope="col" className="text-sm font-medium text-gray-900 px-6 py-4">
-                Heading
+              Leitura
               </th>
               <th scope="col" className="text-sm font-medium text-gray-900 px-6 py-4">
-                Heading
+                Estado
               </th>
             </tr>
           </thead>
@@ -132,18 +132,20 @@ export default async function Page({ params }: { params: {pcliente: Cliente}}){
           
             <tr className="border-b bg-green-100 border-green-200">
               <td className="text-sm text-gray-900 font-medium px-6 py-4 whitespace-nowrap">
-                Success
+              {zon.consumo}
               </td>
               <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                Cell
+              {zon.leitura}
               </td>
               <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                Cell
+              {zon.estado}
               </td>
             </tr>
             
           </tbody>
         </table>
+          </div>
+         
         </div>
         <div className="bg-white py-4 px-3">
           <h3 className="text-xs mb-2 font-medium">Des cadeaux incroyables prêts à être utilisés dans votre prochain projet</h3>
