@@ -114,6 +114,36 @@ export default async function Page({ params }: { params: {pcliente: Cliente}}){
             <h2 className="text-orange-600  text-sm text-center mt-3">{zon.mes}</h2>
             <h4 className="mt-2">{zon.valor}</h4>
           </div>
+          <table className=" text-center">
+          <thead className="border-b">
+            <tr>
+              <th scope="col" className="text-sm font-medium text-gray-900 px-6 py-4">
+                Class
+              </th>
+              <th scope="col" className="text-sm font-medium text-gray-900 px-6 py-4">
+                Heading
+              </th>
+              <th scope="col" className="text-sm font-medium text-gray-900 px-6 py-4">
+                Heading
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+          
+            <tr className="border-b bg-green-100 border-green-200">
+              <td className="text-sm text-gray-900 font-medium px-6 py-4 whitespace-nowrap">
+                Success
+              </td>
+              <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                Cell
+              </td>
+              <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+                Cell
+              </td>
+            </tr>
+            
+          </tbody>
+        </table>
         </div>
         <div className="bg-white py-4 px-3">
           <h3 className="text-xs mb-2 font-medium">Des cadeaux incroyables prêts à être utilisés dans votre prochain projet</h3>
