@@ -115,16 +115,16 @@ interface Zona {
       <label className="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" htmlFor="telefone">
          Telefone
       </label>
-      <input className="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4" id="telefone" name="telefone" type="Number" placeholder="90210"/>
+      <input className="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4" id="telefone" name="telefone" type="Number" placeholder="84xx11220"/>
     </div>
     <div className="md:w-1/2 px-3">
       <label className="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" htmlFor="whatsupp">
         Whatsapp 
       </label>
-      <input className="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4" id="whatsupp" name="whatsupp" type="Number" placeholder="90210"/>
+      <input className="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4" id="whatsupp" name="whatsupp" type="Number" placeholder="84xx11220"/>
     </div>
 
-    <label className="form-control w-full max-w-xs">
+    {/* <label className="form-control w-full max-w-xs">
   <div className="label">
     <span className="label-text">Pick the best fantasy franchise</span>
     <span className="label-text-alt">Alt label</span>
@@ -141,7 +141,7 @@ interface Zona {
     <span className="label-text-alt">Alt label</span>
     <span className="label-text-alt">Alt label</span>
   </div>
-</label>
+</label> */}
 
   </div>
   <button className="btn btn-outline btn-accent mt-2" type="submit">Registar</button>
