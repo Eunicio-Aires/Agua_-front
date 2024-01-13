@@ -26,7 +26,7 @@ export default async function Page({ params }: { params: {pcliente: Cliente}}){
     const fatur = cliente.client.faturas.filter((fatura:Faturas) => fatura.estado === "Nao pago")
     const faturUl = cliente.client.faturas
   .filter((fatura: Faturas) => fatura.estado === "Pago")
-  .slice(-10);
+  .slice(-5);
    
     
     return(
@@ -170,15 +170,40 @@ export default async function Page({ params }: { params: {pcliente: Cliente}}){
       </div>
       ))}
       
-      
-      
-    
-      
-      
-      
-      
+
     </div>
   </div>
+          <h2 className="mt-4 text-center text-gray-600 font-xl">Faturas Pagas</h2>
+  <table className=" text-center">
+          <thead className="border-b">
+            <tr>
+              <th scope="col" className="text-sm font-medium text-gray-900 px-6 py-4">
+                Mes
+              </th>
+              <th scope="col" className="text-sm font-medium text-gray-900 px-6 py-4">
+              Consumo
+              </th>
+              <th scope="col" className="text-sm font-medium text-gray-900 px-6 py-4">
+                Valor
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+          {faturUl.map((zon:any) => ( 
+            <tr key={zon._id} className="border-b bg-green-100 border-green-200">
+              <td className="text-sm text-gray-900 font-medium px-6 py-4 whitespace-nowrap">
+              {zon.mes}
+              </td>
+              <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+              {zon.consumo}
+              </td>
+              <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+              {zon.valor}
+              </td>
+            </tr>
+            ))}
+          </tbody>
+        </table>
 </div>
 
 </section>
