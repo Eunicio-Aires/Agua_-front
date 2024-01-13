@@ -49,7 +49,7 @@ export default async function Page({ params }: { params: {pcliente: Cliente}}){
   <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded ">
    
 
-    <div className="block w-full overflow-x-auto">
+    {/* <div className="block w-full overflow-x-auto">
       <table className="items-center bg-transparent w-full border-collapse ">
         <thead>
           <tr>
@@ -92,7 +92,7 @@ export default async function Page({ params }: { params: {pcliente: Cliente}}){
 
       </table>
     </div>
-  </div>
+  </div> */}
 </div>
 
 
@@ -173,7 +173,8 @@ export default async function Page({ params }: { params: {pcliente: Cliente}}){
 
     </div>
   </div>
-          <h2 className="mt-4 text-center text-gray-600 font-xl">Faturas Pagas</h2>
+          <h2 className="mt-10 text-center text-gray-600 font-xl">Faturas Pagas</h2>
+          <p className="text-xs text-gray-400 text-center">Ultimas 5 faturas pagas</p>
   <table className=" text-center">
           <thead className="border-b">
             <tr>
