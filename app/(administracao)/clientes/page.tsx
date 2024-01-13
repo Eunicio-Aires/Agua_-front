@@ -122,7 +122,7 @@ export default async function Zona() {
     </thead> 
     <tbody>
     {ativos.map((mes:any)=>(
-      <tr className="hover:text-gray-100" key={mes._id}  >
+      <tr className="hover:bg-gray-300" key={mes._id}  >
         <th></th> 
         <td>{mes.nome} {mes.apelido} </td>
         <td>{mes.codigo}</td> 
