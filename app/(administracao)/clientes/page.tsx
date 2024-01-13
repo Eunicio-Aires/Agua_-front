@@ -3,6 +3,7 @@ import Link from "next/link";
 import { resolve } from "path";
 import { MdEdit } from "react-icons/md";
 import  { BiUserPlus } from "react-icons/bi";
+import  SearchInPut  from '@/components/Search/SearchInPut'
 // import { BsPersonFill,BsThreeDotsVertical } from "react-icons/bs"
 // import Head from 'next/head';
 // import Header from "@/components/Header";
@@ -97,7 +98,9 @@ export default async function Zona() {
               </div>
             </div>
           </div>
-          <Link href='/novoCliente' className="btn btn-outline btn-success">
+          <SearchInPut />
+
+          <Link href='/novoCliente' className="btn btn-outline btn-success mt-3 mb-3">
           <BiUserPlus/>
           </Link>
           {/* <Registar/> */}
