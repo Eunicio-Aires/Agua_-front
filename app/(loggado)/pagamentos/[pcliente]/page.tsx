@@ -49,8 +49,8 @@ export default async function Page({ params }: { params: {pcliente: Cliente}}){
   <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded ">
    
 
-    {/* <div className="block w-full overflow-x-auto">
-      <table className="items-center bg-transparent w-full border-collapse ">
+    <div className="block w-full overflow-x-auto">
+      {/* <table className="items-center bg-transparent w-full border-collapse ">
         <thead>
           <tr>
             <th className="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
@@ -90,9 +90,9 @@ export default async function Page({ params }: { params: {pcliente: Cliente}}){
           
         </tbody>
 
-      </table>
+      </table> */}
     </div>
-  </div> */}
+  </div>
 </div>
 
 
