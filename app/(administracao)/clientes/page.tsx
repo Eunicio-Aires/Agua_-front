@@ -123,7 +123,7 @@ export default async function Zona() {
     <tbody>
     {ativos.map((mes:any)=>(
       <tr key={mes._id} className="hover:bg-gray-300"   >
-        <Link  href={`/clientes/${mes._id}`} >
+        
 
         <th></th> 
         <td>{mes.nome} {mes.apelido} </td>
@@ -131,8 +131,9 @@ export default async function Zona() {
         <td> {mes.faturas.filter((fatura:any) => fatura.estado === "Nao pago").length} </td> 
          
         <td>{mes.telefone}</td> 
-        <td> {mes.estado} </td> 
-        </Link> 
+        
+        <td><Link  href={`/clientes/${mes._id}`} > {mes.estado}</Link> </td> 
+         
       </tr> 
        ))}
 
