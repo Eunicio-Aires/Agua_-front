@@ -116,22 +116,22 @@ export default async function Zona() {
         <td>Nome</td> 
         <td>Codigo</td> 
         <td>F.N Pagas</td> 
-        <td>F.Pagamento</td>
-        <th>Mais</th> 
+        <td>Contato</td>
+        <th>Estado</th> 
       </tr>
     </thead> 
     <tbody>
     {ativos.map((mes:any)=>(
-      <tr className="hover:bg-gray-300" key={mes._id}  >
+      <Link key={mes._id} href={`/clientes/${mes._id}`} ><tr className="hover:bg-gray-300"   >
         <th></th> 
         <td>{mes.nome} {mes.apelido} </td>
         <td>{mes.codigo}</td> 
-        <td>{mes.faturas.filter((fatura:any) => fatura.estado === "Nao pago").length}</td> 
+        <td> {mes.faturas.filter((fatura:any) => fatura.estado === "Nao pago").length} </td> 
          
         <td>{mes.telefone}</td> 
-        <td> <Link href={`/clientes/${mes._id}`} ><MdEdit /></Link> </td> 
+        <td> {mes.estado} </td> 
        
-      </tr>
+      </tr> </Link> 
        ))}
 
 </tbody> 
