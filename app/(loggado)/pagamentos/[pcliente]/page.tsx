@@ -170,9 +170,10 @@ export default async function Page({ params }: { params: {pcliente: Cliente}}){
             </svg>
             </a> */}
           </div>
-          <Emola/>
+          
           </div>
         </div>
+        <Emola/>
       </div>
       ))}
       
