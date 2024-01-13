@@ -30,115 +30,9 @@ export default async function Page({ params }: { params: {pcliente: Cliente}}){
    
     
     return(
-//         <div className=''> 
-//              <NavBar/> 
-            
-        //     <div className='h-28 bg-gradient-to-r from-indigo-400 to-cyan-400 static'> 
-        //     <h2 className='pt-2 mt-3  text-center  text-2xl font-bold'>{cliente.client.nome}</h2>
-        //     <div className='flex justify-between px-4 pt-4 '>
-        //     <p className="text-sm">P. Pagar: {fatur.length}</p>
-        //     <h2>estado:{cliente.client.estado}</h2>
-        // </div>
-        // </div>
-       
-//             <div className=' bg-gradient-to-r from-cyan-10  justify-items-center'>
-//             <div  className=" mt-5">
-//           <div className=' mt-2 p-3 rounded-lg'>
-           
-//   {fatur.map((zon:any) => ( 
-
-// <div key={zon._id} className="card bg-base-100 shadow-xl mt-2">
-// <div className="card-body">
-//   <h2 className="  text-red-700 text-center text-2xl font-bold">{zon.mes}</h2>
-   
-//   <div><p className='text-base text-red-700 font-extrabold'>{zon.valor} Mtn</p></div> 
-//   <div className='flex justify-between px-4 pt-4 bg-gray-100 rounded-xl'> 
-  
-//    <div><p className='text-base'>Leitura </p></div>
-//   <div><p className='text-base'>Consumo </p></div>  
-//   <div><p className='text-base'>Estado  </p> </div>  
-
-//   </div>
-
-//   <div className='flex justify-between px-4 pt-4  rounded-xl'> 
-  
-//    <div><p className='text-base'>{zon.leitura} </p></div>
-//   <div><p className='text-base'>{zon.consumo} </p></div>  
-//   <div><p className='text-sm text-red-700'> {zon.estado} </p> </div>  
-
-//   </div>
- 
-//   <div className=" card-actions justify-between ">
-  
-  
-//   <div className="flex justify-between m-3">
-
-//   <div className='m-3'> <Modal _id={zon._id} _idCl={cliente.client._id}/></div>
-//   <div className='m-3'><Movitel /></div>
-  
-//   </div>
-//   </div>
-// </div>
-// </div>
-  
-
-//  ))}
-//    </div>
-//    </div>
-
-//     </div>
-
-    
-//     <div className='bg-base-200'>
-//       <h1>Faturas Pagas</h1>
-//     <div className=' bg-gradient-to-r from-cyan-10  justify-items-center'>
-//             <div  className=" mt-5">
-//           <div className='min-h-screen mt-2 p-3 rounded-lg'>
-           
-//   {faturUl.map((zon:any) => ( 
-
-// <div key={zon._id} className="card bg-base-100 shadow-xl mt-2">
-// <div className="card-body">
-//   <h2 className="  text-red-700 text-center text-2xl font-bold">{zon.mes}</h2>
-   
-//   <div><p className='text-base text-red-700 font-extrabold'>{zon.valor} Mtn</p></div> 
-//   <div className='flex justify-between px-4 pt-4 bg-gray-100 rounded-xl'> 
-   
-//    <div><p className='text-base'>Leitura </p></div>
-//   <div><p className='text-base'>Consumo </p></div>  
-//   <div><p className='text-base'>Estado  </p> </div>  
-
-//   </div>
-
-//   <div className='flex justify-between px-4 pt-4  rounded-xl'> 
-  
-//    <div><p className='text-base'>{zon.leitura} </p></div>
-//   <div><p className='text-base'>{zon.consumo} </p></div>  
-//   <div><p className='text-sm text-red-700'> {zon.estado} </p> </div>  
-
-//   </div>
- 
-//   <div className=" card-actions justify-between ">
-  
-  
-
-//   </div>
-// </div>
-// </div>
-  
-
-//  ))}
-//    </div>
-//    </div>
-//     </div>
-//     </div>
-
-
-
-
 
 <section className="py-1 bg-blueGray-50">
-<NavBar/> 
+
       
 <div className='h-28 bg-gradient-to-r from-indigo-400 to-cyan-400 static'> 
 
@@ -153,16 +47,7 @@ export default async function Page({ params }: { params: {pcliente: Cliente}}){
 
 <div className="w-full xl:w-8/12 mb-12 xl:mb-0 px-4 mx-auto mt-24">
   <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded ">
-    {/* <div class="rounded-t mb-0 px-4 py-3 border-0">
-      <div class="flex flex-wrap items-center">
-        <div class="relative w-full px-4 max-w-full flex-grow flex-1">
-          <h3 class="font-semibold text-base text-blueGray-700">Page Visits</h3>
-        </div>
-        <div class="relative w-full px-4 max-w-full flex-grow flex-1 text-right">
-          <button class="bg-indigo-500 text-white active:bg-indigo-600 text-xs font-bold uppercase px-3 py-1 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button">See all</button>
-        </div>
-      </div>
-    </div> */}
+   
 
     <div className="block w-full overflow-x-auto">
       <table className="items-center bg-transparent w-full border-collapse ">
@@ -209,18 +94,59 @@ export default async function Page({ params }: { params: {pcliente: Cliente}}){
     </div>
   </div>
 </div>
-{/* <footer className="relative pt-8 pb-6 mt-16">
-  <div className="container mx-auto px-4">
-    <div className="flex flex-wrap items-center md:justify-between justify-center">
-      <div className="w-full md:w-6/12 px-4 mx-auto text-center">
-        <div className="text-sm text-blueGray-500 font-semibold py-1">
-          Powered <Link href="https://www.creative-tim.com/product/notus-js" className="text-blueGray-500 hover:text-gray-800" target="_blank">Eunicio</Link> by <a href="https://www.creative-tim.com" className="text-blueGray-500 hover:text-blueGray-800" target="_blank"> Creative Tim</a>.
+
+
+<div className="relative flex min-h-screen flex-col justify-center overflow-hidden bg-gray- py-6 sm:py-12">
+  <div className="mx-auto max-w-screen-xl px-4 w-full">
+    <h2 className="mb-4 font-bold text-xl text-gray-600">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic, consequuntur.</h2>
+    <div className="grid w-full sm:grid-cols-2 xl:grid-cols-4 gap-6">
+
+      <div className="relative flex flex-col shadow-md rounded-xl overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300 max-w-sm">
+        <a href="" className="hover:text-orange-600 absolute z-30 top-2 right-0 mt-2 mr-3">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+          </svg>
+        </a>
+        <a href="" className="z-20 absolute h-full w-full top-0 left-0 ">&nbsp;</a>
+        <div className="h-auto overflow-hidden">
+          <div className="h-44 overflow-hidden relative">
+            {/* <img src="https://picsum.photos/400/400" alt=""> */}
+          </div>
+        </div>
+        <div className="bg-white py-4 px-3">
+          <h3 className="text-xs mb-2 font-medium">Des cadeaux incroyables prêts à être utilisés dans votre prochain projet</h3>
+          <div className="flex justify-between items-center">
+            <p className="text-xs text-gray-400">
+            Lorem, ipsum dolor sit amet
+          </p>
+          <div className="relative z-40 flex items-center gap-2">
+            <a className="text-orange-600 hover:text-blue-500" href="">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+              </svg>
+            </a>
+            <a className="text-orange-600 hover:text-blue-500" href="">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" />
+            </svg>
+            </a>
+          </div>
+          </div>
         </div>
       </div>
+      
+      
+      
+    
+      
+      
+      
+      
     </div>
   </div>
-</footer> */}
+</div>
+
 </section>
-        // </div>
+        
     )
 }
