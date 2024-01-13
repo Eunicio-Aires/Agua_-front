@@ -122,7 +122,9 @@ export default async function Zona() {
     </thead> 
     <tbody>
     {ativos.map((mes:any)=>(
-      <Link key={mes._id} href={`/clientes/${mes._id}`} ><tr className="hover:bg-gray-300"   >
+      <tr key={mes._id} className="hover:bg-gray-300"   >
+        <Link  href={`/clientes/${mes._id}`} >
+
         <th></th> 
         <td>{mes.nome} {mes.apelido} </td>
         <td>{mes.codigo}</td> 
@@ -130,8 +132,8 @@ export default async function Zona() {
          
         <td>{mes.telefone}</td> 
         <td> {mes.estado} </td> 
-       
-      </tr> </Link> 
+        </Link> 
+      </tr> 
        ))}
 
 </tbody> 
