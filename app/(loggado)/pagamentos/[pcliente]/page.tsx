@@ -98,7 +98,7 @@ export default async function Page({ params }: { params: {pcliente: Cliente}}){
 
 <div className="relative flex min-h-screen flex-col justify-center overflow-hidden bg-gray- py-6 sm:py-12">
   <div className="mx-auto max-w-screen-xl px-4 w-full">
-    <h2 className="mb-4 font-bold text-xl text-gray-600">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic, consequuntur.</h2>
+    {/* <h2 className="mb-4 font-bold text-xl text-gray-600">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic, consequuntur.</h2> */}
     <div className="grid w-full sm:grid-cols-2 xl:grid-cols-4 gap-6">
 
     {fatur.map((zon:any) => ( 
@@ -112,7 +112,7 @@ export default async function Page({ params }: { params: {pcliente: Cliente}}){
         <div className="h-auto overflow-hidden">
           <div className="h-44 overflow-hidden relative">
             <h2 className="text-orange-600  text-sm text-center mt-3">{zon.mes}</h2>
-            <h4 className="mt-2">{zon.valor}</h4>
+            <h4 className="m-2 text-orange-200 font-bold ">{zon.valor} Mt </h4>
 
             <table className=" text-center">
           <thead className="border-b">
@@ -130,7 +130,7 @@ export default async function Page({ params }: { params: {pcliente: Cliente}}){
           </thead>
           <tbody>
           
-            <tr className="border-b bg-green-100 border-green-200">
+            <tr className="border-b bg-red-100 border-red-200">
               <td className="text-sm text-gray-900 font-medium px-6 py-4 whitespace-nowrap">
               {zon.consumo}
               </td>
@@ -148,10 +148,10 @@ export default async function Page({ params }: { params: {pcliente: Cliente}}){
          
         </div>
         <div className="bg-white py-4 px-3">
-          <h3 className="text-xs mb-2 font-medium">Des cadeaux incroyables prêts à être utilisés dans votre prochain projet</h3>
+          <h3 className="text-xs mb-2 font-medium">Faca pagamento parcelada</h3>
           <div className="flex justify-between items-center">
             <p className="text-xs text-gray-400">
-            Lorem, ipsum dolor sit amet
+            Valor por m*3 e de 85mt
           </p>
           <div className="relative z-40 flex items-center gap-2">
             <a className="text-orange-600 hover:text-blue-500" href="">
