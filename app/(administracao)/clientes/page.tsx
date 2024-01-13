@@ -36,6 +36,8 @@ import { Registar } from '@/components/Registar'
 
 export default async function Zona() {
   const responseC = await fetch(`https://agua-p.vercel.app/adm/todos`,{cache:"no-cache"}).then((res) => res.json());
+  // const responseC = res.allClientes.filter(cliente => cliente.estado === "Activo");
+
 
   // const responseC= await getDataClientes();
   
@@ -116,7 +118,7 @@ export default async function Zona() {
       </tr>
     </thead> 
     <tbody>
-    {clients.map((mes:any)=>(
+    {ativos.map((mes:any)=>(
       <tr key={mes._id}>
         <th></th> 
         <td>{mes.nome} {mes.apelido} </td>
