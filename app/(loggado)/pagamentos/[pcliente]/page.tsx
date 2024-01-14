@@ -5,7 +5,7 @@ import { Footer } from '@/components/Foter'
 import { Modal } from '@/components/Modal'
 import { GiReceiveMoney } from "react-icons/gi";
 import Link from "next/link";
-// import ButPagar from '@/components/pagamento/ButPagar';
+import ButPagar from '@/components/pagamento/ButPagar';
 
 import {BsPersonFill, BsThreeDotsVertical} from 'react-icons/bs'
 
@@ -172,7 +172,7 @@ export default async function Page({ params }: { params: {pcliente: Cliente}}){
           </div>
           </div>
         </div>
-        {/* <ButPagar/> */}
+        <ButPagar/>
       </div>
       ))}
       

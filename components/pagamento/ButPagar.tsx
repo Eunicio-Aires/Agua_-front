@@ -1,3 +1,4 @@
+"use client"
 import React, { useState } from "react";
 import { GiReceiveMoney } from "react-icons/gi";
 import Emola from '@/components/pagamento/Emola';
