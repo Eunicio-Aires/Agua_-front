@@ -3,8 +3,9 @@ export default function Emola(){
 
     return(
         <>
+        <Image src="/Rrrrr.jpg" alt={""} width={150} height={85}/>
             <div className="flex  items-center justify-center bg-[#fbfbfb]">
-              <Image src="/Rrrrr.jpg" alt={""} width={150} height={85}/>
+              
   <div className="grid w-80 grid-rows-4 gap-1">
     {/* <p className="font-semibold text-gray-700">💌 Get the best of Product Hunt, directly in your inbox.</p> */}
     <input type="text" className="h-10 w-full rounded border p-2 text-sm" placeholder="Your email" />
