@@ -10,7 +10,7 @@ export default function Emola(){
               
   <div className="grid w-80 grid-rows-4 gap-1">
     {/* <p className="font-semibold text-gray-700">💌 Get the best of Product Hunt, directly in your inbox.</p> */}
-    <input type="Number" className="h-10 w-full rounded border p-2 text-sm" placeholder="84/85" />
+    <input type="Number" className="h-10 w-full rounded border p-2 text-sm" placeholder="86/87" />
     <button className="rounded bg-[orange] text-gray-50 hover:bg-gradient-to-r hover:from-[#ebab2c] hover:to-[#fca547]">Pagar</button>
     {/* <a href="">
       <p className="mt-4 flex items-center text-xs text-gray-500 hover:text-gray-700">
