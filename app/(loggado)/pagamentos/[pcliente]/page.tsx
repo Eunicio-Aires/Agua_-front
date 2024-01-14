@@ -6,6 +6,7 @@ import { Modal } from '@/components/Modal'
 import { GiReceiveMoney } from "react-icons/gi";
 import Link from "next/link";
 import Emola from '@/components/pagamento/Emola';
+import ButPagar from '@/components/pagamento/ButPagar';
 
 import {BsPersonFill, BsThreeDotsVertical} from 'react-icons/bs'
 
@@ -173,7 +174,7 @@ export default async function Page({ params }: { params: {pcliente: Cliente}}){
           
           </div>
         </div>
-        <Emola/>
+        <ButPagar/>
       </div>
       ))}
       
