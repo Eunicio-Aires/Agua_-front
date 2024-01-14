@@ -51,7 +51,7 @@ export default function Mpesa({_id}:Fatura){
     <form onSubmit={handleSubmi }>
     <label htmlFor="numero"></label>
     <input type="Number" className="h-10 w-full rounded border p-2 text-sm" placeholder="84/85" id="numero" name="numero" />
-    <button type="submit" className="rounded bg-[red] text-gray-50 hover:bg-gradient-to-r hover:from-[#FD5E57] hover:to-[#FC477E]">Pagar</button>
+    <button  className="rounded bg-[red] text-gray-50 hover:bg-gradient-to-r hover:from-[#FD5E57] hover:to-[#FC477E]">Pagar</button>
     </form>
     {/* <a href="">
       <p className="mt-4 flex items-center text-xs text-gray-500 hover:text-gray-700">
