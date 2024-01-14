@@ -133,7 +133,7 @@ export default async function Page({ params }: { params: {pcliente: Cliente}}){
           </div>
           </div>
         </div>
-        <ButPagar/>
+        <ButPagar _id={zon._id}/>
       </div>
       ))}
       

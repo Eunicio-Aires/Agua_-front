@@ -3,7 +3,12 @@ import { useState } from 'react';
 import React, { SyntheticEvent } from 'react';
 import { useRouter } from 'next/navigation';
 
-export default function Mpesa(){
+
+interface Fatura{
+  _id:String;
+  
+}
+export default function Mpesa({_id}:Fatura){
 
   const router = useRouter()
   const [isButtonDisabled, setButtonDisabled] = useState(false);

@@ -6,7 +6,7 @@ import Image from 'next/image';
 import router from 'next/router';
 interface Fatura{
     _id:String;
-    // _idCl:String;
+    
 }
 export function Numero({_id}:Fatura){
   const router = useRouter()

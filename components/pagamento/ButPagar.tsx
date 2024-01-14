@@ -4,7 +4,11 @@ import { GiReceiveMoney } from "react-icons/gi";
 import Mpesa from '@/components/pagamento/Mpesa';
 import Emola from '@/components/pagamento/Emola'
 
-export default function ButPagar(){
+interface Fatura{
+    _id:String;
+    
+}
+export default function ButPagar({_id}:Fatura){
     const [iseBlueBoxShown, setIsBlueBoxShown] = useState(false);
     // This function is triggered when the button is clicked
     const buttonHandler = () => {
@@ -20,7 +24,7 @@ export default function ButPagar(){
             </button > : <p  className="btn btn-outline btn-accent ml-2"> Pagar <GiReceiveMoney /></p>}
         </button>
         {iseBlueBoxShown && <div className=" p-6 " >
-        <Mpesa/>
+        <Mpesa _id={_id}/>
         <Emola/>
         {/* onSubmit={handleSubmit} */}
         {/* <form  onSubmit={handleSubmit}>
