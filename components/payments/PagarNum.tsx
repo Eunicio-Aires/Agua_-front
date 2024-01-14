@@ -9,6 +9,10 @@ interface Fatura{
     _id:String;
   }
   export function PagarNum({_id}:Fatura){
+
+   
+
+
       const router = useRouter()
       const [isButtonDisabled, setButtonDisabled] = useState(false);
       const handleSubm = async (event: SyntheticEvent) => {
