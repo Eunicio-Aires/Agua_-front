@@ -1,7 +1,8 @@
 "use client"
 import React, { useState } from "react";
 import { GiReceiveMoney } from "react-icons/gi";
-import Emola from '@/components/pagamento/Emola';
+import Mpesa from '@/components/pagamento/Mpesa';
+import Emola from '@/components/pagamento/Emola'
 
 export default function ButPagar(){
     const [iseBlueBoxShown, setIsBlueBoxShown] = useState(false);
@@ -19,7 +20,7 @@ export default function ButPagar(){
             </button > : <p  className="btn btn-outline btn-accent ml-2"> Pagar <GiReceiveMoney /></p>}
         </button>
         {iseBlueBoxShown && <div className=" p-6 " >
-        <Emola/>
+        <Mpesa/>
         <Emola/>
         {/* onSubmit={handleSubmit} */}
         {/* <form  onSubmit={handleSubmit}>

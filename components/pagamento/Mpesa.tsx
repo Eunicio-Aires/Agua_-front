@@ -1,17 +1,17 @@
 import Image from "next/image"
-export default function Emola(){
+export default function Mpesa(){
 
     return(
         <>
         <div className="flex items-center justify-center mt-7 mb-3">
-          <Image src="/Movitel-1.jpg" alt="" width={150} height={85} />
+          <Image src="/Rrrrr.jpg" alt="" width={150} height={85} />
         </div>
             <div className="flex  items-center justify-center bg-[#fbfbfb]">
               
   <div className="grid w-80 grid-rows-4 gap-1">
     {/* <p className="font-semibold text-gray-700">💌 Get the best of Product Hunt, directly in your inbox.</p> */}
     <input type="Number" className="h-10 w-full rounded border p-2 text-sm" placeholder="84/85" />
-    <button className="rounded bg-[orange] text-gray-50 hover:bg-gradient-to-r hover:from-[#ebab2c] hover:to-[#fca547]">Pagar</button>
+    <button className="rounded bg-[red] text-gray-50 hover:bg-gradient-to-r hover:from-[#FD5E57] hover:to-[#FC477E]">Pagar</button>
     {/* <a href="">
       <p className="mt-4 flex items-center text-xs text-gray-500 hover:text-gray-700">
         
