@@ -111,10 +111,10 @@ export default async function Page({ params }: { params: {pcliente: Cliente}}){
          
         </div>
         <div className="bg-white py-4 px-3">
-          <h3 className="text-xs mb-2 font-medium">Faca pagamento parcelada</h3>
+          <h3 className="text-xs mb-2 font-medium">Pagamentos sem Taxas</h3>
           <div className="flex justify-between items-center">
             <p className="text-xs text-gray-400">
-            Valor por m*3 e de 85mt
+            Facilidade de Pagamento.
           </p>
           <div className="relative z-40 flex items-center gap-2">
 
@@ -154,12 +154,15 @@ export default async function Page({ params }: { params: {pcliente: Cliente}}){
               <th scope="col" className="text-sm font-medium text-gray-900 px-6 py-4">
                 Valor
               </th>
+              <th scope="col" className="text-sm font-medium text-gray-900 px-6 py-4">
+                Pago Por: 
+              </th>
             </tr>
           </thead>
           <tbody>
           {faturUl.map((zon:any) => ( 
             <tr key={zon._id} className="border-b bg-green-100 border-green-200">
-              <td className="text-sm text-gray-900 font-medium px-6 py-4 whitespace-nowrap">
+              <td className="text-sm text-gray-900 font-bold px-6 py-4 whitespace-nowrap">
               {zon.mes}
               </td>
               <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
@@ -167,6 +170,9 @@ export default async function Page({ params }: { params: {pcliente: Cliente}}){
               </td>
               <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
               {zon.valor}
+              </td>
+              <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+              {zon.formaDePagamento}
               </td>
             </tr>
             ))}
