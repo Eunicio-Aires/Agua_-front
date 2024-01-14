@@ -48,52 +48,12 @@ export default async function Page({ params }: { params: {pcliente: Cliente}}){
 
 
 
-      <div className="w-full xl:w-8/12 mb-12 xl:mb-0 px-4 mx-auto mt-24">
+      <div className="w-full xl:w-8/12 mb-12 xl:mb-0 px-4 mx-auto mt-10">
       <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded ">
    
 
       <div className="block w-full overflow-x-auto">
-      {/* <table className="items-center bg-transparent w-full border-collapse ">
-        <thead>
-          <tr>
-            <th className="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
-                         Mes
-                        </th>
-          <th className="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
-                          Valor
-                        </th>
-           <th className="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
-                          Consumo/
-                        </th>
-          <th className="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
-                          Leitura
-                        </th>
-          </tr>
-        </thead>
-
-        <tbody>
-        {faturUl.map((zon:any) => ( 
-          <tr key={zon._id} >
-            <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
-           
-            <Movitel /> <Modal _id={zon._id} _idCl={cliente.client._id}/>
-            </th>
-            <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
-            {zon.valor} 
-            </td>
-            <td className="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-            {zon.consumo}/{zon.leitura}
-            </td>
-            <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-              <i className="fas fa-arrow-up text-emerald-500 mr-4">i</i>
-              {zon.mes}
-            </td>
-          </tr>
-          ))}
-          
-        </tbody>
-
-      </table> */}
+    
     </div>
   </div>
 </div>
@@ -114,8 +74,8 @@ export default async function Page({ params }: { params: {pcliente: Cliente}}){
         {/* <a href="" className="z-20 absolute h-full w-full top-0 left-0 ">&nbsp;</a> */}
         <div className="h-auto overflow-hidden">
           <div className="h-44 overflow-hidden relative">
-            <h2 className="text-orange-600  text-sm text-center mt-3">{zon.mes}</h2>
-            <h4 className="m-2 text-orange-200 font-bold ">{zon.valor} Mt </h4>
+            <h2 className="text-orange-600 font-bold text-lg text-center mt-3">{zon.mes}</h2>
+            <h4 className="m-2 text-orange-400 font-bold ">{zon.valor} Mt </h4>
 
             <table className=" text-center">
           <thead className="border-b">
@@ -159,7 +119,7 @@ export default async function Page({ params }: { params: {pcliente: Cliente}}){
           <div className="relative z-40 flex items-center gap-2">
 
             {/* <Link href={`/pagar/${zon._id}`} className="btn btn-outline btn-accent"> Pagar <GiReceiveMoney /></Link> */}
-            
+
             {/* <a className="text-orange-600 hover:text-blue-500" href="">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
