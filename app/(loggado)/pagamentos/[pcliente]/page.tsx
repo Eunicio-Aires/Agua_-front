@@ -171,7 +171,6 @@ export default async function Page({ params }: { params: {pcliente: Cliente}}){
             </svg>
             </a> */}
           </div>
-          
           </div>
         </div>
         <ButPagar/>
