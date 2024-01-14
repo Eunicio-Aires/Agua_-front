@@ -4,7 +4,7 @@ export default function Emola(){
     return(
         <>
         <div className="flex items-center justify-center mt-7 mb-3">
-          <Image src="/Movitel-1.jpg" alt="" width={150} height={85} />
+          <Image src="/Movitel-1.jpeg" alt="" width={150} height={85} />
         </div>
             <div className="flex  items-center justify-center bg-[#fbfbfb]">
               
