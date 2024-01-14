@@ -1,5 +1,38 @@
 import Image from "next/image"
+import { useState } from 'react';
+import React, { SyntheticEvent } from 'react';
+import { useRouter } from 'next/navigation';
+
 export default function Mpesa(){
+
+  const router = useRouter()
+  const [isButtonDisabled, setButtonDisabled] = useState(false);
+  const handleSubmi = async (event: SyntheticEvent) => {
+        event.preventDefault();
+        // desabilitar o botao
+        // setButtonDisabled(true);
+
+        const data = {
+            numero: (event.target as HTMLFormElement).numero.value,
+          };
+        const JSONdata = JSON.stringify(data);
+        const endpoint = `https://agua-p.vercel.app/adm/pagarfat/${_id}`;
+        const options: RequestInit = {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSONdata,
+          };
+          const response = await fetch(endpoint, options);
+          const result = await response.json();
+          console.log(result.response)
+          alert(` ${result.response}`);
+       
+          // router.refresh()
+          // router.push(`pagamentos/${_id}`)
+
+    };
 
     return(
         <>
@@ -10,8 +43,11 @@ export default function Mpesa(){
               
   <div className="grid w-80 grid-rows-4 gap-1">
     {/* <p className="font-semibold text-gray-700">💌 Get the best of Product Hunt, directly in your inbox.</p> */}
-    <input type="Number" className="h-10 w-full rounded border p-2 text-sm" placeholder="84/85" />
-    <button className="rounded bg-[red] text-gray-50 hover:bg-gradient-to-r hover:from-[#FD5E57] hover:to-[#FC477E]">Pagar</button>
+    <form onSubmit={handleSubmi }>
+    <label htmlFor="numero"></label>
+    <input type="Number" className="h-10 w-full rounded border p-2 text-sm" placeholder="84/85" id="numero" name="numero" />
+    <button type="submit" className="rounded bg-[red] text-gray-50 hover:bg-gradient-to-r hover:from-[#FD5E57] hover:to-[#FC477E]">Pagar</button>
+    </form>
     {/* <a href="">
       <p className="mt-4 flex items-center text-xs text-gray-500 hover:text-gray-700">
         
