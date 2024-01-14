@@ -45,14 +45,14 @@ export default function Mpesa({_id}:Fatura){
           <Image src="/Rrrrr.jpg" alt="" width={150} height={85} />
         </div>
             <div className="flex  items-center justify-center bg-[#fbfbfb]">
-              
+  <form onSubmit={handleSubmi }>          
   <div className="grid w-80 grid-rows-4 gap-1">
     {/* <p className="font-semibold text-gray-700">💌 Get the best of Product Hunt, directly in your inbox.</p> */}
-    <form onSubmit={handleSubmi }>
+    
     <label htmlFor="numero"></label>
     <input type="Number" className="h-10 w-full rounded border p-2 text-sm" placeholder="84/85" id="numero" name="numero" />
-    <button  className="rounded bg-[red] text-gray-50 hover:bg-gradient-to-r hover:from-[#FD5E57] hover:to-[#FC477E]">Pagar</button>
-    </form>
+    <button type="submit" className="rounded bg-[red] text-gray-50 hover:bg-gradient-to-r hover:from-[#FD5E57] hover:to-[#FC477E]">Pagar</button>
+    
     {/* <a href="">
       <p className="mt-4 flex items-center text-xs text-gray-500 hover:text-gray-700">
         
@@ -62,6 +62,7 @@ export default function Mpesa({_id}:Fatura){
       </p>
     </a> */}
   </div>
+  </form>
 </div>
         
         </>
