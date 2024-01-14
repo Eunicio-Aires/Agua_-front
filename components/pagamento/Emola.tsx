@@ -8,7 +8,9 @@ import { ToastContainer, toast } from 'react-toastify';
 
 
 export default function Emola(){
-    const notify = () => toast("Servico Indesponivel");
+    const notify = () => toast.warning("O Servico E-mola encontra-se Indesponivel",{
+        theme: "colored"
+    });
     const handleSubmi = async (event: SyntheticEvent) => {
         event.preventDefault();
         // desabilitar o botao
