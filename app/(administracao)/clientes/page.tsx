@@ -97,7 +97,7 @@ export default async function Zona() {
               </div>
             </div>
           </div>
-          <SearchInPut />
+          
 
           <Link href='/novoCliente' className="btn btn-outline btn-success mt-3 mb-3">
           <BiUserPlus/>
