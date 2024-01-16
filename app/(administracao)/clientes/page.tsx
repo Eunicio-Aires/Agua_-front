@@ -70,7 +70,7 @@ export default async function Zona() {
 
 
 
-<div className=" grid lg:grid-cols-5 gap-4 p-4 bg-green-200"> 
+<div className=" grid lg:grid-cols-5 gap-4 p-4 bg-gray-200"> 
 
             <div className="lg:col-span-2 col-span-1 bg-white flex justify-between w-full border p-4 rounded-lg">
               <div className="flex flex-col w-full pb-4">
@@ -107,7 +107,7 @@ export default async function Zona() {
                   {/* modal button */}
           {/* <label htmlFor="my_modal_7" className="btn">No Cliente</label> */}
           
-          <h1 className="text-center text-lg mt-4 mb-3">Clientes</h1>
+          <h1 className="text-center bold-400 text-xl mt-4 mb-3">Clientes</h1>
 
 <div className="w-full col-span-1 relative lg:h-[70vh] h-[50vh] m-auto p-4 border rounded-lg bg-white overflow-scroll">          
   <div className="overflow-x-auto">
