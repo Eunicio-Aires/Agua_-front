@@ -40,13 +40,14 @@ export function ModalNum(props:Fatura){
 
       // Verifica se a requisição foi bem-sucedida
       if (!response.ok) {
-        throw new Error(`Erro na requisição: ${response.statusText}`);
+        alert(`Falha ao efetuar o pagamento`);
       }
 
       // Manipula a resposta do backend, se necessário
       const data = await response.json();
-      alert(`Resposta do backend:`);
+      
       revalidatePath('/clietes')
+      alert(`Pago com sucesso`);
     } catch (error ) {
       
       // revalidatePath('/clietes')
@@ -60,7 +61,7 @@ export function ModalNum(props:Fatura){
       {/* <input type="text" value={_id} onChange={(e) => setId(e.target.value)} /> */}
 
       {/* Botão que chama a função handleClick ao ser clicado */}
-      <button onClick={handleClick}>Clique para Pagar</button>
+      <button className="btn-sm" onClick={handleClick}> Pagar Numerario</button>
     </div>
   );
 

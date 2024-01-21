@@ -15,16 +15,6 @@ import { TopCards } from '@/components/TopCards'
 import OtherUsers from "@/components/outros";
 import Editar from "@/components/clientes/Editar";
 
-// type Client ={
-//   _id:String;
-//   nome:String;
-//   apelido:String;
-//   faturas:[]
-// }
-// interface Zona {
-//   _id:String;
-  
-// }
 
 // async function getData({ params }: { params: { zona: string } }) {
 //   const id = await params.zona
@@ -58,17 +48,6 @@ import Editar from "@/components/clientes/Editar";
     //   }
     // }
 
-
-    // async function getDataId({ params }: { params: { id: string } }){
-  
-    //   const res = await fetch(`https://agua-front.vercel.app/api/todos`,{cache:"no-cache"})
-    
-    //   if(!res.ok){
-    //     throw new Error('Failed to fetch data')
-    //   }
-    //   return res.json()
-    // }
-
     export default async function ClienteId({ params }: { params: { id: string } }){
       const posts = await fetch(`https://agua-front.vercel.app/api/clienteId/${params.id}`,{ cache: 'no-store'}).then((res) => res.json())
       const dados = await posts.clientId.nome
@@ -83,7 +62,7 @@ import Editar from "@/components/clientes/Editar";
     // const area = await fetch(`http://localhost:3000/api/areas/${id}`,{cache:"no-cache"});
     // const areas = await area.json();
     // const area  = await product.area
-      
+       
     // console.log(areas) 
     // const client = await posts.product.area.cliente
     // const _id = await posts.product.area._id
@@ -94,51 +73,7 @@ import Editar from "@/components/clientes/Editar";
           <h1 className="text-red-800">{faturasNaoPagas.length}</h1> 
 
            
-           {/* <div>My Post: {params.id}</div> */}
-       {/* <TopCards/>  */}
-       
-      {/* <OtherUsers _idZona={_id}  /> */}
-           
-        
-      {/* <h3 className='text-2xl text-center text-green-400'>{ posts.product.area.zona}</h3>
-       <Registar _id={_id} /> 
-       <div className="p-4">
-       
-        <div className="w-full n-auto p-4 border rounded-lg bg-white overflow-y-auto">
-        
-          <div className="my-3 p-2 grid md:grid-cols-4 sm:grid-cols-3 grid-cols-2 items-center justify-between cursor-pointer">
-            <span>Nome </span> 
-           < span className="sm:text-left text-right">Codigo</span>
-            <span className="hidden md:grid">F.Nao pagas</span>
-            
-            <span className="hidden md:grid">Cotatato</span> 
-            
-         </div> 
-
-     <ul>
-      
-     {area.map((zon:any) => (
-      <li key={zon._id} className="bg-gray-50 hover:bg-gray-100 rounded-lg my-3 grid md:grid-cols-4 sm:grid-cols-3 grid-cols-2 items-center justify-between cursor-poiter"> 
-      
-        <div className="flex items-center">
-          <div className="bg-purple-100 p-1 rounded-sm">
-                <BsPersonFill className="">jyfytsts</BsPersonFill>
-          </div>
-          <p className="pl-2">{zon.nome}</p> 
-        </div>
-        <p className="text-gray-600 sm:text-left text-rigth">{zon.codigo}</p>
-        <p className="hidden md:flex">{zon.faturas.filter((fatura: { estado: string; }) => fatura.estado === "Nao pago").length}</p>
-        
-        <p className="hidden md:flex">{zon.telefone}</p>
-        
-        
-        
-      </li>
-      
-         ))}
-     </ul> 
-     </div>
-     </div> */}
+         
 
 <div className="overflow-x-auto m-4">
   <table className="table table-xs">

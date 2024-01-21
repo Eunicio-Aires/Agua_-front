@@ -3,7 +3,7 @@ export function Movitel(){
     return(
         <div>
             {/* The button to open modal */}
-                <a href="#my_modal_2" className="btn"><h3 className="text-yellow-600"> E-Mola</h3></a>
+                <a href="#my_modal_2" className="btn btn-sm "><h3 className="text-yellow-600"> E-Mola</h3></a>
                 {/* Put this part before </body> tag */}
                 <div className="modal" id="my_modal_2">
                 <div className="modal-box">

@@ -4,43 +4,12 @@ import { resolve } from "path";
 import { MdEdit } from "react-icons/md";
 import  { BiUserPlus } from "react-icons/bi";
 import  SearchInPut  from '@/components/Search/SearchInPut'
-
-// import { BsPersonFill,BsThreeDotsVertical } from "react-icons/bs"
-// import Head from 'next/head';
-// import Header from "@/components/Header";
-// import { RegistarZona } from "@/components/RegistarZona"; 
-// import { Cliente }  from "@/components/Clientes";
-
-// import {BsDatabase, BsPersonFill, BsThreeDotsVertical} from 'react-icons/bs'
 import { Registar } from '@/components/Registar'
-// import Zona from "../page";
-// import  TopCards  from '@/components/TopCards'
-// import OtherUsers from "@/components/outros";
 
-// type Zona = {
-//   _id: any;
-//   zona: string;
-// }
-
-
-
-// async function getDataClientes(){
-//   await new Promise ((resolve)=> setTimeout(resolve,1000));
-//   const res = await fetch(`https://agua-front.vercel.app/api/todos`,{cache:"no-store"})
-
-//   if(!res.ok){
-//     throw new Error('Failed to fetch data')
-//   }
-//   return res.json()
-// }
 
 export default async function Zona() {
   const responseC = await fetch(`https://agua-p.vercel.app/adm/todos`,{cache:"no-cache"}).then((res) => res.json());
-  // const responseC = res.allClientes.filter(cliente => cliente.estado === "Activo");
 
-
-  // const responseC= await getDataClientes();
-  
   const clients = await responseC.allClientes
   const numero  = await responseC.allClientes.filter((cliente:any) => cliente.estado === "Activo").length
   const ativos  = await responseC.allClientes.filter((cliente:any) => cliente.estado === "Activo")
@@ -51,12 +20,6 @@ export default async function Zona() {
  
 
     <section className="text-gray-600 body-font">
-
-
-      {/* The button to open modal */}
-
-
-{/* Put this part before </body> tag */}
 <input type="checkbox" id="my_modal_7" className="modal-toggle" />
 <div className="modal" role="dialog">
   <div className="modal-box">
@@ -103,9 +66,7 @@ export default async function Zona() {
           <Link href='/novoCliente' className="btn btn-outline btn-success mt-3 mb-3">
           <BiUserPlus/>
           </Link>
-          {/* <Registar/> */}
-                  {/* modal button */}
-          {/* <label htmlFor="my_modal_7" className="btn">No Cliente</label> */}
+    
           
           <h1 className="text-center bold-400 text-xl mt-4 mb-3">Clientes</h1>
 
@@ -134,7 +95,7 @@ export default async function Zona() {
          
         <td>{mes.telefone}</td> 
         
-        <td><Link  href={`/clientes/${mes._id}`} > {mes.estado}</Link> </td> 
+        <td> <Link  href={`/clientes/${mes._id}`} > {mes.estado}</Link> </td> 
          
       </tr> 
        ))}
