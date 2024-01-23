@@ -1,7 +1,7 @@
 import { MdPhotoSizeSelectLarge } from "react-icons/md";
 
-export default async function Imprimir({ params }:{ params:{faturacao:any}}){
-    const posts = await fetch(`https://agua-p.vercel.app/adm/fatura/${params.faturacao}`,{cache:"no-cache"}).then((res) => res.json());
+export default async function Imprimir({ params }:{ params:{id:any}}){
+    const posts = await fetch(`https://agua-p.vercel.app/adm/fatura/${params.id}`,{cache:"no-cache"}).then((res) => res.json());
     return(
         <>
             <div>
