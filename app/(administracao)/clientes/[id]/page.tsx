@@ -16,56 +16,14 @@ import OtherUsers from "@/components/outros";
 import Editar from "@/components/clientes/Editar";
 
 
-// async function getData({ params }: { params: { zona: string } }) {
-//   const id = await params.zona
-//   const res = await fetch(`http://localhost:3000/api/areas/${id}`,{cache:"no-cache"}`)
-//   // The return value is *not* serialized
-//   // You can return Date, Map, Set, etc.
- 
-//   if (!res.ok) {
-//     // This will activate the closest `error.js` Error Boundary
-//     throw new Error('Failed to fetch data')
-//   }
- 
-//   return res.json()
-// }
-
-
-
-    
-    // const id = params.zona
-    // const posts =  fetch(`http://localhost:3000/api/areas/${id}`,{cache:"no-cache"});
-    // const area  = poats.json();
-    // console.log(posts)
-    // const client = await posts.product.area.cliente
-    // const _id = await posts.product.area._id
-   
-    // const getZonaId = async () =>{
-    //   try{
-
-    //   }catch(error){
-    //     console.log(error)
-    //   }
-    // }
-
     export default async function ClienteId({ params }: { params: { id: string } }){
       const posts = await fetch(`https://agua-front.vercel.app/api/clienteId/${params.id}`,{ cache: 'no-store'}).then((res) => res.json())
       const dados = await posts.clientId.nome
       const dadosm = await posts.clientId.faturas
-      // const faturasNaPagas = await posts.clientI.faturas.filter((faturas: { faturas: string; }) => faturas.faturas === "Pago")
       const faturasNaoPagas = posts.clientId.faturas.filter((fatura: any) => fatura.estado === "Nao pago");
       const faturasPagas = posts.clientId.faturas.filter((fatura: any) => fatura.estado === "Pago").slice(-10);
      
-      // const posts = await fetch('https://.../posts').then((res) => res.json())
-    // }
-    //  const id = await params.zona
-    // const area = await fetch(`http://localhost:3000/api/areas/${id}`,{cache:"no-cache"});
-    // const areas = await area.json();
-    // const area  = await product.area
-       
-    // console.log(areas) 
-    // const client = await posts.product.area.cliente
-    // const _id = await posts.product.area._id
+    
     return (
       <div> 
           <h1 className="text-3xl font-medium text-center mt-3">{dados} {posts.clientId.apelido}</h1>

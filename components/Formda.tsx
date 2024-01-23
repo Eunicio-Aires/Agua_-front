@@ -1,6 +1,6 @@
 'use client' 
 import React, {useState, SyntheticEvent } from 'react';
-
+import { useRouter } from 'next/navigation';
 
 interface Ligacao{
     _id:String;
@@ -8,6 +8,7 @@ interface Ligacao{
 }
 
 export function Formda(ligacoes:Ligacao){
+  const router = useRouter()
     const handleSubmit = async (event:SyntheticEvent) => {
         event.preventDefault()
         const data = {
@@ -27,7 +28,8 @@ export function Formda(ligacoes:Ligacao){
         // const _id = await result._id
         // setResultId(result);
         // console.log(result)
-        alert(`Is this your full name: ${result._id}`)
+        router.push(`/imprimir/${result._id}`)
+        // alert(`Is this your full name: ${result._id}`)
       }
     const { _id, _idm } = ligacoes;
     return(

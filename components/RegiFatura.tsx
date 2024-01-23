@@ -28,30 +28,6 @@ interface Resultado{
  
          <div > 
 
-       
-         
-         {/* <div>
-         
-         <div className="flex flex-wrap -m-4">
-         {resulte.faturas.filter((fatura: { estado: string; }) => fatura.estado === "Nao pago").map((faturas:any)=>(
-          <div className="xl:w-1/3 md:w-1/2 p-4 border-8 rounded-xl"  key={faturas._id}>
-            <div className="bg-white p-6 rounded-xl">
-            <p className='text-blue-600 text-center text-xl'>{faturas.mes}</p>
-            <p className='text-xs'>{faturas.valor} Mts</p>
-            <p className='text-xs'>U.L-{faturas.leitura}</p>
-            <p className='text-red-600'>{faturas.estado}</p> 
-            
-            <div className='flex justify-between mt-3'>
-            < ModalMp _id={faturas._id}/>
-            < ModalNum _id={faturas._id} />
-            
-            </div>
-            
-            </div>
-          </div>
-         ))} 
-         </div>
-         </div> */}
             
 
         </div>
