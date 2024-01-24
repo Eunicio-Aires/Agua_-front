@@ -68,7 +68,7 @@ interface Resultado{
            <td>{fatur.valor}</td>
            <td>{fatur.leitura}</td> 
            <td>{fatur.createdAt}</td> 
-           <td> <Link href={`/imprimir/${fatur._id}`}></Link> </td>
+           <td> <Link href={`/imprimir/${fatur._id}`}>imprimir</Link> </td>
          </tr>
       ))}
     </tbody> 
