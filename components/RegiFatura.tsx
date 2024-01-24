@@ -62,13 +62,13 @@ interface Resultado{
       ))}
       {resulte.faturas.filter((fatura: { estado: string; }) => fatura.estado === "Pago").map((fatur:any)=>(
            <tr key={fatur._id }>
-           <th className="bg-gradient-to-r from-blue-600 to-violet-600">{fatur.estado}</th> 
+           <th className="bg-gradient-to-r from-blue-600 to-violet-600"> <Link href={`/imprimir/${fatur._id}`}></Link> {fatur.estado}</th> 
            <td>{fatur.mes}</td> 
            <td>{fatur.consumo}</td> 
            <td>{fatur.valor}</td>
            <td>{fatur.leitura}</td> 
            <td>{fatur.createdAt}</td> 
-           <td> <Link href={`/imprimir/${fatur._id}`}>imprimir</Link></td>
+           <td> imprimir</td>
          </tr>
       ))}
     </tbody> 
