@@ -16,6 +16,7 @@ interface Resultado{
     return(
         
          <div className="container px-5 py-24 mx-auto min-w-min">
+          <p><Link href={`/imprimir/${resulte._id}`}></Link>ink</p>
           {/* max-w-7x1 */}
          
       {resulte ? (
@@ -25,15 +26,10 @@ interface Resultado{
     
   </div>
 
-  
- 
          <div > 
-
-            
-
-        </div>
+       </div>
         <Formda _id={resulte._id} _idm={_id}/> 
-        
+
         <div className="overflow-x-auto m-4">
   <table className="table table-xs">
     <thead>
@@ -62,7 +58,7 @@ interface Resultado{
       ))}
       {resulte.faturas.filter((fatura: { estado: string; }) => fatura.estado === "Pago").map((fatur:any)=>(
            <tr key={fatur._id }>
-           <th className="bg-gradient-to-r from-blue-600 to-violet-600"> <Link href={`/imprimir/${fatur._id}`}></Link> {fatur.estado}</th> 
+           <th className="bg-gradient-to-r from-blue-600 to-violet-600">  {fatur.estado}</th> 
            <td>{fatur.mes}</td> 
            <td>{fatur.consumo}</td> 
            <td>{fatur.valor}</td>
