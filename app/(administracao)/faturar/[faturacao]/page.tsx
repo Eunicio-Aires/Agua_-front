@@ -33,8 +33,3 @@ export default async function Page({ params }:{ params:{faturacao:Mes}}) {
     ) 
 }
 
-// export default function Page({ params }: { params: { faturacao: string } }) {
-//     const area = fetch(`http://localhost:3000/faturar/${params.faturacao}`,{cache:"no-cache"}).then((res) => res.json());
-//     console.log(area)
-//     return <div>My Post: {}</div>
-//   }
