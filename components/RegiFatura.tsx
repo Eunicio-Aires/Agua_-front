@@ -51,7 +51,7 @@ interface Resultado{
     <tbody>
     {resulte.faturas.filter((fatura: { estado: string; }) => fatura.estado === "Nao pago").map((faturas:any)=>(
       <tr key={faturas._id }>
-        <th className="bg-gradient-to-r from-red-500 to-orange-500">{faturas.estado}</th> 
+        <th className="bg-gradient-to-r from-red-500 to-orange-500"><Link href={`/imprimir/${fatur._id}`}>{faturas.estado}</Link></th> 
         <td>{faturas.mes}</td> 
         <td>{faturas.consumo}</td> 
         <td>{faturas.valor}</td>
