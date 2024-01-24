@@ -24,7 +24,7 @@ export default async function Page({ params }:{ params:{faturacao:Mes}}) {
        <div className="container mx-auto px-4 py-14 sm:px-6 xl:px-12">
             <h1 className="text-center text-2xl font-bold tracking-normal sm:text-4xl lg:text-4xl mt-2">{posts.mes.mes}</h1> 
             
-        <Procurarc _id={mes}/>
+        {/* <Procurarc _id={mes}/> */}
 
            
 
