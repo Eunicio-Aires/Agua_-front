@@ -16,7 +16,7 @@ interface Resultado{
     return(
         
          <div className="container px-5 py-24 mx-auto min-w-min">
-          <p><Link href={`/imprimir/${resulte._id}`}></Link>ink</p>
+          {/* <p><Link href={`/imprimir/${resulte._id}`}></Link>ink</p> */}
           {/* max-w-7x1 */}
          
       {resulte ? (
