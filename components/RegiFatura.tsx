@@ -33,8 +33,7 @@ interface Resultado{
 
         </div>
         <Formda _id={resulte._id} _idm={_id}/> 
-
-
+        
         <div className="overflow-x-auto m-4">
   <table className="table table-xs">
     <thead>
@@ -46,6 +45,7 @@ interface Resultado{
         <th>Leitura</th> 
         <th>Data de L </th> 
         <th>Forma de </th>
+        870273516
       </tr>
     </thead>  
     <tbody>
