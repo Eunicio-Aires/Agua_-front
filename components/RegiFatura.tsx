@@ -2,6 +2,7 @@ import { Formda } from '@/components/Formda'
 import { Numero } from '@/components/Numero'
 import { ModalMp } from '@/components/payments/ModalMp'
 import { ModalNum} from '@/components/payments/ModalNum'
+import Link from 'next/link';
 // import { PagarNum } from '@/components/payments/pagarNum'
 interface Resultado{
     resulte:any;
@@ -56,9 +57,7 @@ interface Resultado{
         <td>{faturas.valor}</td>
         <td>{faturas.leitura}</td> 
         <td>{faturas.createdAt}</td> 
-        {/* <td><Movitel /></td>
-        <td><Modal _id={fatura._id} _idCl={fatura._id}/></td>
-        <td><ModalNum _id={fatura._id} /></td> */}
+     
       </tr>
       ))}
       {resulte.faturas.filter((fatura: { estado: string; }) => fatura.estado === "Pago").map((fatur:any)=>(
@@ -69,21 +68,11 @@ interface Resultado{
            <td>{fatur.valor}</td>
            <td>{fatur.leitura}</td> 
            <td>{fatur.createdAt}</td> 
-           <td>{fatur.formaDePagamento}</td>
+           <td> <Link href={`/imprimir/${fatur._id}`}></Link> </td>
          </tr>
       ))}
     </tbody> 
-    {/* <tfoot>
-      <tr>
-        <th></th> 
-        <th>Name</th> 
-        <th>Job</th> 
-        <th>company</th> 
-        <th>location</th> 
-        <th>Last Login</th> 
-        <th>Favorite Color</th>
-      </tr>
-    </tfoot> */}
+   
   </table>
 </div>
         </div>
