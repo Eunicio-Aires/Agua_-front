@@ -7,20 +7,20 @@ export default async function Imprimir({ params }:{ params:{id:any}}){
     return(
         <>
             <div className="p-2">
-                <h1 className="text-center text-6xl ">Faturas On-line</h1>
+                <h1 className="text-center text-4xl mt-2">Faturas On-line</h1>
                 
                 <div> <span></span> <span></span> </div>
                 <p className="text-2xl">Baiira Sao damaso, q-74, casa-25</p>
                 <p className="text-2xl">Contatos:25884 990 34 03</p>
                 <p className="text-2xl">Nuit:2588454</p>
                 
-                <h1 className="text-center text-4xl mt-2">{cliente.none} {cliente.apelido}</h1>
-                <h1 className="text-center text-2xl mt-2">Faturas nao Pagas</h1>
+                <h1 className="text-center text-3xl mt-2">{cliente.none} {cliente.apelido}</h1>
+                <h1 className="text-center text-1xl mt-2">Faturas nao Pagas</h1>
                
                 {faturas.map((fatura:any)=>(
                     <div key={fatura._id }>
                         <div className="text-center">__________________________________________________</div>
-                        <h1 className="text-center text-2xl mt-2 font-semibold">{fatura.mes} </h1>
+                        <h1 className="text-center text-1xl mt-2 font-semibold">{fatura.mes} </h1>
                     </div>
 
                   ))}
