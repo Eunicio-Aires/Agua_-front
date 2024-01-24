@@ -64,8 +64,6 @@ export  function Procurarc(props:Mes){
             </div>
         
         <RegisFatura  resulte={resultId} _id={props._id}   />
-       
-     
 
      </div>
       )
