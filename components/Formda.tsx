@@ -9,6 +9,7 @@ interface Ligacao{
 
 export function Formda(ligacoes:Ligacao){
   const router = useRouter()
+  const { _id, _idm } = ligacoes;
     const handleSubmit = async (event:SyntheticEvent) => {
         event.preventDefault()
         const data = {
@@ -25,13 +26,13 @@ export function Formda(ligacoes:Ligacao){
         }
         const response = await fetch(endpoint, options)
         const result  = await response.json()
-        const _id = await result._id
+        // const _id = await result._id
         // setResultId(result);
         // console.log(result)
-        router.push(`/imprimir/${result._id}`)
-        // alert(`Is this your full name: ${result._id}`)
+        // router.push(`/imprimir/${result._id}`)
+        alert(`Is this your full name: ${result._id}`)
       }
-    const { _id, _idm } = ligacoes;
+    // const { _id, _idm } = ligacoes;
     return(
         <div className="mt-8 flex items-center justify-center"> 
         
