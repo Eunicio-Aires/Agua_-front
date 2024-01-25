@@ -28,6 +28,7 @@ interface Resultado{
 
          <div > 
        </div>
+       <Link href={`/imprimir/${resulte._id}`}>imprimir</Link>
         <Formda _id={resulte._id} _idm={_id}/> 
 
         <div className="overflow-x-auto m-4">
