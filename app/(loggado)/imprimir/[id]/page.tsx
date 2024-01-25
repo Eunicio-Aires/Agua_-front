@@ -2,9 +2,9 @@ import { MdPhotoSizeSelectLarge } from "react-icons/md";
 
 export default async function Imprimir({ params }:{ params:{id:any}}){
     const posts = await fetch(`https://agua-p.vercel.app/adm/clientpr/${params.id}`,{cache:"no-cache"}).then((res) => res.json());
-    const cliente = await posts.client;
-    const faturas = await posts.faturasP
-    console.log(cliente,faturas)
+    // const cliente = await posts.client;
+    // const faturas = await posts.faturasP
+    // console.log(cliente,faturas)
     return(
         <>
             <div className="p-2">
@@ -15,7 +15,7 @@ export default async function Imprimir({ params }:{ params:{id:any}}){
                 <p className="text-2xl">Contatos:25884 990 34 03</p>
                 <p className="text-2xl">Nuit:258845485</p>
                 
-                <h1 className="text-center text-3xl mt-2">{cliente.nome} {cliente.apelido}</h1>
+                {/* <h1 className="text-center text-3xl mt-2">{cliente.nome} {cliente.apelido}</h1> */}
                 <h1 className="text-center text-1xl mt-2">Faturas nao Pagas</h1>
                
                 {/* {faturas.map((fatura:any)=>(
