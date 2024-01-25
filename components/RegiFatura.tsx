@@ -41,13 +41,13 @@ interface Resultado{
         <th>Leitura</th> 
         <th>Data de L </th> 
         <th>Forma de </th>
-        870273516
+        {/* 870273516 */}
       </tr>
     </thead>  
     <tbody>
     {resulte.faturas.filter((fatura: { estado: string; }) => fatura.estado === "Nao pago").map((faturas:any)=>(
       <tr key={faturas._id }>
-        <th className="bg-gradient-to-r from-red-500 to-orange-500"><Link href={`/imprimir/${faturas._id}`}>{faturas.estado}</Link></th> 
+        <th className="bg-gradient-to-r from-red-500 to-orange-500"><Link href={`/imprimir/${resulte._id}`}>{faturas.estado}</Link></th> 
         <td>{faturas.mes}</td> 
         <td>{faturas.consumo}</td> 
         <td>{faturas.valor}</td>
