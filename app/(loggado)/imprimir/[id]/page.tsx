@@ -3,7 +3,7 @@ import { MdPhotoSizeSelectLarge } from "react-icons/md";
 export default async function Imprimir({ params }:{ params:{id:any}}){
     const posts = await fetch(`https://agua-p.vercel.app/adm/clientpr/${params.id}`,{cache:"no-cache"}).then((res) => res.json());
     const cliente = await posts.client;
-    // const faturas = await posts.faturasP
+    const faturas = await posts.faturasP
     console.log(cliente)
     return(
         <>
@@ -15,15 +15,24 @@ export default async function Imprimir({ params }:{ params:{id:any}}){
                 <p className="text-2xl">Contatos:84 990 34 03</p>
                 <p className="text-2xl">Nuit:258845485</p>
                 
-                <h1 className="text-center text-3xl mt-2">{cliente.nome} {cliente.apelido}</h1>
-                <h1 className="text-center text-3xl mt-4 font-bold">Faturas nao Pagas</h1>
+                <h1 className="text-center text-3xl mt-2 font-bold">{cliente.nome} {cliente.apelido}</h1>
+                <h1 className="text-center text-3xl mt-4 ">Faturas nao Pagas</h1>
                
-                {/* {faturas.map((fatura:any)=>(
+                {faturas.map((fatura:any)=>(
                     <div key={fatura._id }>
-                        <div className="text-center">__________________________________________________</div>
-                        <h1 className="text-center text-1xl mt-2 font-semibold">{fatura.mes} </h1>
+                        <div className="text-center">_______________________________________</div>
+                        <h2 className="text-center text-2xl font-bold">{fatura.mes}</h2>
+                        <div> <p className="text-2xl font-bold">Leitura:----------- {fatura.leitura}</p> </div>
+                        <div> <p className="text-2xl font-bold">Consumo:----------- {fatura.consumo}</p> </div>
+                        
+                        <div> <p className="text-2xl font-bold">Estado: ----------- {fatura.estado}</p> </div>
+                        <div> <p className="text-3xl font-bold">Valor: ----------- {fatura.valor}</p> </div>
+
+                        <div className="text-center">_______________________________________</div>
+
+                       
                     </div>
-                  ))} */}
+                  ))}
 
             </div>
         </>
