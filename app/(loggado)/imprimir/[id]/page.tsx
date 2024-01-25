@@ -4,6 +4,7 @@ export default async function Imprimir({ params }:{ params:{id:any}}){
     const posts = await fetch(`https://agua-p.vercel.app/adm/clientpr/${params.id}`,{cache:"no-cache"}).then((res) => res.json());
     const cliente = await posts.client;
     const faturas = await posts.faturasP
+    console.log(cliente,faturas)
     return(
         <>
             <div className="p-2">
@@ -17,12 +18,12 @@ export default async function Imprimir({ params }:{ params:{id:any}}){
                 <h1 className="text-center text-3xl mt-2">{cliente.nome} {cliente.apelido}</h1>
                 <h1 className="text-center text-1xl mt-2">Faturas nao Pagas</h1>
                
-                {faturas.map((fatura:any)=>(
+                {/* {faturas.map((fatura:any)=>(
                     <div key={fatura._id }>
                         <div className="text-center">__________________________________________________</div>
                         <h1 className="text-center text-1xl mt-2 font-semibold">{fatura.mes} </h1>
                     </div>
-                  ))}
+                  ))} */}
 
             </div>
         </>
