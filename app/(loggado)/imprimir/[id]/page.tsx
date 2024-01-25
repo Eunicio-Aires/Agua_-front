@@ -8,10 +8,10 @@ export default async function Imprimir({ params }:{ params:{id:any}}){
     return(
         <>
             <div className="p-2">
-                <h1 className="text-center text-4xl mt-2 mb-4">Faturas On-line</h1>
+                <h1 className="text-center text-4xl mt-2 mb-4">Aguas da Matola</h1>
                 
                 <div> <span></span> <span></span> </div>
-                <p className="text-2xl">Baiira Sao damaso, q-74, casa-25</p>
+                <p className="text-2xl">Bairro Sao damaso, q-74, casa-25</p>
                 <p className="text-2xl">Contatos:84 990 34 03</p>
                 <p className="text-2xl">Nuit:258845485</p>
                 
@@ -28,12 +28,12 @@ export default async function Imprimir({ params }:{ params:{id:any}}){
                         <div> <p className="text-2xl font-semibold">Estado: -------------- {fatura.estado}</p> </div>
                         <div> <p className="text-3xl font-bold mt-2">Valor: ----------- {fatura.valor} mt</p> </div>
 
-                        <div className="text-center">**********************************************</div>
+                        <div className="text-center mt-2 font-bold">**********************************************</div>
 
                        
                     </div>
                   ))}
-                    <p className="text-center" >Valor por m3 e de 75Mt</p>
+                    <p className="text-center mt-3" >Valor por m3 e de 75Mt</p>
             </div>
         </>
     )
