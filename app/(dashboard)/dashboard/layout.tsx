@@ -1,8 +1,6 @@
-
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google' 
 import '../globals.css';
-import { ToastContainer } from "react-toastify"
 import Link from 'next/link';
 
 
@@ -21,10 +19,11 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body className={inter.className}>
+      <div className='fixed left-0 top-0 w-64 h-full bg-gray-900 p-4'>
+          <Link href='' className='flex items-center py-2 px-4 text-gray-300 hover:bg-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white'> </Link>
+        </div>
+        {/* {children} */}
         
-
-        {children}
-        <ToastContainer />
         </body>
     </html>
   )
