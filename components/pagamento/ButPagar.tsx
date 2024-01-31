@@ -26,12 +26,7 @@ export default function ButPagar({_id}:Fatura){
         {iseBlueBoxShown && <div className=" p-6 " >
         <Mpesa _id={_id}/>
         <Emola/>
-        {/* onSubmit={handleSubmit} */}
-        {/* <form  onSubmit={handleSubmit}>
-        <label htmlFor="zona">Zona Nova</label>
-        <input type="text" id="zona" name="zona" required />
-        <button type="submit">Registar</button>
-         </form> */}
+        
         </div>}
       </div>
         </>
