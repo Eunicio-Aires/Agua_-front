@@ -74,7 +74,7 @@ interface Resultado{
 </div>
         </div>
       ) : (
-        <p>Nenhum resultado para exibir</p>
+        <p>Nenhum resultado paraa exibir</p>
         
       )}
    
