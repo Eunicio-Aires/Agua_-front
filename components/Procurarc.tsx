@@ -55,7 +55,7 @@ export  function Procurarc(props:Mes){
       }
       return (
  
-        <div className="flex items-center justify-center h-screen bg-gray-100">
+        <div className="">
 
         {/* <div className="flex flex-col items-center justify-center
          space-y-6 text-center"> */}
