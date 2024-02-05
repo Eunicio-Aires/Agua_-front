@@ -43,6 +43,7 @@ export async function TopCards(){
                 <p className="text-gray-600">Daily Revenue</p>
               </div>
             </div>
+
           </div>
     );
 }
