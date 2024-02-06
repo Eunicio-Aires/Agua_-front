@@ -72,7 +72,7 @@ interface Resultado{
   </table>
 
   {resulte.faturas.filter((fatura: { estado: string; }) => fatura.estado === "Nao pago").map((faturas:any)=>(
-   <div className="bg-white shadow-md rounded-lg p-4">
+   <div key={faturas._id } className="bg-white shadow-md rounded-lg p-4">
        <div className="bg-gradient-to-r from-blue-600 to-violet-600 text-white font-bold rounded-t-lg p-2 mb-2">
          {faturas.estado}
        </div>
