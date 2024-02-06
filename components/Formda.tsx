@@ -34,7 +34,7 @@ export function Formda(ligacoes:Ligacao){
       }
     // const { _id, _idm } = ligacoes;
     return(
-      <div className="mt-8 flex items-center justify-center">
+      <div className="">
       <form onSubmit={handleSubmit} className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-3">
         <label htmlFor="leitura" className="sr-only">Leitura</label>
         <input type="text" id="leitura" name="leitura" required className=" sm:w-64 rounded-md border bg-gray-50 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:cursor-not-allowed disabled:opacity-50" placeholder="Leitura" />
