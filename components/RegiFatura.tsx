@@ -31,7 +31,7 @@ interface Resultado{
         <Formda _id={resulte._id} _idm={_id}/> 
 
         <div className="overflow-x-auto m-4">
-  <table className="table table-xs">
+  {/* <table className="table table-xs">
     <thead>
       <tr>
         <th></th> 
@@ -41,7 +41,7 @@ interface Resultado{
         <th>Leitura</th> 
         <th>Data de L </th> 
         <th>Forma de </th>
-        {/* 870273516 */}
+        
       </tr>
     </thead>  
     <tbody>
@@ -69,7 +69,7 @@ interface Resultado{
       ))}
     </tbody> 
    
-  </table>
+  </table> */}
 
   {resulte.faturas.filter((fatura: { estado: string; }) => fatura.estado === "Nao pago").map((faturas:any)=>(
    <div key={faturas._id } className="bg-white shadow-md rounded-lg p-4">
