@@ -13,6 +13,10 @@ interface Resultado{
     
     // const {resulte,_id} = props
     // const ultimafatura = resulte.faturas.slice(-1)
+
+    // const faturasNaoPagas = resulte.faturas.filter((fatura: { estado: string; }) => fatura.estado === "Nao pago");
+    // const ultimoFaturaNaoPaga = faturasNaoPagas.pop();
+
     return(
         
          <div className="container px-5 py-24 mx-auto min-w-min">

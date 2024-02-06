@@ -34,14 +34,13 @@ export function Formda(ligacoes:Ligacao){
       }
     // const { _id, _idm } = ligacoes;
     return(
-        <div className="mt-8 flex items-center justify-center"> 
-        
-         <form onSubmit={handleSubmit} className='bg-white rounded-2xl border shadow-x1 p-10 max-w-lg'>
-          <label htmlFor="leitura"></label>
-          <input type="text" id="leitura" name="leitura" required className="input input-bordered input-info w-full max-w-xs"  />
-          <button className="btn btn-outline btn-info ml-1" type="submit">Sub Leitura</button>
-          
-        </form>
-        </div>
+      <div className="mt-8 flex items-center justify-center">
+      <form onSubmit={handleSubmit} className='bg-white rounded-2xl border shadow-x1 p-4 sm:p-10 max-w-md w-full'>
+        <label htmlFor="leitura" className="sr-only">Leitura</label>
+        <input type="text" id="leitura" name="leitura" required className="input input-bordered input-info w-full max-w-xs sm:max-w-none" placeholder="Leitura" />
+        <button className="btn btn-outline btn-info ml-1" type="submit">Submeter Leitura</button>
+      </form>
+    </div>
+    
     )
 }  
