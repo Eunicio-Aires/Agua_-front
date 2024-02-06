@@ -65,40 +65,32 @@ export default async  function Pagaments(){
               {/* <Pagamentos/> */}
               {/* @ts-ignore  */}
               < Ultimom/> 
-             <div className="overflow-x-auto p-4">
-             
-                    <table className="table table-xs table-pin-rows table-pin-cols">
-                    <thead>
+              <div className="overflow-x-auto p-4">
+                <table className="table table-xs table-pin-rows table-pin-cols">
+                  <thead>
                     <tr>
-                    <th></th> 
-                    <td>Mes</td> 
-                    <td>Consumo</td> 
-                    <td>Valor</td> 
-                    <td>F.Pagamentoo</td>
-                    <th></th> 
+                      <th></th>
+                      <th>Mês</th>
+                      <th>Consumo</th>
+                      <th>Valor</th>
+                      <th>F. Pagamento</th>
+                      <th></th>
                     </tr>
-                    </thead> 
-                    <tbody>
+                  </thead>
+                  <tbody>
                     {faturasPagas.map((mes:any)=>(
-                    <tr key={mes._id}>
-                    <th></th> 
-                    <td>{mes.mes}</td>
-                    <td>{mes.consumo}</td> 
-                    <td>{mes.valor}</td> 
-                    
-                    <td>{mes.formaDePagamento}</td> 
-                    
-                    </tr>
+                      <tr key={mes._id}>
+                        <td></td>
+                        <td>{mes.mes}</td>
+                        <td>{mes.consumo}</td>
+                        <td>{mes.valor}</td>
+                        <td>{mes.formaDePagamento}</td>
+                        <td></td>
+                      </tr>
                     ))}
-                    
-                    </tbody> 
-                  
-                    </table>
-    
-    
-   
-
-        </div>
+                  </tbody>
+                </table>
+              </div>
 
 
         <Chart/>
@@ -107,56 +99,56 @@ export default async  function Pagaments(){
 {/* ____________________________________MESES____________________________________ */}
 
 
-  <div className="bg-gray-50 ">
- 
-  <div>
+<div className="bg-gray-50">
+  <div className="max-w-screen-lg mx-auto">
     <div className="p-4">
       <div className="bg-white p-4 rounded-md">
         <div>
           <h2 className="mb-4 text-xl font-bold text-gray-700">Admin & User</h2>
           <div>
             <div>
-              <div className="flex justify-between bg-gradient-to-tr from-indigo-600 to-purple-600 rounded-md py-2 px-4 text-white font-bold text-md">
-                <div>
+              <div className="flex flex-col sm:flex-row justify-between bg-gradient-to-tr from-indigo-600 to-purple-600 rounded-md py-2 px-4 text-white font-bold text-md">
+                <div className="w-full sm:w-auto">
                   <span>Mes</span>
                 </div>
-                <div>
+                <div className="w-full sm:w-auto">
                   <span>Percent</span>
                 </div>
-                <div>
+                <div className="w-full sm:w-auto">
                   <span>F. Pagas</span>
                 </div>
-                <div>
+                <div className="w-full sm:w-auto">
                   <span>FN. Pags</span>
                 </div>
-                <div>
+                <div className="w-full sm:w-auto">
                   <span>Edit</span>
                 </div>
               </div>
               <div>
-              {meses.map((mes:Mes)=>(
-              <Link href={`/pagaments/${mes._id}` } key={mes._id } > <div  className="flex justify-between border-t text-sm font-normal mt-4 space-x-4">
-                  <div className="px-2 flex">
-                    <span>{mes.mes}</span>
-                  </div>
-                  <div>
-                    <span>{(mes.faturas.filter((fatura: { estado: any; }) => fatura.estado === "Pago").length /mes.faturas.length )*100}%</span>
-                  </div>
-                  <div className="px-2">
-                    <span> {mes.faturas.filter((fatura: { estado: String; }) => fatura.estado === "Pago").length}</span>
-                  </div>
-                  <div className="px-2">
-                    <span> {mes.faturas.filter((fatura: { estado: String ; }) => fatura.estado === "Nao pago").length}</span>
-                  </div>
-                  <div className="px-2">
-                    {/* <select>
-                      <option>Admin</option>
-                      <option>User</option>
-                    </select> */}
-                  </div>
-                </div> </Link> 
-                 ))}
-
+                {meses.map((mes: Mes) => (
+                  <Link href={`/pagaments/${mes._id}`} key={mes._id}>
+                    <div className="flex flex-col sm:flex-row justify-between border-t text-sm font-normal mt-4 space-x-4">
+                      <div className="px-2 flex w-full sm:w-auto">
+                        <span>{mes.mes}</span>
+                      </div>
+                      <div className="px-2 w-full sm:w-auto">
+                        <span>{(mes.faturas.filter((fatura: { estado: any; }) => fatura.estado === "Pago").length / mes.faturas.length) * 100}%</span>
+                      </div>
+                      <div className="px-2 w-full sm:w-auto">
+                        <span> {mes.faturas.filter((fatura: { estado: String; }) => fatura.estado === "Pago").length}</span>
+                      </div>
+                      <div className="px-2 w-full sm:w-auto">
+                        <span> {mes.faturas.filter((fatura: { estado: String; }) => fatura.estado === "Nao pago").length}</span>
+                      </div>
+                      <div className="px-2 w-full sm:w-auto">
+                        {/* <select>
+                          <option>Admin</option>
+                          <option>User</option>
+                        </select> */}
+                      </div>
+                    </div>
+                  </Link>
+                ))}
               </div>
             </div>
           </div>

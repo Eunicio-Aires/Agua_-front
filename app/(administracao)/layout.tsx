@@ -38,7 +38,7 @@ export default function RootLayout({
                 </div>
               </div>
 
-          <div className="">
+          <div className="flex">
             <div className="flexed w-14 h-screen p-4 bg-white border-r-[1px] flex flex-col justify-between">
                     <div className="flex flex-col items-center fixed">
                         <Link href='/'>
@@ -64,12 +64,12 @@ export default function RootLayout({
                         </Link>
                         <Link href='/clientes'>
                             <div className="bg-gray-100 hover:bg-gray-200 text-black my-4 p-3 rounded-lg inline-block"  >
-                                <RxPerson size={13 } />
+                                <RxPerson size={13 }/>
                             </div>
                         </Link>
                         <Link href='/configuracoes'>
                             <div className="bg-gray-100 hover:bg-gray-200 text-black my-4 p-3 rounded-lg inline-block"  >
-                                <CiSettings size={13 } />
+                                <CiSettings size={13}/>
                             </div>
                         </Link>
 
@@ -77,7 +77,6 @@ export default function RootLayout({
                     
                 </div>
                 <main className="min-h-scren  h-full w-full p-2">
-                    
                     {children}</main>
               </div>
             </div>

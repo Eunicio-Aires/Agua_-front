@@ -70,7 +70,7 @@ export default async function Zona() {
           
           <h1 className="text-center bold-400 text-xl mt-4 mb-3">Clientes</h1>
 
-<div className="w-full col-span-1 relative lg:h-[70vh] h-[50vh] m-auto p-4 border rounded-lg bg-white overflow-scroll">          
+<div  className="w-full col-span-1 relative lg:h-[70vh] h-[50vh] m-auto p-4 border rounded-lg bg-white overflow-scroll">          
   <div className="overflow-x-auto">
   <table className="table table-xs table-pin-rows table-pin-cols">
     <thead>

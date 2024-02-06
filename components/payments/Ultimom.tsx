@@ -38,37 +38,37 @@ export  async   function  Ultimom(){
     
 
     return( 
-        <div>
-         
-            {/* <h1>{response.ultimo[0].mes}</h1> */}
-        <div className=" grid lg:grid-cols-5 gap-4 p-4">  
         
-        <div className="lg:col-span-2 col-span-1 bg-white flex justify-between w-full border p-4 rounded-lg">
-          <div className="flex flex-col w-full pb-4">
-            <p className="text-2xl font-bold">{totalValorFaturasPagas}-Mtn</p>
-            <p className="text-gray-600">Faturas Pagas </p>
+         
+            // {/* <h1>{response.ultimo[0].mes}</h1> */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 p-4">
+            <div className="bg-white flex justify-between w-full border p-4 rounded-lg">
+              <div className="flex flex-col w-full pb-4">
+                <p className="text-2xl font-bold">{totalValorFaturasPagas}-Mtn</p>
+                <p className="text-gray-600">Faturas Pagas</p>
+              </div>
+              <p className="bg-green-200 flex justify-center items-center p-2 rounded-lg">
+                <span className='text-green-700 text-lg'>{numeroDeFaturasPagas}</span>
+              </p>
+            </div>
+            <div className="bg-white flex justify-between w-full border p-4 rounded-lg">
+              <div className="flex flex-col w-full pb-4">
+                <p className="text-2xl font-bold">{totalValorFaturasNaoPagas}-Mtn</p>
+                <p className="text-gray-600">Faturas Não Pagas</p>
+              </div>
+              <p className="bg-red-200 flex justify-center items-center p-2 rounded-lg">
+                <span className='text-green-700 text-lg'>{numeroDeFaturasNaoPagas}</span>
+              </p>
+            </div>
+            <div className="bg-white flex justify-btween w-full p-4 rounded">
+              <div className="flex flex-col w-full pb-4">
+                <p className="text-2xl font-bold">{totalValorTodasFaturas}-Mtn</p>
+                <p className="text-gray-600">Todas {ultimom}</p>
+              </div>
+            </div>
           </div>
-          <p className="bg-green-200 flex justify-center items-center p-2 rounded-lg">
-            <span className='text-green-700 text-lg'>{numeroDeFaturasPagas}</span>
-          </p>
-        </div>
-        <div className="lg:col-span-2 col-span-1 bg-white flex justify-between w-full border p-4 rounded-lg">
-          <div className="flex flex-col w-full pb-4">
-          <p className="text-2xl font-bold">{totalValorFaturasNaoPagas}-Mtn</p>
-            <p className="text-gray-600">Faturas nao Pagas </p>
-          </div>
-          <p className="bg-red-200 flex justify-center items-center p-2 rounded-lg">
-            <span className='text-green-700 text-lg'>{numeroDeFaturasNaoPagas}</span>
-          </p>
-        </div>
-        <div className="bg-white flex justify-btween w-full p-4 rounded">
-          <div className=" flex flex-col w-full pb-4">
-            <p className="text-2xl font-bold"> {totalValorTodasFaturas}-Mtn</p>
-            <p className="text-gray-600"> Todas {ultimom}</p>
-          </div>
-        </div>
-      </div>
-      </div>
+          
+      
     )
 }
 

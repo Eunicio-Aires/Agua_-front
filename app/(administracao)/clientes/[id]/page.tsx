@@ -17,7 +17,7 @@ import Editar from "@/components/clientes/Editar";
 
 
     export default async function ClienteId({ params }: { params: { id: string } }){
-      const posts = await fetch(`https://agua-front.vercel.app/api/clienteId/${params.id}`,{ cache: 'no-store'}).then((res) => res.json())
+      const posts = await  fetch(`https://agua-front.vercel.app/api/clienteId/${params.id}`,{ cache: 'no-store'}).then((res) => res.json())
       const dados = await posts.clientId.nome
       const dadosm = await posts.clientId.faturas
       const faturasNaoPagas = posts.clientId.faturas.filter((fatura: any) => fatura.estado === "Nao pago");
@@ -72,17 +72,7 @@ import Editar from "@/components/clientes/Editar";
          </tr>
       ))}
     </tbody> 
-    {/* <tfoot>
-      <tr>
-        <th></th> 
-        <th>Name</th> 
-        <th>Job</th> 
-        <th>company</th> 
-        <th>location</th> 
-        <th>Last Login</th> 
-        <th>Favorite Color</th>
-      </tr>
-    </tfoot> */}
+    
   </table>
 </div>
 
