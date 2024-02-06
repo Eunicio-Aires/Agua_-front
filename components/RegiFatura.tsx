@@ -97,15 +97,18 @@ interface Resultado{
            <p className="font-bold">Leitura:</p>
            <p>{faturas.leitura}</p>
          </div>
-         <div>
+         {/* <div>
            <p className="font-bold">Criado em:</p>
            <p>{faturas.createdAt}</p>
-         </div>
+         </div> */}
       </div>
-       <button className="bg-blue-500 text-white px-4 py-2 mt-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+      <Link href={`/imprimir/${resulte._id}`}  className="bg-blue-500 text-white px-4 py-2 mt-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
          Imprimir
-      </button>
-     </div>
+      </Link>
+
+      </div>
+      
+
      ))}
 
 </div>
@@ -114,6 +117,7 @@ interface Resultado{
         <p>Nenhum resultado para exibir</p>
         
       )}
+   
    
   </div> 
     )    
