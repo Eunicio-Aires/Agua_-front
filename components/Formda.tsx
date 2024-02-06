@@ -35,10 +35,10 @@ export function Formda(ligacoes:Ligacao){
     // const { _id, _idm } = ligacoes;
     return(
       <div className="mt-8 flex items-center justify-center">
-      <form onSubmit={handleSubmit} className='bg-white rounded-2xl border shadow-x1 p-4 sm:p-10 max-w-md '>
+      <form onSubmit={handleSubmit} className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-3">
         <label htmlFor="leitura" className="sr-only">Leitura</label>
-        <input type="text" id="leitura" name="leitura" required className="input input-bordered input-info  max-w-xs sm:max-w-none" placeholder="Leitura" />
-        <button className="btn btn-outline btn-info ml-1" type="submit">Submeter Leitura</button>
+        <input type="text" id="leitura" name="leitura" required className=" sm:w-64 rounded-md border bg-gray-50 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:cursor-not-allowed disabled:opacity-50" placeholder="Leitura" />
+        <button className=" sm:w-auto rounded-md border border-blue-500 bg-blue-500 py-2 px-6 text-white transition hover:border-blue-600 hover:bg-blue-600 focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50 disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:border-blue-500 disabled:hover:bg-blue-500" type="submit">Submeter Leitura</button>
       </form>
     </div>
     
