@@ -12,7 +12,7 @@ interface Resultado{
   export  function RegisFatura({resulte, _id}:Resultado){
     
     // const {resulte,_id} = props
-    const ultimafatura = resulte.faturas.slice(-1)
+    // const ultimafatura = resulte.faturas.slice(-1)
     return(
         
          <div className="container px-5 py-24 mx-auto min-w-min">
@@ -71,36 +71,38 @@ interface Resultado{
    
   </table>
 
+  {resulte.faturas.filter((fatura: { estado: string; }) => fatura.estado === "Nao pago").map((faturas:any)=>(
    <div className="bg-white shadow-md rounded-lg p-4">
        <div className="bg-gradient-to-r from-blue-600 to-violet-600 text-white font-bold rounded-t-lg p-2 mb-2">
-         {ultimafatura.estado}
+         {faturas.estado}
        </div>
        <div className="grid grid-cols-2 gap-2">
          <div>
            <p className="font-bold">Mês:</p>
-           <p>{ultimafatura.mes}</p>
+           <p>{faturas.mes}</p>
          </div>
          <div>
            <p className="font-bold">Consumo:</p>
-           <p>{ultimafatura.consumo}</p>
+           <p>{faturas.consumo}</p>
          </div>
          <div>
            <p className="font-bold">Valor:</p>
-           <p>{ultimafatura.valor}</p>
+           <p>{faturas.valor}</p>
          </div>
          <div>
            <p className="font-bold">Leitura:</p>
-           <p>{ultimafatura.leitura}</p>
+           <p>{faturas.leitura}</p>
          </div>
          <div>
            <p className="font-bold">Criado em:</p>
-           <p>{ultimafatura.createdAt}</p>
+           <p>{faturas.createdAt}</p>
          </div>
       </div>
        <button className="bg-blue-500 text-white px-4 py-2 mt-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
          Imprimir
       </button>
      </div>
+     ))}
 
 </div>
         </div>
