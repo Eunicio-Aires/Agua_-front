@@ -30,6 +30,29 @@ export default async function Zona() {
   <label className="modal-backdrop" htmlFor="my_modal_7">Close</label>
 </div>
 
+<section className="flex flex-wrap justify-center">
+                <div className="w-full md:w-1/3 p-4">
+                    <div className="bg-white rounded-lg shadow-md p-6">
+                    <h2 className="text-xl font-bold mb-2">{numero} </h2>
+                    <p>Conteúdo do Card 1...</p>
+                    </div>
+                </div>
+                <div className="w-full md:w-1/3 p-4">
+                    <div className="bg-white rounded-lg shadow-md p-6">
+                    <h2 className="text-xl font-bold mb-2">Card 2</h2>
+                    <p>Conteúdo do Card 2...</p>
+                    </div>
+                </div>
+                <div className="w-full md:w-1/3 p-4">
+                    <div className="bg-white rounded-lg shadow-md p-6">
+                    <h2 className="text-xl font-bold mb-2">Card 3</h2>
+                    <p>Conteúdo do Card 3...</p>
+                    </div>
+                </div>
+  
+ 
+ </section>
+
 
 
 

@@ -23,9 +23,9 @@ export default async function Imprimir({ params }:{ params:{id:any}}){
                         <div className="text-center"></div>
                         <h2 className="text-center text-2xl font-bold mt-5">{fatura.mes}</h2>
                         <div> <p className="text-2xl font-bold">Leitura:------------------- {fatura.leitura}m3</p> </div>
-                        <div> <p className="text-2xl font-bold">Consumo:----------------- {fatura.consumo}m3</p> </div>
+                        <div> <p className="text-2xl font-bold">Consumo:------------------ {fatura.consumo}m3</p> </div>
                         
-                        <div> <p className="text-2xl font-semibold">Estado: -------------- {fatura.estado}</p> </div>
+                        <div> <p className="text-2xl font-semibold">Estado: ---------------- {fatura.estado}</p> </div>
                         <div> <p className="text-3xl font-bold mt-2">Valor: ----------- {fatura.valor} mt</p> </div>
 
                         <div className="text-center mt-3 font-bold">**********************************************</div>
