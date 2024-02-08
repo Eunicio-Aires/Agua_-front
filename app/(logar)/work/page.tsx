@@ -1,5 +1,46 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
+import { SyntheticEvent } from "react";
+import { cookies } from 'next/headers'
+
+
+
+
 export default function Work(){
+    const router = useRouter();
+    const handleSubmi = async (event: SyntheticEvent) => {
+      event.preventDefault();
+  
+      
+      const data = {
+        email: (event.target as HTMLFormElement).email.value,
+        password: (event.target as HTMLFormElement).password.value,
+    
+      };
+      const JSONdata = JSON.stringify(data);
+      const endpoint = `https://agua-p.vercel.app/adm/loginSadmin`;
+      const options: RequestInit = {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json', 
+        },
+        body: JSONdata,
+      };
+      const response = await fetch(endpoint, options);
+      const result = await response.json();
+      
+    
+      try{
+      const cookieStore = cookies()
+      const token = cookieStore.get('token')
+      alert(token)
+    //   const id = await result._id
+    //   router.push(`pagamentos/${id}`)
+      }catch(error){
+        alert(`Verifique o seu Codigo, Codigo invalido`);
+      }
+  
+    }
 
     return (
         <>
@@ -12,7 +53,7 @@ export default function Work(){
                 <p className="text-gray-500 dark:text-gray-400">Navegacao segura </p>
             </div>
             <div className="m-7">
-                <form action="https://agua-front.vercel.app/pagaments">
+                <form onSubmit={handleSubmi}>
                     <div className="mb-6">
                         <label  className="block mb-2 text-sm text-gray-600 dark:text-gray-400">Email </label>
                         <input type="email" name="email" id="email" placeholder="you@company.com" className="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
@@ -25,7 +66,7 @@ export default function Work(){
                         <input type="password" name="password" id="password" placeholder="Your Password" className="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
                     </div>
                     <div className="mb-6">
-                        <button type="button" className="w-full px-3 py-4 text-white bg-indigo-500 rounded-md focus:bg-indigo-600 focus:outline-none">Log</button>
+                        <button type="submit" className="w-full px-3 py-4 text-white bg-indigo-500 rounded-md focus:bg-indigo-600 focus:outline-none">Log</button>
                     </div>
                     <p className="text-sm text-center text-gray-400">Don&#x27;t have an account yet? <a href="#!" className="text-indigo-400 focus:outline-none focus:underline focus:text-indigo-500 dark:focus:border-indigo-800">Sign up</a>.</p>
                 </form>
