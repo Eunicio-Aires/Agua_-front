@@ -13,7 +13,7 @@ export  function WorkLog(){
       event.preventDefault();
   
       
-      const data = {
+      const data =  {
         email: (event.target as HTMLFormElement).email.value,
         password: (event.target as HTMLFormElement).password.value,
     
@@ -28,11 +28,11 @@ export  function WorkLog(){
         body: JSONdata,
       };
       
-      
+      const response = await fetch(endpoint, options);
+        const result = await response.json();
     
       try{
-        const response = await fetch(endpoint, options);
-        const result = await response.json();
+        
     //   const cookieStore = cookies()
     //   const token = cookieStore.get('token')
       alert(result)

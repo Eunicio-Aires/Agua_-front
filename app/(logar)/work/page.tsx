@@ -1,6 +1,6 @@
 import { WorkLog } from '@/components/WorkLog'
 
-export default async function Work() {
+export default  function Work() {
     return(
         <div>
         < WorkLog/>
