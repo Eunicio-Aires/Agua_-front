@@ -18,7 +18,7 @@ export  function WorkLog(){
     
       };
       const JSONdata = JSON.stringify(data);
-      const endpoint = `https://agua-p.vercel.app/adm/loginSadmin`;
+      const endpoint = `https://agua-front.vercel.app/api/login`;
       const options: RequestInit = {
         method: 'POST',
         headers: {
@@ -29,17 +29,17 @@ export  function WorkLog(){
       
       
     
-    
+      try{
         const response = await fetch(endpoint, options);
         const result = await response.json();
-    //   const cookieStore = cookies()
-    //   const token = cookieStore.get('token')
-    //   alert(token)
+      const cookieStore = cookies()
+      const token = cookieStore.get('token')
+      alert(token)
     //   const id = await result._id
     //   router.push(`pagamentos/${id}`)
-    //   }catch(error){
-    //     alert(`Verifique o seu Codigo, Codigo invalido`);
-    //   }
+      }catch(error){
+        alert(`Verifique o seu Codigo, Codigo invalido`);
+      }
   
     }
 
@@ -67,7 +67,7 @@ export  function WorkLog(){
                         <input type="password" name="password" id="password" placeholder=" Password" className="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
                     </div>
                     <div className="mb-6">
-                        <button type="" className="w-full px-3 py-4 text-white bg-indigo-500 rounded-md focus:bg-indigo-600 focus:outline-none">Log</button>
+                        <button type="submit" className="w-full px-3 py-4 text-white bg-indigo-500 rounded-md focus:bg-indigo-600 focus:outline-none">Log</button>
                     </div>
                     <p className="text-sm text-center text-gray-400">Don&#x27;t have an account yet? <a href="#!" className="text-indigo-400 focus:outline-none focus:underline focus:text-indigo-500 dark:focus:border-indigo-800">Sign up</a>.</p>
                 </form>
