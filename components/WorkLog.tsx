@@ -32,7 +32,7 @@ export  function WorkLog(){
     
       try{
       const cookieStore = cookies()
-      const token = cookieStore.get('token')
+      const token = cookieStore.get('id')
       alert(token)
     //   const id = await result._id
     //   router.push(`pagamentos/${id}`)
