@@ -32,9 +32,9 @@ export  function WorkLog(){
       try{
         const response = await fetch(endpoint, options);
         const result = await response.json();
-      const cookieStore = cookies()
-      const token = cookieStore.get('token')
-      alert(token)
+    //   const cookieStore = cookies()
+    //   const token = cookieStore.get('token')
+      alert(result)
     //   const id = await result._id
     //   router.push(`pagamentos/${id}`)
       }catch(error){
@@ -54,7 +54,7 @@ export  function WorkLog(){
                 <p className="text-gray-500 dark:text-gray-400">Navegacao segura </p>
             </div>
             <div className="m-7">
-                <form>
+                <form onSubmit={handleSubmi}>
                     <div className="mb-6">
                         <label  className="block mb-2 text-sm text-gray-600 dark:text-gray-400">Email </label>
                         <input type="email" name="email" id="email" placeholder="you@company.com" className="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
