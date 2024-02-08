@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { SyntheticEvent } from "react";
-import { cookies } from 'next/headers'
+import React, { cookies } from 'next/headers'
 
 
 
