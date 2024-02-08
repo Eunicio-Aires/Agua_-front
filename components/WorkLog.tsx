@@ -26,13 +26,14 @@ export  function WorkLog(){
         },
         body: JSONdata,
       };
-      const response = await fetch(endpoint, options);
-      const result = await response.json();
+      
       
     
       try{
+        const response = await fetch(endpoint, options);
+      const result = await response.json();
       const cookieStore = cookies()
-      const token = cookieStore.get('id')
+      const token = cookieStore.get('token')
       alert(token)
     //   const id = await result._id
     //   router.push(`pagamentos/${id}`)
