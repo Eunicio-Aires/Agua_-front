@@ -7,31 +7,31 @@ import React, { cookies } from 'next/headers'
 
 
 export  function WorkLog(){
-    // const router = useRouter();
-    // const handleSubmi = async (event: SyntheticEvent) => {
-    //   event.preventDefault();
+    const router = useRouter();
+    const handleSubmi = async (event: SyntheticEvent) => {
+      event.preventDefault();
   
       
-    //   const data = {
-    //     email: (event.target as HTMLFormElement).email.value,
-    //     password: (event.target as HTMLFormElement).password.value,
+      const data = {
+        email: (event.target as HTMLFormElement).email.value,
+        password: (event.target as HTMLFormElement).password.value,
     
-    //   };
-    //   const JSONdata = JSON.stringify(data);
-    //   const endpoint = `https://agua-p.vercel.app/adm/loginSadmin`;
-    //   const options: RequestInit = {
-    //     method: 'POST',
-    //     headers: {
-    //       'Content-Type': 'application/json', 
-    //     },
-    //     body: JSONdata,
-    //   };
+      };
+      const JSONdata = JSON.stringify(data);
+      const endpoint = `https://agua-p.vercel.app/adm/loginSadmin`;
+      const options: RequestInit = {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json', 
+        },
+        body: JSONdata,
+      };
       
       
     
-    //   try{
-    //     const response = await fetch(endpoint, options);
-    //     const result = await response.json();
+    
+        const response = await fetch(endpoint, options);
+        const result = await response.json();
     //   const cookieStore = cookies()
     //   const token = cookieStore.get('token')
     //   alert(token)
@@ -41,7 +41,7 @@ export  function WorkLog(){
     //     alert(`Verifique o seu Codigo, Codigo invalido`);
     //   }
   
-    // }
+    }
 
     return (
         <>
