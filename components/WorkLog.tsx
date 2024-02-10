@@ -27,15 +27,15 @@ export  function WorkLog(){
       };
       
       const response = await fetch(endpoint, options);
-        const result = await response.json();
-      //   const token = await result.token
+        const result = await response.json(); 
+        const token = await result.token
       //   const idCanp = await result.id
     
       // try{
       //   cookies().set('token', token)
       //    const cookieStore = cookies()
      
-      alert(result.token)
+      alert(token)
       // const id = await result._id
       // router.push(`pagamentos/${id}`)
       // }catch(error){
