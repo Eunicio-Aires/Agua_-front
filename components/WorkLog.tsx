@@ -29,7 +29,7 @@ export  function WorkLog(){
       };
       
       const response = await fetch(endpoint, options);
-    //     const result = await response.json();
+        const result = await response.json();
     
     //   try{
         
