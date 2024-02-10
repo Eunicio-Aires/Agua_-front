@@ -9,40 +9,40 @@ import Link from "next/link";
 
 export  function WorkLog(){
     // const router = useRouter();
-    const handleSubmi = async (event: SyntheticEvent) => {
-      event.preventDefault();
+    // const handleSubmi = async (event: SyntheticEvent) => {
+    //   event.preventDefault();
   
       
-      const data =  {
-        email: (event.target as HTMLFormElement).email.value,
-        password: (event.target as HTMLFormElement).password.value,
+    //   const data =  {
+    //     email: (event.target as HTMLFormElement).email.value,
+    //     password: (event.target as HTMLFormElement).password.value,
     
-      };
-      const JSONdata = JSON.stringify(data);
-      const endpoint = `https://agua-front.vercel.app/api/login`;
-      const options: RequestInit = {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json', 
-        },
-        body: JSONdata,
-      };
+    //   };
+    //   const JSONdata = JSON.stringify(data);
+    //   const endpoint = `https://agua-front.vercel.app/api/login`;
+    //   const options: RequestInit = {
+    //     method: 'POST',
+    //     headers: {
+    //       'Content-Type': 'application/json', 
+    //     },
+    //     body: JSONdata,
+    //   };
       
-      const response = await fetch(endpoint, options);
-        const result = await response.json();
+    //   const response = await fetch(endpoint, options);
+    //     const result = await response.json();
     
-      try{
+    //   try{
         
     //   const cookieStore = cookies()
     //   const token = cookieStore.get('token')
-      alert(result)
+      // alert(result)
     //   const id = await result._id
     //   router.push(`pagamentos/${id}`)
-      }catch(error){
-        alert(`Verifique o seu Codigo, Codigo invalido`);
-      }
+      // }catch(error){
+    //     alert(`Verifique o seu Codigo, Codigo invalido`);
+    //   }
   
-    }
+    // }
 
     return (
         <>
@@ -55,7 +55,7 @@ export  function WorkLog(){
                 <p className="text-gray-500 dark:text-gray-400">Navegacao segura </p>
             </div>
             <div className="m-7">
-                <form onSubmit={handleSubmi}>
+                <form >
                     <div className="mb-6">
                         <label  className="block mb-2 text-sm text-gray-600 dark:text-gray-400">Email </label>
                         <input type="email" name="email" id="email" placeholder="you@company.com" className="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
