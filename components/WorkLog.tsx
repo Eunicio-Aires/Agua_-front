@@ -28,7 +28,7 @@ export  function WorkLog(){
       
       const response = await fetch(endpoint, options);
         const result = await response.json(); 
-        const token = await result.token
+        const token = await result.data.token
       //   const idCanp = await result.id
     
       // try{
