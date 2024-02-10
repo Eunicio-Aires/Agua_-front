@@ -9,26 +9,26 @@ import Link from "next/link";
 
 export  function WorkLog(){
     // const router = useRouter();
-    // const handleSubmi = async (event: SyntheticEvent) => {
-    //   event.preventDefault();
+    const handleSubmi = async (event: SyntheticEvent) => {
+      event.preventDefault();
   
       
-    //   const data =  {
-    //     email: (event.target as HTMLFormElement).email.value,
-    //     password: (event.target as HTMLFormElement).password.value,
+      const data =  {
+        email: (event.target as HTMLFormElement).email.value,
+        password: (event.target as HTMLFormElement).password.value,
     
-    //   };
-    //   const JSONdata = JSON.stringify(data);
-    //   const endpoint = `https://agua-front.vercel.app/api/login`;
-    //   const options: RequestInit = {
-    //     method: 'POST',
-    //     headers: {
-    //       'Content-Type': 'application/json', 
-    //     },
-    //     body: JSONdata,
-    //   };
+      };
+      const JSONdata = JSON.stringify(data);
+      const endpoint = `https://agua-front.vercel.app/api/login`;
+      const options: RequestInit = {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json', 
+        },
+        body: JSONdata,
+      };
       
-    //   const response = await fetch(endpoint, options);
+      const response = await fetch(endpoint, options);
     //     const result = await response.json();
     
     //   try{
@@ -42,7 +42,7 @@ export  function WorkLog(){
     //     alert(`Verifique o seu Codigo, Codigo invalido`);
     //   }
   
-    // }
+    }
 
     return (
         <>
