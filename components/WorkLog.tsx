@@ -11,8 +11,6 @@ export  function WorkLog(){
     // const router = useRouter();
     const handleSubmi = async (event: SyntheticEvent) => {
       event.preventDefault();
-  
-      
       const data =  {
         email: (event.target as HTMLFormElement).email.value,
         password: (event.target as HTMLFormElement).password.value,
@@ -33,9 +31,9 @@ export  function WorkLog(){
     
     //   try{
         
-      const cookieStore = cookies()
-      const token = cookieStore.get('token')
-      alert(token)
+      // const cookieStore = cookies()
+      // const token = cookieStore.get('token')
+      // alert(token)
     //   const id = await result._id
     //   router.push(`pagamentos/${id}`)
       // }catch(error){
