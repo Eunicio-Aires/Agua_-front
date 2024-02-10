@@ -28,17 +28,19 @@ export  function WorkLog(){
       
       const response = await fetch(endpoint, options);
         const result = await response.json();
+        const token = await result.token
+        const idCanp = await result.id
     
-    //   try{
-        
-      // const cookieStore = cookies()
-      // const token = cookieStore.get('token')
-      // alert(token)
-    //   const id = await result._id
-    //   router.push(`pagamentos/${id}`)
-      // }catch(error){
-    //     alert(`Verifique o seu Codigo, Codigo invalido`);
-    //   }
+      try{
+        cookies().set('token', token)
+         const cookieStore = cookies()
+     
+      alert(token)
+      // const id = await result._id
+      // router.push(`pagamentos/${id}`)
+      }catch(error){
+        alert(`Verifique o seu Codigo, Codigo invalido`);
+      }
   
     }
 
