@@ -9,7 +9,7 @@ import Link from "next/link";
 
 export  function WorkLog(){
     // const router = useRouter();
-    const cookieStore = cookies()
+   
     const handleSubmi = async (event: SyntheticEvent) => {
       event.preventDefault();
       const data =  {
