@@ -33,9 +33,9 @@ export  function WorkLog(){
       //   const idCanp = await result.id
     
       try{
-           const cookieStore = cookies()
+        //    const cookieStore = cookies()
         cookies().set('token', token)
-        cookies().set('id', id)
+        
       
      console.log(token)
       alert("submetido")
