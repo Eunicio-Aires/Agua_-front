@@ -1,7 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server'
+
  
 
 export async function POST(request: NextRequest) { 
+  
   const resb = await request.json()
   const res = await fetch('https://agua-p.vercel.app/adm/loginSadmin',{
     method: 'POST',
