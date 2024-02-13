@@ -16,7 +16,7 @@ export  function WorkLog(){
         password: (event.target as HTMLFormElement).password.value,
     
       };
-      const JSONdata = JSON.stringify(data);
+      const JSONdata = await JSON.stringify(data);
       const endpoint = `https://agua-front.vercel.app/api/login`;
       const options: RequestInit = {
         method: 'POST',

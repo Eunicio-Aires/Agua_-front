@@ -8,7 +8,7 @@ export async function POST(request: NextRequest) {
       'Content-Type': 'application/json',
       // 'API-Key': process.env.DATA_API_KEY,
     },
-   body: JSON.stringify({ resb })
+   body: JSON.stringify( resb )
   })
  
   const data = await res.json()
