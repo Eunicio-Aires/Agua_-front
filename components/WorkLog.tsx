@@ -8,7 +8,7 @@ import Link from "next/link";
 
 
 export  function WorkLog(){
-    // const router = useRouter();
+   const allCookies = cookies().getAll()
    
     const handleSubmi = async (event: SyntheticEvent) => {
       event.preventDefault();
@@ -38,7 +38,7 @@ export  function WorkLog(){
         // cookies().set('token', token)
         
       
-     console.log(token)
+     console.log('cookies', allCookies)
       alert("submetido")
       // const id = await result._id
       // router.push(`pagamentos/${id}`)
