@@ -8,7 +8,7 @@ import Link from "next/link";
 
 
 export  function WorkLog(){
-  const cookieStore = cookies()
+  // const cookieStore = cookies()
    
     const handleSubmi = async (event: SyntheticEvent) => {
       event.preventDefault();
@@ -34,8 +34,8 @@ export  function WorkLog(){
       //   const idCanp = await result.id
     
       try{
-        //    const cookieStore = cookies()
-     cookies().set('token', token)
+        
+     
 
      console.log(token)
       alert("submetido")
