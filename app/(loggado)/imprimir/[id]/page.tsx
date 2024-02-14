@@ -7,7 +7,7 @@ export default async function Imprimir({ params }:{ params:{id:any}}){
     const posts = await fetch(`https://agua-p.vercel.app/adm/clientpr/${params.id}`,{cache:"no-cache"}).then((res) => res.json());
     const cliente = await posts.client;
     const faturas = await posts.faturasP
-    console.log('cookies', todosCokies)
+    console.log('cookies')
     return(
         <>
             <div className="p-2">
