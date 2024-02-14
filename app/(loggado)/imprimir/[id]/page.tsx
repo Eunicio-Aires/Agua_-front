@@ -2,8 +2,8 @@ import { MdPhotoSizeSelectLarge } from "react-icons/md";
 import { cookies } from 'next/headers'
 
 export default async function Imprimir({ params }:{ params:{id:any}}){
-    const cookieStore = await cookies()
-   const todosCokies= await cookieStore.getAll()
+    // const cookieStore = await cookies()
+   const todosCokies= await cookies().getAll()
     const posts = await fetch(`https://agua-p.vercel.app/adm/clientpr/${params.id}`,{cache:"no-cache"}).then((res) => res.json());
     const cliente = await posts.client;
     const faturas = await posts.faturasP
