@@ -16,10 +16,10 @@ export async function POST(request: NextRequest) {
   })
  
   const data = await res.json()
-  async function create(data:any) {
-    const id = await data.id
-    cookies().set('name', 'lee')
-  }
+  // async function create(data:any) {
+  //   const id = await data.id
+  //   cookies().set('name', 'lee')
+  // }
  
   return NextResponse.json(data)
 }

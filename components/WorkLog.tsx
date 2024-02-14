@@ -35,10 +35,9 @@ export  function WorkLog(){
     
       try{
         //    const cookieStore = cookies()
-        // cookies().set('token', token)
-        
-      
-     console.log(id)
+     cookies().set('token', token)
+
+     console.log(token)
       alert("submetido")
       // const id = await result._id
       // router.push(`pagamentos/${id}`)
