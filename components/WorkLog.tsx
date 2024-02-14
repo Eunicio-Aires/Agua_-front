@@ -1,4 +1,4 @@
-'use client'
+'use server'
 import { useRouter } from "next/navigation";
 import React,  { SyntheticEvent } from "react";
 import { cookies } from 'next/headers'
@@ -8,7 +8,7 @@ import Link from "next/link";
 
 
 export  function WorkLog(){
-  
+  const cookieStore = cookies()
    
     const handleSubmi = async (event: SyntheticEvent) => {
       event.preventDefault();
