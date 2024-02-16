@@ -42,7 +42,7 @@ export  function WorkLog(){
     
      
       // const id = await result._id
-      router.push(`pagamentos/${id}`)
+      router.push(`/logadoAdmin/${id}`)
       }catch(error){
         alert(`Verifique o seu Codigo, Codigo invalido`);
       }
