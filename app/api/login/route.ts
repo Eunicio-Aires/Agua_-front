@@ -17,7 +17,7 @@ export async function POST(request: NextRequest) {
  
   const data = await res.json()
   const token = await data.token
-  cookies().set('token', token)
+  cookies().set('token' , token )
  
   return NextResponse.json(data)
 }

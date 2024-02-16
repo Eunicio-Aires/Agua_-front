@@ -2,12 +2,14 @@ import { CiSettings } from "react-icons/ci";
 import { GiPayMoney } from "react-icons/gi";
 import {RxSketchLogo, RxDashboard, RxPerson } from 'react-icons/rx' 
 import { BsGraphUpArrow } from "react-icons/bs"
+import { cookies } from 'next/headers'
 
 import Link from "next/link"
 import '../globals.css'
 // import BarChart from "@/components/BarChart";
 
 export default function RootLayout({
+  
  
     children,
   }: {

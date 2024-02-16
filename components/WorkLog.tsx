@@ -7,8 +7,10 @@ import Link from "next/link";
 
 
 
+
 export  function WorkLog(){
   // const cookieStore = cookies()
+  const router = useRouter()
    
     const handleSubmi = async (event: SyntheticEvent) => {
       event.preventDefault();
@@ -37,10 +39,10 @@ export  function WorkLog(){
         
      
 
-     console.log(token)
-      alert("submetido")
+    
+     
       // const id = await result._id
-      // router.push(`pagamentos/${id}`)
+      router.push(`pagamentos/${id}`)
       }catch(error){
         alert(`Verifique o seu Codigo, Codigo invalido`);
       }
