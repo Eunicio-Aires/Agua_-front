@@ -1,5 +1,3 @@
-
-
 import Link from "next/link"
 import React, { SyntheticEvent } from 'react';
 import { Movitel } from '@/components/pagamento/Movitel';
