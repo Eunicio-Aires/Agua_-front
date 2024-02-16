@@ -16,8 +16,10 @@ export async function POST(request: NextRequest) {
   })
  
   const data = await res.json()
+  const id   = await data.id
   const token = await data.token
   cookies().set('token' , token )
- 
+  cookies().set('id' , id )
+
   return NextResponse.json(data)
 }
