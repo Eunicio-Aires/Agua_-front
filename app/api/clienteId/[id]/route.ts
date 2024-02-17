@@ -9,7 +9,7 @@ export async function GET(request: Request,
     const cookieStore = cookies()
     const theme = cookieStore.get('token')
     const id = params.id
-    console.log(theme)
+    console.log('console teste')
     const res = await fetch(`https://agua-p.vercel.app/adm/oneclient/${id}`,{cache:"no-cache"})
     const product = await res.json()
     return NextResponse.json( product )
