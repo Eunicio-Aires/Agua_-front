@@ -5,6 +5,7 @@ import { MdEdit } from "react-icons/md";
 import  { BiUserPlus } from "react-icons/bi";
 import  SearchInPut  from '@/components/Search/SearchInPut'
 import { Registar } from '@/components/Registar'
+import { getSession } from  '@/lib/cookiesConf'
 
 
 export default async function Zona() {
@@ -14,12 +15,14 @@ export default async function Zona() {
   const numero  = await responseC.allClientes.filter((cliente:any) => cliente.estado === "Activo").length
   const ativos  = await responseC.allClientes.filter((cliente:any) => cliente.estado === "Activo")
   const seativo = await responseC.allClientes.filter((cliente: any) => cliente.estado !== "Activo");
+  const token = await getSession()
   
-console.log('teste makjgilug')
+
   return (
  
 
     <section className="text-gray-600 body-font">
+      <span> {token}</span>
 <input type="checkbox" id="my_modal_7" className="modal-toggle" />
 <div className="modal" role="dialog">
   <div className="modal-box">
