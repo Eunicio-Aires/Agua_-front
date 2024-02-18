@@ -8,14 +8,15 @@ export async function GET(request: Request,
   ) {
 
     const tokenCl = getSession()
+    const headers:any = {
+      'Authorization': tokenCl,
+      
+    }
+
+    
     const id = params.id
     
-    const res = await fetch(`https://agua-p.vercel.app/adm/oneclient/${id}`, {
-      headers: {
-        'Content-Type': 'application/json',
-        // 'API-Key': process.env.DATA_API_KEY,
-      },
-    })
+    const res = await fetch(`https://agua-p.vercel.app/adm/oneclient/${id}`, { headers})
     
     const product = await res.json()
     return NextResponse.json( product )

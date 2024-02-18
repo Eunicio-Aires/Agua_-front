@@ -9,7 +9,13 @@ import { getSession } from  '@/lib/cookiesConf'
 
 
 export default async function Zona() {
-  const responseC = await fetch(`https://agua-p.vercel.app/adm/todos`,{cache:"no-cache"}).then((res) => res.json());
+  const tokenFun = await getSession()
+  const header:any = await {
+    'Authorization': tokenFun,
+    // Outros headers personalizados, se necessário
+  };
+ 
+    const responseC = await fetch(`https://agua-p.vercel.app/adm/todos`,{cache:"no-cache"}).then((res) => res.json());
 
   const clients = await responseC.allClientes
   const numero  = await responseC.allClientes.filter((cliente:any) => cliente.estado === "Activo").length

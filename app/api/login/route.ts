@@ -1,10 +1,15 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { cookies } from 'next/headers'
 import { headers } from 'next/headers'
+import { getSession } from  '@/lib/cookiesConf'
 
 export async function POST(request: NextRequest) { 
-
-
+  const tokenFun = await getSession()
+  const header = await {
+    'Authorization': tokenFun,
+    // Outros headers personalizados, se necessário
+  };
+  
   const resb = await request.json()
   const res = await fetch('https://agua-p.vercel.app/adm/loginSadmin',{
     method: 'POST',

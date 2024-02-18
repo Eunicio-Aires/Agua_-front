@@ -20,7 +20,7 @@ import Editar from "@/components/clientes/Editar";
       const dadosm = await posts.clientId.faturas
       const faturasNaoPagas = posts.clientId.faturas.filter((fatura: any) => fatura.estado === "Nao pago");
       const faturasPagas = posts.clientId.faturas.filter((fatura: any) => fatura.estado === "Pago").slice(-10);
-      console.log('testando o log')
+      
      
     
     return (
