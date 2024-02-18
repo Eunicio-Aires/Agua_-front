@@ -15,7 +15,7 @@ export default async function Zona() {
   const ativos  = await responseC.allClientes.filter((cliente:any) => cliente.estado === "Activo")
   const seativo = await responseC.allClientes.filter((cliente: any) => cliente.estado !== "Activo");
   
-
+console.log('teste makjgilug')
   return (
  
 
