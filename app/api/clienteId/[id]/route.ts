@@ -10,8 +10,17 @@ export async function GET(request: Request,
     const tokenCl = getSession()
     const id = params.id
     
-    const res = await fetch(`https://agua-p.vercel.app/adm/oneclient/${id}`,{cache:"no-cache"})
-    console.log('console teste')
+    const res = await fetch(`https://agua-p.vercel.app/adm/oneclient/${id}`, {
+      headers: {
+        'Content-Type': 'application/json',
+        // 'API-Key': process.env.DATA_API_KEY,
+      },
+    })
+    
     const product = await res.json()
     return NextResponse.json( product )
+
+
   }
+
+  

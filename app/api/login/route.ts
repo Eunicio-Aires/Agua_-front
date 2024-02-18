@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { cookies } from 'next/headers'
- 
+import { headers } from 'next/headers'
 
 export async function POST(request: NextRequest) { 
 
@@ -15,7 +15,12 @@ export async function POST(request: NextRequest) {
    body: JSON.stringify( resb )
   })
  
+   
   const data = await res.json()
+
+  // const requestHeaders = new Headers(request.headers)
+  // const tokenHea = await requestHeaders.get("Authorization")
+  // const nome = await requestHeaders.get("nome")
   const id   = await data.id
   const token = await data.token
   cookies().set('token' , token )
