@@ -1,8 +1,10 @@
 
 import { NextResponse } from 'next/server';
 // import { Request } from 'express';
+import { getSession } from '@/lib/cookiesConf'
 
 export async function POST(req: Request) {
+  const token = await getSession()
   const body = await req.json(); // Parse the incoming JSON body
 
   try {
@@ -10,6 +12,7 @@ export async function POST(req: Request) {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        'Authorization': `${token}`
       },
       body: JSON.stringify(body), // Use the parsed body
     });
