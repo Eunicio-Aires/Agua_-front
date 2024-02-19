@@ -28,7 +28,7 @@ export default async function Zona() {
  
 
     <section className="text-gray-600 body-font">
-      <span> {token}</span>
+      {/* <span> {token}</span> */}
 <input type="checkbox" id="my_modal_7" className="modal-toggle" />
 <div className="modal" role="dialog">
   <div className="modal-box">
