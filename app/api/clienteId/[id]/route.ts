@@ -15,9 +15,7 @@ export async function GET(request: Request,
 
     
     const id = params.id
-    
     const res = await fetch(`https://agua-p.vercel.app/adm/oneclient/${id}`, { headers})
-    
     const product = await res.json()
     return NextResponse.json( product )
 
