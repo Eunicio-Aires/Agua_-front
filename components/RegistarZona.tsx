@@ -11,7 +11,7 @@ interface ZonaProps{
 
 export  function RegistarZona(){
 
-const token =  getSession()
+// const token =  getSession()
 
   const handleSubmit = async (event: SyntheticEvent) => {
     event.preventDefault();
@@ -27,7 +27,7 @@ const token =  getSession()
       method: 'POST', 
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `${token}`
+        // 'Authorization': `${token}`
       },
       body: JSONdata,
     };
