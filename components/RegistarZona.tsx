@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import  { SyntheticEvent } from 'react';
 import { json } from "stream/consumers";
+import  { getSession } from '@/lib/cookiesConf';
 
 
 interface ZonaProps{
@@ -9,6 +10,8 @@ interface ZonaProps{
 }
 
 export  function RegistarZona(){
+
+const token =  getSession()
 
   const handleSubmit = async (event: SyntheticEvent) => {
     event.preventDefault();
@@ -24,6 +27,7 @@ export  function RegistarZona(){
       method: 'POST', 
       headers: {
         'Content-Type': 'application/json',
+        'Authorization': `${token}`
       },
       body: JSONdata,
     };
