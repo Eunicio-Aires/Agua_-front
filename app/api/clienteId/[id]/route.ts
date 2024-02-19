@@ -9,7 +9,7 @@ export async function GET(request: Request,
 
     const tokenCl = getSession()
     const headers:any = {
-      'authorization': tokenCl,
+      'Token': tokenCl,
       
     }
 
