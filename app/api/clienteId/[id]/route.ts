@@ -8,8 +8,8 @@ export async function GET(request: Request,
   ) {
 
     const tokenCl = getSession()
-    const headers:any = {
-      'Token': tokenCl,
+    const headers:any = await {
+      'token': tokenCl,
       
     }
 
