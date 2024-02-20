@@ -17,7 +17,7 @@ export default async function ClienteId({ params }: { params: { id: string } }){
             <div>{nome} {apelido}</div>
             {comp.map((companes:any)=>(
                 <div  key={companes._id}>
-                    <Link href={`/inicial/${companes._id}`}>
+                    <Link href=''>
                         <div>{companes.nome}</div>
                         <div>{companes.clientes.length}</div>
                     </Link>
