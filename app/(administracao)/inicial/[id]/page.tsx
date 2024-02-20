@@ -12,16 +12,16 @@ import { Registar } from '@/components/Registar'
 export default async function ClientComp({ params }: { params: { id: string } }){
     
     const responseC = await  fetch(`https://agua-front.vercel.app/api/compoCliente/${params.id}`,{ cache: 'no-store'}).then((res) => res.json())
-    // const clients = await responseC
-    // const numero  = await responseC.filter((cliente:any) => cliente.estado === "Activo").length
-    // const ativos  = await responseC.filter((cliente:any) => cliente.estado === "Activo")
-    // const seativo = await responseC.filter((cliente: any) => cliente.estado !== "Activo");
+    const clients = await responseC
+    const numero  = await responseC.filter((cliente:any) => cliente.estado === "Activo").length
+    const ativos  = await responseC.filter((cliente:any) => cliente.estado === "Activo")
+    const seativo = await responseC.filter((cliente: any) => cliente.estado !== "Activo");
     
 
     return(
         <section className="text-gray-600 body-font">
         
-  {/* <input type="checkbox" id="my_modal_7" className="modal-toggle" />
+  <input type="checkbox" id="my_modal_7" className="modal-toggle" />
   <div className="modal" role="dialog">
     <div className="modal-box">
       <h3 className="text-lg font-bold">Hello!</h3>
@@ -52,12 +52,12 @@ export default async function ClientComp({ params }: { params: { id: string } })
                   </div>
     
    
-   </section> */}
+   </section>
   
   
   
   
-  {/* <div className=" grid lg:grid-cols-5 gap-4 p-4 bg-gray-200"> 
+  <div className=" grid lg:grid-cols-5 gap-4 p-4 bg-gray-200"> 
   
               <div className="lg:col-span-2 col-span-1 bg-white flex justify-between w-full border p-4 rounded-lg">
                 <div className="flex flex-col w-full pb-4">
@@ -128,7 +128,7 @@ export default async function ClientComp({ params }: { params: { id: string } })
      
     </table>
   </div>        
-          </div> */}
+          </div>
         
   
   </section>
