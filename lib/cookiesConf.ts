@@ -6,3 +6,8 @@ export async function getSession(){
     return (session) 
 }
 
+export async function getId(){
+    const idComp = await cookies().get('id')
+    return (idComp)
+}
+

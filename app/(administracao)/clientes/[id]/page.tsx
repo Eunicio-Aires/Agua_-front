@@ -32,7 +32,7 @@ import Editar from "@/components/clientes/Editar";
            
          
 
-<div className="overflow-x-auto m-4">
+<div className="overflow-x-auto m-4"> 
   <table className="table table-xs">
     <thead>
       <tr className='bg-gray-100'>
