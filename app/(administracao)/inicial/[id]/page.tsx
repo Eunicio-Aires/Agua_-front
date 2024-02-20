@@ -11,8 +11,8 @@ import { Registar } from '@/components/Registar'
 
 export default async function ClientComp({ params }: { params: { id: string } }){
     
-    const responseC = await  fetch(`https://agua-front.vercel.app/api/compoCliente/${params.id}`,{ cache: 'no-store'}).then((res) => res.json())
-    const clients = await responseC
+    const dasos = await  fetch(`https://agua-front.vercel.app/api/compoCliente/${params.id}`,{ cache: 'no-store'}).then((res) => res.json())
+    const responseC = await dasos.clientes
     const numero  = await responseC.filter((cliente:any) => cliente.estado === "Activo").length
     const ativos  = await responseC.filter((cliente:any) => cliente.estado === "Activo")
     const seativo = await responseC.filter((cliente: any) => cliente.estado !== "Activo");
