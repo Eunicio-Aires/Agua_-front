@@ -7,7 +7,7 @@ export async function GET(
   ) {
     const id = params.id 
 
-    const res = await fetch(`https://agua-p.vercel.app/adm/adminComp/${id}`,{cache:"no-cache"})
+    const res = await fetch(`https://agua-p.vercel.app/adm/adminComp/${id}`,{cache: 'no-store'})
     const clientes = await res.json()
     return NextResponse.json( clientes )
   }
