@@ -57,7 +57,7 @@ export default async function ClientComp({ params }: { params: { id: string } })
   
   
   
-  <div className=" grid lg:grid-cols-5 gap-4 p-4 bg-gray-200"> 
+  {/* <div className=" grid lg:grid-cols-5 gap-4 p-4 bg-gray-200"> 
   
               <div className="lg:col-span-2 col-span-1 bg-white flex justify-between w-full border p-4 rounded-lg">
                 <div className="flex flex-col w-full pb-4">
@@ -126,9 +126,9 @@ export default async function ClientComp({ params }: { params: { id: string } })
   
   </tbody> 
      
-    </table>
-  </div>        
-          </div>
+    </table> */}
+  {/* </div>         */}
+          {/* </div> */}
         
   
   </section>
