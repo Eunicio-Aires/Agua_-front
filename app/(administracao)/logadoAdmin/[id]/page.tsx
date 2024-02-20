@@ -5,7 +5,7 @@ export default async function ClienteId({ params }: { params: { id: string } }){
     const cookie = cookies()
     const toke = cookie.get('token')
     console.log(toke)
-    const compan = await  fetch(`https://agua-front.vercel.app/api/logadoAdnin/${params.id}`,{ cache: 'no-store'}).then((res) => res.json())
+    const compan = await  fetch(`https://agua-front.vercel.app/api/adminComp/${params.id}`,{ cache: 'no-store'}).then((res) => res.json())
     const nome  = await compan.nome
     const apelido  = await compan.apelido
     const id  = await compan._id
