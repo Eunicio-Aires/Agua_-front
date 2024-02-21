@@ -2,9 +2,11 @@ import { cookies } from "next/headers"
 import Link from "next/link"
 import { getId } from '@/lib/cookiesConf'
 
+
+
 export default async function ClienteId({ params }: {params:{id: string }}){
-    // const cookie =await cookies()
-    // const toke = await cookie.get('token')
+    const cookie =await cookies()
+    const toke:any = await cookie.get('token')
     // const idt = await cookie.get('id')
     
     const idt = await getId()
@@ -16,7 +18,7 @@ export default async function ClienteId({ params }: {params:{id: string }}){
     return(
         <>
         
-
+        <span>{toke}</span>
          <div>{nome} {apelido}</div>
             {comp.map((companes:any)=>(
                 <div  key={companes._id}>
