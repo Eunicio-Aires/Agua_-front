@@ -9,7 +9,7 @@ export interface Mes{
 export default async function Configuracoes(){
     // const zonas = await fetch("http://localhost:3101/listarzonas",{cache:"no-cache"})
     
-    // const zona = await zonas.json();
+   
     return(
        
         <div>
