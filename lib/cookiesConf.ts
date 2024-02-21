@@ -7,7 +7,8 @@ export async function getSession(){
 }
 
 export async function getId(){
-    const idComp = await cookies().get('id')
-    return (idComp)
+    const idComp = await cookies().get('id')?.value;
+    if(!idComp) return null 
+    return await (idComp)
 }
 

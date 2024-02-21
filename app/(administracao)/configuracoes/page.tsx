@@ -11,23 +11,15 @@ export default async function Configuracoes(){
     
     // const zona = await zonas.json();
     return(
-        // <main className=''>     
-        //     <form>
-        //         <input type='text'/>
-        //         <button>Add Mes</button>
-
-        //     </form>
+       
         <div>
             <RegistarZona/>
             <Mes/>
-        {/* <DefinirValor/> */}
-        {/* <ul>
-            {zona.map((zona:any) => <li key={zona._id}> <Link href={`/configuracoes/${zona._id}`}>{zona.zona}</Link> </li>)}
-        </ul> */}
+        
             
 
         
         </div>
-        // </main>
+        
     )
 }

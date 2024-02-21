@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import  { SyntheticEvent } from 'react';
 import { useRouter } from 'next/navigation';
+import { getId } from '@/lib/cookiesConf'
 // import { Router } from "next/router";
 // import { redirect } from 'next/navigation'
 
@@ -12,6 +13,7 @@ interface ZonaProps{
 
 
 export  function Mes(){
+  const idCom = getId()
 
   const handleSubmit = async (event: SyntheticEvent) => {
     event.preventDefault();
@@ -20,7 +22,7 @@ export  function Mes(){
       mes:(event.target as HTMLFormElement).mes.value
     };
     const  JSONdata = JSON.stringify(data);
-    const endpoint = 'https://agua-front.vercel.app/api/mes'
+    const endpoint = `https://agua-front.vercel.app/api/configu/mes/${idCom}`
 
     const options: RequestInit = {
       method: 'POST',
