@@ -12,3 +12,13 @@ export async function getId(){
     return await (idComp)
 }
 
+interface IdEmpresa{
+    _id:String;
+    
+}
+
+export async function setCook({_id}:IdEmpresa) {
+    const id =await _id
+    
+}
+
