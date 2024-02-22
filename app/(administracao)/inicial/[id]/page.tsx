@@ -8,10 +8,13 @@ import { MdEdit } from "react-icons/md";
 import  { BiUserPlus } from "react-icons/bi";
 import  SearchInPut  from '@/components/Search/SearchInPut'
 import { Registar } from '@/components/Registar'
+import { cookies } from 'next/headers'
 
 export default async function ClientComp({ params }: { params: { id: string } }){
-    
+  const cookieStore = cookies()
     const dasos = await  fetch(`https://agua-front.vercel.app/api/compoCliente/${params.id}`,{ cache: 'no-store'}).then((res) => res.json())
+    const idComp = await `${params.id}`
+    cookies().set('idCompan', idComp)     
     const responseC = await dasos.clientes
     const numero  = await responseC.filter((cliente:any) => cliente.estado === "Activo").length
     const ativos  = await responseC.filter((cliente:any) => cliente.estado === "Activo")
