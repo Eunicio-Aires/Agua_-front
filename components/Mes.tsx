@@ -13,7 +13,7 @@ interface ZonaProps{
 
 
 export  function Mes(){
-  
+  const idCompa =  12345;
 
   const handleSubmit = async (event: SyntheticEvent) => {
     event.preventDefault();
@@ -22,7 +22,7 @@ export  function Mes(){
       mes:(event.target as HTMLFormElement).mes.value
     };
     const  JSONdata = JSON.stringify(data);
-    const endpoint = `https://agua-front.vercel.app/api/configu/mes/${1234}`
+    const endpoint = `https://agua-front.vercel.app/api/configu/mes/${idCompa}`
 
     const options: RequestInit = {
       method: 'POST',
