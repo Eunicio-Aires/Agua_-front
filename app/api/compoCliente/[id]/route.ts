@@ -9,7 +9,7 @@ export async function GET(
      
     const res = await fetch(`https://agua-p.vercel.app/adm/componeclient/${id}`,{cache:"no-cache"})
     const product = await res.json()
-    cookies().set('idcomp' , id ) 
+    // cookies().set('idcomp' , id ) 
 
     return NextResponse.json( product )
   }
