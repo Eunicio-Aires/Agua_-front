@@ -13,8 +13,7 @@ import { cookies } from 'next/headers'
 export default async function ClientComp({ params }: { params: { id: string } }){
   
     const dasos = await  fetch(`https://agua-front.vercel.app/api/compoCliente/${params.id}`,{ cache: 'no-store'}).then((res) => res.json())
-    const idComp = await `${params.id}`
-    cookies().set('idcomp' , idComp )    
+    
     const responseC = await dasos.clientes
     const numero  = await responseC.filter((cliente:any) => cliente.estado === "Activo").length
     const ativos  = await responseC.filter((cliente:any) => cliente.estado === "Activo")
