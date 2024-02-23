@@ -13,12 +13,12 @@ export async function getId(){
 }
 
 interface IdEmpresa{
-    _id:String;
+    _id:any;
     
 }
 
-export async function setCook({_id}:IdEmpresa) {
-    const id =await _id
-    
+export async function setCook(id:any) {
+   const comp = await cookies().set('companid', id)
+    return await (comp)
 }
 
