@@ -22,6 +22,7 @@ export async function POST(request: NextRequest) {
   const token = await data.token
   // cookies().set('token' , token )
   // cookies().set('id' , id )
+  cookies().set('idco' , "dkalsnfnikasd")
 
   return NextResponse.json(data)
 }
