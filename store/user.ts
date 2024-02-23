@@ -1,10 +1,11 @@
 import { create } from 'zustand'
 
-type Idprops={
-    id: String
-}
-export const userStore = create((set)=>{
-    user:{
-        full_name:'Eunicio Aires'
-    }
-})
+interface IdStore {
+    id: string | null;
+    setId: (newId: string | null) => void;
+  }
+
+export const userStore = create<IdStore>((set) => ({
+  id: null,
+  setId: (newId) => set({ id: newId }),
+}));

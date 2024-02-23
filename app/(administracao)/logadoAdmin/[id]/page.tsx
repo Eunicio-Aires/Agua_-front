@@ -8,11 +8,12 @@ import { userStore } from '@/store/user'
 export default async function ClienteId({ params }: {params:{id: string }}){
     const baseUrl = process.env.NEXT_LOCAL_BASE_URL;
     
+    const { id, setId } = userStore();
 
     // const cookie =await cookies()
     // const toke = await cookie.get('token')
     // const idt = await cookie.get('id')
-    const user = await userStore((state:any)=> state.user)
+    // const user = await userStore((state:any)=> state.user)
     
     
     // const idt = await getSession()
@@ -21,8 +22,10 @@ export default async function ClienteId({ params }: {params:{id: string }}){
     const apelido  = await compan.apelido
     const idc  = await compan._id
     const comp = await compan.company
+    setId(idc);
     return(
         <>
+        <p>ID: {id}</p>
         {/* <span>{user.}</span> */}
         {/* <span>{idt}</span> */}
          {/* <div>{nome} {apelido}</div> */}
