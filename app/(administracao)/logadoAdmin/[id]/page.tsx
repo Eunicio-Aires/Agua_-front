@@ -1,7 +1,7 @@
 import { cookies } from "next/headers"
 import Link from "next/link"
 import { getId, getSession } from '@/lib/cookiesConf'
-import { userStore } from '@/app/store/user'
+import { userStore } from '@/store/user'
 
 
 
