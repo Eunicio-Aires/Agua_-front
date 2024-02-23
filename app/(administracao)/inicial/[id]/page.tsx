@@ -21,7 +21,7 @@ export default async function ClientComp({ params }: { params: { id: string } })
     const ativos  = await responseC.filter((cliente:any) => cliente.estado === "Activo")
     const seativo = await responseC.filter((cliente: any) => cliente.estado !== "Activo");
     
-    setCook(params.id)
+    
 
     return(
         <section className="text-gray-600 body-font">

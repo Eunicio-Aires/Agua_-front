@@ -8,7 +8,7 @@ export async function GET(
   ) {
     const id = params.id 
 
-    
+    setCook(params.id)
     const res = await fetch(`https://agua-p.vercel.app/adm/componeclient/${id}`,{cache:"no-cache"})
     const product = await res.json()
     const idcomp = await product.paramComp
