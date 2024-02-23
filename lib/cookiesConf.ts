@@ -18,6 +18,12 @@ interface IdEmpresa{
     
 }
 
+export async function getCompan(){
+    const compa = await cookies().get('idcompy')?.value;
+    if(!compa) return null 
+    return await (compa) 
+}
+
 export async function setCook(id:any) {
     cookies().set('compa', id)
    

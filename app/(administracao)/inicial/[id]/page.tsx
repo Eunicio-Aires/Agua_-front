@@ -8,7 +8,7 @@ import { MdEdit } from "react-icons/md";
 import  { BiUserPlus } from "react-icons/bi";
 import  SearchInPut  from '@/components/Search/SearchInPut'
 import { Registar } from '@/components/Registar'
-import { setCook } from '@/lib/cookiesConf'
+import { setCook,getCompan } from '@/lib/cookiesConf'
 import { cookies } from "next/headers";
 
 export default async function ClientComp({ params }: { params: { id: string } }){
@@ -21,9 +21,11 @@ export default async function ClientComp({ params }: { params: { id: string } })
     const ativos  = await responseC.filter((cliente:any) => cliente.estado === "Activo")
     const seativo = await responseC.filter((cliente: any) => cliente.estado !== "Activo");
     
-    
+
+    const idfaempresa = await getCompan()
 
     return(
+      
         <section className="text-gray-600 body-font">
         
   <input type="checkbox" id="my_modal_7" className="modal-toggle" />
@@ -60,7 +62,7 @@ export default async function ClientComp({ params }: { params: { id: string } })
    </section>
   
   
-  
+   <span> {idfaempresa} </span>
   
   <div className=" grid lg:grid-cols-5 gap-4 p-4 bg-gray-200"> 
   
