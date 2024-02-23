@@ -12,7 +12,7 @@ export default async function ClienteId({ params }: {params:{id: string }}){
     const user = userStore((state:any)=> state.user)
     
     
-    const idt = await getSession()
+    // const idt = await getSession()
     const compan = await  fetch(`https://agua-front.vercel.app/api/adminComp/${params.id}`,{cache: 'no-store'}).then((res) => res.json())
     const nome  = await compan.nome
     const apelido  = await compan.apelido
@@ -21,8 +21,8 @@ export default async function ClienteId({ params }: {params:{id: string }}){
     return(
         <>
         <span>{user.full_name}</span>
-        <span>{idt}</span>
-         <div>{nome} {apelido}</div>
+        {/* <span>{idt}</span> */}
+         {/* <div>{nome} {apelido}</div> */}
             {comp.map((companes:any)=>(
                 <div  key={companes._id}>
                     <Link href={`/inicial/${companes._id}`}>
