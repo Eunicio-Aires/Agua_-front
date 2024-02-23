@@ -8,7 +8,7 @@ import { MdEdit } from "react-icons/md";
 import  { BiUserPlus } from "react-icons/bi";
 import  SearchInPut  from '@/components/Search/SearchInPut'
 import { Registar } from '@/components/Registar'
-import { setCook,getCompan } from '@/lib/cookiesConf'
+import { setCook, getCompan,getSession } from '@/lib/cookiesConf'
 import { cookies } from "next/headers";
 
 export default async function ClientComp({ params }: { params: { id: string } }){
@@ -23,7 +23,7 @@ export default async function ClientComp({ params }: { params: { id: string } })
     
 
     const idfaempresa = await getCompan()
-
+    const secao = await getSession()
     return(
       
         <section className="text-gray-600 body-font">
@@ -62,7 +62,9 @@ export default async function ClientComp({ params }: { params: { id: string } })
    </section>
   
   
-   <span> {idfaempresa} </span>
+   <span>Id: {idfaempresa} </span>
+   <span>Sessio {secao} </span>
+
   
   <div className=" grid lg:grid-cols-5 gap-4 p-4 bg-gray-200"> 
   

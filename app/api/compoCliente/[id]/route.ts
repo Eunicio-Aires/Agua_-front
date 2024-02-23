@@ -14,9 +14,9 @@ export async function GET(
     const product = await res.json()
     const idcomp = await product.paramComp
     const dados = await product.compan
-     let response = NextResponse.next()
-     response.cookies.set('idcompy', id)
-    
+    //  let response = NextResponse.next()
+    //  response.cookies.set('idcompy', id)
+    cookies().set('compan' , id )
            
     return NextResponse.json( dados )
   }
