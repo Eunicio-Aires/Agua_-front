@@ -14,9 +14,10 @@ export async function GET(
     const product = await res.json()
     const idcomp = await product.paramComp
     const dados = await product.compan
-     
+     let response = NextResponse.next()
+     response.cookies.set('idcomp', id)
     
-
+           
     return NextResponse.json( dados )
   }
 
