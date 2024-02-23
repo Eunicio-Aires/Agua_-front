@@ -12,7 +12,7 @@ export default async function ClienteId({ params }: {params:{id: string }}){
     // const cookie =await cookies()
     // const toke = await cookie.get('token')
     // const idt = await cookie.get('id')
-    const user = await userStore((state:any)=> state.user)
+    // const user = await userStore((state:any)=> state.user)
     
     
     // const idt = await getSession()
@@ -23,7 +23,7 @@ export default async function ClienteId({ params }: {params:{id: string }}){
     const comp = await compan.company
     return(
         <>
-        <span>{user.full_name}</span>
+        {/* <span>{user.full_name}</span> */}
         {/* <span>{idt}</span> */}
          {/* <div>{nome} {apelido}</div> */}
             {comp.map((companes:any)=>(
