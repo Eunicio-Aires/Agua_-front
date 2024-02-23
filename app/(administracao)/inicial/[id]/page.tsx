@@ -12,12 +12,7 @@ import { setCook } from '@/lib/cookiesConf'
 import { cookies } from "next/headers";
 
 export default async function ClientComp({ params }: { params: { id: string } }){
-  async function setcopn() {
-    'use server'
-    cookies().set('idco' , params.id)
-   
-  }
-  setcopn()
+  
     const dasos = await  fetch(`https://agua-front.vercel.app/api/compoCliente/${params.id}`,{ cache: 'no-store'}).then((res) => res.json())
     
     
