@@ -12,8 +12,8 @@ import { setCook, getCompan,getSession } from '@/lib/cookiesConf'
 import { cookies } from "next/headers";
 
 export default async function ClientComp({ params }: { params: { id: string } }){
-  
-    const dasos = await  fetch(`https://agua-front.vercel.app/api/compoCliente/${params.id}`,{ cache: 'no-store'}).then((res) => res.json())
+  const baseUrl = process.env.NEXT_LOCAL_BASE_URL;
+    const dasos = await  fetch(`${baseUrl}/api/compoCliente/${params.id}`,{ cache: 'no-store'}).then((res) => res.json())
     
     
     const responseC = await dasos.clientes

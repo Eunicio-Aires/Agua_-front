@@ -6,14 +6,17 @@ import { userStore } from '@/store/user'
 
 
 export default async function ClienteId({ params }: {params:{id: string }}){
+    const baseUrl = process.env.NEXT_LOCAL_BASE_URL;
+    
+
     // const cookie =await cookies()
     // const toke = await cookie.get('token')
     // const idt = await cookie.get('id')
-    const user = userStore((state:any)=> state.user)
+    const user = await userStore((state:any)=> state.user)
     
     
     // const idt = await getSession()
-    const compan = await  fetch(`https://agua-front.vercel.app/api/adminComp/${params.id}`,{cache: 'no-store'}).then((res) => res.json())
+    const compan = await  fetch(`${baseUrl}/api/adminComp/${params.id}`,{cache: 'no-store'}).then((res) => res.json())
     const nome  = await compan.nome
     const apelido  = await compan.apelido
     const idc  = await compan._id

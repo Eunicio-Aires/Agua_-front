@@ -2,6 +2,7 @@ import Link from "next/link"
 
 
 export default async function NCliente(){
+    const baseUrl = process.env.NEXT_LOCAL_BASE_URL;
     const zonas = await fetch('https://agua-p.vercel.app/adm/allAreas',{cache:'no-store'}).then((res) => res.json())
     return(
       

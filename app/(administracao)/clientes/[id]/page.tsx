@@ -15,7 +15,8 @@ import Editar from "@/components/clientes/Editar";
 
 
     export default async function ClienteId({ params }: { params: { id: string } }){
-      const posts = await  fetch(`https://agua-front.vercel.app/api/clienteId/${params.id}`,{ cache: 'no-store'}).then((res) => res.json())
+      const baseUrl = process.env.NEXT_LOCAL_BASE_URL;
+      const posts = await  fetch(`${baseUrl}/api/clienteId/${params.id}`,{ cache: 'no-store'}).then((res) => res.json())
       const dados = await posts.clientId.nome
       const dadosm = await posts.clientId.faturas
       const faturasNaoPagas = posts.clientId.faturas.filter((fatura: any) => fatura.estado === "Nao pago");
