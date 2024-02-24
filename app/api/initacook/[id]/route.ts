@@ -16,7 +16,8 @@ export async function POST(request:NextRequest,{params}:any) {
       //   body: JSON.stringify(body),
       });
       const data = await response.json();
-      cookies().set('idCompan' , ids )
+      const id   = await data
+      cookies().set('idCompan' , id )
       return NextResponse.json(data); 
     } catch (error) {
       return NextResponse.json({ error: 'An error occurred' }, { status: 500 });
