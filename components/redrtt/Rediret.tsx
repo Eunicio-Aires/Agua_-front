@@ -23,15 +23,19 @@ export default function Redbutton({_id}:Compy){
   const [isButtonDisabled, setButtonDisabled] = useState(false);
   const handleSubmi = async (event: SyntheticEvent) => {
         event.preventDefault();
-        // desabilitar o botao
-        // setButtonDisabled(true);
+
 
         // const data = {
         //     numero: (event.target as HTMLFormElement).numero.value,
         //   };
         // const JSONdata = JSON.stringify(data);
+        
+        // const data = {
+        //     numero: (event.target as HTMLFormElement).numero.value,
+        //   };
+        // const JSONdata = JSON.stringify(data);
 
-        const endpoint = `${baseUrl}/api/initacook/${_id}`;
+        const endpoint = `${baseUrl}/api/initacook/65a956bb8f3b0f53bed8bf8d`;
         const options: RequestInit = {
             method: 'POST',
             headers: {
@@ -46,15 +50,11 @@ export default function Redbutton({_id}:Compy){
                 }catch(error){
                   alert(`Verifique o seu Codigo, Codigo invalido`);
                 }
-            // alert(result)
-            // router.push(`/inicial/${result}`)
-        //   }catch(error){
-        //     console.log({messge:"erro ao efetuar pedido"})
-        //   }
-          
-        //   console.log(result.response)
-        //   alert(` ${result.response}`);
        
+       
+          // router.refresh()
+          // router.push(`pagamentos/${_id}` )
+         
           // router.refresh()
           // router.push(`pagamentos/${_id}` )
 
