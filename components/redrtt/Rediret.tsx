@@ -35,7 +35,7 @@ export default function Redbutton({_id}:Compy){
         //   };
         // const JSONdata = JSON.stringify(data);
 
-        const endpoint = `${baseUrl}/api/initacook/65a956bb8f3b0f53bed8bf8d`;
+        const endpoint = `https://agua-front.vercel.app/api/initacook/65a956bb8f3b0f53bed8bf8d`;
         const options: RequestInit = {
             method: 'POST',
             headers: {
