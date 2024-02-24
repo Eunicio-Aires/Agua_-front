@@ -3,12 +3,12 @@ import { headers } from 'next/headers'
 import { cookies } from 'next/headers'
 
 export async function POST(request:NextRequest,{params}:any) {
-    const ids = await params.id;
-    const id = await ids[0];
+    const ids = await params._id;
+   
     
   //   const body = await request.json();
     try {
-      const response = await fetch(`https://agua-p.vercel.app/adm/fontcook/${id}`,{
+      const response = await fetch(`https://agua-p.vercel.app/adm/fontcook/${ids}`,{
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -16,7 +16,7 @@ export async function POST(request:NextRequest,{params}:any) {
       //   body: JSON.stringify(body),
       });
       const data = await response.json();
-      cookies().set('idCompan' , id )
+      cookies().set('idCompan' , ids )
       return NextResponse.json(data); 
     } catch (error) {
       return NextResponse.json({ error: 'An error occurred' }, { status: 500 });
