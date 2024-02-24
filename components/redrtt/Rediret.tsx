@@ -58,17 +58,17 @@ export default function Redbutton({_id}:Compy){
 
     return(
         <> 
-         <div className="flex items-center justify-center mt-7 mb-3">
+         {/* <div className="flex items-center justify-center mt-7 mb-3">
            <Image src="/Rrrrr.jpg" alt="" width={150} height={85} />
-         </div>
+         </div> */}
           <div className="flex  items-center justify-center bg-[#fbfbfb]">
   <form onSubmit={handleSubmi }>          
   <div className="grid w-80 grid-rows-4 gap-1">
     {/* <p className="font-semibold text-gray-700">💌 Get the best of Product Hunt, directly in your inbox.</p> */}
     
-    <label htmlFor="numero"></label>
-    <input type="Number" className="h-10 w-full rounded border p-2 text-sm" placeholder="84/85" id="numero" name="numero" />
-    <button  type="submit" className="rounded bg-[red] text-gray-50 hover:bg-gradient-to-r hover:from-[#FD5E57] hover:to-[#FC477E]">Selecionar Forneced</button>
+    {/* <label htmlFor="numero"></label>
+    <input type="Number" className="h-10 w-full rounded border p-2 text-sm" placeholder="84/85" id="numero" name="numero" /> */}
+    <button  type="submit" className="">Selecionar Forneced</button>
     
     
   </div>
