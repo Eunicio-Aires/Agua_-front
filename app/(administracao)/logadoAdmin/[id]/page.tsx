@@ -2,6 +2,7 @@ import { cookies } from "next/headers"
 import Link from "next/link"
 import { getId, getSession } from '@/lib/cookiesConf'
 import { userStore } from '@/store/user'
+import  Redbutton  from '@/components/redrtt/Rediret'
 
 
 
@@ -35,6 +36,8 @@ export default async function ClienteId({ params }: {params:{id: string }}){
                         <div>{companes.nome}</div>
                         <div>{companes.clientes.length}</div>
                     </Link>
+
+                    <Redbutton _id={companes._id}/>
          </div>
                         
                     ))}
