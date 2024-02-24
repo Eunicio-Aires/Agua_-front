@@ -4,8 +4,8 @@ import { useState } from 'react';
 import React, { SyntheticEvent } from 'react';
 import { useRouter } from 'next/navigation';
 import { redirect } from 'next/navigation'
-// import { ToastContainer, toast } from 'react-toastify';
-//   import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 
 
 interface Compy{
@@ -15,9 +15,9 @@ interface Compy{
 export default function Redbutton({_id}:Compy){
     const baseUrl = process.env.NEXT_LOCAL_BASE_URL;
 
-//   const notify = () => toast.success("Solicitado com sucesso, verifica Seu M-pesa",{
-//     theme: "colored"
-//  });
+  const notify = () => toast.success("Solicitado com sucesso, verifica Seu M-pesa",{
+    theme: "colored"
+ });
 
   const router = useRouter()
   const [isButtonDisabled, setButtonDisabled] = useState(false);
@@ -68,13 +68,13 @@ export default function Redbutton({_id}:Compy){
     
     {/* <label htmlFor="numero"></label>
     <input type="Number" className="h-10 w-full rounded border p-2 text-sm" placeholder="84/85" id="numero" name="numero" /> */}
-    <button  type="submit" className="">Selecionar Forneced</button>
+    <button onClick={notify}  type="submit" className="">Selecionar Forneced</button>
     
     
   </div>
   </form>
 </div>
-{/* <ToastContainer/>  */}
+<ToastContainer/> 
         </>
     )
 }
