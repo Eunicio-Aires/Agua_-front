@@ -1,4 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { headers } from 'next/headers'
+import { cookies } from 'next/headers'
 
 export async function POST(request:NextRequest,{params}:any) {
     const ids = await params.id;
@@ -14,7 +16,7 @@ export async function POST(request:NextRequest,{params}:any) {
       //   body: JSON.stringify(body),
       });
       const data = await response.json();
-      
+      cookies().set('idCompan' , id )
       return NextResponse.json(data); 
     } catch (error) {
       return NextResponse.json({ error: 'An error occurred' }, { status: 500 });
