@@ -3,10 +3,7 @@ import type { NextRequest } from 'next/server'
 import { cookies } from 'next/headers';
 import { setCook } from '@/lib/cookiesConf'
 
-export async function GET(
-    request: NextRequest,
-    { params }: { params: { id: string } }
-  ) {
+export async function GET( request: NextRequest,{ params }: { params: { id: string } } ) {
     const id = params.id 
 
      request.cookies.set('comp', params.id)
