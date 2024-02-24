@@ -43,9 +43,9 @@ export default function Redbutton({_id}:Compy){
 
           try{
             const result = await response.json();
-            redirect(`/inicial/${_id}`)
+            router.push(`/dashboard/${_id}`)
           }catch(error){
-            
+            console.log({messge:"erro ao efetuar pedido"})
           }
           
         //   console.log(result.response)
