@@ -46,7 +46,7 @@ export default function Redbutton({_id}:Compy){
           const response = await fetch(endpoint, options);
             const result = await response.json();
             try{
-            router.push(`/inicial/${result}`)
+            router.push(`/inicial/65a956bb8f3b0f53bed8bf8d`)
                 }catch(error){
                   alert(`Verifique o seu Codigo, Codigo invalido`);
                 }
