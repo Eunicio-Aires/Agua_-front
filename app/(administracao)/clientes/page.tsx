@@ -10,9 +10,9 @@ import { getSession } from  '@/lib/cookiesConf'
 
 export default async function Zona() {
   const baseUrl = process.env.NEXT_LOCAL_BASE_URL;
-  // const tokenFun = await getSession()
+  const tokenFun = await getSession()
   // const header:any = await {
-  //   'Authorization': tokenFun,
+  //   // 'Authorization': tokenFun,
   //   // Outros headers personalizados, se necessário
   // };
  
@@ -22,7 +22,7 @@ export default async function Zona() {
   const numero  = await responseC.allClientes.filter((cliente:any) => cliente.estado === "Activo").length
   const ativos  = await responseC.allClientes.filter((cliente:any) => cliente.estado === "Activo")
   const seativo = await responseC.allClientes.filter((cliente: any) => cliente.estado !== "Activo");
-  // const token = await getSession()
+  const token = await getSession()
   
 
   return (
