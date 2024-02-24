@@ -17,7 +17,7 @@ export async function POST(request:NextRequest,{params}:any) {
     });
     // const data = await response.json();
     // console.log(ids);
-    cookies().set('compan' , 'lksdk1234567890' )
+    // cookies().set('compan' , 'lksdk1234567890' )
     return NextResponse.json(response); 
   } catch (error) {
     return NextResponse.json({ error: 'An error occurred' }, { status: 500 });

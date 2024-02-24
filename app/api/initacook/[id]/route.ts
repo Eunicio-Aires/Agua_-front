@@ -2,8 +2,8 @@ import { NextRequest, NextResponse } from 'next/server'
 import { headers } from 'next/headers'
 import { cookies } from 'next/headers'
 
-export async function POST(request:NextRequest,{ params }: { params: { id: string } }) {
-    const ids = await params.id;
+export async function POST(request:NextRequest,{ params }: { params: { _id: string } }) {
+    const ids = await params._id;
    
     
   //   const body = await request.json();
@@ -17,7 +17,7 @@ export async function POST(request:NextRequest,{ params }: { params: { id: strin
       });
       const data = await response.json();
       const id   = await data.paramComp
-      
+
       cookies().set('idCompan' , id )
       return NextResponse.json(id); 
     } catch (error) {
