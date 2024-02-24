@@ -8,7 +8,7 @@ export function middleware(request: NextRequest, respo:NextResponse) {
         const searchParams = new URLSearchParams(url.searchParams)
         const idcompy = searchParams.get('id')
         const response = NextResponse.next()
-
+        console.log('sparams',idcompy )
         response.cookies.set('idcompyn', 'idcompy')
 
         return NextResponse.next()
