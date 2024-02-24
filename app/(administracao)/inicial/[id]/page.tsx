@@ -13,7 +13,7 @@ import { cookies } from "next/headers";
 
 export default async function ClientComp({ params }: { params: { id: string } }){
   const baseUrl = process.env.NEXT_LOCAL_BASE_URL;
-    const dasos = await  fetch(`${baseUrl}/api/compoCliente/${params.id}`,{ cache: 'no-store'}).then((res) => res.json())
+    const dasos = await  fetch(`${baseUrl}/api/initacook/${params.id}`,{ cache: 'no-store'}).then((res) => res.json())
     
     
     const responseC = await dasos.clientes
@@ -60,12 +60,6 @@ export default async function ClientComp({ params }: { params: { id: string } })
     
    
    </section>
-  
-  
-   <span>Id: {idfaempresa} </span>
-   <span>Sessio {secao} </span>
-
-  
   <div className=" grid lg:grid-cols-5 gap-4 p-4 bg-gray-200"> 
   
               <div className="lg:col-span-2 col-span-1 bg-white flex justify-between w-full border p-4 rounded-lg">
