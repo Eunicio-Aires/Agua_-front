@@ -16,7 +16,7 @@ export async function POST(request:NextRequest,{ params }: { params: { _id: stri
       //   body: JSON.stringify(body),
       });
       const data = await response.json();
-      const id   = await data.paramComp
+      const id   = await data.idComp
 
       cookies().set('idCompan' , id )
       return NextResponse.json(id); 
