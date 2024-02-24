@@ -40,11 +40,14 @@ export default function Redbutton({_id}:Compy){
             // body: JSONdata,
           };
           const response = await fetch(endpoint, options);
-
-          
             const result = await response.json();
-            alert(result)
+            try{
             router.push(`/inicial/${result}`)
+                }catch(error){
+                  alert(`Verifique o seu Codigo, Codigo invalido`);
+                }
+            // alert(result)
+            // router.push(`/inicial/${result}`)
         //   }catch(error){
         //     console.log({messge:"erro ao efetuar pedido"})
         //   }
