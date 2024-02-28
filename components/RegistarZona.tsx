@@ -27,27 +27,18 @@ export  function RegistarZona(){
       method: 'POST', 
       headers: {
         'Content-Type': 'application/json',
-        // 'Authorization': `${token}`
+        
       },
       body: JSONdata,
     };
-    // try {
+   
       const response = await fetch(endpoint, options);
 
-      // if (!response.ok) {
-        // Handle server error or other non-2xx status codes here
-        // throw new Error('Network response was not ok');
-      // }
 
       const result = await response.json(); 
       
       alert(`Registado com sucesso `);
-      // Do something with the 'result' JSON data if needed
-
-    // } catch (error) {
-      // console.error('Error occurred:', error);
-      // Handle the error appropriately, e.g., show an error message to the user
-    // }
+      
   };
   
     const [iseBlueBoxShown, setIsBlueBoxShown] = useState(false);
