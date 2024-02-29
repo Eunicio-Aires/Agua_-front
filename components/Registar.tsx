@@ -3,23 +3,10 @@
 import React, { SyntheticEvent } from 'react';
 import { useRouter } from 'next/navigation';
 import { useState } from "react";
-import  { BiUserPlus } from "react-icons/bi";
+
 import { revalidateTag } from 'next/cache';
 
-interface Zona {
-  _id:String;
-  
-}
-// async function getMeses(){
-//   const res = await fetch(`https://agua-front.vercel.app/api/areas`,{cache:"no-cache"})
-  
-//   if(!res.ok){
-//     throw new Error('Failed to fetch data')
-//   }
-//   return res.json()
-// }
-
-  export   function  Registar({id}:any) {
+export default function  Registar() {
     const router = useRouter()
     const [isButtonDisabled, setButtonDisabled] = useState(false);
   const handleSubmi = async (event: SyntheticEvent) => {
@@ -38,7 +25,7 @@ interface Zona {
     };
 
     const JSONdata = JSON.stringify(data);
-    const endpoint = `https://agua-p.vercel.app/adm/cliente/${id}`;
+    const endpoint = `https://agua-p.vercel.app/adm/cliente/`;
 
     const options: RequestInit = {
       method: 'POST',
@@ -52,7 +39,7 @@ interface Zona {
       const response = await fetch(endpoint, options);
       const result = await response.json();
       const resul = await result._id
-      router.push(`/cliente/${id}`)
+      router.push(`/cliente/`)
     }catch(error){
       // alert(`Erro`);
       router.push(`/clientes/`)
@@ -78,14 +65,14 @@ interface Zona {
   return (
     <div>
     <div className="transition ease-in-out delay-150"> 
-    {/* <button className=' btn btn-outline btn-success ml-6'  onClick={buttonHandler}>
-      {iseBlueBoxShown ? "Fechar" : <BiUserPlus/> }
-    </button> 
-    {iseBlueBoxShown && <div className="flex items-center justify-center p-12 " > */}
+    <button onClick={buttonHandler}>
+          {iseBlueBoxShown ? <div className="btn btn-circle"><svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg></div> : <div className="btn">Novo</div>}
+        </button>
+   
 
   
 
-    <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col my-2">
+        {iseBlueBoxShown &&  <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col my-2">
     <form onSubmit={handleSubmi}>
   <div className="-mx-3 md:flex mb-6">
     <div className="md:w-1/2 px-3 mb-6 md:mb-0">
@@ -124,36 +111,14 @@ interface Zona {
       <input className="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4" id="whatsupp" name="whatsupp" type="Number" placeholder="84xx11220"/>
     </div>
 
-    {/* <label className="form-control w-full max-w-xs">
-  <div className="label">
-    <span className="label-text">Pick the best fantasy franchise</span>
-    <span className="label-text-alt">Alt label</span>
-  </div>
-  <select className="select select-bordered">
-    <option disabled selected>Pick one</option> 
-    <option>Star Wars</option>
-    <option>Harry Potter</option>
-    <option>Lord of the Rings</option>
-    <option>Planet of the Apes</option>
-    <option>Star Trek</option>
-  </select>
-  <div className="label">
-    <span className="label-text-alt">Alt label</span>
-    <span className="label-text-alt">Alt label</span>
-  </div>
-</label> */}
+    
 
   </div>
   <button className="btn btn-outline btn-accent mt-2" type="submit">Registar</button>
   </form>
-</div> 
+</div> }
     </div>   
-  {/* // } */}
     </div>
-
-    
-
-    // </div>
       
   );
 }
