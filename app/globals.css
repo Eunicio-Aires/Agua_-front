@@ -145,11 +145,11 @@
  
 }
  
-@layer base {
+/* @layer base {
   * {
     @apply border;
-  }
+  } */
   /* body {
     @apply  ;
   } */
-}
+/* } */
