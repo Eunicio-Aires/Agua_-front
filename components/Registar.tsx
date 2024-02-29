@@ -39,7 +39,7 @@ export default function  Registar() {
       const response = await fetch(endpoint, options);
       const result = await response.json();
       const resul = await result._id
-      router.push(`/cliente/`)
+      // router.push(`/cliente/`)
     }catch(error){
       // alert(`Erro`);
       router.push(`/clientes/`)
