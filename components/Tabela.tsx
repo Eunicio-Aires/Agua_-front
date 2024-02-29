@@ -6,8 +6,7 @@ export default function Tabela(){
         <div className="overflow-x-auto h-96">
         <table className="table  table-xs table-pin-rows table-pin-cols">
           <thead>
-            <tr className='bg-gray-100'>
-              <th></th> 
+            <tr className='bg-gray-100'>             
               <td>Name</td> 
               <td>Job</td> 
               <td>company</td> 
@@ -18,8 +17,7 @@ export default function Tabela(){
             </tr>
           </thead> 
           <tbody>
-            <tr>
-              <th>1</th> 
+            <tr>             
               <td>Cy Ganderton</td> 
               <td>Quality Control Specialist</td> 
               <td>Littel, Schaden and Vandervort</td> 
@@ -29,7 +27,7 @@ export default function Tabela(){
               <th>1</th> 
             </tr>
             <tr>
-              <th>2</th> 
+               
               <td>Hart Hagerty</td> 
               <td>Desktop Support Technician</td> 
               <td>Zemlak, Daniel and Leannon</td> 
@@ -38,8 +36,7 @@ export default function Tabela(){
               <td>Purple</td>
               <th>2</th> 
             </tr>
-            <tr>
-              <th>3</th> 
+            <tr>              
               <td>Brice Swyre</td> 
               <td>Tax Accountant</td> 
               <td>Carroll Group</td> 
@@ -49,7 +46,7 @@ export default function Tabela(){
               <th>3</th> 
             </tr>
             <tr>
-              <th>4</th> 
+               
               <td>Marjy Ferencz</td> 
               <td>Office Assistant I</td> 
               <td>Rowe-Schoen</td> 
@@ -59,7 +56,7 @@ export default function Tabela(){
               <th>4</th> 
             </tr>
             <tr>
-              <th>5</th> 
+              
               <td>Yancy Tear</td> 
               <td>Community Outreach Specialist</td> 
               <td>Wyman-Ledner</td> 
@@ -69,7 +66,7 @@ export default function Tabela(){
               <th>5</th> 
             </tr>
             <tr>
-              <th>6</th> 
+              
               <td>Irma Vasilik</td> 
               <td>Editor</td> 
               <td>Wiza, Bins and Emard</td> 
@@ -79,7 +76,7 @@ export default function Tabela(){
               <th>6</th> 
             </tr>
             <tr>
-              <th>7</th> 
+               
               <td>Meghann Durtnal</td> 
               <td>Staff Accountant IV</td> 
               <td>Schuster-Schimmel</td> 
@@ -89,7 +86,7 @@ export default function Tabela(){
               <th>7</th> 
             </tr>
             <tr>
-              <th>8</th> 
+              
               <td>Sammy Seston</td> 
               <td>Accountant I</td> 
               <td>O'Hara, Welch and Keebler</td> 
@@ -99,7 +96,7 @@ export default function Tabela(){
               <th>8</th> 
             </tr>
             <tr>
-              <th>9</th> 
+              
               <td>Lesya Tinham</td> 
               <td>Safety Technician IV</td> 
               <td>Turner-Kuhlman</td> 
@@ -109,7 +106,7 @@ export default function Tabela(){
               <th>9</th> 
             </tr>
             <tr>
-              <th>10</th> 
+              
               <td>Zaneta Tewkesbury</td> 
               <td>VP Marketing</td> 
               <td>Sauer LLC</td> 

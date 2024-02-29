@@ -4,8 +4,6 @@ import React, { SyntheticEvent } from 'react';
 import { useRouter } from 'next/navigation';
 import { useState } from "react";
 
-import { revalidateTag } from 'next/cache';
-
 export default function  Registar() {
     const router = useRouter()
     const [isButtonDisabled, setButtonDisabled] = useState(false);
@@ -25,7 +23,7 @@ export default function  Registar() {
     };
 
     const JSONdata = JSON.stringify(data);
-    const endpoint = `https://agua-p.vercel.app/adm/cliente/`;
+    // const endpoint = `https://agua-p.vercel.app/adm/cliente/`;
 
     const options: RequestInit = {
       method: 'POST',
@@ -36,20 +34,14 @@ export default function  Registar() {
     };
 
     try{
-      const response = await fetch(endpoint, options);
-      const result = await response.json();
-      const resul = await result._id
-      // router.push(`/cliente/`)
+      // const response = await fetch(endpoint, options);
+      
+   
     }catch(error){
-      // alert(`Erro`);
+   
       router.push(`/clientes/`)
     }
-   
-    // router.refresh()
-    
-   
-    
-   
+
   };
   const [iseBlueBoxShown, setIsBlueBoxShown] = useState(false);
   
