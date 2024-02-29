@@ -21,7 +21,7 @@ export default async function ClienteId({ params }: {params:{id: string }}){
 
                     <section className="flex flex-wrap justify-center">
                     {comp.map((companes:any)=>(
-                    <div className="w-full md:w-1/3 p-4">
+                    <div key={companes._id } className="w-full md:w-1/3 p-4">
                     <div className="bg-white rounded-lg shadow-md p-6">
                     <h2 className="text-xl font-bold mb-2"> {companes.nome} </h2>
                     <p>{companes.clientes.length}</p>
