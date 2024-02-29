@@ -3,6 +3,7 @@ import Link from "next/link"
 import { getId, getSession } from '@/lib/cookiesConf'
 import { userStore } from '@/store/user'
 import  Redbutton  from '@/components/redrtt/Rediret'
+import { Input } from "@/components/ui/input"
 
 
 
@@ -26,6 +27,7 @@ export default async function ClienteId({ params }: {params:{id: string }}){
     // setId(idc);
     return(
         <>
+        <Input/>
         {/* <p>ID: {id}</p> */}
         {/* <span>{user.}</span> */}
         {/* <span>{idt}</span> */}
