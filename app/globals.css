@@ -150,6 +150,6 @@
     @apply border;
   }
   body {
-    @apply  text-foreground;
+    @apply  ;
   }
 }
