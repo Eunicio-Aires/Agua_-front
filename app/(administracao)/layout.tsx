@@ -3,6 +3,8 @@ import { GiPayMoney } from "react-icons/gi";
 import {RxSketchLogo, RxDashboard, RxPerson } from 'react-icons/rx' 
 import { BsGraphUpArrow } from "react-icons/bs"
 import { cookies } from 'next/headers'
+import Sidebar from '@/components/Sidebar'
+import { Inter } from "next/font/google";
 
 import Link from "next/link"
 import '../globals.css'
@@ -17,10 +19,12 @@ export default function RootLayout({
   }) {
     return (
       <html lang="pt-br">
-        <body>
+        <body  className={ ` flex items-start justify-between`}>
 
-          <div>
-          <div className="flex">
+          
+          <Sidebar/>  
+
+          {/* <div className="flex">
             <div className="flexed w-14 h-screen p-4 bg-white border-r-[1px] flex flex-col justify-between">
                     <div className="flex flex-col items-center fixed">
                         <Link href='/'>
@@ -57,11 +61,12 @@ export default function RootLayout({
 
                     </div>
                     
-                </div>
-                <main className="min-h-scren  h-full w-full p-2">
-                    {children}</main>
-              </div>
-            </div>
+                </div> */}
+                <main className="grid w-full h-full pl-[250px]">
+                    {children}
+                    </main>
+             
+          
             
           </body> 
       </html>
