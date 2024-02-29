@@ -28,7 +28,7 @@ export default async function ClientComp({ params }: { params: { id: string } })
     return(
       
         <section className="text-gray-600 body-font">
-        <Button>Click me</Button>
+       <Button variant="secondary">Secondary</Button>
   <input type="checkbox" id="my_modal_7" className="modal-toggle" />
   <div className="modal" role="dialog">
     <div className="modal-box">
