@@ -4,7 +4,7 @@ import React, { SyntheticEvent } from 'react';
 import { useRouter } from 'next/navigation';
 import { useState } from "react";
 
-export default function  Registar() {
+export default function Tabela() {
     const router = useRouter()
     const [isButtonDisabled, setButtonDisabled] = useState(false);
   const handleSubmi = async (event: SyntheticEvent) => {
