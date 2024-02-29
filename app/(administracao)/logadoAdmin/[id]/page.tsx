@@ -17,7 +17,7 @@ export default async function ClienteId({ params }: {params:{id: string }}){
     // setId(idc);
     return(
         <>
-        <Input/>
+        
         
             {comp.map((companes:any)=>(
                 <div  key={companes._id}>
@@ -30,6 +30,35 @@ export default async function ClienteId({ params }: {params:{id: string }}){
          </div>
                         
                     ))}
+
+                    <main className=" min-h-screen p-4 mb-4">
+      
+            <section className="flex flex-wrap justify-center">
+            {comp.map((companes:any)=>(
+                <div className="w-full md:w-1/3 p-4">
+                    <div className="bg-white rounded-lg shadow-md p-6">
+                    <h2 className="text-xl font-bold mb-2"> {companes.nome} </h2>
+                    <p>{companes.clientes.length}</p>
+                    <Link href={`/inicial/${companes._id}`}><span className="btn btn-sm btn-accent">Entrar</span> </Link>
+                    </div>
+                   
+                </div>
+                 ))}
+                {/* <div className="w-full md:w-1/3 p-4">
+                    <div className="bg-white rounded-lg shadow-md p-6">
+                    <h2 className="text-xl font-bold mb-2">Card 2</h2>
+                    <p>Conteúdo do Card 2...</p>
+                    </div>
+                </div>
+                <div className="w-full md:w-1/3 p-4">
+                    <div className="bg-white rounded-lg shadow-md p-6">
+                    <h2 className="text-xl font-bold mb-2">Card 3</h2>
+                    <p>Conteúdo do Card 3...</p>
+                    </div>
+                </div> */}
+               </ section >
+
+               </main>
 
         </>
     )
