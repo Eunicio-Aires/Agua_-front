@@ -52,7 +52,7 @@ export default async function ClientComp({ params }: { params: { id: string } })
                </ section >
 
                <div className=" mt-5 p-5 shadow-md ">
-                  {/* <Tabela /> */}
+                  <Tabela />
                 </div>
 
 
