@@ -13,6 +13,17 @@ export async function getId(){
     return await (idComp)
 }
 
+export async function getemail(){
+    const idComp = await cookies().get('email')?.value;
+    if(!idComp) return null 
+    return await (idComp)
+}
+export async function getnome(){
+    const idComp = await cookies().get('email')?.value;
+    if(!idComp) return null 
+    return await (idComp)
+}
+
 interface IdEmpresa{
     _id:any;
     

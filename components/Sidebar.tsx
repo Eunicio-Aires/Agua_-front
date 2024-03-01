@@ -54,6 +54,7 @@
 
 'use client'
 import UserItems from '@/components/UserItems'
+import { getnome } from '@/lib/cookiesConf'
 import {
     Command,
     CommandDialog,

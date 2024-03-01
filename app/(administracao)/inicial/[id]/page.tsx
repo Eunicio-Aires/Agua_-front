@@ -24,8 +24,8 @@ export default async function ClientComp({ params }: { params: { id: string } })
     const seativo = await responseC.filter((cliente: any) => cliente.estado !== "Activo");
     
 
-    const idfaempresa = await getCompan()
-    const secao = await getSession()
+    // const idfaempresa = await getCompan()
+    // const secao = await getSession()
     return(
 
       <main className=" min-h-screen p-4 mb-4">
