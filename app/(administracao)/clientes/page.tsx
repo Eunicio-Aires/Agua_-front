@@ -4,7 +4,7 @@ import { resolve } from "path";
 import { MdEdit } from "react-icons/md";
 import  { BiUserPlus } from "react-icons/bi";
 import  SearchInPut  from '@/components/Search/SearchInPut'
-import { Registar } from '@/components/Registar'
+// import { Registar } from '@/components/Registar'
 import { getSession } from  '@/lib/cookiesConf'
 
 
