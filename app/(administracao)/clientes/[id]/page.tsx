@@ -7,7 +7,7 @@ import { ModalNum } from "@/components/payments/ModalNum";
 import { AiTwotoneEdit } from "react-icons/ai";
 import { GiPayMoney } from "react-icons/gi";
 import { MdDone } from "react-icons/md";
-import {Registar} from '@/components/Registar'
+// import {Registar} from '@/components/Registar'
 import Zona from "../page";
 import { TopCards } from '@/components/TopCards'
 import OtherUsers from "@/components/outros";
