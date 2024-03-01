@@ -10,7 +10,7 @@ import  SearchInPut  from '@/components/Search/SearchInPut'
 import  Registar  from '@/components/Registar'
 import { getCompan, getSession } from '@/lib/cookiesConf'
 import { cookies } from "next/headers";
-// import Tabela from '@/components/Tabela'
+import Tabela from '@/components/Tabela'
 
 
 export default async function ClientComp({ params }: { params: { id: string } }){
