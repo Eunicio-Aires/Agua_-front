@@ -20,8 +20,14 @@ export async function POST(request: NextRequest) {
   const data = await res.json()
   const id   = await data.id
   const token = await data.token
+  const nome = await data.nome
+  const apelido = await data.apelido
+  const email = await data.email
   cookies().set('token' , token )
   cookies().set('id' , id )
+  cookies().set('nome' ,nome)
+  cookies().set('apelido' ,apelido)
+  cookies().set('email' ,email)
   
 
   return NextResponse.json(data)
