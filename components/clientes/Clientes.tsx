@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import Tabela from '../Tabela';
 
-export default function Clientes({responseC}:any){
+export default function Clientes(responseC:any){
 
     const [data, setData] = useState('');
     
