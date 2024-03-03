@@ -17,7 +17,7 @@ export default function Tabela(dados:any){
             </tr>
           </thead> 
           <tbody>
-          {dados.map((client:any)=>(
+          {/* {dados.map((client:any)=>(
             <tr key={client._id}>             
               <td>{client.nome} {client.apelido}</td> 
               <td>{client.codigo}</td> 
@@ -28,7 +28,7 @@ export default function Tabela(dados:any){
               <th>1</th> 
            
             </tr>
-            ))}
+            ))} */}
             <tr>
                
               <td>Hart Hagerty</td> 
@@ -39,7 +39,7 @@ export default function Tabela(dados:any){
               <td>Purple</td>
               <th></th>
             </tr>
-            <tr>              
+            {/* <tr>              
               <td>Brice Swyre</td> 
               <td>Tax Accountant</td> 
               <td>Carroll Group</td> 
@@ -47,7 +47,7 @@ export default function Tabela(dados:any){
               <td>8/15/2020</td> 
               <td>Red</td>
               <th></th> 
-            </tr>
+            </tr> */}
            
           </tbody> 
           <tfoot>
