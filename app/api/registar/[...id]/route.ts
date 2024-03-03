@@ -7,7 +7,7 @@ export async function POST(request:NextRequest,{ params }: { params: { id: strin
   
   const body = await request.json();
   try {
-    const response = await fetch(`https://agua-p.vercel.app/adm/cliente/${params.id}`,{
+    const response = await fetch(`https://agua-p.vercel.app/adm/nclientCompan/${params.id}`,{
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
