@@ -1,34 +1,55 @@
+'use client'
+import React, { useState } from 'react';
+import Tabela from '../Tabela';
 
-export default function Clientes({clientesPrps}:any){
+export default function Clientes({responseC}:any){
+
+    const [data, setData] = useState('');
+    
+    
+  const handleButtonActived = (responseC:any) => {
+    const dados  =  responseC.filter((cliente:any) => cliente.estado === "Activo")
+    setData(dados);
+  };
+  const handleButtonDesatived = (responseC:any) => {
+    const dados =  responseC.filter((cliente: any) => cliente.estado !== "Activo");
+    setData(dados);
+  };
+  const handleButtonMore3 = (responseC:any) => {
+    setData(responseC);
+  };
+
+
 
     return(
-        <div className="w-full col-span-1 relative lg:h-[70vh] h-[50vh] m-auto p-4 border rounded-lg bg-white overflow-scroll">          
-         {/* <div className="overflow-x-auto">
-            <table className="table table-xs table-pin-rows table-pin-cols">
-                <thead>
-                <tr>
-                    <th></th> 
-                    <td>Nome</td> 
-                    <td>Codigo</td> 
-                    <td>F.N Pagas</td> 
-                    <td>Contato</td>
-                    <th>Estado</th> 
-                </tr>
-                </thead> 
-                <tbody>
-                {clientesPrps.map((mes:any)=>(
-                <tr key={mes._id} className="hover:bg-gray-300"   >
-                    <th></th> 
-                    <td>{mes.nome} {mes.apelido} </td>
-                    <td>{mes.codigo}</td> 
-                    <td> {mes.faturas.filter((fatura:any) => fatura.estado === "Nao pago").length} </td>                
-                    <td>{mes.telefone}</td> 
-                    <td><Link  href={`/clientes/${mes._id}`} > {mes.estado}</Link> </td> 
-                </tr> 
-                ))}
-            </tbody> 
-            </table>
-        </div>         */}
+        <div className="">          
+       <section className="flex flex-wrap justify-center">
+                <div className="w-full md:w-1/3 p-4">
+                    <div className="bg-white rounded-lg shadow-md p-6">
+                    <h2 className="text-xl font-bold mb-2"> 1235 </h2>
+                    <p>Conteúdo do Card 1...</p>
+                    <button onClick={ handleButtonActived} className="btn btn-sm mt-2">Ver</button>
+                    </div>
+                </div>
+                <div className="w-full md:w-1/3 p-4">
+                    <div className="bg-white rounded-lg shadow-md p-6">
+                    <h2 className="text-xl font-bold mb-2">Card 2</h2>
+                    <p>Conteúdo do Card 2...</p>
+                    <button onClick={ handleButtonMore3 } className="btn btn-sm mt-2">Ver</button>
+                    </div>
+                </div>
+                <div className="w-full md:w-1/3 p-4">
+                    <div className="bg-white rounded-lg shadow-md p-6">
+                    <h2 className="text-xl font-bold mb-2">Card 3</h2>
+                    <p>Conteúdo do Card 3...</p>
+                    <button onClick={ handleButtonDesatived} className="btn btn-sm mt-2">Ver</button>
+                    </div>
+                </div>
+               </ section >
+
+               <div className=" mt-5 p-5 shadow-md ">
+                  <Tabela dados={data}/>
+                </div>
       </div>
     )
 }

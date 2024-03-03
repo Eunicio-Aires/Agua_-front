@@ -11,9 +11,13 @@ import  Registar  from '@/components/Registar'
 import { getCompan, getSession } from '@/lib/cookiesConf'
 import { cookies } from "next/headers";
 import Tabela from '@/components/Tabela'
+import Clientes from "@/components/clientes/Clientes";
+
+
 
 
 export default async function ClientComp({ params }: { params: { id: string } }){
+  
   const baseUrl = process.env.NEXT_LOCAL_BASE_URL;
     const dasos = await  fetch(`${baseUrl}/api/compoCliente/${params.id}`,{ cache: 'no-store'}).then((res) => res.json())
     
@@ -30,30 +34,7 @@ export default async function ClientComp({ params }: { params: { id: string } })
 
       <main className=" min-h-screen p-4 mb-4">
       <Registar/>
-            <section className="flex flex-wrap justify-center">
-                <div className="w-full md:w-1/3 p-4">
-                    <div className="bg-white rounded-lg shadow-md p-6">
-                    <h2 className="text-xl font-bold mb-2"> 1235 </h2>
-                    <p>Conteúdo do Card 1...</p>
-                    </div>
-                </div>
-                <div className="w-full md:w-1/3 p-4">
-                    <div className="bg-white rounded-lg shadow-md p-6">
-                    <h2 className="text-xl font-bold mb-2">Card 2</h2>
-                    <p>Conteúdo do Card 2...</p>
-                    </div>
-                </div>
-                <div className="w-full md:w-1/3 p-4">
-                    <div className="bg-white rounded-lg shadow-md p-6">
-                    <h2 className="text-xl font-bold mb-2">Card 3</h2>
-                    <p>Conteúdo do Card 3...</p>
-                    </div>
-                </div>
-               </ section >
-
-               <div className=" mt-5 p-5 shadow-md ">
-                  <Tabela />
-                </div>
+      <Clientes/>
 
 
 </main>

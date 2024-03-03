@@ -1,6 +1,6 @@
 'use client'
 
-export default function Tabela(){
+export default function Tabela(dados:any){
 
     return(
         <div className="overflow-x-auto h-96">
@@ -17,15 +17,18 @@ export default function Tabela(){
             </tr>
           </thead> 
           <tbody>
-            <tr>             
-              <td>Cy Ganderton</td> 
-              <td>Quality Control Specialist</td> 
-              <td>Littel, Schaden and Vandervort</td> 
-              <td>Canada</td> 
+          {dados.map((client:any)=>(
+            <tr key={client._id}>             
+              <td>{client.nome} {client.apelido}</td> 
+              <td>{client.codigo}</td> 
+              <td></td> 
+              <td>{client.telefone}</td> 
               <td>12/16/2020</td> 
               <td>Blue</td>
               <th>1</th> 
+           
             </tr>
+            ))}
             <tr>
                
               <td>Hart Hagerty</td> 
