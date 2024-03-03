@@ -1,7 +1,8 @@
 'use client'
 
 export default function Tabela(dados:any){
-
+  console.log(dados)
+  
     return(
         <div className="overflow-x-auto h-96">
         <table className="table  table-xs table-pin-rows table-pin-cols">
@@ -17,7 +18,7 @@ export default function Tabela(dados:any){
             </tr>
           </thead> 
           <tbody>
-          {dados.map((client:any)=>(
+          {/* {dados.map((client:any)=>(
             <tr key={client._id}>             
               <td>{client.nome} {client.apelido}</td> 
               <td>{client.codigo}</td> 
@@ -28,7 +29,7 @@ export default function Tabela(dados:any){
               <th>1</th> 
            
             </tr>
-            ))}
+            ))} */}
             <tr>
                
               <td>Hart Hagerty</td> 
