@@ -71,7 +71,7 @@ import { Link } from 'lucide-react'
 
 export default function SideBar(){
 
-    return <div className=' fixed flex flex-col gap-3 w-[280px] min-w-[280px]  '>
+    return <div className=' fixed flex flex-col gap-3 w-[250px] min-w-[250px]  '>
         <div className='min-w-[250px]'> <UserItems/> </div>
         <div className="grow min-w-[250px]">
         <Command>
