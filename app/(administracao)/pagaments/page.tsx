@@ -47,7 +47,8 @@ interface Mes {
 
 
 export default async  function Pagaments(){
-  const res = await fetch(`https://agua-p.vercel.app/adm/meses`,{cache:"no-cache"}).then((res) => res.json());
+  const idf = await '12345'
+  const res = await fetch(`https://agua-front.vercel.app/api/mes/${idf}`,{cache:"no-cache"}).then((res) => res.json());
   // const data = await  getData()
   const response = await  res;
   const faturasPagas = await response.ultimo[0].faturas.filter((fatura: { estado: string; }) => fatura.estado === "Pago")
@@ -125,7 +126,7 @@ export default async  function Pagaments(){
                 </div>
               </div>
               <div>
-                {meses.map((mes: Mes) => (
+                {response.compan.mes.map((mes: Mes) => (
                   <Link href={`/pagaments/${mes._id}`} key={mes._id}>
                     <div className="flex flex-col sm:flex-row justify-between border-t text-sm font-normal mt-4 space-x-4">
                       <div className="px-2 flex w-full sm:w-auto">
