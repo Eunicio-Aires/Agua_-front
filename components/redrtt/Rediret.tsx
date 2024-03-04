@@ -27,7 +27,7 @@ export default function Redbutton({_id}:Compy){
 
         
 
-        const endpoint = `https://agua-front.vercel.app/api/initacook/65a956bb8f3b0f53bed8bf8d`;
+        const endpoint = `https://agua-front.vercel.app/api/initacook/${_id}`;
         const options: RequestInit = {
             method: 'POST',
             headers: {
@@ -38,7 +38,7 @@ export default function Redbutton({_id}:Compy){
           const response = await fetch(endpoint, options);
             const result = await response.json();
             try{
-            router.push(`/inicial/65a956bb8f3b0f53bed8bf8d`)
+            router.push(`/inicial/${_id}`)
                 }catch(error){
                   alert(`Verifique o seu Codigo, Codigo invalido`);
                 }
@@ -50,11 +50,11 @@ export default function Redbutton({_id}:Compy){
     return(
         <> 
        
-          <div className="flex  items-center justify-center bg-[#fbfbfb]">
+          <div className="">
   <form onSubmit={handleSubmi }>          
-  <div className="grid w-80 grid-rows-4 gap-1">
+  <div className="">
    
-    <button onClick={notify}  type="submit" className="">Selecionar Forneced</button>
+    <button onClick={notify}  type="submit" className="btn btn-sm btn-accent">Selecionar Forneced</button>
     
     
   </div>
