@@ -1,14 +1,75 @@
 import { getCompan } from '@/lib/cookiesConf'
 import { Meses }  from '@/components/Meses'
+import Link from 'next/link';
 
-export default function Faturar(){
-  const idCom = getCompan()
-  console.log(idCom)
+export default async function Faturar(){
+  const idf = '1234'
+  const response = await fetch(`https://agua-front.vercel.app/api/mes/${idf}`,{cache:"no-cache"}).then((res) => res.json());
   return(
     <div className="">
     
    {/* @ts-ignore  */}
-    <Meses/>
+    {/* <Meses/> */}
+
+    <section className="py-1 bg-blueGray-50">
+<div className="w-full xl:w-8/12 mb-12 xl:mb-0 px-4 mx-auto mt-24">
+  <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded ">
+    <div className="rounded-t mb-0 px-4 py-3 border-0">
+      <div className="flex flex-wrap items-center">
+        <div className="relative w-full px-4 max-w-full flex-grow flex-1">
+          <h3 className="font-semibold text-base text-blueGray-700">Faturacao</h3>
+        </div>
+        <div className="relative w-full px-4 max-w-full flex-grow flex-1 text-right">
+          <button className="bg-indigo-500 text-white active:bg-indigo-600 text-xs font-bold uppercase px-3 py-1 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button">Ver</button>
+        </div>
+      </div>
+    </div>
+
+    <div className="block w-full overflow-x-auto">
+      <table className="items-center bg-transparent w-full border-collapse ">
+        <thead>
+          <tr>
+            <th className="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+                 Mes
+                        </th>
+          <th className="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+          Faturas Lidas
+                        </th>
+           <th className="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+                          Valor
+                        </th>
+          <th className="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
+                          Faturar
+                        </th>
+          </tr>
+        </thead>
+
+        <tbody>
+        {response.clientes.mes.map((mes:any)=>(
+          <tr key= {mes._id} className="hover-gray-light transition">
+            <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
+            { mes.mes }
+            </th>
+            <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
+            {mes.faturas.length}
+            </td>
+            <td className="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+              100%
+            </td>
+            <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+              <i className="fas fa-arrow-up text-emerald-500 mr-4"></i>
+              <Link href={`/faturar/${mes._id}`} 
+          >Faturar</Link>
+            </td>
+          </tr>
+           ))} 
+        </tbody>
+
+      </table>
+    </div>
+  </div>
+</div>
+</section>
     </div>
   )
 }
