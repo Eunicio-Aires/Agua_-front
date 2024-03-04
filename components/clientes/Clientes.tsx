@@ -15,7 +15,7 @@ export default function Clientes({responseC}:any){
     };
   
     const handleButtonDesatived = () => {
-      setData(responseC.filter((cliente: any) => cliente.estado === "Desativado"));
+      setData(responseC.filter((cliente: any) => cliente.estado !== "Activo"));
     };
   
     const handleButtonMore3 = () => {
