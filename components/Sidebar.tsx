@@ -66,6 +66,7 @@ import {
     CommandSeparator,
     CommandShortcut,
   } from "@/components/ui/command"
+import { Link } from 'lucide-react'
   
 
 export default function SideBar(){
@@ -78,7 +79,7 @@ export default function SideBar(){
         <CommandList>
             <CommandEmpty>No results found.</CommandEmpty>
             <CommandGroup heading="Suggestions">
-            <CommandItem>Calendar</CommandItem>
+            <CommandItem><Link href='/faturar'>Faturar</Link></CommandItem>
             <CommandItem>Search Emoji</CommandItem>
             <CommandItem>Calculator</CommandItem>
             </CommandGroup>
