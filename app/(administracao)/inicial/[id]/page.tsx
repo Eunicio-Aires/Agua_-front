@@ -20,7 +20,7 @@ export default async function ClientComp({ params }: { params: { id: string } })
   
   const baseUrl = process.env.NEXT_LOCAL_BASE_URL;
     const dasos = await  fetch(`${baseUrl}/api/compoCliente/${params.id}`,{ cache: 'no-store'}).then((res) => res.json())
-    const cookkk = await  fetch(`${baseUrl}/api/initacook/${params.id}`,{ cache: 'no-store'}).then((res) => res.json())
+   
     
     
     const responseC = await dasos.clientes
