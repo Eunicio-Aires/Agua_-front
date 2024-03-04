@@ -79,13 +79,13 @@ export default function SideBar(){
         <CommandList>
             <CommandEmpty>No results found.</CommandEmpty>
             <CommandGroup heading="Suggestions">
-            <CommandItem><Link href='/faturar'>Faturar</Link></CommandItem>
+            <CommandItem>Procurar</CommandItem>
             <CommandItem>Search Emoji</CommandItem>
             <CommandItem>Calculator</CommandItem>
             </CommandGroup>
             <CommandSeparator />
             <CommandGroup heading="Settings">
-            <CommandItem>Profile</CommandItem>
+            <CommandItem><Link href='/faturar'></Link></CommandItem>
             <CommandItem>Billing</CommandItem>
             <CommandItem>Settings</CommandItem>
             </CommandGroup>
