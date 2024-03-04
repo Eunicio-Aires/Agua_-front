@@ -85,7 +85,7 @@ export default function SideBar(){
             </CommandGroup>
             <CommandSeparator />
             <CommandGroup heading="Settings">
-            <CommandItem><Link href='/faturar'></Link></CommandItem>
+            <CommandItem></CommandItem>
             <CommandItem>Billing</CommandItem>
             <CommandItem>Settings</CommandItem>
             </CommandGroup>
