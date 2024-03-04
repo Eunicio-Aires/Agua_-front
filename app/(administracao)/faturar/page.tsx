@@ -46,7 +46,7 @@ export default async function Faturar(){
         </thead>
 
         <tbody>
-        {/* {response.mes.map((mes:any)=>(
+        {response.mes.map((mes:any)=>(
           <tr key= {mes._id} className="hover-gray-light transition">
             <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
             { mes.mes }
@@ -63,7 +63,7 @@ export default async function Faturar(){
           >Faturar</Link>
             </td>
           </tr>
-           ))}  */}
+           ))} 
         </tbody>
 
       </table>
