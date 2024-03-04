@@ -21,8 +21,11 @@ export default function RootLayout({
       <html lang="pt-br">
         <body  className={ ` flex items-start justify-between`}>
 
+        <div className="hidden md:flex min-w-[250px] border-r min-h-screen p-4">
+        <Sidebar/>
+        </div>
           
-          <Sidebar/>  
+            
 
           {/* <div className="flex">
             <div className="flexed w-14 h-screen p-4 bg-white border-r-[1px] flex flex-col justify-between">
@@ -62,7 +65,7 @@ export default function RootLayout({
                     </div>
                     
                 </div> */}
-                <main className="grid w-full h-full pl-[250px]">
+                <main className="grid w-full h-full ">
                     {children}
                     </main>
              
