@@ -19,18 +19,22 @@ export async function getemail(){
     return await (idComp)
 }
 export async function getnome(){
-    const idComp = await cookies().get('email')?.value;
+    const idComp = await cookies().get('nome')?.value;
     if(!idComp) return null 
     return await (idComp)
 }
-
+export async function getapelido(){
+    const idComp = await cookies().get('apelido')?.value;
+    if(!idComp) return null 
+    return await (idComp)
+}
 interface IdEmpresa{
     _id:any;
     
 }
 
 export async function getCompan(){
-    const compa = await cookies().get('compan')?.value;
+    const compa = await cookies().get('idCompan')?.value;
     if(!compa) return null 
     return await (compa) 
 }
