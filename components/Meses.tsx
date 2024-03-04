@@ -15,7 +15,7 @@ interface Mes{
 export async function Meses(mes:Mes){
   const idf = '1234'
     const response = await fetch(`https://agua-front.vercel.app/api/mes/${idf}`,{cache:"no-cache"}).then((res) => res.json());
-    
+    console.log(response)
   
 return(
 
