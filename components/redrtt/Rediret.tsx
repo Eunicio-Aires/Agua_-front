@@ -25,15 +25,7 @@ export default function Redbutton({_id}:Compy){
         event.preventDefault();
 
 
-        // const data = {
-        //     numero: (event.target as HTMLFormElement).numero.value,
-        //   };
-        // const JSONdata = JSON.stringify(data);
         
-        // const data = {
-        //     numero: (event.target as HTMLFormElement).numero.value,
-        //   };
-        // const JSONdata = JSON.stringify(data);
 
         const endpoint = `https://agua-front.vercel.app/api/initacook/65a956bb8f3b0f53bed8bf8d`;
         const options: RequestInit = {
@@ -52,26 +44,16 @@ export default function Redbutton({_id}:Compy){
                 }
        
        
-          // router.refresh()
-          // router.push(`pagamentos/${_id}` )
-         
-          // router.refresh()
-          // router.push(`pagamentos/${_id}` )
-
+          
     };
 
     return(
         <> 
-         {/* <div className="flex items-center justify-center mt-7 mb-3">
-           <Image src="/Rrrrr.jpg" alt="" width={150} height={85} />
-         </div> */}
+       
           <div className="flex  items-center justify-center bg-[#fbfbfb]">
   <form onSubmit={handleSubmi }>          
   <div className="grid w-80 grid-rows-4 gap-1">
-    {/* <p className="font-semibold text-gray-700">💌 Get the best of Product Hunt, directly in your inbox.</p> */}
-    
-    {/* <label htmlFor="numero"></label>
-    <input type="Number" className="h-10 w-full rounded border p-2 text-sm" placeholder="84/85" id="numero" name="numero" /> */}
+   
     <button onClick={notify}  type="submit" className="">Selecionar Forneced</button>
     
     
