@@ -47,7 +47,7 @@ export default function Clientes({responseC}:any){
                </ section >
 
                <div className=" mt-5 p-5 shadow-md ">
-                  <Tabela dados={data}/>
+                  {/* <Tabela dados={data}/> */}
                 </div>
       </div>
     )
