@@ -79,14 +79,14 @@ export default function SideBar(){
         <CommandList>
             <CommandEmpty>No results found.</CommandEmpty>
             <CommandGroup heading="Suggestions">
-            <CommandItem>Procurar</CommandItem>
+            <CommandItem >Procurar</CommandItem>
             <CommandItem>Search Emoji</CommandItem>
             <CommandItem>Calculator</CommandItem>
             </CommandGroup>
             <CommandSeparator />
             <CommandGroup heading="Settings">
             <CommandItem></CommandItem>
-            <CommandItem>Billing</CommandItem>
+            <CommandItem><Link href='/faturar'>faturar </Link></CommandItem>
             <CommandItem>Settings</CommandItem>
             </CommandGroup>
         </CommandList>
@@ -94,7 +94,7 @@ export default function SideBar(){
 
         </div>
         <div>Pagamentos</div>
-        <div>Sair</div>
+        <div ><Link href=''>Sair</Link> </div>
 
 
 
