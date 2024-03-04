@@ -2,18 +2,17 @@
 import React, { useState } from 'react';
 import Tabela from '../Tabela';
 
-export default function Clientes(responseC:any){
+export default function Clientes({responseC}:any){
 
-    const [data, setData] = useState('');
+    const [data, setData] = useState(responseC);
     
     
   const handleButtonActived = (responseC:any) => {
-    const data  =  responseC.filter((cliente:any) => cliente.estado === "Activo")
-    setData(data);
+   
+    setData(responseC.filter((cliente:any) => cliente.estado === "Activo"));
   };
   const handleButtonDesatived = (responseC:any) => {
-    const data =  responseC.filter((cliente: any) => cliente.estado !== "Activo");
-    setData(data);
+    setData(responseC.filter((cliente: any) => cliente.estado !== "Activo"));
   };
   const handleButtonMore3 = (responseC:any) => {
     setData(responseC);
