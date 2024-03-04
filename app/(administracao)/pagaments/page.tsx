@@ -51,7 +51,7 @@ export default async  function Pagaments(){
   const res = await fetch(`https://agua-front.vercel.app/api/mes/${idf}`,{cache:"no-cache"}).then((res) => res.json());
   // const data = await  getData()
   const response = await  res;
-  const faturasPagas = await response.ultimo[0].faturas.filter((fatura: { estado: string; }) => fatura.estado === "Pago")
+  // const faturasPagas = await response.ultimo[0].faturas.filter((fatura: { estado: string; }) => fatura.estado === "Pago")
  
   
   // ________________MEses__________
@@ -79,7 +79,7 @@ export default async  function Pagaments(){
                     </tr>
                   </thead>
                   <tbody>
-                    {faturasPagas.map((mes:any)=>(
+                    {/* {faturasPagas.map((mes:any)=>(
                       <tr key={mes._id}>
                         <td></td>
                         <td>{mes.mes}</td>
@@ -88,7 +88,7 @@ export default async  function Pagaments(){
                         <td>{mes.formaDePagamento}</td>
                         <td></td>
                       </tr>
-                    ))}
+                    ))} */}
                   </tbody>
                 </table>
               </div>
