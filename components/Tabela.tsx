@@ -18,18 +18,18 @@ export default function Tabela(dados:any){
             </tr>
           </thead> 
           <tbody>
-          {/* {dados.map((client:any)=>(
+          {dados.map((client:any)=>(
             <tr key={client._id}>             
-              <td>{client.nome} {client.apelido}</td> 
+              {/* <td>{client.nome} {client.apelido}</td> 
               <td>{client.codigo}</td> 
               <td></td> 
               <td>{client.telefone}</td> 
               <td>12/16/2020</td> 
               <td>Blue</td>
-              <th>1</th> 
+              <th>1</th>  */}
            
             </tr>
-            ))} */}
+            ))}
             <tr>
                
               <td>Hart Hagerty</td> 
