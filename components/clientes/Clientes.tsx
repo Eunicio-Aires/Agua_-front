@@ -3,20 +3,24 @@ import React, { useState } from 'react';
 import Tabela from '../Tabela';
 
 export default function Clientes({responseC}:any){
-
-    const [data, setData] = useState(responseC);
-    
-    
-  const handleButtonActived = (responseC:any) => {
+    const [data, setData] = React.useState(responseC);
    
-    setData(responseC.filter((cliente:any) => cliente.estado === "Activo"));
-  };
-  const handleButtonDesatived = (responseC:any) => {
-    setData(responseC.filter((cliente: any) => cliente.estado !== "Activo"));
-  };
-  const handleButtonMore3 = (responseC:any) => {
-    setData(responseC);
-  };
+    // Use useEffect para atualizar o estado "data" sempre que "responseC" mudar
+    React.useEffect(() => {
+      setData(responseC);
+    }, [responseC]);
+  
+    const handleButtonActived = () => {
+      setData(responseC.filter((cliente:any) => cliente.estado === "Activo"));
+    };
+  
+    const handleButtonDesatived = () => {
+      setData(responseC.filter((cliente: any) => cliente.estado !== "Activo"));
+    };
+  
+    const handleButtonMore3 = () => {
+      // Aqui você pode fazer algo diferente, se necessário
+    };
 
 
 
