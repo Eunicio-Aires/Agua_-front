@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Tabela from '../Tabela';
 
 export default function Clientes({responseC}:any){
-    const [data, setData] = React.useState();
+    const [data, setData] = React.useState(responseC ?? []);
    
     // Use useEffect para atualizar o estado "data" sempre que "responseC" mudar
     React.useEffect(() => {
