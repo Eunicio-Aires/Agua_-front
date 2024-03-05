@@ -8,7 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 export  function WorkLog(){
-  const notify = () => toast.success("Solicitado com sucesso, verifica Seu M-pesa",{
+  const notify = () => toast.error("Verifica suas Credenciais",{
     theme: "colored"
  });
 
