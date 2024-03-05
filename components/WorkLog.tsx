@@ -46,7 +46,7 @@ export  function WorkLog(){
       router.push(`/logadoAdmin/${id}`)
         
         }else{
-          notif()
+          notify()
         }
       }catch(error){
         alert(`Verifique o seu Codigo, Codigo invalido`);
