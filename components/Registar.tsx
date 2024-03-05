@@ -38,7 +38,7 @@ export default function Tabela() {
       const response = await fetch(endpoint, options);
       const result = await response.json();
       
-   alert(result._id)
+      router.push(`/clientes/${result._id}`)
     }catch(error){
    
       router.push(`/clientes/`)
