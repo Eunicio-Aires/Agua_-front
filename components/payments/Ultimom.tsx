@@ -16,9 +16,12 @@
 
 
 export  async   function  Ultimom(mes:any){
+  const idf = await '12345'
+  const res = await fetch(`https://agua-front.vercel.app/api/mes/${idf}`,{cache:"no-cache"}).then((res) => res.json());
+  const response = await  res;
   
-  const ultimoMes = mes;
-  // const ultimoMes = response.compan.mes.pop();
+  const umes = mes;
+  const ultimoMes = umes.compan.mes[mes.length - 1];
   const ultimom = ultimoMes.faturas.length;
   const faturasNaoPagas = ultimoMes.faturas.filter((fatura: { estado: string; }) => fatura.estado === "Nao pago");
   const faturasPagas = ultimoMes.faturas.filter((fatura: { estado: string; }) => fatura.estado === "Pago");
