@@ -17,9 +17,8 @@
 
 export  async   function  Ultimom(mes:any){
   
-  const response = mes;
-  const ultimoMes = response.compan.mes.pop(); // Remove e retorna o último mês da lista
-
+  const ultimoMes = mes;
+  // const ultimoMes = response.compan.mes.pop();
   const ultimom = ultimoMes.faturas.length;
   const faturasNaoPagas = ultimoMes.faturas.filter((fatura: { estado: string; }) => fatura.estado === "Nao pago");
   const faturasPagas = ultimoMes.faturas.filter((fatura: { estado: string; }) => fatura.estado === "Pago");
