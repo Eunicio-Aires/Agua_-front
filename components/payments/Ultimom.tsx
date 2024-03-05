@@ -15,7 +15,7 @@
  
 
 
-export  async   function  Ultimom({mes}:any){
+export  async   function  Ultimom(mes:any){
   
   const response = mes;
   const ultimoMes = response.pop(); // Remove e retorna o último mês da lista
@@ -40,7 +40,7 @@ export  async   function  Ultimom({mes}:any){
 
     return( 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 p-4">
-            <div className="bg-white flex justify-between w-full border p-4 rounded-lg">
+            {/* <div className="bg-white flex justify-between w-full border p-4 rounded-lg">
               <div className="flex flex-col w-full pb-4">
                 <p className="text-2xl font-bold">{totalValorFaturasPagas}-Mtn</p>
                 <p className="text-gray-600">Faturas Pagas</p>
@@ -63,7 +63,7 @@ export  async   function  Ultimom({mes}:any){
                 <p className="text-2xl font-bold">{totalValorTodasFaturas}-Mtn</p>
                 <p className="text-gray-600">Todas {ultimom}</p>
               </div>
-            </div>
+            </div> */}
           </div>
           
       
