@@ -36,16 +36,15 @@ export  function WorkLog(){
       
       const response = await fetch(endpoint, options);
         const result = await response.json(); 
-        
+        const token = await result.token
       //   const idCanp = await result.id
     
       try{
-        if(response.status  === 200){
+        if(token){
         
         const id =await result.id
       router.push(`/logadoAdmin/${id}`)
-        }else if(response.status === 401){
-          notify()
+        
         }else{
           notif()
         }
