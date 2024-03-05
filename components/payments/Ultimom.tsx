@@ -26,16 +26,16 @@ export  async   function  Ultimom(mes:any){
   const totalValorFaturasNaoPagas = faturasNaoPagas.reduce((total: any, fatura: { valor: any; }) => total + fatura.valor, 0);
   const numeroDeFaturasNaoPagas = faturasNaoPagas.length;
   const numeroDeFaturasPagas = faturasPagas.length;
-  const totalValorTodasFaturas = response.reduce((total: any, mes: { faturas: any[]; }) => {
-      const valorFaturasMes = mes.faturas.reduce((subtotal, fatura) => subtotal + fatura.valor, 0);
-      return total + valorFaturasMes;
-  }, 0);
-  const totalValorFaturasPagas = response.reduce((total: any, mes: { faturas: any[]; }) => {
-      const valorFaturasMes = mes.faturas
-          .filter(fatura => fatura.estado === "Pago")
-          .reduce((subtotal, fatura) => subtotal + fatura.valor, 0);
-      return total + valorFaturasMes;
-  }, 0);
+  // const totalValorTodasFaturas = response.reduce((total: any, mes: { faturas: any[]; }) => {
+  //     const valorFaturasMes = mes.faturas.reduce((subtotal, fatura) => subtotal + fatura.valor, 0);
+  //     return total + valorFaturasMes;
+  // }, 0);
+  // const totalValorFaturasPagas = response.reduce((total: any, mes: { faturas: any[]; }) => {
+  //     const valorFaturasMes = mes.faturas
+  //         .filter(fatura => fatura.estado === "Pago")
+  //         .reduce((subtotal, fatura) => subtotal + fatura.valor, 0);
+  //     return total + valorFaturasMes;
+  // }, 0);
 
 
     return( 
