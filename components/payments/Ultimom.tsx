@@ -16,18 +16,18 @@
 
 
 export  async   function  Ultimom(){
-  const idf = await '12345'
-  const res = await fetch(`https://agua-front.vercel.app/api/mes/${idf}`,{cache:"no-cache"}).then((res) => res.json());
-  const response = await  res;
+  // const idf = await '12345'
+  // const res = await fetch(`https://agua-front.vercel.app/api/mes/${idf}`,{cache:"no-cache"}).then((res) => res.json());
+  // const response = await  res;
   
-  const umes = response;
-  const ultimoMes = umes.compan.mes[mes.length - 1];
-  const ultimom = ultimoMes.faturas.length;
-  const faturasNaoPagas = ultimoMes.faturas.filter((fatura: { estado: string; }) => fatura.estado === "Nao pago");
-  const faturasPagas = ultimoMes.faturas.filter((fatura: { estado: string; }) => fatura.estado === "Pago");
-  const totalValorFaturasNaoPagas = faturasNaoPagas.reduce((total: any, fatura: { valor: any; }) => total + fatura.valor, 0);
-  const numeroDeFaturasNaoPagas = faturasNaoPagas.length;
-  const numeroDeFaturasPagas = faturasPagas.length;
+  // const umes = response;
+  // const ultimoMes = umes.compan.mes[mes.length - 1];
+  // const ultimom = ultimoMes.faturas.length;
+  // const faturasNaoPagas = ultimoMes.faturas.filter((fatura: { estado: string; }) => fatura.estado === "Nao pago");
+  // const faturasPagas = ultimoMes.faturas.filter((fatura: { estado: string; }) => fatura.estado === "Pago");
+  // const totalValorFaturasNaoPagas = faturasNaoPagas.reduce((total: any, fatura: { valor: any; }) => total + fatura.valor, 0);
+  // const numeroDeFaturasNaoPagas = faturasNaoPagas.length;
+  // const numeroDeFaturasPagas = faturasPagas.length;
   // const totalValorTodasFaturas = response.reduce((total: any, mes: { faturas: any[]; }) => {
   //     const valorFaturasMes = mes.faturas.reduce((subtotal, fatura) => subtotal + fatura.valor, 0);
   //     return total + valorFaturasMes;
@@ -41,6 +41,7 @@ export  async   function  Ultimom(){
 
 
     return( 
+      
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 p-4">
             {/* <div className="bg-white flex justify-between w-full border p-4 rounded-lg">
               <div className="flex flex-col w-full pb-4">
