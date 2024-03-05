@@ -17,25 +17,26 @@
 
 export  async   function  Ultimom({mes}:any){
   
-  const response = mes
-    const ultimom =   response.faturas.length;
-    const faturasNaoPagas = response.faturas.filter((fatura: { estado: string; }) => fatura.estado === "Nao pago");
-    const faturasPagas = response.faturas.filter((fatura: { estado: string; }) => fatura.estado === "Pago");
-    const totalValorFaturasNaoPagas = faturasNaoPagas.reduce((total: any, fatura: { valor: any; }) => total + fatura.valor, 0);
-    const numeroDeFaturasNaoPagas = faturasNaoPagas.length;
-    const numeroDeFaturasPagas = faturasPagas.length
-    const totalValorTodasFaturas = response.reduce((total: any, mes: { faturas: any[]; }) => {
-        const valorFaturasMes = mes.faturas.reduce((subtotal, fatura) => subtotal + fatura.valor, 0);
-        return total + valorFaturasMes;
-    }, 0);
-    const totalValorFaturasPagas = response.reduce((total: any, mes: { faturas: any[]; }) => {
-        const valorFaturasMes = mes.faturas
-            .filter(fatura => fatura.estado === "Pago")
-            .reduce((subtotal, fatura) => subtotal + fatura.valor, 0);
-        return total + valorFaturasMes;
-    }, 0);
+  const response = mes;
+  const ultimoMes = response.pop(); // Remove e retorna o último mês da lista
 
-    
+  const ultimom = ultimoMes.faturas.length;
+  const faturasNaoPagas = ultimoMes.faturas.filter((fatura: { estado: string; }) => fatura.estado === "Nao pago");
+  const faturasPagas = ultimoMes.faturas.filter((fatura: { estado: string; }) => fatura.estado === "Pago");
+  const totalValorFaturasNaoPagas = faturasNaoPagas.reduce((total: any, fatura: { valor: any; }) => total + fatura.valor, 0);
+  const numeroDeFaturasNaoPagas = faturasNaoPagas.length;
+  const numeroDeFaturasPagas = faturasPagas.length;
+  const totalValorTodasFaturas = response.reduce((total: any, mes: { faturas: any[]; }) => {
+      const valorFaturasMes = mes.faturas.reduce((subtotal, fatura) => subtotal + fatura.valor, 0);
+      return total + valorFaturasMes;
+  }, 0);
+  const totalValorFaturasPagas = response.reduce((total: any, mes: { faturas: any[]; }) => {
+      const valorFaturasMes = mes.faturas
+          .filter(fatura => fatura.estado === "Pago")
+          .reduce((subtotal, fatura) => subtotal + fatura.valor, 0);
+      return total + valorFaturasMes;
+  }, 0);
+
 
     return( 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 p-4">

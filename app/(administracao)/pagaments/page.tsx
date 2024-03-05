@@ -65,7 +65,7 @@ export default async  function Pagaments(){
               {/* @ts-ignore  */}
               {/* <Pagamentos/> */}
               {/* @ts-ignore  */}
-              < Ultimom mes={ultimoMes} /> 
+              < Ultimom mes={response} /> 
               <div className="overflow-x-auto p-4">
                 <table className="table table-xs table-pin-rows table-pin-cols">
                   <thead>
