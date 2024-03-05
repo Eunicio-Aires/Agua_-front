@@ -1,6 +1,7 @@
 'use client'
 import React, { useState } from 'react';
 import Tabela from '../Tabela';
+import Link from 'next/link';
 
 export default function Clientes({responseC}:any){
     const [data, setData] = React.useState([]);
@@ -22,15 +23,16 @@ export default function Clientes({responseC}:any){
       // Aqui você pode fazer algo diferente, se necessário
     };
 
-
+    const ativos = responseC.filter((cliente:any) => cliente.estado === "Activo").length
+    const desativado = responseC.filter((cliente:any) => cliente.estado !== "Activo").length
 
     return(
         <div className="">          
        <section className="flex flex-wrap justify-center">
                 <div className="w-full md:w-1/3 p-4">
                     <div className="bg-white rounded-lg shadow-md p-6">
-                    <h2 className="text-xl font-bold mb-2"> 1235 </h2>
-                    <p>Conteúdo do Card 1...</p>
+                    <h2 className="text-xl font-bold mb-2"> {ativos} </h2>
+                    <p>Ativos</p>
                     <button onClick={ handleButtonActived} className="btn btn-sm mt-2">Ver</button>
                     </div>
                 </div>
@@ -43,8 +45,8 @@ export default function Clientes({responseC}:any){
                 </div>
                 <div className="w-full md:w-1/3 p-4">
                     <div className="bg-white rounded-lg shadow-md p-6">
-                    <h2 className="text-xl font-bold mb-2">Card 3</h2>
-                    <p>Conteúdo do Card 3...</p>
+                    <h2 className="text-xl font-bold mb-2">{desativado}</h2>
+                    <p>Desativado</p>
                     <button onClick={ handleButtonDesatived} className="btn btn-sm mt-2">Ver</button>
                     </div>
                 </div>
@@ -56,29 +58,29 @@ export default function Clientes({responseC}:any){
         <table className="table  table-xs table-pin-rows table-pin-cols">
           <thead>
             <tr className='bg-gray-100'>             
-              <td>Name</td> 
-              <td>Job</td> 
-              <td>company</td> 
-              <td>location</td> 
-              <td>Last Login</td> 
+              <td>Nome</td> 
+              <td>Codigo</td> 
+              <td>Contato</td> 
+              <td>N Paga</td> 
+              <td>Divida</td> 
               <td>Favorite Color</td>
-              <th></th> 
+              {/* <th></th>  */}
             </tr>
           </thead> 
           <tbody>
           {data.map((client:any)=>(
-            <tr  key={client._id}>             
+            <tr className='hover:bg-gray-100' key={client._id}>             
               <td>{client.nome} {client.apelido}</td> 
               <td>{client.codigo}</td> 
-              <td></td> 
-              <td>{client.telefone}</td> 
+              <td>{client.contato}</td> 
+              <td>{client.faturas.filter((fatura:any) => fatura.estado === "Nao pago").length}</td> 
               <td>12/16/2020</td> 
-              <td>Blue</td>
-              <th>1</th> 
+              <td><Link href={`/clientes/${client._id}`}>{client.estado}</Link></td>
+              
            
             </tr>
             ))}
-            <tr>
+            {/* <tr>
                
               <td>Hart Hagerty</td> 
               <td>Desktop Support Technician</td> 
@@ -87,7 +89,7 @@ export default function Clientes({responseC}:any){
               <td>12/5/2020</td> 
               <td>Purple</td>
               <th></th>
-            </tr>
+            </tr> */}
             {/* <tr>              
               <td>Brice Swyre</td> 
               <td>Tax Accountant</td> 
@@ -99,7 +101,7 @@ export default function Clientes({responseC}:any){
             </tr> */}
            
           </tbody> 
-          <tfoot>
+          {/* <tfoot>
             <tr>
               <th></th> 
               <td>Name</td> 
@@ -109,7 +111,7 @@ export default function Clientes({responseC}:any){
               <td>Last Login</td> 
               <th></th> 
             </tr>
-          </tfoot>
+          </tfoot> */}
         </table>
       </div>
                 </div>
