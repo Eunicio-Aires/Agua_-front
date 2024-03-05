@@ -3,32 +3,32 @@
 //   // Render data...
 // }
 
-async function getData(){
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
-  const res = await fetch(`https://agua-p.vercel.app/adm/meses`,{cache:"no-cache"})
+// async function getData(){
+//   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+//   const res = await fetch(`https://agua-p.vercel.app/adm/meses`,{cache:"no-cache"})
 
-  if(!res.ok){
-    throw new Error('Failed to fetch data')
-  }
-  return res.json()
-}
+//   if(!res.ok){
+//     throw new Error('Failed to fetch data')
+//   }
+//   return res.json()
+// }
  
 
 
-export  async   function  Ultimom(){
-  const data = await  getData()
-  const response = await  data;
-    const ultimom =   response.ultimo[0].faturas.length;
-    const faturasNaoPagas = response.ultimo[0].faturas.filter((fatura: { estado: string; }) => fatura.estado === "Nao pago");
-    const faturasPagas = response.ultimo[0].faturas.filter((fatura: { estado: string; }) => fatura.estado === "Pago");
+export  async   function  Ultimom({mes}:any){
+  
+  const response = mes
+    const ultimom =   response.faturas.length;
+    const faturasNaoPagas = response.faturas.filter((fatura: { estado: string; }) => fatura.estado === "Nao pago");
+    const faturasPagas = response.faturas.filter((fatura: { estado: string; }) => fatura.estado === "Pago");
     const totalValorFaturasNaoPagas = faturasNaoPagas.reduce((total: any, fatura: { valor: any; }) => total + fatura.valor, 0);
     const numeroDeFaturasNaoPagas = faturasNaoPagas.length;
     const numeroDeFaturasPagas = faturasPagas.length
-    const totalValorTodasFaturas = response.ultimo.reduce((total: any, mes: { faturas: any[]; }) => {
+    const totalValorTodasFaturas = response.reduce((total: any, mes: { faturas: any[]; }) => {
         const valorFaturasMes = mes.faturas.reduce((subtotal, fatura) => subtotal + fatura.valor, 0);
         return total + valorFaturasMes;
     }, 0);
-    const totalValorFaturasPagas = response.ultimo.reduce((total: any, mes: { faturas: any[]; }) => {
+    const totalValorFaturasPagas = response.reduce((total: any, mes: { faturas: any[]; }) => {
         const valorFaturasMes = mes.faturas
             .filter(fatura => fatura.estado === "Pago")
             .reduce((subtotal, fatura) => subtotal + fatura.valor, 0);
@@ -38,9 +38,6 @@ export  async   function  Ultimom(){
     
 
     return( 
-        
-         
-            // {/* <h1>{response.ultimo[0].mes}</h1> */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 p-4">
             <div className="bg-white flex justify-between w-full border p-4 rounded-lg">
               <div className="flex flex-col w-full pb-4">

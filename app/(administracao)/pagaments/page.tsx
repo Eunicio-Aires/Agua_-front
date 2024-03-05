@@ -49,9 +49,9 @@ interface Mes {
 export default async  function Pagaments(){
   const idf = await '12345'
   const res = await fetch(`https://agua-front.vercel.app/api/mes/${idf}`,{cache:"no-cache"}).then((res) => res.json());
-  // const data = await  getData()
   const response = await  res;
-  // const faturasPagas = await response.ultimo[0].faturas.filter((fatura: { estado: string; }) => fatura.estado === "Pago")
+  const ultimoMes = response.compan.mes.pop();
+
  
   
   // ________________MEses__________
@@ -65,7 +65,7 @@ export default async  function Pagaments(){
               {/* @ts-ignore  */}
               {/* <Pagamentos/> */}
               {/* @ts-ignore  */}
-              < Ultimom/> 
+              < Ultimom mes={ultimoMes} /> 
               <div className="overflow-x-auto p-4">
                 <table className="table table-xs table-pin-rows table-pin-cols">
                   <thead>
