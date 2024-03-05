@@ -24,7 +24,7 @@ export default function Tabela() {
     };
 
     const JSONdata = JSON.stringify(data);
-    // const endpoint = `https://agua-p.vercel.app/adm/cliente/`;
+    const endpoint = `https://agua-p.vercel.app/adm/cliente/`;
 
     const options: RequestInit = {
       method: 'POST',
@@ -35,7 +35,7 @@ export default function Tabela() {
     };
 
     try{
-      // const response = await fetch(endpoint, options);
+      const response = await fetch(endpoint, options);
       
    
     }catch(error){

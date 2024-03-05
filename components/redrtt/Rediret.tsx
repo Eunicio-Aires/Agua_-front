@@ -54,7 +54,7 @@ export default function Redbutton({_id}:Compy){
   <form onSubmit={handleSubmi }>          
   <div className="">
    
-    <button onClick={notify}  type="submit" className="btn btn-sm btn-accent">Selecionar Forneced</button>
+    <button onClick={notify}  type="submit" className="btn btn-sm btn-accent">Selecionar</button>
     
     
   </div>
