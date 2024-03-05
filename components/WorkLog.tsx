@@ -11,6 +11,9 @@ export  function WorkLog(){
   const notify = () => toast.error("Verifica suas Credenciais",{
     theme: "colored"
  });
+ const notif = () => toast.error(" Credenciais",{
+  theme: "colored"
+});
 
   const router = useRouter()
    
@@ -41,8 +44,10 @@ export  function WorkLog(){
         // const token =await result.token
         const id =await result.id
       router.push(`/logadoAdmin/${id}`)
-        }else{
+        }else if(response.status === 401){
           notify()
+        }else{
+          notif()
         }
       }catch(error){
         alert(`Verifique o seu Codigo, Codigo invalido`);
