@@ -37,8 +37,8 @@ export  function WorkLog(){
       //   const idCanp = await result.id
     
       try{
-        if(result.status === 200){
-        const token =await result.token
+        if(response.status  === 200){
+        // const token =await result.token
         const id =await result.id
       router.push(`/logadoAdmin/${id}`)
         }else{
