@@ -31,9 +31,12 @@ export function Formda(ligacoes:Ligacao){
         }
         const response = await fetch(endpoint, options)
         const result  = await response.json()
-        router.push(`/imprimir/${result._id}`)
-        // notify()
-        
+        try{
+          router.push(`/imprimir/${result._id}`)
+        }catch(error){
+          alert("error ao submeter")
+        }
+     
       }
     return(
       <div className="">
