@@ -7,7 +7,12 @@ export async function GET( request: NextRequest,{ params }: { params: { id: stri
     const id = params.id 
 
      request.cookies.set('comp', params.id)
-    const res = await fetch(`https://agua-p.vercel.app/adm/componeclient/${id}`,{cache:"no-cache"})
+    const res = await fetch(`https://agua-p.vercel.app/adm/componeclient/${id}`,{
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YWE3NzRjMGUyODA5OTAwMmYxNThlMyIsImlhdCI6MTcwOTgyMTA3MSwiZXhwIjoxNzA5OTA3NDcxfQ.oeKHAXmxlcfCFwSyBc7A0HxlSrH2vrjfgaZj-mKk3-8',
+      },
+    })
     const product = await res.json()
     const idcomp = await product.paramComp
     const dados = await product.compan
