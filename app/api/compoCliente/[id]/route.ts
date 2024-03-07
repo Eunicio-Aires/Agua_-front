@@ -9,9 +9,9 @@ export async function GET( request: NextRequest,{ params }: { params: { id: stri
      request.cookies.set('comp', params.id)
     const res = await fetch(`https://agua-p.vercel.app/adm/componeclient/${id}`,{
       headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `${token}`,
-      },
+        'Content-Type' : 'application/json',
+        'Authorization' : `${token}`,
+      }
     })
     const product = await res.json()
     const idcomp = await product.paramComp
