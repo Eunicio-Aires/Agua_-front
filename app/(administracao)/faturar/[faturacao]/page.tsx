@@ -18,7 +18,14 @@ interface Mes {
 }
 export default async function Page({ params }:{ params:{faturacao:Mes}}) {
     
-    const posts = await fetch(`https://agua-p.vercel.app/adm/mesunic/${params.faturacao}`,{cache:"no-cache"}).then((res) => res.json());
+    const posts = await fetch(`https://agua-p.vercel.app/adm/mesunic/${params.faturacao}`,{
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YWE3NzRjMGUyODA5OTAwMmYxNThlMyIsImlhdCI6MTcwOTgyMTA3MSwiZXhwIjoxNzA5OTA3NDcxfQ.oeKHAXmxlcfCFwSyBc7A0HxlSrH2vrjfgaZj-mKk3-8`,
+        },
+    //    body: JSON.stringify( resb )
+      }).then((res) => res.json());
     const mes = await posts.mes._id;
 
     return (
