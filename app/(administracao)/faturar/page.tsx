@@ -4,7 +4,12 @@ import Link from 'next/link';
 
 export default async function Faturar(){
   const idf = '1234'
-  const response = await fetch(`https://agua-front.vercel.app/api/mes/${idf}`,{cache:"no-cache"}).then((res) => res.json());
+  const token = await `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YWE3NzRjMGUyODA5OTAwMmYxNThlMyIsImlhdCI6MTcwOTgyMTA3MSwiZXhwIjoxNzA5OTA3NDcxfQ.oeKHAXmxlcfCFwSyBc7A0HxlSrH2vrjfgaZj-mKk3-8`
+  const response = await fetch(`https://agua-front.vercel.app/api/mes/${idf}`,{ 
+    headers: {
+     'Authorization' : `${token}`,
+   },
+}).then((res) => res.json());
   console.log(response)
   return(
     <div className="">
