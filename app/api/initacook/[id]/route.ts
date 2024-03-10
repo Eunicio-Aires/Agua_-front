@@ -5,10 +5,10 @@ import { cookies } from 'next/headers'
 export async function POST(request:NextRequest,{params}:any) {
  
   const ids = await params.id;
-  const id = await ids[0];
+  const idc = await ids[0];
 
     try {
-      const response = await fetch(`https://agua-p.vercel.app/adm/fontcook/${id} `,{
+      const response = await fetch(`https://agua-p.vercel.app/adm/fontcook/${idc} `,{
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -16,9 +16,9 @@ export async function POST(request:NextRequest,{params}:any) {
      
       });
       const data = await response.json();
-      const idc   = await data.idComp
+      const id   = await data.idComp
 
-      cookies().set('idCompan' , idc )
+      cookies().set('idCompan' , id )
       return NextResponse.json(id); 
     } catch (error) {
       return NextResponse.json({ error: 'An error occurred' }, { status: 500 });
