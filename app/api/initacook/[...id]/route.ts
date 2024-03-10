@@ -3,12 +3,11 @@ import { NextRequest, NextResponse } from 'next/server'
 import { cookies } from 'next/headers'
 
 export async function POST(request:NextRequest,{params}:any) {
- 
-  const ids = await params.id;
-  const idc = await ids[0];
-
+  const ids = await params.ids 
+  const idc = await ids[0]
+  
     try {
-      const response = await fetch(`https://agua-p.vercel.app/adm/fontcook/${idc} `,{
+      const response = await fetch(`https://agua-p.vercel.app/adm/fontcook/${params.idc} `,{
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
