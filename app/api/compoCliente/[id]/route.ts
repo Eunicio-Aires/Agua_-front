@@ -2,13 +2,15 @@ import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server'
 import { cookies } from 'next/headers';
 import { setCook } from '@/lib/cookiesConf'
+import { getSession } from '@/lib/cookiesConf';
 
 export async function GET( request: NextRequest,{ params }: { params: { id: string } } ) {
     const id = params.id 
-    const token = await `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YWE3NzRjMGUyODA5OTAwMmYxNThlMyIsImlhdCI6MTcwOTgyMTA3MSwiZXhwIjoxNzA5OTA3NDcxfQ.oeKHAXmxlcfCFwSyBc7A0HxlSrH2vrjfgaZj-mKk3-8`
+    const token = await getSession()
     request.cookies.set('comp', params.id)
     const res = await fetch(`https://agua-p.vercel.app/adm/componeclient/${id}`,{
       headers: {
+        'Content-Type': 'application/json',
         'Authorization' :`${token}`,
       }
     })

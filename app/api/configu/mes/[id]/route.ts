@@ -1,10 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server'
  import { getId } from '@/lib/cookiesConf'
- import { cookies } from "next/headers";
+ import { getSession } from '@/lib/cookiesConf';
 export async function POST(request:NextRequest,{params}:any) {
   const idCom =await getId()
   //   const ids = await params.id;
   // const id = await ids[0];
+  const token = await getSession()
   
   const body = await request.json();
   try {
@@ -12,6 +13,7 @@ export async function POST(request:NextRequest,{params}:any) {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        'Authorization' : `${token}`,
       },
       body: JSON.stringify(body),
     });

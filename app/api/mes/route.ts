@@ -3,7 +3,6 @@ import { getSession } from "@/lib/cookiesConf"
 
 export async function POST(req: Request) {
   const body = await req.json(); // Parse the incoming JSON body
-  const toke = await `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YWE3NzRjMGUyODA5OTAwMmYxNThlMyIsImlhdCI6MTcwOTgyMTA3MSwiZXhwIjoxNzA5OTA3NDcxfQ.oeKHAXmxlcfCFwSyBc7A0HxlSrH2vrjfgaZj-mKk3-8`
   try {
     const token = await getSession()
     const response = await fetch('https://agua-p.vercel.app/adm/criarMes', {
