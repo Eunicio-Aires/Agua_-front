@@ -26,7 +26,7 @@ export default async function ClienteId({ params }: {params:{id: string }}){
                     <h2 className="text-xl font-bold mb-2"> {companes.nome} </h2>
                     <p>{companes.clientes.length}</p>
                     <Redbutton _id={companes._id}/>
-                    {/* <Link href={`/inicial/${companes._id}`}><span className="btn btn-sm btn-accent">Entrar</span> </Link> */}
+                    
                     </div>
                    
                 </div>

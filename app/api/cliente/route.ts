@@ -1,4 +1,5 @@
-import {NextResponse} from 'next/server';
+import { NextRequest, NextResponse } from 'next/server'
+// import {,} from 'next/server';
 import { getSession } from '@/lib/cookiesConf';
 export async function GET(request:Request){
     const { searchParams } = new URL(request.url)
