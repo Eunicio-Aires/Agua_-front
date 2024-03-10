@@ -18,7 +18,7 @@ export async function POST(request:NextRequest,{params}:any) {
       const data = await response.json();
       const idc   = await data.idComp
 
-      cookies().set('idCompan' , id )
+      cookies().set('idCompan' , idc )
       return NextResponse.json(id); 
     } catch (error) {
       return NextResponse.json({ error: 'An error occurred' }, { status: 500 });
