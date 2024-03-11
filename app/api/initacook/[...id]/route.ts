@@ -10,7 +10,7 @@ export async function POST(request:NextRequest,{params}:any) {
   const idc = await ids[0]
   const search = searchParams.get('_id')
 
-  const response = await fetch(`https://agua-p.vercel.app/adm/fontcook/${idc} `,{
+  const response = await fetch(`https://agua-p.vercel.app/adm/fontcook/${search} `,{
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
