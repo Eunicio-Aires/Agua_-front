@@ -29,7 +29,7 @@ export default function Redbutton({_id}:Compy){
 
         const endpoint = `https://agua-front.vercel.app/api/initacook/${_id}`;
         const options: RequestInit = {
-            method: 'POST',
+            method: 'GET',
             headers: {
               'Content-Type': 'application/json',
             },
@@ -47,14 +47,10 @@ export default function Redbutton({_id}:Compy){
 
     return(
         <> 
-       
           <div className="">
   <form onSubmit={handleSubmi }>          
   <div className="">
-   
-    <button type="submit" className="btn btn-sm btn-accent">Selecionar</button>
-    
-    
+    <button type="submit" className="btn btn-sm btn-accent">Selecionar</button>  
   </div>
   </form>
 </div>
