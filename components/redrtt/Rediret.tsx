@@ -30,12 +30,9 @@ export default function Redbutton({_id}:Compy){
         const endpoint = `https://agua-front.vercel.app/api/initacook/${_id}`;
         const options: RequestInit = {
             method: 'GET',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            // body: JSONdata,
+          
           };
-          const response = await fetch(endpoint, options);
+          const response = await fetch(endpoint);
             const result = await response.json();
             try{
             router.push(`/inicial/${_id}`)
