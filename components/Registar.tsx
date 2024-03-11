@@ -33,9 +33,9 @@ export default function Tabela() {
       body: JSONdata,
     };
 
+    const response = await fetch(endpoint, options);
+    const result = await response.json();
     try{
-      const response = await fetch(endpoint, options);
-      const result = await response.json();
       const idc   = await result._id
       router.push(`/clientes/${idc}`)
     }catch(error){
@@ -50,7 +50,6 @@ export default function Tabela() {
     setIsBlueBoxShown(!iseBlueBoxShown);
   }
   const handleClick = () => {
-      
   
     // Desabilitar o botão
     setButtonDisabled(true);
