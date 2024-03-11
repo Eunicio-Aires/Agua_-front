@@ -2,7 +2,8 @@ import { NextRequest, NextResponse } from 'next/server'
 import { cookies } from 'next/headers'
 import { getCompan } from '@/lib/cookiesConf'
 import { getSession } from '@/lib/cookiesConf';
-export async function POST(request: NextRequest) { 
+
+export async function POST(request:NextRequest,{params}:any) { 
 
     // const token = await getSession()
     const compId = await getCompan()
