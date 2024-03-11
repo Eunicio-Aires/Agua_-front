@@ -8,14 +8,14 @@ export async function POST(request: NextRequest) {
   const idc = searchParams.get('_id')
 
 
-  const resb = await request.json()
-  const res = await fetch(`https://agua-p.vercel.app/adm/fontcook/65a956bb8f3b0f53bed8bf8d`,{
+  // const resb = await request.json()
+  const res = await fetch(`https://agua-p.vercel.app/adm/fontcook/${idc}`,{
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
       // 'API-Key': process.env.DATA_API_KEY,
     },
-   body: JSON.stringify( resb )
+  //  body: JSON.stringify( resb )
   })
 
 
