@@ -4,7 +4,7 @@ import { useRouter } from 'next/navigation';
 import { useState } from "react";
 
 export default function Tabela() {
- 
+ const idfe =  `kjwbafkmsaf`
     const router = useRouter()
     const [isButtonDisabled, setButtonDisabled] = useState(false);
   const handleSubmi = async (event: SyntheticEvent) => {
@@ -23,7 +23,7 @@ export default function Tabela() {
     };
 
     const JSONdata = JSON.stringify(data);
-    const endpoint = `https://agua-front.vercel.app/api/newClient/`;
+    const endpoint = `https://agua-front.vercel.app/api/newClient/${idfe}`;
 
     const options: RequestInit = {
       method: 'POST',
