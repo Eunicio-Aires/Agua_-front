@@ -42,8 +42,6 @@ export default function Redbutton({_id}:Compy){
                 }catch(error){
                   alert(`Verifique o seu Codigo, Codigo invalido`);
                 }
-       
-       
           
     };
 
@@ -54,7 +52,7 @@ export default function Redbutton({_id}:Compy){
   <form onSubmit={handleSubmi }>          
   <div className="">
    
-    <button onClick={notify}  type="submit" className="btn btn-sm btn-accent">Selecionar</button>
+    <button type="submit" className="btn btn-sm btn-accent">Selecionar</button>
     
     
   </div>
