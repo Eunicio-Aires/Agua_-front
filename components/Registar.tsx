@@ -24,7 +24,7 @@ export default function Tabela() {
     };
 
     const JSONdata = JSON.stringify(data);
-    const endpoint = `https://agua-front.vercel.app/api/newClient/`;
+    const endpoint = `https://agua-front.vercel.app/api/newClient/`
 
     const options: RequestInit = {
       method: 'POST',
@@ -33,10 +33,10 @@ export default function Tabela() {
       },
       body: JSONdata,
     };
-
+    const response = await fetch(endpoint, options);
+    const result = await response.json();
     try{
-      const response = await fetch(endpoint, options);
-      const result = await response.json();
+     
       
       router.push(`/clientes/${result._id}`)
     }catch(error){
