@@ -9,7 +9,7 @@ export async function POST(request: NextRequest) {
 
 
   const resb = await request.json()
-  const res = await fetch(`https://agua-p.vercel.app/adm/fontcook/${idc}`,{
+  const res = await fetch(`https://agua-p.vercel.app/adm/fontcook/65a956bb8f3b0f53bed8bf8d`,{
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
