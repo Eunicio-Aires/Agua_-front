@@ -2,9 +2,7 @@
 import { cookies } from 'next/headers'
 import { getCompan } from '@/lib/cookiesConf'
 
-export async function POST(request:NextRequest,{params}:any) { 
-  const ids = await params.agir
-  const idc = await ids[0]
+export async function POST(request:NextRequest) { 
 
     const compId = await getCompan()
     const resb = await request.json()

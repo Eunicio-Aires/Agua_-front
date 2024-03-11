@@ -24,7 +24,7 @@ export default function Tabela() {
     };
 
     const JSONdata = JSON.stringify(data);
-    const endpoint = `https://agua-front.vercel.app/api/newClient/${agir}/${agi}`
+    const endpoint = `https://agua-front.vercel.app/api/newClient/`
 
     const options: RequestInit = {
       method: 'POST',
