@@ -1,5 +1,4 @@
 "use client"
-
 import React, { SyntheticEvent } from 'react';
 import { useRouter } from 'next/navigation';
 import { useState } from "react";
@@ -37,8 +36,8 @@ export default function Tabela() {
     try{
       const response = await fetch(endpoint, options);
       const result = await response.json();
-      
-      router.push(`/clientes/${result._id}`)
+      const idc   = await result._id
+      router.push(`/clientes/${idc}`)
     }catch(error){
    
       router.push(`/clientes/`)
