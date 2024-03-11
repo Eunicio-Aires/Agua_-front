@@ -40,11 +40,11 @@ export async function POST(request:NextRequest,{params}:any) {
   const body = await request.json();
   const token = await getSession()
   try {
-    const response = await fetch(`https://agua-p.vercel.app/adm/fontcook//${idc}`,{
+    const response = await fetch(`https://agua-p.vercel.app/adm/fontcook/${idc}`,{
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization' : `${token}`,
+        // 'Authorization' : `${token}`,
       },
       // body: JSON.stringify(body),
     });
