@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import { useState } from "react";
 
 export default function Tabela() {
+  const agir = `efgdsfg`
     const router = useRouter()
     const [isButtonDisabled, setButtonDisabled] = useState(false);
 
@@ -22,7 +23,7 @@ export default function Tabela() {
     };
 
     const JSONdata = JSON.stringify(data);
-    const endpoint = `https://agua-front.vercel.app/api/newClient`
+    const endpoint = `https://agua-front.vercel.app/api/newClient/${agir}`
 
     const options: RequestInit = {
       method: 'POST',

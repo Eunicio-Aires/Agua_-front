@@ -2,7 +2,10 @@
 import { cookies } from 'next/headers'
 import { getCompan } from '@/lib/cookiesConf'
 
-export async function POST(request: NextRequest) { 
+export async function POST(request:NextRequest,{params}:any) { 
+  const ids = await params.agir
+  const idc = await ids[0]
+
     const compId = await getCompan()
     const resb = await request.json()
     const res = await fetch(`https://agua-p.vercel.app/adm/nclientCompan/${compId}`,{
