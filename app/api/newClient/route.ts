@@ -6,7 +6,7 @@ export async function POST(request:NextRequest) {
 
     const compId = await getCompan()
     const resb = await request.json()
-    const res = await fetch(`https://agua-p.vercel.app/adm/nclientCompan/${compId}`,{
+    const res = await fetch(`https://agua-p.vercel.app/adm/nclientCompan/65a956bb8f3b0f53bed8bf8d`,{
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

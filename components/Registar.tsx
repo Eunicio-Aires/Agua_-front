@@ -36,13 +36,11 @@ export default function Tabela() {
     const response = await fetch(endpoint,options);
     const result = await response.json();
     try{
-
       router.push(`/clientes/${result._id}`)
     }catch(error){
    
       router.push(`/clientes/`)
     }
-
   };
   const [iseBlueBoxShown, setIsBlueBoxShown] = useState(false);
   
