@@ -1,6 +1,7 @@
  import { NextRequest, NextResponse } from 'next/server'
 import { cookies } from 'next/headers'
 import { getCompan } from '@/lib/cookiesConf'
+
 export async function POST(request: NextRequest) { 
     const compId = await getCompan()
     const resb = await request.json()

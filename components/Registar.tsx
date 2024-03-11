@@ -5,14 +5,12 @@ import { useRouter } from 'next/navigation';
 import { useState } from "react";
 
 export default function Tabela() {
- 
     const router = useRouter()
     const [isButtonDisabled, setButtonDisabled] = useState(false);
+
   const handleSubmi = async (event: SyntheticEvent) => {
     event.preventDefault();
-    
     setButtonDisabled(true);
-
     const data = {
       nome: (event.target as HTMLFormElement).nome.value,
       apelido: (event.target as HTMLFormElement).apelido.value,
@@ -24,7 +22,7 @@ export default function Tabela() {
     };
 
     const JSONdata = JSON.stringify(data);
-    const endpoint = `https://agua-front.vercel.app/api/newClient/`
+    const endpoint = `https://agua-front.vercel.app/api/newClient`
 
     const options: RequestInit = {
       method: 'POST',
@@ -33,11 +31,10 @@ export default function Tabela() {
       },
       body: JSONdata,
     };
-    const response = await fetch(endpoint, options);
+    const response = await fetch(endpoint,options);
     const result = await response.json();
     try{
-     
-      
+
       router.push(`/clientes/${result._id}`)
     }catch(error){
    
