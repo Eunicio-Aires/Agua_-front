@@ -34,8 +34,8 @@ return (
 
       <main className=" min-h-screen p-4 mb-4">
 
-    <div>{token}</div>
-      <section className="flex flex-wrap justify-center">
+   
+      {/* <section className="flex flex-wrap justify-center">
                         <div className="w-full md:w-1/3 p-4">
                             <div className="bg-white rounded-lg shadow-md p-6">
                             <h2 className="text-xl font-bold mb-2">{numero} </h2>
@@ -56,7 +56,7 @@ return (
                         </div>
       
       
-         </section>
+         </section> */}
       <Registar/>
       <Clientes responseC={responseC}/>
 
