@@ -1,10 +1,11 @@
 "use client"
+
 import React, { SyntheticEvent } from 'react';
 import { useRouter } from 'next/navigation';
 import { useState } from "react";
 
 export default function Tabela() {
- const idfe =  `kjwbafkmsaf`
+ 
     const router = useRouter()
     const [isButtonDisabled, setButtonDisabled] = useState(false);
   const handleSubmi = async (event: SyntheticEvent) => {
@@ -23,7 +24,7 @@ export default function Tabela() {
     };
 
     const JSONdata = JSON.stringify(data);
-    const endpoint = `https://agua-front.vercel.app/api/newClient/${idfe}`;
+    const endpoint = `https://agua-front.vercel.app/api/newClient/`;
 
     const options: RequestInit = {
       method: 'POST',
@@ -33,11 +34,11 @@ export default function Tabela() {
       body: JSONdata,
     };
 
-    const response = await fetch(endpoint, options);
-    const result = await response.json();
     try{
-      const idc   = await result._id
-      router.push(`/clientes/${idc}`)
+      const response = await fetch(endpoint, options);
+      const result = await response.json();
+      
+      router.push(`/clientes/${result._id}`)
     }catch(error){
    
       router.push(`/clientes/`)
@@ -50,6 +51,7 @@ export default function Tabela() {
     setIsBlueBoxShown(!iseBlueBoxShown);
   }
   const handleClick = () => {
+      
   
     // Desabilitar o botão
     setButtonDisabled(true);
