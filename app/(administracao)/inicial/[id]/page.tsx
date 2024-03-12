@@ -19,6 +19,7 @@ import Clientes from "@/components/clientes/Clientes";
 
 export default async function ClientComp({ params }: { params: { id: string } }){
   const token = await getSession()
+  const comp  = await getCompan()
   const baseUrl = process.env.NEXT_LOCAL_BASE_URL;
     const dasos = await  fetch(`${baseUrl}/api/compoCliente/${params.id}`,{ cache: 'no-store'}).then((res) => res.json())
    
@@ -33,7 +34,7 @@ export default async function ClientComp({ params }: { params: { id: string } })
 return (
 
       <main className=" min-h-screen p-4 mb-4">
-
+          <div> {camp}</div>
       <Registar/>
       <Clientes responseC={responseC}/>
 
