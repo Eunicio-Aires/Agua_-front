@@ -3,7 +3,7 @@ import { getCompan } from '@/lib/cookiesConf'
 
 export async function GET(request: Request) {
     const compId = await getCompan()
-    const res = await fetch(`https://data.mongodb-api.com/product/${compId}`, {
+    const res = await fetch(`https://agua-p.vercel.app/adm/mesesGetbtcomp/${compId}`, {
       headers: {
         'Content-Type': 'application/json',
         'API-Key': process.env.DATA_API_KEY!,
