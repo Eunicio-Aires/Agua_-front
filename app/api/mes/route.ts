@@ -1,29 +1,34 @@
-import { NextResponse } from 'next/server';
-import { getSession } from "@/lib/cookiesConf"
+import { NextResponse } from "next/server"
+import { getCompan } from "@/lib/cookiesConf"
+import { getSession } from '@/lib/cookiesConf';
 
-export async function POST(req: Request) {
-  const body = await req.json(); // Parse the incoming JSON body
-  try {
+// export async function GET(
+//     request: Request,
+//     { params }: { params: { id: string } }
+//   ) {
+//     const idCom = getCompan()
+//     const token = await getSession()
+//     const id = params.id 
+//     const res = await fetch(`https://agua-p.vercel.app/adm/mesesGetbtcomp/${idCom}`, {
+//       headers: {
+//         'Content-Type': 'application/json',
+//         // 'Authorization' : `${token}`,
+//       },
+//     })
+//     const clientes = await res.json()
+//     return NextResponse.json( clientes )
+//   }
+
+  export async function GET(request: Request) {
+    const idCom = getCompan()
     const token = await getSession()
-    const response = await fetch('https://agua-p.vercel.app/adm/criarMes', {
-      method: 'POST',
+    const res = await fetch(`https://agua-p.vercel.app/adm/mesesGetbtcomp/${idCom}`,{
       headers: {
         'Content-Type': 'application/json',
-        'Authorization' :`${token}`,
+        // 'Authorization' : `${token}`,e  
       },
-      body: JSON.stringify(body), // Use the parsed body
-    });
-
-    const data = await response.json();
-
-    // You can log the response or data if needed
-    // console.log(response);
-    // console.log(data);
-
-    return NextResponse.json(data); // Return the response from the other server
-  } catch (error) {
-    // Handle errors if the fetch or parsing fails
-    console.error(error);
-    return NextResponse.json({ error: 'An error occurred' }, { status: 500 });
+    })
+    const respo = await res.json();
+  
+    return NextResponse.json(respo)
   }
-}

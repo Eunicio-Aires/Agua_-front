@@ -1,11 +1,6 @@
 import { NextResponse } from 'next/server'
 
-// export async function GET(request: Request) {
-//   const res = await fetch('https://agua-p.vercel.app/adm/allAreas',{cache:"no-cache"})
-//   const respo = await res.json();
 
-//   return NextResponse.json(respo)
-// }
 
 
 export function GET(request: Request) {
@@ -13,7 +8,7 @@ export function GET(request: Request) {
     .then(res => res.json())
     .then(respo => {
       // Faça algo com respo
-      console.log(respo);
+      
 
       // Retornar a resposta ou qualquer coisa que você precise fazer com ela
       return new Response(JSON.stringify(respo), {
