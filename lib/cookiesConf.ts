@@ -36,7 +36,7 @@ interface IdEmpresa{
 }
 
 export async function getCompan(){
-    const compa = await cookies().get('idCompan')?.value;
+    const compa = await cookies().get('idComp')?.value;
     if(!compa) return null 
     return await (compa) 
 }
