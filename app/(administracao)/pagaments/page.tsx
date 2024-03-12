@@ -48,7 +48,7 @@ interface Mes {
 
 export default async  function Pagaments(){
   const idf = await '12345'
-  const res = await fetch(`https://agua-front.vercel.app/api/mes/${idf}`,{cache:"no-cache"}).then((res) => res.json());
+  // const res = await fetch(`https://agua-front.vercel.app/api/mes/${idf}`,{cache:"no-cache"}).then((res) => res.json());
   // const response = await  res;
   // const ultimoMes = response.compan.mes.pop();
 
