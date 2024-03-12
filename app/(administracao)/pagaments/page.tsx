@@ -49,23 +49,21 @@ interface Mes {
 export default async  function Pagaments(){
   const idf = await '12345'
   const res = await fetch(`https://agua-front.vercel.app/api/mes/${idf}`,{cache:"no-cache"}).then((res) => res.json());
-  const response = await  res;
-  const ultimoMes = response.compan.mes.pop();
+  // const response = await  res;
+  // const ultimoMes = response.compan.mes.pop();
 
  
   
   // ________________MEses__________
-  const meses = await response.mesesl;
+  // const meses = await response.mesesl;
         
         return(
 
           
             
             <div className=''>
-              {/* @ts-ignore  */}
-              {/* <Pagamentos/> */}
-              {/* @ts-ignore  */}
-              < Ultimom  /> 
+            
+              {/* < Ultimom  />  */}
               <div className="overflow-x-auto p-4">
                 <table className="table table-xs table-pin-rows table-pin-cols">
                   <thead>
@@ -126,7 +124,7 @@ export default async  function Pagaments(){
                 </div>
               </div>
               <div>
-                {response.compan.mes.map((mes: Mes) => (
+                {/* {response.compan.mes.map((mes: Mes) => (
                   <Link href={`/pagaments/${mes._id}`} key={mes._id}>
                     <div className="flex flex-col sm:flex-row justify-between border-t text-sm font-normal mt-4 space-x-4">
                       <div className="px-2 flex w-full sm:w-auto">
@@ -142,14 +140,11 @@ export default async  function Pagaments(){
                         <span> {mes.faturas.filter((fatura: { estado: String; }) => fatura.estado === "Nao pago").length}</span>
                       </div>
                       <div className="px-2 w-full sm:w-auto">
-                        {/* <select>
-                          <option>Admin</option>
-                          <option>User</option>
-                        </select> */}
+                        
                       </div>
                     </div>
                   </Link>
-                ))}
+                ))} */}
               </div>
             </div>
           </div>
