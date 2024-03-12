@@ -8,7 +8,7 @@ export async function GET(
     const idCom = getCompan()
     const token = await getSession()
     const id = params.id 
-    const res = await fetch(`https://agua-p.vercel.app/adm/mesesGetbtcomp/65a956bb8f3b0f53bed8bf8d`, {
+    const res = await fetch(`https://agua-p.vercel.app/adm/mesesGetbtcomp/${idCom}`, {
       headers: {
         'Content-Type': 'application/json',
         'Authorization' : `${token}`,
