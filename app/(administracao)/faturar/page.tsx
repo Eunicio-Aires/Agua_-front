@@ -3,8 +3,8 @@ import { Meses }  from '@/components/Meses'
 import Link from 'next/link';
 
 export default async function Faturar(){
-  const idf = '1234'
-  const response = await fetch(`https://agua-front.vercel.app/api/mes/`,{cache:"no-cache"}).then((res) => res.json());
+  const idf = '1234sdfsdgf'
+  const response = await fetch(`https://agua-front.vercel.app/api/mes/${idf}`,{cache:"no-cache"}).then((res) => res.json());
   // console.log(response)
   return(
     <div className="">
