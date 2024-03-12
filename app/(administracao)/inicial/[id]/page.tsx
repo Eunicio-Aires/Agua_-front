@@ -34,7 +34,7 @@ export default async function ClientComp({ params }: { params: { id: string } })
 return (
 
       <main className=" min-h-screen p-4 mb-4">
-          <div> {camp}</div>
+          <div> {comp}</div>
       <Registar/>
       <Clientes responseC={responseC}/>
 
