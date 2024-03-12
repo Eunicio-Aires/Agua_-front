@@ -15,10 +15,3 @@ export async function GET(
     return NextResponse.json( meses )
   }
 
-  // export async function GET(request: Request) {
-  //   const idCom = getCompan()
-  //   const res = await fetch(`https://agua-p.vercel.app/adm/mesesGetbtcomp/${idCom}`,{cache:"no-cache"})
-  //   const respo = await res.json();
-  
-  //   return NextResponse.json(respo)
-  // }
