@@ -5,7 +5,13 @@ import Link from 'next/link';
 export default async function Faturar(){
   const idf = await '1234sdfsdgf'
   const response = await fetch(`https://agua-front.vercel.app/api/mes/${idf}`,{cache:"no-cache"}).then((res) => res.json());
-  const meses = response.compan.mes;
+ 
+  if ( response   && response.compan && response.compan.mes){
+    const meses = response.compan.mes;
+  }else{
+    console.log("falha")
+  }
+ 
   return(
     <div className="">
     
