@@ -7,7 +7,7 @@ export default async function Faturar(){
   const response = await fetch(`https://agua-front.vercel.app/api/mes/vhdfvknvfkjn`,{cache:"no-cache"}).then((res) => res.json());
 
   
-    const meses = response.compan.mes
+    const meses = response.compan
 
  
   return(
