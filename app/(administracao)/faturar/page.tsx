@@ -21,7 +21,7 @@ export default async function Faturar(){
   const idf = await '1234sdfsdgfhjklbjhl';
   // const response = await fetch(`https://agua-p.vercel.app/adm/mesesGetbtcomp/65a956bb8f3b0f53bed8bf8d`, {cache: "no-cache"})
   const data = await getData()
-  const nome = await data.compan
+  const nome = await data.compan.nome
 
   // sera necessaria ateracao para Api
   // const data = await response.json();
