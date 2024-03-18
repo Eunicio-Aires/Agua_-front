@@ -6,11 +6,9 @@ export default async function Faturar(){
   const idf = await '1234sdfsdgf'
   const response = await fetch(`https://agua-front.vercel.app/api/mes/${idf}`,{cache:"no-cache"}).then((res) => res.json());
  
-  if ( response   && response.compan && response.compan.mes){
+  
     const meses = response.compan.mes;
-  }else{
-    console.log("falha")
-  }
+
  
   return(
     <div className="">
@@ -77,7 +75,7 @@ export default async function Faturar(){
   </div>
 </div>
 </section> 
-<code> {response} </code>
+<code> {meses} </code>
     </div>
   )
 }
