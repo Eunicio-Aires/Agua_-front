@@ -1,11 +1,12 @@
-import { getCompan } from '@/lib/cookiesConf'
+
 import { Meses }  from '@/components/Meses'
 import Link from 'next/link';
+import { getCompan, getSession } from '@/lib/cookiesConf'
 
 
 
 async function getData() {
-  const res = await fetch(`https://agua-front.vercel.app/api/mes/`, {cache: "no-cache"})
+  const res = await fetch(`https://agua-front.vercel.app/api/mes/kjlgilugilug`, {cache: "no-cache"})
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
  
