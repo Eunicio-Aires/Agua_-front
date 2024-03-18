@@ -9,11 +9,8 @@ import { getCompan, getSession } from '@/lib/cookiesConf'
 async function getData() {
   const idComp = await getCompan()
   const res = await fetch(`https://agua-front.vercel.app/api/mes/${idComp}`, {cache: "no-cache"})
-  // The return value is *not* serialized
-  // You can return Date, Map, Set, etc.
- 
   if (!res.ok) {
-    // This will activate the closest `error.js` Error Boundary
+    
     throw new Error('Failed to fetch data')
   }
  
@@ -21,7 +18,7 @@ async function getData() {
 }
 
 export default async function Faturar(){
-  const idf = await '1234sdfsdgfhjklbjhl';
+ 
   // const response = await fetch(`https://agua-p.vercel.app/adm/mesesGetbtcomp/65a956bb8f3b0f53bed8bf8d`, {cache: "no-cache"})
   const data = await getData()
   const nome = await data.compan.nome

@@ -16,7 +16,7 @@ interface Mes {
     _id:String;
     
 }
-export default async function Page({ params }:{ params:{faturacao:Mes}}) {
+export default async function Page({ params }:{ params:{faturacao:any}}) {
     
     const posts = await fetch(`https://agua-front.vercel.app/api/mesUnicoo${params.faturacao}`,{cache:'no-store'}).then((res) => res.json());
     const mes = await posts.mes._id;
