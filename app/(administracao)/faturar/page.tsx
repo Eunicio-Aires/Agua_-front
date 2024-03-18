@@ -5,9 +5,9 @@ import Link from 'next/link';
 export default async function Faturar(){
   const idf = await '1234sdfsdgf';
   const response = await fetch(`https://agua-front.vercel.app/api/mes/${idf}`,{cache:"no-cache"}).then((res) => res.json());
-console.log(response)
+
   
-    const meses = response.compan
+    const meses = response.meses.compan.mes
 
  
   return(
@@ -49,7 +49,7 @@ console.log(response)
         </thead>
 
          <tbody>
-        {/* {meses.map((mes:any)=>(
+        {meses.map((mes:any)=>(
           <tr key= {mes._id} className="hover-gray-light transition">
           <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
             { mes.mes }
@@ -67,7 +67,7 @@ console.log(response)
             </td> 
 
           </tr>
-           ))}  */}
+           ))} 
         </tbody> 
 
       </table>
@@ -75,7 +75,7 @@ console.log(response)
   </div>
 </div>
 </section> 
-<code> {meses} </code>
+{/* <code> {meses} </code> */}
     </div>
   )
 }
