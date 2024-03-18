@@ -19,7 +19,7 @@ interface Mes {
 
 export default async function Page({ params }: { params: { id: string } }) {
     
-    // const posts = await fetch(`https://agua-front.vercel.app/api/mesUnicoo${params.id}`,{cache:'no-store'}).then((res) => res.json());
+    const posts = await fetch(`https://agua-front.vercel.app/api/mesUnic${params.id}`,{cache:'no-store'}).then((res) => res.json());
     // const mes = await posts.mes._id;
 
     return (
