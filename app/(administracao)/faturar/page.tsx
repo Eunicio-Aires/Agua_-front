@@ -8,7 +8,7 @@ export default async function Faturar(){
   const data = await response.json();
   
   // Verifica se o objeto retornado contém a propriedade "compan"
-  const nome = data.compan.nome;
+  // const nome = data.compan.nome;
   // if (data && data.compan) {
   //     const nome = data.compan.nome;
   //     console.log(nome);
