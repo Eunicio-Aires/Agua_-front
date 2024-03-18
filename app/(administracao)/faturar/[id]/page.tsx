@@ -24,7 +24,7 @@ export default async function Page({ params }: { params: { id: string } }) {
 
     return (
        <div  className="flex" >
-            {/* <h1 className="text-center text-xl font-bold tracking-normal sm:text-4xl lg:text-4xl mt-1">{posts.mes.mes}</h1>  */}
+            <h1 className="text-center text-xl font-bold tracking-normal sm:text-4xl lg:text-4xl mt-1">{posts.mes.mes}</h1> 
             <p>klnklnklj;jujhuiohuh</p>
         <Procurarc _id={mes}/>
         </div>
