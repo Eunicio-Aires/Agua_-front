@@ -17,7 +17,7 @@ import { getSession } from "@/lib/cookiesConf"
     
     
     const id = params.id;
-    const res = await fetch(`https://agua-p.vercel.app/adm/mesunic/${id}`,)
+    const res = await fetch(`https://agua-p.vercel.app/adm/mesunic/${id}`)
 
     const meses = await res.json()
     return NextResponse.json(meses)
