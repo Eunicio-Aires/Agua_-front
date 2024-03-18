@@ -5,8 +5,10 @@ import { getCompan, getSession } from '@/lib/cookiesConf'
 
 
 
+
 async function getData() {
-  const res = await fetch(`https://agua-front.vercel.app/api/mes/kjlgilugilug`, {cache: "no-cache"})
+  const idComp = await getCompan()
+  const res = await fetch(`https://agua-front.vercel.app/api/mes/${idComp}`, {cache: "no-cache"})
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
  

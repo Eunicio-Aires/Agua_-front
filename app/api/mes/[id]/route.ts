@@ -7,7 +7,7 @@ export async function GET( request: Request, { params }: { params: { id: string 
     
     const idComp = await getCompan()
     const id = params.id;
-    const res = await fetch(`https://agua-p.vercel.app/adm/mesesGetbtcomp/${idComp}`,)
+    const res = await fetch(`https://agua-p.vercel.app/adm/mesesGetbtcomp/${id}`,)
 
     const meses = await res.json()
     return NextResponse.json(meses)
