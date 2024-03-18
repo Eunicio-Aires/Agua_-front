@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default async function Faturar(){
   const idf = await '1234sdfsdgfhjklbjhl';
-  const response = await fetch(`https://agua-front.vercel.app/api/mes/`, {cache: "no-cache"})
+  const response = await fetch(`https://agua-p.vercel.app/adm/mesesGetbtcomp/65a956bb8f3b0f53bed8bf8d`, {cache: "no-cache"})
   const data = await response.json();
   
   // Verifica se o objeto retornado contém a propriedade "compan"
