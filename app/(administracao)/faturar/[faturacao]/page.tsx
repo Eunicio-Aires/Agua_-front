@@ -18,14 +18,14 @@ interface Mes {
 }
 export default async function Page({ params }:{ params:{faturacao:Mes}}) {
     
-    // const posts = await fetch(`https://agua-front.vercel.app/api/mes/mesUnico${params.faturacao}`,{cache:'no-store'}).then((res) => res.json());
-    // const mes = await posts.mes._id;
+    const posts = await fetch(`https://agua-front.vercel.app/api/mesUnico${params.faturacao}`,{cache:'no-store'}).then((res) => res.json());
+    const mes = await posts.mes._id;
 
     return (
        <div  className="flex" >
-            {/* <h1 className="text-center text-xl font-bold tracking-normal sm:text-4xl lg:text-4xl mt-1">{posts.mes.mes}</h1>  */}
+            <h1 className="text-center text-xl font-bold tracking-normal sm:text-4xl lg:text-4xl mt-1">{posts.mes.mes}</h1> 
             
-        {/* <Procurarc _id={mes}/> */}
+        <Procurarc _id={mes}/>
         </div>
             
     ) 
