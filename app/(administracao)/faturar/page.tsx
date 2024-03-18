@@ -5,10 +5,13 @@ import Link from 'next/link';
 export default async function Faturar(){
   const idf = await '1234sdfsdgfhjklbjhl';
   const response = await fetch(`https://agua-p.vercel.app/adm/mesesGetbtcomp/65a956bb8f3b0f53bed8bf8d`, {cache: "no-cache"})
+
+  // sera necessaria ateracao para Api
   const data = await response.json();
   
   // Verifica se o objeto retornado contém a propriedade "compan"
   const nome = data.compan.nome;
+  const meses = await data.compan.mes;
   // if (data && data.compan) {
   //     const nome = data.compan.nome;
   //     console.log(nome);
@@ -56,7 +59,7 @@ export default async function Faturar(){
         </thead>
 
          <tbody>
-        {/* {meses.map((mes:any)=>(
+        {meses.map((mes:any)=>(
           <tr key= {mes._id} className="hover-gray-light transition">
           <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
             { mes.mes }
@@ -74,7 +77,7 @@ export default async function Faturar(){
             </td> 
 
           </tr>
-           ))}  */}
+           ))}  
         </tbody> 
 
       </table>
