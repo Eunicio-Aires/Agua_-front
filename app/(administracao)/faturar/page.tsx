@@ -13,7 +13,7 @@ export default async function Faturar(){
   return(
     <div className="">
     
-   <p>{meses}</p>
+   {/* <p>{meses}</p> */}
 
      <section className="py-1 bg-blueGray-50">
 <div className="w-full xl:w-8/12 mb-12 xl:mb-0 px-4 mx-auto mt-24">
