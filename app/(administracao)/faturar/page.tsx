@@ -4,10 +4,10 @@ import Link from 'next/link';
 
 export default async function Faturar(){
   const idf = await '1234sdfsdgfhjklbjhl';
-  const response = await fetch(`https://agua-front.vercel.app/api/mes/vhdfvknvfkjn`,{cache:"no-cache"}).then((res) => res.json());
+  const response = await fetch(`https://agua-front.vercel.app/api/mes/`,{cache:"no-cache"}).then((res) => res.json());
 
   
-    const meses = response.compan.nome
+    // const meses = response.compan.nome
 
  
   return(
