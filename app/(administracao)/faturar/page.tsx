@@ -4,16 +4,22 @@ import Link from 'next/link';
 
 export default async function Faturar(){
   const idf = await '1234sdfsdgfhjklbjhl';
-  const response = await fetch(`https://agua-front.vercel.app/api/mes/`,{cache:"no-cache"}).then((res) => res.json());
-
+  const response = await fetch(`https://agua-front.vercel.app/api/mes/`, {cache: "no-cache"})
+  const data = await response.json();
   
-    const meses = response.compan.nome
+  // Verifica se o objeto retornado contém a propriedade "compan"
+  if (data && data.compan) {
+      const nome = data.compan.nome;
+      console.log(nome);
+  } else {
+      console.error("O objeto retornado não contém a propriedade 'compan'");
+  }
 
  
   return(
     <div className="">
     
-   <p>{meses}</p>
+   {/* <p>{nome}</p> */}
 
      <section className="py-1 bg-blueGray-50">
 <div className="w-full xl:w-8/12 mb-12 xl:mb-0 px-4 mx-auto mt-24">
