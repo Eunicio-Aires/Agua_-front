@@ -93,9 +93,7 @@ export default async  function Pagaments(){
                       <tr key={mes._id}>
                         <td></td>
                         <td> {mes.mes}</td>
-                        <td>{mes.faturas.filter(mes.faturas.reduce((total:any, fatura:any) => {
-                return fatura.estado === 'Nao pago' ? total + 1 : total;
-            }, 0)) || '-'}</td>
+                        <td>{mes.faturas.filter((fatura:any) => fatura.estado === 'Nao pago').length || '-'}</td>
                         <td>{mes.valor || '-'}</td>
                         <td> {mes.formaDePagamento || '-'} </td>
                         <td></td>
