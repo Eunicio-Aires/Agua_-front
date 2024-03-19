@@ -100,13 +100,53 @@ export default async  function Pagaments(){
                 </div>
                 </section>
 
-                <div className="flex justify-center">
-                  <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 bg-blue-500 p-4 m-2">Div 1</div>
-                  <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 bg-green-500 p-4 m-2">Div 2</div>
-</div>
+                <section className="flex flex-wrap justify-center">
+                <div className="w-full md:w-1/3 p-4">
+                    <div className="bg-white rounded-lg shadow-md p-6">
+                    <h2 className="text-xl font-bold mb-2">  </h2>
+                    <p>Ativos</p>
+                    
+                    </div>
+                </div>
+                <div className="w-full md:w-1/3 p-4">
+                    <div className="bg-white rounded-lg shadow-md p-6">
+                    <h2 className="text-xl font-bold mb-2">
+                    <div className="overflow-x-auto p-4 rounded-lg shadow-md">
+                <table className="table table-xs table-pin-rows table-pin-cols">
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th>Mês</th>
+                      <th>Faturas</th>
+                      <th>N. Pagas</th>
+                      <th>Pagas</th>
+                      <th>Detalhes</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {ultimosMeses.map((mes:any)=>(
+                      <tr key={mes._id}>
+                        <td></td>
+                        <td> {mes.mes}</td>
+                        <td>{mes.faturas.length || '-'}</td>
+                        <td>{mes.faturas.filter((fatura:any) => fatura.estado === 'Nao pago').length || '-'}</td>
+                        <td> {mes.faturas.filter((fatura:any) => fatura.estado === 'Nao pago').length || '-'} </td>
+                        <td><Link href={''} className="btn btn-xs">Ver</Link></td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+                    </h2>
+                    <p>Conteúdo do Card 2...</p>
+                   
+                    </div>
+                </div>
+                
+                </section>
 
 
-              <div className="overflow-x-auto p-4">
+              <div className="overflow-x-auto p-4 rounded-lg shadow-md">
                 <table className="table table-xs table-pin-rows table-pin-cols">
                   <thead>
                     <tr>
