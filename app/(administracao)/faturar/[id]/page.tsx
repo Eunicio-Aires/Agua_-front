@@ -24,10 +24,10 @@ export default async function Page({ params }: { params: { id: string } }) {
 
     return (
        <div  className=" min-h-screen p-4 mb-4" >
-           
+           <h1 className="text-center text-xl font-bold tracking-normal sm:text-4xl lg:text-4xl mt-1">{posts.mes.mes}</h1> 
             
         <Procurarc _id={mes}/>
-        <h1 className="text-center text-xl font-bold tracking-normal sm:text-4xl lg:text-4xl mt-1">{posts.mes.mes}</h1> 
+        
         </div>
             
     ) 

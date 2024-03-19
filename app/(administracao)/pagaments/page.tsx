@@ -5,6 +5,7 @@ import Chart from '@/components/Charts'
 import  Pagamentos  from '@/components/payments/Pagamentos'
 import Meses      from '@/components/payments/Meses'
 import Link from "next/link"
+import { getCompan, getSession } from '@/lib/cookiesConf'
 // import  Pagamentoss  from "@/lib/pagamentos"
 import { NextResponse } from 'next/server'
 
@@ -34,20 +35,21 @@ interface Mes {
 
 
 
-// async function getData(){
-  
-//   const res = await fetch(`https://agua-p.vercel.app/adm/meses`,{cache:"no-cache"}).then((res) => res.json());
+async function getData(){
+  const comp  = await getCompan()
+  const res = await fetch(`https://agua-p.vercel.app/adm/mesesGetbtcomp/${comp}`,{cache:"no-cache"}).then((res) => res.json());
    
   
-//   if(!res.ok){
-//     throw new Error('Failed to fetch data')
-//   }
-//   return res.json()
-// } 
+  if(!res.ok){
+    throw new Error('Failed to fetch data')
+  }
+  return res.json()
+} 
 
 
 export default async  function Pagaments(){
-  const idf = await '12345'
+  const data = await getData()
+  // const idf = await '12345'
   // const res = await fetch(`https://agua-front.vercel.app/api/mes/${idf}`,{cache:"no-cache"}).then((res) => res.json());
   // const response = await  res;
   // const ultimoMes = response.compan.mes.pop();
