@@ -53,6 +53,7 @@
 
 
 'use client'
+import { getCompan, getSession } from '@/lib/cookiesConf'
 import UserItems from '@/components/UserItems'
 import { getnome } from '@/lib/cookiesConf'
 import {
@@ -70,18 +71,20 @@ import { Link } from 'lucide-react'
   
 
 export default function SideBar(){
-
+    const comp  =  getCompan()
     return <div className=' fixed flex flex-col gap-3 w-[250px] min-w-[250px]  '>
         <div className='min-w-[250px]'> <UserItems/> </div>
         <div className="grow min-w-[250px]">
 
             <div>
                 <ul>
-                    <li>Clientes</li>
+                    <li><Link href={`inicial/${comp}`}>Clientes</Link> </li>
                     <li>Pagamentos</li>
                     <li>Faturar</li>
                     <li>procurar</li>
                 </ul>
+
+                <div ><Link href=''>Sair</Link> </div>
             </div>
         {/* <Command>
             <CommandInput placeholder="Type a command or search..." />
@@ -103,7 +106,7 @@ export default function SideBar(){
 
         </div>
         <div>Pagamentos</div>
-        <div ><Link href=''>Sair</Link> </div>
+        
 
 
 
