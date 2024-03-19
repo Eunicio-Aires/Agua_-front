@@ -3,6 +3,7 @@ import React, {useState, SyntheticEvent } from 'react';
 import { useRouter } from 'next/navigation';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { revalidatePath } from 'next/cache'
 
 interface Ligacao{
     _id:String;
@@ -33,7 +34,7 @@ export function Formda(ligacoes:Ligacao){
         const result  = await response.json()
         const idfut   = await result.faratId._id
         try{
-          router.push(`/imprimir/${result.idfut}`)
+          router.push(`/imprimir/${_id}`)
         }catch(error){
           alert("error ao submeter")
         }
