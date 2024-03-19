@@ -82,9 +82,9 @@ export default async  function Pagaments(){
                     <tr>
                       <th></th>
                       <th>Mês</th>
-                      <th>Consumo</th>
-                      <th>Valor</th>
-                      <th>F. Pagamento</th>
+                      <th>Faturas</th>
+                      <th>N. Pagas</th>
+                      <th>Pagas</th>
                       <th></th>
                     </tr>
                   </thead>
@@ -93,9 +93,9 @@ export default async  function Pagaments(){
                       <tr key={mes._id}>
                         <td></td>
                         <td> {mes.mes}</td>
+                        <td>{mes.faturas.length || '-'}</td>
                         <td>{mes.faturas.filter((fatura:any) => fatura.estado === 'Nao pago').length || '-'}</td>
-                        <td>{mes.faturas.filter((fatura:any) => fatura.estado === 'Pago').length || '-'}</td>
-                        <td> {mes.formaDePagamento || '-'} </td>
+                        <td> {mes.faturas.filter((fatura:any) => fatura.estado === 'Nao pago').length || '-'} </td>
                         <td></td>
                       </tr>
                     ))}
