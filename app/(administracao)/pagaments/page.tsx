@@ -113,7 +113,7 @@ export default async  function Pagaments(){
                     
                     </div>
                 </div>
-                <div className="w-full md:w-1/2 p-4 bg-white">
+                <div className="w-full md:w-1/2 p-4 bg-gray-50">
                     <div className="bg-white rounded-lg shadow-md p-6">
                     <h2 className="text-xl font-bold mb-2"> </h2>
 
@@ -152,7 +152,7 @@ export default async  function Pagaments(){
                 </section>
 
 
-              <div className="overflow-x-auto p-4 rounded-lg shadow-md">
+              <div className="overflow-x-auto p-4 bg-white rounded-md shadow-md">
                 <table className="table table-xs table-pin-rows table-pin-cols">
                   <thead>
                     <tr>
