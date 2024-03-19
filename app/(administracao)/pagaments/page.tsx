@@ -100,6 +100,11 @@ export default async  function Pagaments(){
                 </div>
                 </section>
 
+                <div className="flex justify-center">
+                  <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 bg-blue-500 p-4 m-2">Div 1</div>
+                  <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 bg-green-500 p-4 m-2">Div 2</div>
+</div>
+
 
               <div className="overflow-x-auto p-4">
                 <table className="table table-xs table-pin-rows table-pin-cols">
