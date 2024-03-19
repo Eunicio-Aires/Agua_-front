@@ -94,7 +94,7 @@ export default async  function Pagaments(){
                         <td></td>
                         <td> {mes.mes}</td>
                         <td>{mes.faturas.filter((fatura:any) => fatura.estado === 'Nao pago').length || '-'}</td>
-                        <td>{mes.valor || '-'}</td>
+                        <td>{mes.faturas.filter((fatura:any) => fatura.estado === 'Pago').length || '-'}</td>
                         <td> {mes.formaDePagamento || '-'} </td>
                         <td></td>
                       </tr>
