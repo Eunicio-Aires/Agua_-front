@@ -113,12 +113,13 @@ export default async  function Pagaments(){
                     
                     </div>
                 </div>
-                <div className="w-full md:w-1/2 p-4">
+                <div className="w-full md:w-1/2 p-4 bg-white">
                     <div className="bg-white rounded-lg shadow-md p-6">
-                    <h2 className="text-xl font-bold mb-2">
+                    <h2 className="text-xl font-bold mb-2"> </h2>
+
                     <div className="overflow-x-auto p-4 rounded-lg shadow-md">
                 <table className="table table-xs table-pin-rows table-pin-cols">
-                  <thead>
+                  <thead > 
                     <tr>
                       <th></th>
                       <th>Mês</th>
@@ -142,8 +143,8 @@ export default async  function Pagaments(){
                   </tbody>
                 </table>
               </div>
-                    </h2>
-                    <p>Conteúdo do Card 2...</p>
+                   
+                   
                    
                     </div>
                 </div>
