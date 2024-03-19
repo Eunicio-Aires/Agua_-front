@@ -37,13 +37,8 @@ interface Fatura {
  }
 
 export default async function UnicoMes({ params }: { params: { id: string } }){
-   const token = await `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YWE3NzRjMGUyODA5OTAwMmYxNThlMyIsImlhdCI6MTcwOTgyMTA3MSwiZXhwIjoxNzA5OTA3NDcxfQ.oeKHAXmxlcfCFwSyBc7A0HxlSrH2vrjfgaZj-mKk3-8`
     const id = params.id
-    const res = await fetch(`https://agua-p.vercel.app/adm/mesunic/${id}`,{ 
-      headers: {
-       'Authorization' : `${token}`,
-     },
- }).then((res) => res.json())
+    const res = await fetch(`https://agua-p.vercel.app/adm/mesunic/${id}`,{cache:'no-store' }).then((res) => res.json())
    
     const numFatu = await res.mes.faturas.length;
     const todasFaturas: Fatura[] = res.mes.faturas;

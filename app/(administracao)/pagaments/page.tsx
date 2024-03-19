@@ -172,7 +172,7 @@ export default async  function Pagaments(){
                         <td>{mes.faturas.length || '-'}</td>
                         <td>{mes.faturas.filter((fatura:any) => fatura.estado === 'Nao pago').length || '-'}</td>
                         <td> {mes.faturas.filter((fatura:any) => fatura.estado === 'Nao pago').length || '-'} </td>
-                        <td><Link href={''} className="btn btn-xs">Ver</Link></td>
+                        <td><Link href={`pagaments/${mes._id}`} className="btn btn-xs">Ver</Link></td>
                       </tr>
                     ))}
                   </tbody>
@@ -186,7 +186,7 @@ export default async  function Pagaments(){
 {/* ____________________________________MESES____________________________________ */}
 
 
-<div className="bg-gray-50">
+{/* <div className="bg-gray-50">
   <div className="max-w-screen-lg mx-auto">
     <div className="p-4">
       <div className="bg-white p-4 rounded-md">
@@ -212,7 +212,7 @@ export default async  function Pagaments(){
                 </div>
               </div>
               <div>
-                {/* {response.compan.mes.map((mes: Mes) => (
+                {response.compan.mes.map((mes: Mes) => (
                   <Link href={`/pagaments/${mes._id}`} key={mes._id}>
                     <div className="flex flex-col sm:flex-row justify-between border-t text-sm font-normal mt-4 space-x-4">
                       <div className="px-2 flex w-full sm:w-auto">
@@ -232,7 +232,7 @@ export default async  function Pagaments(){
                       </div>
                     </div>
                   </Link>
-                ))} */}
+                ))}
               </div>
             </div>
           </div>
@@ -240,7 +240,7 @@ export default async  function Pagaments(){
       </div>
     </div>
   </div>
-</div>
+</div> */}
    
             </div>
           
