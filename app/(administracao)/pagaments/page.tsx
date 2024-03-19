@@ -106,14 +106,14 @@ export default async  function Pagaments(){
 
 
                 <section className="flex flex-wrap justify-center">
-                <div className="w-full md:w-360px p-4">
+                <div className="w-full md:w-300px p-4">
                     <div className="bg-white rounded-lg shadow-md p-6">
                     <h2 className="text-xl font-bold mb-2">  </h2>
                     <p>Ativos</p>
                     
                     </div>
                 </div>
-                <div className="w-full md:w-360px p-4">
+                <div className="w-full md:w-300px p-4">
                     <div className="bg-white rounded-lg shadow-md p-6">
                     <h2 className="text-xl font-bold mb-2">
                     <div className="overflow-x-auto p-4 rounded-lg shadow-md">
