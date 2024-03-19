@@ -85,7 +85,7 @@ export default async  function Pagaments(){
                       <th>Faturas</th>
                       <th>N. Pagas</th>
                       <th>Pagas</th>
-                      <th><Link href={''} className="btn btn-xs">Ver detalhes</Link></th>
+                      <th></th>
                     </tr>
                   </thead>
                   <tbody>
@@ -96,7 +96,7 @@ export default async  function Pagaments(){
                         <td>{mes.faturas.length || '-'}</td>
                         <td>{mes.faturas.filter((fatura:any) => fatura.estado === 'Nao pago').length || '-'}</td>
                         <td> {mes.faturas.filter((fatura:any) => fatura.estado === 'Nao pago').length || '-'} </td>
-                        <td></td>
+                        <td><Link href={''} className="btn btn-xs">Ver</Link></td>
                       </tr>
                     ))}
                   </tbody>
