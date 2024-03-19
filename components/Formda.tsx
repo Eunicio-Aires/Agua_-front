@@ -16,6 +16,7 @@ export function Formda(ligacoes:Ligacao){
  });
   const router = useRouter()
   const {_id, _idm } = ligacoes;
+  const id = _id;
     const handleSubmit = async (event:SyntheticEvent) => {
         event.preventDefault()
         const data = {
@@ -32,9 +33,9 @@ export function Formda(ligacoes:Ligacao){
         }
         const response = await fetch(endpoint, options)
         const result  = await response.json()
-        const idfut   = await result.faratId._id
+        // const idfut   = await result.faratId._id
         try{
-          router.push(`/imprimir/${_id}`)
+          router.push(`/imprimir/${id}`)
         }catch(error){
           alert("error ao submeter")
         }
