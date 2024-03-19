@@ -91,10 +91,10 @@ export default async  function Pagaments(){
                     {ultimosMeses.map((mes:any)=>(
                       <tr key={mes._id}>
                         <td></td>
-                        <td>{mes.mes}</td>
-                        <td>{mes.consumo}</td>
-                        <td>{mes.valor}</td>
-                        <td>{mes.formaDePagamento}</td>
+                        <td> {mes.mes}</td>
+                        <td>{mes.faturas.length || '-'}</td>
+                        <td>{mes.valor || '-'}</td>
+                        <td> {mes.formaDePagamento || '-'} </td>
                         <td></td>
                       </tr>
                     ))}
