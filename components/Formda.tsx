@@ -14,7 +14,7 @@ export function Formda(ligacoes:Ligacao){
     theme: "colored"
  });
   const router = useRouter()
-  const { _id, _idm } = ligacoes;
+  const {_id, _idm } = ligacoes;
     const handleSubmit = async (event:SyntheticEvent) => {
         event.preventDefault()
         const data = {
