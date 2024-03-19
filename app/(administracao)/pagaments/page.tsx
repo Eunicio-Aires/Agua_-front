@@ -50,8 +50,9 @@ export default async  function Pagaments(){
   // const nome = await data.compan.nome
   // const idf = await '12345'
   const res = await fetch(`https://agua-p.vercel.app/adm/mesesGetbtcomp/${comp}`,{cache:"no-cache"}).then((res) => res.json());
-
-  const nome = await res.compan.nome
+  const ultimosMeses = res.compan.mes.slice(-10)
+  const nome = await res.compan.nome;
+  // const mes = await res.compan.mes
 
   // if(!res.ok){
   //   throw new Error('Failed to fetch data')
@@ -87,7 +88,7 @@ export default async  function Pagaments(){
                     </tr>
                   </thead>
                   <tbody>
-                    {/* {faturasPagas.map((mes:any)=>(
+                    {ultimosMeses.map((mes:any)=>(
                       <tr key={mes._id}>
                         <td></td>
                         <td>{mes.mes}</td>
@@ -96,7 +97,7 @@ export default async  function Pagaments(){
                         <td>{mes.formaDePagamento}</td>
                         <td></td>
                       </tr>
-                    ))} */}
+                    ))}
                   </tbody>
                 </table>
               </div>
