@@ -5,24 +5,20 @@ import { BsGraphUpArrow } from "react-icons/bs"
 import { cookies } from 'next/headers'
 import Sidebar from '@/components/Sidebar'
 import { Inter } from "next/font/google";
+import { getCompan } from "@/lib/cookiesConf";
 
 import Link from "next/link"
 import '../globals.css'
 // import BarChart from "@/components/BarChart";
 
-export default function RootLayout({
-  
- 
-    children,
-  }: {
-    children: React.ReactNode 
-  }) {
+export default function RootLayout({ children,}: {children: React.ReactNode }) {
+    const comp  =  getCompan()
     return (
       <html lang="pt-br">
         <body  className={ ` flex items-start justify-between`}>
 
         <div className="hidden md:flex min-w-[280px] border-r min-h-screen p-4">
-        <Sidebar/>
+        < Sidebar id={comp}/>
         </div>
           
             

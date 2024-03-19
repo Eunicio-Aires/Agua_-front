@@ -70,15 +70,15 @@ import {
 import { Link } from 'lucide-react'
   
 
-export default function SideBar(){
-    const comp  =  getCompan()
+export default function SideBar(id:any){
+    
     return <div className=' fixed flex flex-col gap-3 w-[250px] min-w-[250px]  '>
         <div className='min-w-[250px]'> <UserItems/> </div>
         <div className="grow min-w-[250px]">
 
             <div>
                 <ul>
-                    <li><Link href={`inicial/${comp}`}>Clientes</Link> </li>
+                    <li><Link href={`inicial/${id}`}>Clientes</Link> </li>
                     <li>Pagamentos</li>
                     <li>Faturar</li>
                     <li>procurar</li>
