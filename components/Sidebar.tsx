@@ -82,6 +82,7 @@ export default function SideBar(id:any){
                     <li>Pagamentos</li>
                     <li>Faturar</li>
                     <li>procurar</li>
+                    <li><Link href={`inicial/${id}`}>Clientes</Link> </li>
                 </ul>
 
                 <div ><Link href=''>Sair</Link> </div>
