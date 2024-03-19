@@ -32,9 +32,6 @@ interface Mes {
   __v: number;
 }
 
-
-
-
 async function getData(){
   const comp  = await getCompan()
   const res = await fetch(`https://agua-p.vercel.app/adm/mesesGetbtcomp/${comp}`,{cache:"no-cache"}).then((res) => res.json());
@@ -49,6 +46,7 @@ async function getData(){
 
 export default async  function Pagaments(){
   const data = await getData()
+  const nome = await data.compan.nome
   // const idf = await '12345'
   // const res = await fetch(`https://agua-front.vercel.app/api/mes/${idf}`,{cache:"no-cache"}).then((res) => res.json());
   // const response = await  res;
@@ -64,6 +62,7 @@ export default async  function Pagaments(){
           
             
             <div className=''>
+              <p>{nome}</p>
               <div className="overflow-x-auto p-4">
                 <table className="table table-xs table-pin-rows table-pin-cols">
                   <thead>
