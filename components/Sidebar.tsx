@@ -74,7 +74,16 @@ export default function SideBar(){
     return <div className=' fixed flex flex-col gap-3 w-[250px] min-w-[250px]  '>
         <div className='min-w-[250px]'> <UserItems/> </div>
         <div className="grow min-w-[250px]">
-        <Command>
+
+            <div>
+                <ul>
+                    <li>Clientes</li>
+                    <li>Pagamentos</li>
+                    <li>Faturar</li>
+                    <li>procurar</li>
+                </ul>
+            </div>
+        {/* <Command>
             <CommandInput placeholder="Type a command or search..." />
         <CommandList>
             <CommandEmpty>No results found.</CommandEmpty>
@@ -90,7 +99,7 @@ export default function SideBar(){
             <CommandItem>Settings</CommandItem>
             </CommandGroup>
         </CommandList>
-        </Command>
+        </Command> */}
 
         </div>
         <div>Pagamentos</div>
