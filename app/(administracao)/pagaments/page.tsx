@@ -32,23 +32,34 @@ interface Mes {
   __v: number;
 }
 
-async function getData(){
-  const comp  = await getCompan()
-  const res = await fetch(`https://agua-p.vercel.app/adm/mesesGetbtcomp/${comp}`,{cache:"no-cache"}).then((res) => res.json());
+// async function getData(){
+//   const comp  = await getCompan()
+//   const res = await fetch(`https://agua-p.vercel.app/adm/mesesGetbtcomp/${comp}`,{cache:"no-cache"}).then((res) => res.json());
    
   
-  if(!res.ok){
-    throw new Error('Failed to fetch data')
-  }
-  return res.json()
-} 
+//   if(!res.ok){
+//     throw new Error('Failed to fetch data')
+//   }
+//   return res.json()
+// } 
 
 
 export default async  function Pagaments(){
-  const data = await getData()
-  const nome = await data.compan.nome
+  // const data = await getData()
+  const comp  = await getCompan()
+  // const nome = await data.compan.nome
   // const idf = await '12345'
-  // const res = await fetch(`https://agua-front.vercel.app/api/mes/${idf}`,{cache:"no-cache"}).then((res) => res.json());
+  const res = await fetch(`https://agua-p.vercel.app/adm/mesesGetbtcomp/${comp}`,{cache:"no-cache"}).then((res) => res.json());
+
+  const nome = await res.compan.nome
+
+  // if(!res.ok){
+  //   throw new Error('Failed to fetch data')
+  // }
+  // return res.json()
+
+
+
   // const response = await  res;
   // const ultimoMes = response.compan.mes.pop();
 
