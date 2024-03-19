@@ -85,7 +85,7 @@ export default async  function Pagaments(){
                       <th>Faturas</th>
                       <th>N. Pagas</th>
                       <th>Pagas</th>
-                      <th></th>
+                      <th><Link href={''} className="btn btn-xs">Ver detalhes</Link></th>
                     </tr>
                   </thead>
                   <tbody>
