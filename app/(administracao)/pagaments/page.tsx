@@ -76,6 +76,31 @@ export default async  function Pagaments(){
             
             <div className=''>
               <p>{nome}</p>
+              <section className="flex flex-wrap justify-center">
+                <div className="w-full md:w-1/3 p-4">
+                    <div className="bg-white rounded-lg shadow-md p-6">
+                    <h2 className="text-xl font-bold mb-2">  </h2>
+                    <p>Ativos</p>
+                    {/* <button onClick={ handleButtonActived} className="btn btn-sm mt-2">Ver</button> */}
+                    </div>
+                </div>
+                <div className="w-full md:w-1/3 p-4">
+                    <div className="bg-white rounded-lg shadow-md p-6">
+                    <h2 className="text-xl font-bold mb-2">Card 2</h2>
+                    <p>Conteúdo do Card 2...</p>
+                    {/* <button onClick={ handleButtonMore3 } className="btn btn-sm mt-2">Ver</button> */}
+                    </div>
+                </div>
+                <div className="w-full md:w-1/3 p-4">
+                    <div className="bg-white rounded-lg shadow-md p-6">
+                    <h2 className="text-xl font-bold mb-2"></h2>
+                    <p>Desativado</p>
+                    {/* <button onClick={ handleButtonDesatived} className="btn btn-sm mt-2">Ver</button> */}
+                    </div>
+                </div>
+                </section>
+
+
               <div className="overflow-x-auto p-4">
                 <table className="table table-xs table-pin-rows table-pin-cols">
                   <thead>
@@ -85,7 +110,7 @@ export default async  function Pagaments(){
                       <th>Faturas</th>
                       <th>N. Pagas</th>
                       <th>Pagas</th>
-                      <th></th>
+                      <th>Detalhes</th>
                     </tr>
                   </thead>
                   <tbody>
