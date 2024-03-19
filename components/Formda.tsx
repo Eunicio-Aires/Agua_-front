@@ -31,8 +31,9 @@ export function Formda(ligacoes:Ligacao){
         }
         const response = await fetch(endpoint, options)
         const result  = await response.json()
+        const idfut   = await result.faratId._id
         try{
-          router.push(`/imprimir/${result._id}`)
+          router.push(`/imprimir/${result.idfut}`)
         }catch(error){
           alert("error ao submeter")
         }

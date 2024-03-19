@@ -11,17 +11,13 @@ interface Resultado{
 
   export  function RegisFatura({resulte, _id}:Resultado){
     return(
-        
          <div className="container px-5 py-24 mx-auto min-w-min">
-       
-         
       {resulte ? (
         <div>
  <h1 className="mx-11 my-3 font-bold text-[20px] text-red-600 text-center mt-4" >{resulte.nome} {resulte.apelido}</h1>
 <div className="p-3 mt-4">
     
   </div>
-
          <div > 
        </div>
        <Link href={`/imprimir/${resulte._id}`}>imprimir</Link>
