@@ -99,10 +99,10 @@ const handleClick = () => {
   
     <div className="-mx-3 md:flex mb-2">
       <div className="md:w-1/2 px-3 mb-6 md:mb-0">
-        <label className="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" htmlFor="casa">
+        <label className="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" htmlFor="casa" >
           Casa
         </label>
-        <input className="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4" id="casa" type="text" name="casa" placeholder="Numero da casa"/>
+        <input className="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4" id="casa" type="text" name="casa" placeholder="Casa"/>
       </div>
     
       <div className="md:w-1/2 px-3">
