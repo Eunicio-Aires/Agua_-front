@@ -1,19 +1,22 @@
 import { NextRequest, NextResponse } from 'next/server'
  import { getId } from '@/lib/cookiesConf'
  import { getSession } from '@/lib/cookiesConf';
-export async function POST(request:NextRequest,{params}:any) {
+
+
+export async function POST(request: NextRequest,{ params }: { params: { id: string } } ) {
   const idCom =await getId()
+  const id = params.id 
   //   const ids = await params.id;
   // const id = await ids[0];
   const token = await getSession()
   
   const body = await request.json();
   try {
-    const response = await fetch(`https://agua-p.vercel.app/adm/criarMes/${idCom}`,{
+    const response = await fetch(`https://agua-p.vercel.app/adm/criarMes/${id}`,{
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization' : `${token}`,
+        // 'Authorization' : `${token}`,
       },
       body: JSON.stringify(body),
     });
