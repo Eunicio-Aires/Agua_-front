@@ -36,6 +36,19 @@ export default function Clientes({responseC}:any){
     const ativos = responseC.filter((cliente:any) => cliente.estado === "Activo").length
     const desativado = responseC.filter((cliente:any) => cliente.estado !== "Activo").length
 
+    const clientesFiltrados:any = responseC.filter((cliente: any) => {
+      // Filtra clientes com estado "Activo"
+      if (cliente.estado !== "Activo") {
+          return false;
+      }
+  
+      // Verifica se o cliente tem três ou mais faturas com estado "Nao pago"
+      const faturasNaoPagas = cliente.faturas.filter((fatura: any) => fatura.estado === "Nao pago");
+      return faturasNaoPagas.length >= 3;
+  })
+
+  const comMaisDe3 = clientesFiltrados.length
+
     return(
         <div className="">          
        <section className="flex flex-wrap justify-center">
@@ -48,8 +61,8 @@ export default function Clientes({responseC}:any){
                 </div>
                 <div className="w-full md:w-1/3 p-4">
                     <div className="bg-white rounded-lg shadow-md p-6">
-                    <h2 className="text-xl font-bold mb-2">Card 2</h2>
-                    <p>Conteúdo do Card 2...</p>
+                    <h2 className="text-xl font-bold mb-2">{comMaisDe3}</h2>
+                    <p>Com 3 Ou Mais Faturas</p>
                     <button onClick={ handleButtonMore3 } className="btn btn-sm mt-2">Ver</button>
                     </div>
                 </div>
