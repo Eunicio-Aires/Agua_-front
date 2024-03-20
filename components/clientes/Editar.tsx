@@ -16,10 +16,11 @@ import { revalidateTag } from 'next/cache';
 export default function Editar(posts:any){
 
   const nome = posts.posts.clientId.nome;
-  const apelido = posts.posts.clientId.nome;
+  const apelido = posts.posts.clientId.apelido;
  const telefone  = posts.posts.clientId.telefone;
   const whatsupp  = posts.posts.clientId.whatsupp;
   const casa  = posts.posts.clientId.casa;
+  const estado  = posts.posts.clientId.estado;
  
   const router = useRouter()
   const [isButtonDisabled, setButtonDisabled] = useState(false);
@@ -101,7 +102,7 @@ const handleClick = () => {
         <label className="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" htmlFor="casa" >
           Casa
         </label>
-        <input className="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4" id="casa" type="text" name="casa" value={casa}/>
+        <input className="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4" id="casa" type="text" name="casa" value={estado}/>
       </div>
     
       <div className="md:w-1/2 px-3">
