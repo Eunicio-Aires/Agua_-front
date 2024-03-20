@@ -78,9 +78,9 @@ export default function SideBar(id:any){
 
       
                
-                   <Link href={`inicial/${id}`}> <a >Clientes</a> </Link> 
+                  <p><Link href={`inicial/${id}`}>Clientes</Link></p> 
                    
-                    <Link href={`inicial/${id}`}>Clientes</Link>
+                    
               
 
                 <div ><Link href=''>Sair</Link> </div>
