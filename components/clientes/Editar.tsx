@@ -15,12 +15,12 @@ import { revalidateTag } from 'next/cache';
 
 export default function Editar(props:any){
 
-const nome = props.clientId.nome;
-const apelido = props.clientId.nome;
-const estado  = props.clientId.estado;
-const telefone  = props.clientId.telefone;
-const whatsupp  = props.clientId.whatsupp;
-const casa  = props.clientId.casa;
+// const nome = props.clientId.nome;
+// const apelido = props.clientId.nome;
+// const estado  = props.clientId.estado;
+// const telefone  = props.clientId.telefone;
+// const whatsupp  = props.clientId.whatsupp;
+// const casa  = props.clientId.casa;
  
   const router = useRouter()
   const [isButtonDisabled, setButtonDisabled] = useState(false);
@@ -86,14 +86,14 @@ const handleClick = () => {
         <label className="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" htmlFor="nome">
           Nome
         </label>
-        <input className="appearance-none block w-full bg-grey-lighter text-grey-darker border border-red rounded py-3 px-4 mb-3" type="text" id="nome" name="nome" value={nome}/>
+        <input className="appearance-none block w-full bg-grey-lighter text-grey-darker border border-red rounded py-3 px-4 mb-3" type="text" id="nome" name="nome" />
         <p className="text-red text-xs italic">Compo obrigatorio</p>
       </div>
       <div className="md:w-1/2 px-3">
         <label className="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" htmlFor="apelido">
           Apelido
         </label>
-        <input className="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4" type="text" id="apelido" name="apelido" value={apelido}/>
+        <input className="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4" type="text" id="apelido" name="apelido" />
       </div>
     </div>
   
