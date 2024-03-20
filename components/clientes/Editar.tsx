@@ -15,7 +15,7 @@ import { revalidateTag } from 'next/cache';
 
 export default function Editar(props:any){
 
-// const nome = props.clientId.nome;
+  const nome = props.clientId.nome;
 // const apelido = props.clientId.nome;
 // const estado  = props.clientId.estado;
 // const telefone  = props.clientId.telefone;
