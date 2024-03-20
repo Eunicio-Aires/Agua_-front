@@ -75,7 +75,7 @@ import Editar from "@/components/clientes/Editar";
     
   </table>
 </div>
-<Editar props={posts} />
+<Editar posts={posts} />
 
      </div>
 
