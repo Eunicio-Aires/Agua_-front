@@ -118,6 +118,18 @@ const handleClick = () => {
         <input className="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4" id="whatsupp" name="whatsupp" type="Number" value={whatsupp}/>
       </div>
   
+      <div className="md:w-1/2 px-3">
+        <label className="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" htmlFor="estado">
+          Estado 
+        </label>
+        <select id="estado" name="estado"   className="select select-accent w-full max-w-xs">
+          <option disabled selected>{estado}</option>
+          <option><p className=''>Activo</p></option>
+          <option><p className=''>Desativado</p></option>
+          
+        </select>
+        {/* <input className="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4" id="whatsupp" name="whatsupp" type="Number" value={whatsupp}/> */}
+      </div>
       
   
     </div>
