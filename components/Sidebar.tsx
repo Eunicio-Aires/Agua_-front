@@ -56,19 +56,19 @@
 import { getCompan, getSession } from '@/lib/cookiesConf'
 import UserItems from '@/components/UserItems'
 import { getnome } from '@/lib/cookiesConf'
-import { getCompan } from '@/lib/cookiesConf'
-import {
-    Command,
-    CommandDialog,
-    CommandEmpty,
-    CommandGroup,
-    CommandInput,
-    CommandItem,
-    CommandList,
-    CommandSeparator,
-    CommandShortcut,
-  } from "@/components/ui/command"
-import { Link } from 'lucide-react'
+
+// import {
+//     Command,
+//     CommandDialog,
+//     CommandEmpty,
+//     CommandGroup,
+//     CommandInput,
+//     CommandItem,
+//     CommandList,
+//     CommandSeparator,
+//     CommandShortcut,
+//   } from "@/components/ui/command"
+// import { Link } from 'lucide-react'
   
 
 export default function SideBar(id:any){
