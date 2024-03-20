@@ -50,7 +50,8 @@ export default async  function Pagaments(){
   // const nome = await data.compan.nome
   // const idf = await '12345'
   const res = await fetch(`https://agua-p.vercel.app/adm/mesesGetbtcomp/${comp}`,{cache:"no-cache"}).then((res) => res.json());
-  const ultimosMeses = res.compan.mes.slice(-10)
+  const ultimosMeses = await res.compan.mes.slice(-10)
+  const ultimo = await res.compan.mes[0].faturas.filter((fatura: { estado: string; }) => fatura.estado === "Pago");
   const nome = await res.compan.nome;
   
   // const mes = await res.compan.mes
@@ -123,21 +124,21 @@ export default async  function Pagaments(){
                     <tr>
                       <th></th>
                       <th>Mês</th>
-                      <th>Faturas</th>
-                      <th>N. Pagas</th>
-                      <th>Pagas</th>
-                      <th>Detalhes</th>
+                      <th>Consumo</th>
+                      <th>Valor</th>
+                      <th>F. Pagament</th>
+                      {/* <th>Detalhes</th> */}
                     </tr>
                   </thead>
                   <tbody>
-                    {ultimosMeses.map((mes:any)=>(
+                    {ultimo.map((mes:any)=>(
                       <tr key={mes._id}>
                         <td></td>
                         <td> {mes.mes}</td>
-                        <td>{mes.faturas.length || '-'}</td>
-                        <td>{mes.faturas.filter((fatura:any) => fatura.estado === 'Nao pago').length || '-'}</td>
-                        <td> {mes.faturas.filter((fatura:any) => fatura.estado === 'Nao pago').length || '-'} </td>
-                        <td><Link href={''} className="btn btn-xs">Ver</Link></td>
+                        <td>{mes.consumo || '-'}</td>
+                        <td>{mes.valor || '-'}</td>
+                        <td> {mes.formaDePagamento || '-'} </td>
+                        {/* <td><Link href={''} className="btn btn-xs">Ver</Link></td> */}
                       </tr>
                     ))}
                   </tbody>
