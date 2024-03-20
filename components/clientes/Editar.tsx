@@ -86,7 +86,7 @@ const handleClick = () => {
         <label className="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" htmlFor="nome">
           Nome
         </label>
-        <input className="appearance-none block w-full bg-grey-lighter text-grey-darker border border-red rounded py-3 px-4 mb-3" type="text" id="nome" name="nome" />
+        <input className="appearance-none block w-full bg-grey-lighter text-grey-darker border border-red rounded py-3 px-4 mb-3" type="text" id="nome" name="nome" value={nome} />
         <p className="text-red text-xs italic">Compo obrigatorio</p>
       </div>
       <div className="md:w-1/2 px-3">
