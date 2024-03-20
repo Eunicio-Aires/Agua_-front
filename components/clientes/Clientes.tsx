@@ -141,3 +141,9 @@ export default function Clientes({responseC}:any){
       </div>
     )
 }
+
+
+
+
+    
+ 
