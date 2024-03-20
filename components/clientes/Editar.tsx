@@ -15,6 +15,7 @@ import { revalidateTag } from 'next/cache';
 
 export default function Editar(posts:any){
 
+  const id  = posts.posts.clientId._id
   const nome = posts.posts.clientId.nome;
   const apelido = posts.posts.clientId.apelido;
  const telefone  = posts.posts.clientId.telefone;
@@ -34,12 +35,13 @@ const handleSubmi = async (event: SyntheticEvent) => {
     casa: (event.target as HTMLFormElement).casa.value,
     telefone: (event.target as HTMLFormElement).telefone.value, 
     whatsupp: (event.target as HTMLFormElement).whatsupp.value,
+    estado: (event.target as HTMLFormElement).estado.value,
     
     
   };
 
   const JSONdata = JSON.stringify(data);
-  const endpoint = `https://agua-front.vercel.app/api//newClient/`
+  const endpoint = `https://agua-p.vercel.app/adm/atualizarClient/${id}`
 
   const options: RequestInit = {
     method: 'POST',
@@ -51,7 +53,7 @@ const handleSubmi = async (event: SyntheticEvent) => {
   const response = await fetch(endpoint,options);
   const result = await response.json();
   try{
-    router.push(`/clientes/${result._id}`)
+    alert('submetido ')
   }catch(error){
  
     router.push(`/clientes/`)
@@ -73,7 +75,7 @@ const handleClick = () => {
       <div>
       <div className="transition ease-in-out delay-150"> 
       <button onClick={buttonHandler}>
-            {iseBlueBoxShown ? <div className="btn btn-circle"><svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg></div> : <div className="btn">Novo</div>}
+            {iseBlueBoxShown ? <div className="btn btn-circle"><svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg></div> : <div className="btn">Atualizar</div>}
           </button>
      
   
@@ -102,7 +104,7 @@ const handleClick = () => {
         <label className="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" htmlFor="casa" >
           Casa
         </label>
-        <input className="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4" id="casa" type="text" name="casa" value={estado}/>
+        <input className="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4" id="casa" type="text" name="casa" value={casa}/>
       </div>
     
       <div className="md:w-1/2 px-3">
