@@ -56,6 +56,7 @@
 import { getCompan, getSession } from '@/lib/cookiesConf'
 import UserItems from '@/components/UserItems'
 import { getnome } from '@/lib/cookiesConf'
+import { getCompan } from '@/lib/cookiesConf'
 import {
     Command,
     CommandDialog,
@@ -71,7 +72,7 @@ import { Link } from 'lucide-react'
   
 
 export default function SideBar(id:any){
-    
+    const empre = getCompan()
     return <div className=' fixed flex flex-col gap-3 w-[250px] min-w-[250px]  '>
 
         <div
@@ -151,7 +152,7 @@ export default function SideBar(id:any){
             </div>
             <div id="menu" className="flex flex-col space-y-2">
               <a
-                href= {`/inicial/${id}`}
+                href= {`/inicial/${empre}`}
                 className="text-sm font-medium text-gray-700 py-2 px-2 hover:bg-teal-500 hover:text-white hover:text-base rounded-md transition duration-150 ease-in-out"
               >
                 <svg
