@@ -19,8 +19,18 @@ export default function Clientes({responseC}:any){
       setData(responseC.filter((cliente: any) => cliente.estado !== "Activo"));
     };
   
-    const handleButtonMore3 = () => {
-      // Aqui você pode fazer algo diferente, se necessário
+    const handleButtonMore3  = () => {
+      const clientesFiltrados:any = responseC.filter((cliente: any) => {
+        // Filtra clientes com estado "Activo"
+        if (cliente.estado !== "Activo") {
+            return false;
+        }
+    
+        // Verifica se o cliente tem três ou mais faturas com estado "Nao pago"
+        const faturasNaoPagas = cliente.faturas.filter((fatura: any) => fatura.estado === "Nao pago");
+        return faturasNaoPagas.length >= 3;
+    })
+    setData(clientesFiltrados)
     };
 
     const ativos = responseC.filter((cliente:any) => cliente.estado === "Activo").length

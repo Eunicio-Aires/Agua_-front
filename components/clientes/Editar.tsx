@@ -104,20 +104,20 @@ const handleClick = () => {
         <label className="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" htmlFor="casa" >
           Casa
         </label>
-        <input className="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4" id="casa" type="text" name="casa" value={casa}/>
+        <input className="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4" id="casa" type="text" name="casa" value={casa} />
       </div>
     
       <div className="md:w-1/2 px-3">
         <label className="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" htmlFor="telefone">
            Telefone
         </label>
-        <input className="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4" id="telefone" name="telefone" type="Number" value={telefone}/>
+        <input className="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4" id="telefone" name="telefone" type="Number" value={telefone} />
       </div>
       <div className="md:w-1/2 px-3">
         <label className="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" htmlFor="whatsupp">
           Whatsapp 
         </label>
-        <input className="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4" id="whatsupp" name="whatsupp" type="Number" value={whatsupp}/>
+        <input className="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4" id="whatsupp" name="whatsupp" type="Number" value={whatsupp} />
       </div>
   
       <div className="md:w-1/2 px-3">
