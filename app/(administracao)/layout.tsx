@@ -17,7 +17,7 @@ export default function RootLayout({ children,}: {children: React.ReactNode }) {
       <html lang="pt-br">
         <body  className={ ` flex items-start justify-between`}>
 
-        <div className="hidden md:flex min-w-[280px] border-r min-h-screen p-4">
+        <div className="hidden md:flex min-w-[255px]  min-h-screen p-4">
         < Sidebar id={comp}/>
         </div>
           
