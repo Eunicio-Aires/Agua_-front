@@ -76,17 +76,15 @@ export default function SideBar(id:any){
         <div className='min-w-[250px]'> <UserItems/> </div>
         <div className="grow min-w-[250px]">
 
-            <div>
-                <ul>
-                    <li><Link href={`inicial/${id}`}>Clientes</Link> </li>
-                    <li>Pagamentos</li>
-                    <li>Faturar</li>
-                    <li>procurar</li>
-                    <li><Link href={`inicial/${id}`}>Clientes</Link> </li>
-                </ul>
+      
+               
+                   <Link href={`inicial/${id}`}>Clientes</Link> 
+                   
+                    <Link href={`inicial/${id}`}>Clientes</Link>
+              
 
                 <div ><Link href=''>Sair</Link> </div>
-            </div>
+           
         {/* <Command>
             <CommandInput placeholder="Type a command or search..." />
         <CommandList>
