@@ -52,7 +52,7 @@
 // }
 
 
-'use client'
+'use server'
 import { getCompan, getSession } from '@/lib/cookiesConf'
 import UserItems from '@/components/UserItems'
 import { getnome } from '@/lib/cookiesConf'
