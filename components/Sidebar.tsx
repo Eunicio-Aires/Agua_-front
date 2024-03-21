@@ -73,6 +73,7 @@ import { getnome } from '@/lib/cookiesConf'
 
 export default function SideBar(id:any){
     const empre = getCompan()
+    
     return <div className=' fixed flex flex-col gap-3 w-[250px] min-w-[250px]  '>
 
         <div

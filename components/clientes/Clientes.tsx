@@ -62,7 +62,7 @@ export default function Clientes({responseC}:any){
                 <div className="w-full md:w-1/3 p-4">
                     <div className="bg-white rounded-lg shadow-md p-6">
                     <h2 className="text-xl font-bold mb-2">{comMaisDe3}</h2>
-                    <p>Com 3 Ou Mais Faturas</p>
+                    <p> 3 Faturas</p>
                     <button onClick={ handleButtonMore3 } className="btn btn-sm mt-2">Ver</button>
                     </div>
                 </div>
