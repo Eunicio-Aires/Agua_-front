@@ -70,7 +70,7 @@ export default function Clientes({responseC}:any){
                     <div className="bg-white rounded-lg shadow-md p-6">
                     <h2 className="text-xl font-bold mb-2">{desativado}</h2>
                     <p>Desativado</p>
-                    <button onClick={ handleButtonDesatived} className="btn btn-sm mt-2">Ver</button>
+                    <button onClick={ handleButtonDesatived} className="btn btn-sm mt-2 z-10">Ver</button>
                     </div>
                 </div>
                </ section >
