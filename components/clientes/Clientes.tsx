@@ -50,7 +50,7 @@ export default function Clientes({responseC}:any){
   const comMaisDe3 = clientesFiltrados.length
 
     return(
-        <div className="">          
+        <div className="z-20">          
        <section className="flex flex-wrap justify-center">
                 <div className="w-full md:w-1/3 p-4">
                     <div className="bg-white rounded-lg shadow-md p-6">
