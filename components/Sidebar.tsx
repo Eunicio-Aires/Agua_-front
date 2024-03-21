@@ -82,7 +82,8 @@ export default async function SideBar(){
         <div
         id="view"
         className="h-[750px] w-screen flex flex-row"
-        x-data="{ sidenav: true }"
+        // x-data="{ sidenav: true }"
+        // className="{ 'pointer-events-auto': sidenav, 'pointer-events-none': !sidenav }"
       >
         <button
         
