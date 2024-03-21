@@ -81,7 +81,7 @@ export default async function SideBar(){
 
         <div
         // id="view"
-        className="h-full w-screen flex flex-row"
+        className="h-[750px] w-screen flex flex-row"
         x-data="{ sidenav: true }"
       >
         {/* <button
@@ -103,7 +103,7 @@ export default async function SideBar(){
         </button> */}
         <div
           id="sidebar"
-          className="bg-white h-screen  shadow-xl px-3 w-30 md:w-60 lg:w-60 overflow-x-hidden transition-transform duration-300 ease-in-out z-1"
+          className="bg-white h-screen  shadow-xl px-3 w-30 md:w-60 lg:w-60 overflow-x-hidden transition-transform duration-300 ease-in-out"
           x-show="sidenav"
           
         >
