@@ -53,9 +53,9 @@
 
 
 'use server'
-import { getCompan, getSession } from '@/lib/cookiesConf'
+import { getCompan, getnome ,getapelido} from '@/lib/cookiesConf'
 import UserItems from '@/components/UserItems'
-import { getnome } from '@/lib/cookiesConf'
+
 import Link from "next/link";
 
 // import {
@@ -74,6 +74,8 @@ import Link from "next/link";
 
 export default async function SideBar(){
     const empre = await getCompan()
+    const nome  = await getapelido()
+    const apelido = await getapelido()
     
     return <div className=' fixed flex flex-col gap-3 w-[250px] min-w-[250px]  '>
 
@@ -110,7 +112,7 @@ export default async function SideBar(){
               D<span className="text-teal-600">.</span>
             </h1>
             <h1 className="hidden md:block font-bold text-sm md:text-xl text-center">
-              Dashwind<span className="text-teal-600">.</span>
+              Fatura na Mao<span className="text-teal-600">.</span>
             </h1>
             <div id="profile" className="space-y-3">
               <img
@@ -122,9 +124,9 @@ export default async function SideBar(){
                 <h2
                   className="font-medium text-xs md:text-sm text-center text-teal-500"
                 >
-                  Eduard Pantazi
+                  {nome} {apelido}
                 </h2>
-                <p className="text-xs text-gray-500 text-center">Administrator</p>
+                <p className="text-xs text-gray-500 text-center">Administrador</p>
               </div>
             </div>
             
