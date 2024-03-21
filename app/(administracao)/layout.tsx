@@ -12,13 +12,13 @@ import '../globals.css'
 // import BarChart from "@/components/BarChart";
 
 export default function RootLayout({ children,}: {children: React.ReactNode }) {
-    const comp  =  getCompan()
+    
     return (
       <html lang="pt-br">
         <body  className={ ` flex items-start justify-between`}>
 
-        <div className="hidden md:flex min-w-[255px]  min-h-screen p-4">
-        < Sidebar id={comp}/>
+        <div className="hidden md:flex min-w-[255mmmmmm  v px]  min-h-screen p-4">
+        < Sidebar />
         </div>
           
             
