@@ -80,7 +80,7 @@ export default async function SideBar(){
     return <div className=' fixed flex flex-col gap-3 w-[250px] min-w-[250px]  '>
 
         <div
-        // id="view"
+        id="view"
         className="h-[750px] w-screen flex flex-row"
         x-data="{ sidenav: true }"
       >
