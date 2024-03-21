@@ -78,7 +78,7 @@ export default async function SideBar(){
     return <div className=' fixed flex flex-col gap-3 w-[250px] min-w-[250px]  '>
 
         <div
-        id="view"
+        // id="view"
         className="h-full w-screen flex flex-row"
         x-data="{ sidenav: true }"
       >
@@ -114,7 +114,7 @@ export default async function SideBar(){
             </h1>
             <div id="profile" className="space-y-3">
               <img
-                src="https://images.unsplash.com/photo-1628157588553-5eeea00af15c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
+                // src="https://images.unsplash.com/photo-1628157588553-5eeea00af15c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
                 alt="Avatar user"
                 className="w-10 md:w-16 rounded-full mx-auto"
               />
@@ -130,7 +130,7 @@ export default async function SideBar(){
             
             <div id="menu" className="flex flex-col space-y-2">
               <Link
-                href= {`/`}
+                href= {`inicial/${empre}`}
                 className="text-sm font-medium text-gray-700 py-2 px-2 hover:bg-teal-500 hover:text-white hover:text-base rounded-md transition duration-150 ease-in-out"
               >
                 <svg
@@ -145,7 +145,7 @@ export default async function SideBar(){
                 </svg>
                 <span className="">Home</span>
               </Link>
-              <a
+              <Link
                 href={`/faturar`}
                 className="text-sm font-medium text-gray-700 py-2 px-2 hover:bg-teal-500 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out"
               >
@@ -160,7 +160,7 @@ export default async function SideBar(){
                   ></path>
                 </svg>
                 <span className="">Faturar</span>
-              </a>
+              </Link>
               <Link
                 href={`/pagaments`}
                 className="text-sm font-medium text-gray-700 py-2 px-2 hover:bg-teal-500 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out"
@@ -200,7 +200,7 @@ export default async function SideBar(){
                 <span className="">Messages</span>
               </Link>
               <Link
-              href={''}
+              href={'/'}
                 className="text-sm font-medium text-gray-700 py-2 px-2 hover:bg-teal-500 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out"
               >
                 <svg
@@ -218,7 +218,7 @@ export default async function SideBar(){
                 <span className="">Calendar</span>
               </Link>
               <Link
-                href={""}
+                href={"/"}
                 className="text-sm font-medium text-gray-700 py-2 px-2 hover:bg-teal-500 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out"
               >
                 <svg
@@ -236,7 +236,7 @@ export default async function SideBar(){
                 <span className="">Table</span>
               </Link>
               <Link
-                href={''}
+                href={'/'}
                 className="text-sm font-medium text-gray-700 py-2 px-2 hover:bg-teal-500 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out"
               >
                 <svg
@@ -252,7 +252,7 @@ export default async function SideBar(){
                 <span className="">UI Components</span>
               </Link>
               <Link
-                href={""}
+                href={"/"}
                 className="text-sm font-medium text-gray-700 py-2 px-2 hover:bg-teal-500 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out"
               >
                 <svg
