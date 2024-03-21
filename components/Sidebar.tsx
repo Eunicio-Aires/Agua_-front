@@ -103,7 +103,7 @@ export default async function SideBar(){
         </button> */}
         <div
           id="sidebar"
-          className="bg-white h-screen md:block shadow-xl px-3 w-30 md:w-60 lg:w-60 overflow-x-hidden transition-transform duration-300 ease-in-out"
+          className="bg-white h-screen  shadow-xl px-3 w-30 md:w-60 lg:w-60 overflow-x-hidden transition-transform duration-300 ease-in-out"
           x-show="sidenav"
           
         >
