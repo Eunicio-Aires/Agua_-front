@@ -72,8 +72,8 @@ import Link from "next/link";
 // import { Link } from 'lucide-react'
   
 
-export default function SideBar(){
-    // const empre = getCompan()
+export default async function SideBar(){
+    const empre = await getCompan()
     
     return <div className=' fixed flex flex-col gap-3 w-[250px] min-w-[250px]  '>
 
