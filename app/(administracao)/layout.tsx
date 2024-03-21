@@ -17,7 +17,7 @@ export default function RootLayout({ children,}: {children: React.ReactNode }) {
       <html lang="pt-br">
         <body  className={ ` flex items-start justify-between`}>
 
-        <div className="hidden md:flex min-w-[280px]  min-h-screen p-4">
+        <div className="hidden md:flex min-w-[250px]  min-h-screen p-3">
 
      {/* @ts-expect-error Server Component */}
         < Sidebar />
