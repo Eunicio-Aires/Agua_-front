@@ -82,7 +82,7 @@ export default function SideBar(){
         className="h-full w-screen flex flex-row"
         x-data="{ sidenav: true }"
       >
-        <button
+        {/* <button
          
           className="p-2 border-2 bg-white rounded-md border-gray-200 shadow-lg text-gray-500 focus:bg-teal-500 focus:outline-none focus:text-white absolute top-0 left-0 sm:hidden"
         >
@@ -98,7 +98,7 @@ export default function SideBar(){
               clip-rule="evenodd"
             ></path>
           </svg>
-        </button>
+        </button> */}
         <div
           id="sidebar"
           className="bg-white h-screen md:block shadow-xl px-3 w-30 md:w-60 lg:w-60 overflow-x-hidden transition-transform duration-300 ease-in-out"
@@ -127,7 +127,7 @@ export default function SideBar(){
                 <p className="text-xs text-gray-500 text-center">Administrator</p>
               </div>
             </div>
-            <div
+            {/* <div
               className="flex border-2 border-gray-200 rounded-md focus-within:ring-2 ring-teal-500"
             >
               <input
@@ -151,7 +151,7 @@ export default function SideBar(){
                   ></path>
                 </svg>
               </button>
-            </div>
+            </div> */}
             <div id="menu" className="flex flex-col space-y-2">
               <Link
                 href= {`/`}
@@ -224,7 +224,7 @@ export default function SideBar(){
                 <span className="">Messages</span>
               </Link>
               <Link
-                href=""
+              href={''}
                 className="text-sm font-medium text-gray-700 py-2 px-2 hover:bg-teal-500 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out"
               >
                 <svg
@@ -242,7 +242,7 @@ export default function SideBar(){
                 <span className="">Calendar</span>
               </Link>
               <Link
-                href=""
+                href={""}
                 className="text-sm font-medium text-gray-700 py-2 px-2 hover:bg-teal-500 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out"
               >
                 <svg
@@ -260,7 +260,7 @@ export default function SideBar(){
                 <span className="">Table</span>
               </Link>
               <Link
-                href=""
+                href={''}
                 className="text-sm font-medium text-gray-700 py-2 px-2 hover:bg-teal-500 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out"
               >
                 <svg
@@ -276,7 +276,7 @@ export default function SideBar(){
                 <span className="">UI Components</span>
               </Link>
               <Link
-                href=""
+                href={""}
                 className="text-sm font-medium text-gray-700 py-2 px-2 hover:bg-teal-500 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out"
               >
                 <svg
