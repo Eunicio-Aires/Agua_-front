@@ -56,6 +56,7 @@
 import { getCompan, getSession } from '@/lib/cookiesConf'
 import UserItems from '@/components/UserItems'
 import { getnome } from '@/lib/cookiesConf'
+import Link from "next/link";
 
 // import {
 //     Command,
@@ -152,7 +153,7 @@ export default function SideBar(id:any){
               </button>
             </div>
             <div id="menu" className="flex flex-col space-y-2">
-              <a
+              <Link
                 href= {`/inicial/${empre}`}
                 className="text-sm font-medium text-gray-700 py-2 px-2 hover:bg-teal-500 hover:text-white hover:text-base rounded-md transition duration-150 ease-in-out"
               >
@@ -167,7 +168,7 @@ export default function SideBar(id:any){
                   ></path>
                 </svg>
                 <span className="">Home</span>
-              </a>
+              </Link>
               <a
                 href={`/faturar`}
                 className="text-sm font-medium text-gray-700 py-2 px-2 hover:bg-teal-500 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out"
@@ -184,7 +185,7 @@ export default function SideBar(id:any){
                 </svg>
                 <span className="">Faturar</span>
               </a>
-              <a
+              <Link
                 href={`/pagaments`}
                 className="text-sm font-medium text-gray-700 py-2 px-2 hover:bg-teal-500 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out"
               >
@@ -202,8 +203,8 @@ export default function SideBar(id:any){
                   ></path>
                 </svg>
                 <span className="">Pagamentos</span>
-              </a>
-              <a
+              </Link>
+              <Link
                 href=""
                 className="text-sm font-medium text-gray-700 py-2 px-2 hover:bg-teal-500 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out"
               >
@@ -221,8 +222,8 @@ export default function SideBar(id:any){
                   ></path>
                 </svg>
                 <span className="">Messages</span>
-              </a>
-              <a
+              </Link>
+              <Link
                 href=""
                 className="text-sm font-medium text-gray-700 py-2 px-2 hover:bg-teal-500 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out"
               >
@@ -239,8 +240,8 @@ export default function SideBar(id:any){
                   ></path>
                 </svg>
                 <span className="">Calendar</span>
-              </a>
-              <a
+              </Link>
+              <Link
                 href=""
                 className="text-sm font-medium text-gray-700 py-2 px-2 hover:bg-teal-500 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out"
               >
@@ -257,8 +258,8 @@ export default function SideBar(id:any){
                   ></path>
                 </svg>
                 <span className="">Table</span>
-              </a>
-              <a
+              </Link>
+              <Link
                 href=""
                 className="text-sm font-medium text-gray-700 py-2 px-2 hover:bg-teal-500 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out"
               >
@@ -273,8 +274,8 @@ export default function SideBar(id:any){
                   ></path>
                 </svg>
                 <span className="">UI Components</span>
-              </a>
-              <a
+              </Link>
+              <Link
                 href=""
                 className="text-sm font-medium text-gray-700 py-2 px-2 hover:bg-teal-500 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out"
               >
@@ -289,7 +290,7 @@ export default function SideBar(id:any){
                   ></path>
                 </svg>
                 <span className="">Users</span>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
