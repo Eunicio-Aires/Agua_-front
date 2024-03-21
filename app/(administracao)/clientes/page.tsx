@@ -9,28 +9,25 @@ import { getSession } from  '@/lib/cookiesConf'
 
 
 export default async function Zona() {
-  const baseUrl = process.env.NEXT_LOCAL_BASE_URL;
-  const tokenFun = await getSession()
-  // const header:any = await {
-  //   // 'Authorization': tokenFun,
-  //   // Outros headers personalizados, se necessário
-  // };
+  // const baseUrl = process.env.NEXT_LOCAL_BASE_URL;
+  // const tokenFun = await getSession()
  
-    const responseC = await fetch(`${baseUrl}/adm/todos`,{cache:"no-cache"}).then((res) => res.json());
+ 
+  //   const responseC = await fetch(`${baseUrl}/adm/todos`,{cache:"no-cache"}).then((res) => res.json());
 
-  const clients = await responseC.allClientes
-  const numero  = await responseC.allClientes.filter((cliente:any) => cliente.estado === "Activo").length
-  const ativos  = await responseC.allClientes.filter((cliente:any) => cliente.estado === "Activo")
-  const seativo = await responseC.allClientes.filter((cliente: any) => cliente.estado !== "Activo");
-  const token = await getSession()
+  // const clients = await responseC.allClientes
+  // const numero  = await responseC.allClientes.filter((cliente:any) => cliente.estado === "Activo").length
+  // const ativos  = await responseC.allClientes.filter((cliente:any) => cliente.estado === "Activo")
+  // const seativo = await responseC.allClientes.filter((cliente: any) => cliente.estado !== "Activo");
+  // const token = await getSession()
   
 
   return (
  
 
     <section className="text-gray-600 body-font">
-      {/* <span> {token}</span> */}
-<input type="checkbox" id="my_modal_7" className="modal-toggle" />
+    
+{/* <input type="checkbox" id="my_modal_7" className="modal-toggle" />
 <div className="modal" role="dialog">
   <div className="modal-box">
     <h3 className="text-lg font-bold">Hello!</h3>
@@ -137,7 +134,7 @@ export default async function Zona() {
    
   </table>
 </div>        
-        </div>
+        </div> */}
       
 
 </section>
