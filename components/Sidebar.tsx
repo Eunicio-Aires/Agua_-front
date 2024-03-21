@@ -74,7 +74,7 @@ import Link from "next/link";
 
 export default async function SideBar(){
     const empre = await getCompan()
-    const nome  = await getapelido()
+    const nome  = await getnome()
     const apelido = await getapelido()
     
     return <div className=' fixed flex flex-col gap-3 w-[250px] min-w-[250px]  '>
