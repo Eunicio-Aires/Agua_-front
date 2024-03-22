@@ -54,20 +54,13 @@ export default async  function Pagaments(){
   const ultimo = await res.compan.mes[0].faturas.filter((fatura: { estado: string; }) => fatura.estado === "Pago");
   const nome = await res.compan.nome;
   
-  // const mes = await res.compan.mes
-
+  // const mes = await res.compan.mes 
   // if(!res.ok){
   //   throw new Error('Failed to fetch data')
   // }
   // return res.json()
-
-
-
   // const response = await  res;
   // const ultimoMes = response.compan.mes.pop();
-
- 
-  
   // ________________MEses__________
   // const meses = await response.mesesl;
         
@@ -80,29 +73,30 @@ export default async  function Pagaments(){
 
            {/* @ts-expect-error Server Component */}
               <Ultimom/>
-              <section className="flex flex-wrap justify-center">
+              
+              {/* <section className="flex flex-wrap justify-center">
                 <div className="w-full md:w-1/3 p-4">
                     <div className="bg-white rounded-lg shadow-md p-6">
                     <h2 className="text-xl font-bold mb-2">  </h2>
                     <p>Ativos</p>
-                    {/* <button onClick={ handleButtonActived} className="btn btn-sm mt-2">Ver</button> */}
+                    
                     </div>
-                </div>
-                <div className="w-full md:w-1/3 p-4">
-                    <div className="bg-white rounded-lg shadow-md p-6">
-                    <h2 className="text-xl font-bold mb-2">Card 2</h2>
-                    <p>Conteúdo do Card 2...</p>
-                    {/* <button onClick={ handleButtonMore3 } className="btn btn-sm mt-2">Ver</button> */}
-                    </div>
-                </div>
-                <div className="w-full md:w-1/3 p-4">
-                    <div className="bg-white rounded-lg shadow-md p-6">
-                    <h2 className="text-xl font-bold mb-2"></h2>
-                    <p>Desativado</p>
-                    {/* <button onClick={ handleButtonDesatived} className="btn btn-sm mt-2">Ver</button> */}
-                    </div>
-                </div>
-                </section>
+                 </div>
+                 <div className="w-full md:w-1/3 p-4">
+                     <div className="bg-white rounded-lg shadow-md p-6">
+                     <h2 className="text-xl font-bold mb-2">Card 2</h2>
+                     <p>Conteúdo do Card 2...</p>
+                     
+                     </div>
+                 </div>
+                 <div className="w-full md:w-1/3 p-4">
+                     <div className="bg-white rounded-lg shadow-md p-6">
+                     <h2 className="text-xl font-bold mb-2"></h2>
+                     <p>Desativado</p>
+                     
+                     </div>
+                 </div>
+                 </section> */}
 
 
 

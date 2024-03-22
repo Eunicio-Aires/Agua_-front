@@ -31,16 +31,16 @@ export  async   function  Ultimom(){
   const totalValorFaturasNaoPagas = faturasNaoPagas.reduce((total: any, fatura: { valor: any; }) => total + fatura.valor, 0);
   const numeroDeFaturasNaoPagas = faturasNaoPagas.length;
   const numeroDeFaturasPagas = faturasPagas.length;
-  // const totalValorTodasFaturas = response.reduce((total: any, mes: { faturas: any[]; }) => {
-  //     const valorFaturasMes = mes.faturas.reduce((subtotal, fatura) => subtotal + fatura.valor, 0);
-  //     return total + valorFaturasMes;
-  // }, 0);
-  // const totalValorFaturasPagas = response.reduce((total: any, mes: { faturas: any[]; }) => {
-  //     const valorFaturasMes = mes.faturas
-  //         .filter(fatura => fatura.estado === "Pago")
-  //         .reduce((subtotal, fatura) => subtotal + fatura.valor, 0);
-  //     return total + valorFaturasMes;
-  // }, 0);
+  const totalValorTodasFaturas = umes.reduce((total: any, mes: { faturas: any[]; }) => {
+      const valorFaturasMes = mes.faturas.reduce((subtotal, fatura) => subtotal + fatura.valor, 0);
+      return total + valorFaturasMes;
+  }, 0);
+  const totalValorFaturasPagas = umes.reduce((total: any, mes: { faturas: any[]; }) => {
+      const valorFaturasMes = mes.faturas
+          .filter(fatura => fatura.estado === "Pago")
+          .reduce((subtotal, fatura) => subtotal + fatura.valor, 0);
+      return total + valorFaturasMes;
+  }, 0);
 
 
     return( 
@@ -74,27 +74,27 @@ export  async   function  Ultimom(){
             <section className="flex flex-wrap justify-center">
                 <div className="w-full md:w-1/3 p-4">
                     <div className="bg-white rounded-lg shadow-md p-6">
-                    <h2 className="text-xl font-bold mb-2">  </h2>
-                    {/* <p> Total Pagas{totalValorFaturasPagas}</p> */}
-                    {/* <button onClick={ handleButtonActived} className="btn btn-sm mt-2">Ver</button> */}
-                    {/* <p>{numeroDeFaturasPagas}Numero de faturas</p> */}
+                    <h2 className="text-xl font-bold mb-2"> Faturas Lidas </h2>
+                    <p>{totalValorFaturasPagas}</p>
+                   
+                    
                     </div>
                 </div>
                 <div className="w-full md:w-1/3 p-4">
                     <div className="bg-white rounded-lg shadow-md p-6">
-                    <h2 className="text-xl font-bold mb-2">Card 2</h2>
-                    <p>Conteúdo do Card 2...</p>
+                    <h2 className="text-xl font-bold mb-2">Faturas Pagas</h2>
+                    <p>{numeroDeFaturasPagas}Numero de faturas</p>
                     <p className="text-2xl font-bold">{totalValorFaturasNaoPagas}-Mtn</p>
-                    <p className="text-gray-600">Faturas Não Pagas</p>
+                    {/* <p className="text-gray-600">Faturas Não Pagas</p> */}
                     <span className='text-green-700 text-lg'>{numeroDeFaturasNaoPagas}</span>
-                    {/* <button onClick={ handleButtonMore3 } className="btn btn-sm mt-2">Ver</button> */}
+                   
                     </div>
                 </div>
                 <div className="w-full md:w-1/3 p-4">
                     <div className="bg-white rounded-lg shadow-md p-6">
                     <h2 className="text-xl font-bold mb-2"></h2>
                     <p>Todas {ultimom}</p>
-                    {/* <button onClick={ handleButtonDesatived} className="btn btn-sm mt-2">Ver</button> */}
+                   
                     </div>
                 </div>
                 </section>
