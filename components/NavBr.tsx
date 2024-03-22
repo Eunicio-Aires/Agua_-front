@@ -6,7 +6,7 @@ import { Sobrea } from '@/components/sobre/Sobre'
 export default function NavBr(){
 
     return (  
-      <nav id="header" className="w-full z-30 top-0 py-1 bg-white shadow-lg border-b border-blue-400 fixed ">
+      <nav id="header" className="w-full z-30 top-0 py-1 bg-white shadow-lg border-b border-blue-400 fixed left-0 right-0">
       <div className="w-full flex items-center justify-between mt-0 px-6 py-2">
          <label  className="cursor-pointer md:hidden block">
             <svg className="fill-current text-blue-600" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">

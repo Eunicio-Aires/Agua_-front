@@ -64,7 +64,7 @@ export default function RootLayout({ children,}: {children: React.ReactNode }) {
                     </div>
                     
                 </div> */}
-                <main className="grid w-full h-full ">
+                <main className="grid w-full h-full mt-17">
                     <NavBr/>
                     {children}
                     </main>
