@@ -19,7 +19,7 @@ import {
 
 
 export default function Chart() {
-  const data = [
+  const data:any= [
     {
       name: 'Page A',
       uv: 590,

@@ -182,7 +182,7 @@ export default async  function Pagaments(){
               </div>
 
 
-        <Chart/>
+              <Chart/>
 
 
 {/* ____________________________________MESES____________________________________ */}
