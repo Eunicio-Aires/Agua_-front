@@ -3,7 +3,7 @@ import Link from 'next/link'
 import React from 'react'
 import { Sobrea } from '@/components/sobre/Sobre'
 
-export default function NavBar(){
+export default function NavBr(){
 
     return (  
       <nav id="header" className="w-full z-30 top-10 py-1 bg-white shadow-lg border-b border-blue-400 mt-24">

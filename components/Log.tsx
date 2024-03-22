@@ -1,6 +1,6 @@
 'use client'
 // import TopCards from "@/components/TopCards";
-import { NavBar } from "./NavBar";
+// import { NavBar } from "./NavBr";
 import { useRouter } from 'next/navigation';
 // import { useState } from 'react';
 import React, { SyntheticEvent } from 'react';
