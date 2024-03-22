@@ -77,6 +77,9 @@ export default async  function Pagaments(){
             
             <div className=''>
               <p>{nome}</p>
+
+           {/* @ts-expect-error Server Component */}
+              <Ultimom/>
               <section className="flex flex-wrap justify-center">
                 <div className="w-full md:w-1/3 p-4">
                     <div className="bg-white rounded-lg shadow-md p-6">
