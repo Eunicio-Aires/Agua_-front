@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import Tabela from '../Tabela';
 import Link from 'next/link';
+import { format } from 'date-fns';
 
 export default function Clientes({responseC}:any){
     const [data, setData] = React.useState([]);
@@ -49,6 +50,11 @@ export default function Clientes({responseC}:any){
 
   const comMaisDe3 = clientesFiltrados.length
 
+  const formatarData = (data: string): string => {
+    const dataFormatada = format(new Date(data), 'dd/MM/yyyy');
+    return dataFormatada;
+  };
+
     return(
         <div className="z-1">          
        <section className="flex flex-wrap justify-center">
@@ -86,7 +92,7 @@ export default function Clientes({responseC}:any){
               <td>Contato</td> 
               <td>N Paga</td> 
               <td>Divida</td> 
-              <td>Favorite Color</td>
+              <td>Estado</td>
               {/* <th></th>  */}
             </tr>
           </thead> 
@@ -97,7 +103,7 @@ export default function Clientes({responseC}:any){
               <td>{client.codigo}</td> 
               <td>{client.contato}</td> 
               <td>{client.faturas.filter((fatura:any) => fatura.estado === "Nao pago").length}</td> 
-              <td>12/16/2020</td> 
+              <td>-</td> 
               <td><Link href={`/clientes/${client._id}`}>{client.estado}</Link></td>
               
            
