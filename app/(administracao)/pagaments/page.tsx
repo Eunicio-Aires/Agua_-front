@@ -73,7 +73,7 @@ export default async  function Pagaments(){
 
            {/* @ts-expect-error Server Component */}
               <Ultimom/>
-              
+
               {/* <section className="flex flex-wrap justify-center">
                 <div className="w-full md:w-1/3 p-4">
                     <div className="bg-white rounded-lg shadow-md p-6">
@@ -169,7 +169,7 @@ export default async  function Pagaments(){
                         <td> {mes.mes}</td>
                         <td>{mes.faturas.length || '-'}</td>
                         <td>{mes.faturas.filter((fatura:any) => fatura.estado === 'Nao pago').length || '-'}</td>
-                        <td> {mes.faturas.filter((fatura:any) => fatura.estado === 'Nao pago').length || '-'} </td>
+                        <td> {mes.faturas.filter((fatura:any) => fatura.estado !== 'Nao pago').length || '-'} </td>
                         <td><Link href={`pagaments/${mes._id}`} className="btn btn-xs">Ver</Link></td>
                       </tr>
                     ))}
