@@ -6,6 +6,7 @@ import { cookies } from 'next/headers'
 import Sidebar from '@/components/Sidebar'
 import { Inter } from "next/font/google";
 import { getCompan } from "@/lib/cookiesConf";
+import NavBar from '@/components/NavBar'
 
 import Link from "next/link"
 import '../globals.css'
@@ -64,6 +65,7 @@ export default function RootLayout({ children,}: {children: React.ReactNode }) {
                     
                 </div> */}
                 <main className="grid w-full h-full ">
+                    <NavBar/>
                     {children}
                     </main>
              

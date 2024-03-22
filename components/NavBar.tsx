@@ -2,39 +2,37 @@
 import Link from 'next/link'
 import React from 'react'
 import { Sobrea } from '@/components/sobre/Sobre'
-export function NavBar(){
+
+export default function NavBar(){
 
     return (  
-      
-    
-      <div className="navbar bg-base-100 ">
-  <div className="navbar-start">
-    <div className="dropdown">
-      {/* <label tabIndex={0} className="btn btn-ghost btn-circle">
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
-      </label>
-      <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+      <nav id="header" className="w-full z-30 top-10 py-1 bg-white shadow-lg border-b border-blue-400 mt-24">
+      <div className="w-full flex items-center justify-between mt-0 px-6 py-2">
+         <label  className="cursor-pointer md:hidden block">
+            <svg className="fill-current text-blue-600" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+               <title>menu</title>
+               <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+            </svg>
+         </label>
+         {/* <input className="hidden" type="checkbox" id="menu-toggle"> */}
          
-      </ul> */}
-      
-    </div>
-  </div>
-  <div className="navbar-center">
-    <a className="btn btn-ghost normal-case text-xl">Fatura Online</a>
-  </div>
-  <div className="navbar-end">
-  
-  {/* <button className="btn btn-ghost btn-circle">
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
-    </button> */}
-    <Sobrea/>
-    {/* <button className="btn btn-ghost btn-circle">
-      <div className="indicator">
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" /></svg>
-        <span className="badge badge-xs badge-primary indicator-item"></span>
+         <div className="hidden md:flex md:items-center md:w-auto w-full order-3 md:order-1" id="menu">
+            <nav>
+               <ul className="md:flex items-center justify-between text-base text-blue-600 pt-4 md:pt-0">
+                  <li><a className="inline-block no-underline hover:text-black font-medium text-lg py-2 px-4 lg:-ml-2" href="#">Home</a></li>
+                  <li><a className="inline-block no-underline hover:text-black font-medium text-lg py-2 px-4 lg:-ml-2" href="#">Products</a></li>
+                  <li><a className="inline-block no-underline hover:text-black font-medium text-lg py-2 px-4 lg:-ml-2" href="#">About</a></li>
+               </ul>
+            </nav>
+         </div>
+         
+         <div className="order-2 md:order-3 flex flex-wrap items-center justify-end mr-0 md:mr-4" id="nav-content">
+            <div className="auth flex items-center w-full md:w-full">
+               <button className="bg-transparent text-gray-800  p-2 rounded border border-gray-300 mr-4 hover:bg-gray-100 hover:text-gray-700">Sign in</button>
+               <button className="bg-blue-600 text-gray-200  p-2 rounded  hover:bg-blue-500 hover:text-gray-100">Sign up</button>
+            </div>
+         </div>
       </div>
-    </button> */}
-  </div>
-</div> 
+   </nav> 
     )
 }
