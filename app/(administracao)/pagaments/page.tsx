@@ -9,6 +9,7 @@ import { getCompan, getSession } from '@/lib/cookiesConf'
 // import  Pagamentoss  from "@/lib/pagamentos"
 import { NextResponse } from 'next/server'
 
+
 interface Fatura {
   _id: string;
   mes: string;
@@ -110,6 +111,7 @@ export default async  function Pagaments(){
                     <div className="bg-white rounded-lg shadow-md p-6">
                     <h2 className="text-xl font-bold mb-2">  </h2>
                     <p>Ativos</p>
+                    <Chart/>
                     
                     </div>
                 </div>
