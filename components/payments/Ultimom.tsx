@@ -31,16 +31,16 @@ export  async   function  Ultimom(){
   const totalValorFaturasNaoPagas = faturasNaoPagas.reduce((total: any, fatura: { valor: any; }) => total + fatura.valor, 0);
   const numeroDeFaturasNaoPagas = faturasNaoPagas.length;
   const numeroDeFaturasPagas = faturasPagas.length;
-  const totalValorTodasFaturas = umes.reduce((total: any, mes: { faturas: any[]; }) => {
-      const valorFaturasMes = mes.faturas.reduce((subtotal, fatura) => subtotal + fatura.valor, 0);
-      return total + valorFaturasMes;
-  }, 0);
-  const totalValorFaturasPagas = umes.reduce((total: any, mes: { faturas: any[]; }) => {
-      const valorFaturasMes = mes.faturas
-          .filter(fatura => fatura.estado === "Pago")
-          .reduce((subtotal, fatura) => subtotal + fatura.valor, 0);
-      return total + valorFaturasMes;
-  }, 0);
+  // const totalValorTodasFaturas = umes.reduce((total: any, mes: { faturas: any[]; }) => {
+  //     const valorFaturasMes = mes.faturas.reduce((subtotal, fatura) => subtotal + fatura.valor, 0);
+  //     return total + valorFaturasMes;
+  // }, 0);
+  // const totalValorFaturasPagas = umes.reduce((total: any, mes: { faturas: any[]; }) => {
+  //     const valorFaturasMes = mes.faturas
+  //         .filter(fatura => fatura.estado === "Pago")
+  //         .reduce((subtotal, fatura) => subtotal + fatura.valor, 0);
+  //     return total + valorFaturasMes;
+  // }, 0);
 
 
     return( 
@@ -75,7 +75,7 @@ export  async   function  Ultimom(){
                 <div className="w-full md:w-1/3 p-4">
                     <div className="bg-white rounded-lg shadow-md p-6">
                     <h2 className="text-xl font-bold mb-2"> Faturas Lidas </h2>
-                    <p>{totalValorFaturasPagas}</p>
+                    {/* <p>{totalValorFaturasPagas}</p> */}
                    
                     
                     </div>
