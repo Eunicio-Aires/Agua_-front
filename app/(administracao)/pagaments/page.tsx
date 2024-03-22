@@ -49,7 +49,7 @@ export default async  function Pagaments(){
   const comp  = await getCompan()
   // const nome = await data.compan.nome
   // const idf = await '12345'
-  const res = await fetch(`https://agua-p.vercel.app/adm/mesesGetbtcomp/${comp}`,{cache:"no-cache"}).then((res) => res.json());
+  const res:any = await fetch(`https://agua-p.vercel.app/adm/mesesGetbtcomp/${comp}`,{cache:"no-cache"}).then((res) => res.json());
   const ultimosMeses = await res.compan.mes.slice(-10)
   const mesultimo = await res.compan.mes.slice(-1)
   const ultimo = await mesultimo.faturas.filter((fatura: { estado: string; }) => fatura.estado !== "Nao pago");
