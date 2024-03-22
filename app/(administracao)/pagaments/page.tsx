@@ -5,7 +5,7 @@ import Chart from '@/components/Charts'
 import  Pagamentos  from '@/components/payments/Pagamentos'
 import Meses      from '@/components/payments/Meses'
 import Link from "next/link"
-import { getCompan, getSession } from '@/lib/cookiesConf'
+import { getCompan } from '@/lib/cookiesConf'
 // import  Pagamentoss  from "@/lib/pagamentos"
 import { NextResponse } from 'next/server'
 
@@ -72,7 +72,7 @@ export default async  function Pagaments(){
           
             
             <div className=''>
-              <p>{nome}</p>
+              {/* <p>{nome}</p> */}
 
            {/* @ts-expect-error Server Component */}
               <Ultimom/>
