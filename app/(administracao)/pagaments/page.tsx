@@ -51,9 +51,10 @@ export default async  function Pagaments(){
   // const idf = await '12345'
   const res = await fetch(`https://agua-p.vercel.app/adm/mesesGetbtcomp/${comp}`,{cache:"no-cache"}).then((res) => res.json());
   const ultimosMeses = await res.compan.mes.slice(-10)
-  const ultimo = await res.compan.mes[0].faturas.filter((fatura: { estado: string; }) => fatura.estado === "Pago");
+  const mesultimo = await res.compan.mes.slice(-1)
+  const ultimo = await mesultimo.faturas.filter((fatura: { estado: string; }) => fatura.estado !== "Nao pago");
   const nome = await res.compan.nome;
-  
+  // res.compan.mes[0]
   // const mes = await res.compan.mes 
   // if(!res.ok){
   //   throw new Error('Failed to fetch data')
