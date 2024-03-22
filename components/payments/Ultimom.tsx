@@ -13,14 +13,16 @@
 //   return res.json()
 // }
  
+import { getCompan, getSession } from '@/lib/cookiesConf'
 
 
 export  async   function  Ultimom(){
   const idf = await '12345'
-  const res = await fetch(`https://agua-front.vercel.app/api/mes/${idf}`,{cache:"no-cache"}).then((res) => res.json());
-  const response = await  res;
+  const comp  = await getCompan()
+  const res = await fetch(`https://agua-p.vercel.app/adm/mesesGetbtcomp/${comp}`,{cache:"no-cache"}).then((res) => res.json());
+  const umes = await  res;
   
-  const umes = response;
+  // const  = response;
   // const ultimoMes = dados.compan.mes[dados.compan.mes.length - 1];
   const ultimoMes = umes.compan.mes[umes.compan.mes.length - 1];
   const ultimom = ultimoMes.faturas.length;
@@ -29,16 +31,16 @@ export  async   function  Ultimom(){
   const totalValorFaturasNaoPagas = faturasNaoPagas.reduce((total: any, fatura: { valor: any; }) => total + fatura.valor, 0);
   const numeroDeFaturasNaoPagas = faturasNaoPagas.length;
   const numeroDeFaturasPagas = faturasPagas.length;
-  const totalValorTodasFaturas = response.reduce((total: any, mes: { faturas: any[]; }) => {
-      const valorFaturasMes = mes.faturas.reduce((subtotal, fatura) => subtotal + fatura.valor, 0);
-      return total + valorFaturasMes;
-  }, 0);
-  const totalValorFaturasPagas = response.reduce((total: any, mes: { faturas: any[]; }) => {
-      const valorFaturasMes = mes.faturas
-          .filter(fatura => fatura.estado === "Pago")
-          .reduce((subtotal, fatura) => subtotal + fatura.valor, 0);
-      return total + valorFaturasMes;
-  }, 0);
+  // const totalValorTodasFaturas = response.reduce((total: any, mes: { faturas: any[]; }) => {
+  //     const valorFaturasMes = mes.faturas.reduce((subtotal, fatura) => subtotal + fatura.valor, 0);
+  //     return total + valorFaturasMes;
+  // }, 0);
+  // const totalValorFaturasPagas = response.reduce((total: any, mes: { faturas: any[]; }) => {
+  //     const valorFaturasMes = mes.faturas
+  //         .filter(fatura => fatura.estado === "Pago")
+  //         .reduce((subtotal, fatura) => subtotal + fatura.valor, 0);
+  //     return total + valorFaturasMes;
+  // }, 0);
 
 
     return( 
@@ -46,7 +48,7 @@ export  async   function  Ultimom(){
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 p-4">
             <div className="bg-white flex justify-between w-full border p-4 rounded-lg">
               <div className="flex flex-col w-full pb-4">
-                <p className="text-2xl font-bold">{totalValorFaturasPagas}-Mtn</p>
+                {/* <p className="text-2xl font-bold">{totalValorFaturasPagas}-Mtn</p> */}
                 <p className="text-gray-600">Faturas Pagas</p>
               </div>
               <p className="bg-green-200 flex justify-center items-center p-2 rounded-lg">
@@ -64,7 +66,7 @@ export  async   function  Ultimom(){
             </div>
             <div className="bg-white flex justify-btween w-full p-4 rounded">
               <div className="flex flex-col w-full pb-4">
-                <p className="text-2xl font-bold">{totalValorTodasFaturas}-Mtn</p>
+                {/* <p className="text-2xl font-bold">{totalValorTodasFaturas}-Mtn</p> */}
                 <p className="text-gray-600">Todas {ultimom}</p>
               </div>
             </div>
