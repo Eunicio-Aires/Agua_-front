@@ -1,4 +1,4 @@
-import { NavBar } from '@/components/NavBar';
+// import { NavBar } from '@/components/NavBar';
 import { Movitel } from '@/components/pagamento/Movitel';
 import { Numero } from '@/components/Numero'
 import { Footer } from '@/components/Foter'
