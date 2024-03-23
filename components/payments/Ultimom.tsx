@@ -35,42 +35,16 @@ export  async   function  Ultimom(){
 //       const valorFaturasMes = mes.faturas.reduce((subtotal, fatura) => subtotal + fatura.valor, 0);
 //       return total + valorFaturasMes;
 //   }, 0);
-  const totalValorFaturasPagas = ultimoMes.reduce((total: any, mes: { faturas: any[]; }) => {
-      const valorFaturasMes = mes.faturas
-          .filter(fatura => fatura.estado === "Pago")
-          .reduce((subtotal, fatura) => subtotal + fatura.valor, 0);
-      return total + valorFaturasMes;
-  }, 0);
+//   const totalValorFaturasPagas = ultimoMes.reduce((total: any, mes: { faturas: any[]; }) => {
+//       const valorFaturasMes = mes.faturas
+//           .filter(fatura => fatura.estado === "Pago")
+//           .reduce((subtotal, fatura) => subtotal + fatura.valor, 0);
+//       return total + valorFaturasMes;
+//   }, 0);
 
 
     return( 
-      
-            // <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 p-4">
-            // <div className="bg-white flex justify-between w-full border p-4 rounded-lg">
-            //   <div className="flex flex-col w-full pb-4">
-            //     {/* <p className="text-2xl font-bold">{totalValorFaturasPagas}-Mtn</p> */}
-            //     <p className="text-gray-600">Faturas Pagas</p>
-            //   </div>
-            //   <p className="bg-green-200 flex justify-center items-center p-2 rounded-lg">
-            //     <span className='text-green-700 text-lg'>{numeroDeFaturasPagas}</span>
-            //   </p>
-            // </div>
-            // <div className="bg-white flex justify-between w-full border p-4 rounded-lg">
-            //   <div className="flex flex-col w-full pb-4">
-            //     <p className="text-2xl font-bold">{totalValorFaturasNaoPagas}-Mtn</p>
-            //     <p className="text-gray-600">Faturas Não Pagas</p>
-            //   </div>
-            //   <p className="bg-red-200 flex justify-center items-center p-2 rounded-lg">
-            //     <span className='text-green-700 text-lg'>{numeroDeFaturasNaoPagas}</span>
-            //   </p>
-            // </div>
-            // <div className="bg-white flex justify-btween w-full p-4 rounded">
-            //   <div className="flex flex-col w-full pb-4">
-            //     {/* <p className="text-2xl font-bold">{totalValorTodasFaturas}-Mtn</p> */}
-            //     <p className="text-gray-600">Todas {ultimom}</p>
-            //   </div>
-            // </div>
-
+        
             <section className="flex flex-wrap justify-center">
                 <div className="w-full md:w-1/3 p-4">
                     <div className="bg-white rounded-lg shadow-md p-6">
@@ -84,7 +58,7 @@ export  async   function  Ultimom(){
                     <div className="bg-white rounded-lg shadow-md p-6">
                     <h2 className="text-xl font-bold mb-2">Faturas Pagas</h2>
                     <p>{numeroDeFaturasPagas}</p>
-                    <p className="text-2xl font-bold">{totalValorFaturasPagas}-Mtn</p>
+                    <p className="text-2xl font-bold">-Mtn</p>
                     {/* <p className="text-gray-600">Faturas Não Pagas</p> */}
                     {/* <span className='text-green-700 text-lg'>{numeroDeFaturasNaoPagas}</span> */}
                    
