@@ -83,7 +83,7 @@ export  async   function  Ultimom(){
                 <div className="w-full md:w-1/3 p-4">
                     <div className="bg-white rounded-lg shadow-md p-6">
                     <h2 className="text-xl font-bold mb-2">Faturas Pagas</h2>
-                    <p>{numeroDeFaturasPagas}Numero de faturas</p>
+                    <p>{numeroDeFaturasPagas}</p>
                     {/* <p className="text-2xl font-bold">{totalValorFaturasNaoPagas}-Mtn</p> */}
                     {/* <p className="text-gray-600">Faturas Não Pagas</p> */}
                     {/* <span className='text-green-700 text-lg'>{numeroDeFaturasNaoPagas}</span> */}
@@ -93,7 +93,8 @@ export  async   function  Ultimom(){
                 <div className="w-full md:w-1/3 p-4">
                     <div className="bg-white rounded-lg shadow-md p-6">
                     <h2 className="text-xl font-bold mb-2">Nao Paga</h2>
-                    {/* <p>Todas {ultimom}</p> */}
+                    <p> {numeroDeFaturasNaoPagas}</p>
+                    <p className="text-gray-600">{totalValorFaturasNaoPagas}</p>
                    
                     </div>
                 </div>
