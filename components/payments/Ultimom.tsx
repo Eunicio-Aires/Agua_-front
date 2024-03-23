@@ -28,10 +28,12 @@ export  async   function  Ultimom(){
   // const ultimoMes = dados.compan.mes[dados.compan.mes.length - 1];
   const ultimoMes = umes.compan.mes[umes.compan.mes.length - 1];
   const ultimom = ultimoMes.faturas.length;
+  const todasFaturas = ultimoMes.faturas
   const faturasNaoPagas = ultimoMes.faturas.filter((fatura: { estado: string; }) => fatura.estado === "Nao pago");
   const faturasPagas = ultimoMes.faturas.filter((fatura: { estado: string; }) => fatura.estado !== "Nao pago");
   const totalValorFaturasNaoPagas = faturasNaoPagas.reduce((total: any, fatura: { valor: any; }) => total + fatura.valor, 0);
   const totalValorFaturasPagas = faturasPagas.reduce((total: any, fatura: { valor: any; }) => total + fatura.valor, 0);
+  const valorTodasFaturas      = todasFaturas.reduce((total: any, fatura: { valor: any; }) => total + fatura.valor, 0);
   const numeroDeFaturasNaoPagas = faturasNaoPagas.length;
   const numeroDeFaturasPagas = faturasPagas.length;
 //   const totalValorTodasFaturas = faturasNaoPagas.reduce((total: any, mes: { faturas: any[]; }) => {
@@ -51,15 +53,19 @@ export  async   function  Ultimom(){
             <section className="flex flex-wrap justify-center">
                 <div className="w-full md:w-1/3 p-4">
                     <div className="bg-white rounded-lg shadow-md p-6">
-                    <h2 className="text-lg font-bold mb-2"> Faturas Lidas </h2>
-                    <p>{ultimom} {}</p>
+                    <h2 className="text-lg font-bold mb-2 text-yellow-500"> Faturas Lidas </h2>
+                    <div className=" flex justify-between">
+                    <span className='flex'> <TfiNotepad className='mr-2'/> {ultimom} </span>
+
+                    <span className='flex'> <GiReceiveMoney className='mr-2'/> {valorTodasFaturas},00 Mtn</span>
+                    </div>
                    
                     
                     </div>
                 </div>
                 <div className="w-full md:w-1/3 p-4">
                     <div className="bg-white rounded-lg shadow-md p-6">
-                    <h2 className="text-lg font-bold mb-2">Faturas Pagas</h2>
+                    <h2 className="text-lg font-bold mb-2 text-green-500">Faturas Pagas</h2>
                     <div className=" flex justify-between">
                     <span className='flex'> <TfiNotepad className='mr-2'/> {numeroDeFaturasPagas} </span>
 
