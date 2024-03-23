@@ -93,8 +93,12 @@ export  async   function  Ultimom(){
                 <div className="w-full md:w-1/3 p-4">
                     <div className="bg-white rounded-lg shadow-md p-6">
                     <h2 className="text-xl font-bold mb-2">Nao Paga</h2>
-                    <p> {numeroDeFaturasNaoPagas}</p>
-                    <p className="text-gray-600">{totalValorFaturasNaoPagas}</p>
+                    <div className="justify-between">
+                    <span> {numeroDeFaturasNaoPagas}</span>
+                    <span><p className="text-gray-600">{totalValorFaturasNaoPagas}</p></span>
+                    
+                    </div>
+                    
                    
                     </div>
                 </div>
