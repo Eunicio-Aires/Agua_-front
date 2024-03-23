@@ -35,7 +35,7 @@ export  async   function  Ultimom(){
 //       const valorFaturasMes = mes.faturas.reduce((subtotal, fatura) => subtotal + fatura.valor, 0);
 //       return total + valorFaturasMes;
 //   }, 0);
-  const totalValorFaturasPagas = umes.reduce((total: any, mes: { faturas: any[]; }) => {
+  const totalValorFaturasPagas = ultimoMes.reduce((total: any, mes: { faturas: any[]; }) => {
       const valorFaturasMes = mes.faturas
           .filter(fatura => fatura.estado === "Pago")
           .reduce((subtotal, fatura) => subtotal + fatura.valor, 0);
@@ -84,7 +84,7 @@ export  async   function  Ultimom(){
                     <div className="bg-white rounded-lg shadow-md p-6">
                     <h2 className="text-xl font-bold mb-2">Faturas Pagas</h2>
                     <p>{numeroDeFaturasPagas}</p>
-                    <p className="text-2xl font-bold">{totalValorFaturasNaoPagas}-Mtn</p>
+                    <p className="text-2xl font-bold">{totalValorFaturasPagas}-Mtn</p>
                     {/* <p className="text-gray-600">Faturas Não Pagas</p> */}
                     {/* <span className='text-green-700 text-lg'>{numeroDeFaturasNaoPagas}</span> */}
                    
