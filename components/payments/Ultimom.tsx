@@ -27,7 +27,7 @@ export  async   function  Ultimom(){
   // const  = response;
   // const ultimoMes = dados.compan.mes[dados.compan.mes.length - 1];
   const ultimoMes = umes.compan.mes[umes.compan.mes.length - 1];
-  const nomeMes = umes.compan.mes.mes
+  const nomeMes = ultimoMes.mes
   const ultimom = ultimoMes.faturas.length;
   const todasFaturas = ultimoMes.faturas
   const faturasNaoPagas = ultimoMes.faturas.filter((fatura: { estado: string; }) => fatura.estado === "Nao pago");
