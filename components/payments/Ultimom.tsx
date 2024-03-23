@@ -48,7 +48,7 @@ export  async   function  Ultimom(){
             <section className="flex flex-wrap justify-center">
                 <div className="w-full md:w-1/3 p-4">
                     <div className="bg-white rounded-lg shadow-md p-6">
-                    <h2 className="text-xl font-bold mb-2"> Faturas Lidas </h2>
+                    <h2 className="text-lg font-bold mb-2"> Faturas Lidas </h2>
                     <p>{ultimom} {}</p>
                    
                     
@@ -56,7 +56,7 @@ export  async   function  Ultimom(){
                 </div>
                 <div className="w-full md:w-1/3 p-4">
                     <div className="bg-white rounded-lg shadow-md p-6">
-                    <h2 className="text-xl font-bold mb-2">Faturas Pagas</h2>
+                    <h2 className="text-lg font-bold mb-2">Faturas Pagas</h2>
                     <p>{numeroDeFaturasPagas}</p>
                     <p className="text-2xl font-bold">-Mtn</p>
                     {/* <p className="text-gray-600">Faturas Não Pagas</p> */}
@@ -66,9 +66,10 @@ export  async   function  Ultimom(){
                 </div>
                 <div className="w-full md:w-1/3 p-4">
                     <div className="bg-white rounded-lg shadow-md p-6">
-                    <h2 className="text-xl font-bold mb-2">Nao Paga</h2>
-                    <div className="justify-between">
+                    <h2 className="text-lg font-bold mb-2">Nao Paga</h2>
+                    <div className="flex items-center justify-between">
                     <span> {numeroDeFaturasNaoPagas}</span>
+
                     <span><p className="text-gray-600">{totalValorFaturasNaoPagas}</p></span>
                     
                     </div>
