@@ -27,6 +27,7 @@ export  async   function  Ultimom(){
   // const  = response;
   // const ultimoMes = dados.compan.mes[dados.compan.mes.length - 1];
   const ultimoMes = umes.compan.mes[umes.compan.mes.length - 1];
+  const nomeMes = umes.compan.mes.mes
   const ultimom = ultimoMes.faturas.length;
   const todasFaturas = ultimoMes.faturas
   const faturasNaoPagas = ultimoMes.faturas.filter((fatura: { estado: string; }) => fatura.estado === "Nao pago");
@@ -50,7 +51,8 @@ export  async   function  Ultimom(){
 
     return( 
         
-            <section className="flex flex-wrap justify-center">
+            <section className="flex flex-wrap justify-center mt-16">
+                <h2 className='text-xl font-bold'>{nomeMes}</h2>
                 <div className="w-full md:w-1/3 p-4">
                     <div className="bg-white rounded-lg shadow-md p-6">
                     <h2 className="text-lg font-bold mb-2 text-yellow-500"> Faturas Lidas </h2>
