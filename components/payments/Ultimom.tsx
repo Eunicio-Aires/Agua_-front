@@ -21,7 +21,7 @@ import { GiReceiveMoney } from "react-icons/gi";
 export  async   function  Ultimom(){
   const idf = await '12345'
   const comp  = await getCompan()
-  const res = await fetch(`https://agua-p.vercel.app/adm/mesesGetbtcomp/${comp}`,{cache:"no-cache"}).then((res) => res.json());
+  const res:any = await fetch(`https://agua-p.vercel.app/adm/mesesGetbtcomp/${comp}`,{cache:"no-cache"}).then((res) => res.json());
   const umes = await  res;
   
   // const  = response;
@@ -68,11 +68,11 @@ export  async   function  Ultimom(){
                 </div>
                 <div className="w-full md:w-1/3 p-4">
                     <div className="bg-white rounded-lg shadow-md p-6">
-                    <h2 className="text-lg font-bold mb-2">Nao Paga</h2>
+                    <h2 className="text-lg font-bold mb-2 text-red-500">Nao Paga</h2>
                     <div className=" flex justify-between">
-                    <span className='flex'> <TfiNotepad /> {numeroDeFaturasNaoPagas}</span>
+                    <span className='flex'> <TfiNotepad className='ml-2'/> {numeroDeFaturasNaoPagas}</span>
 
-                    <span><GiReceiveMoney /> {totalValorFaturasNaoPagas}</span>
+                    <span className='flex'><GiReceiveMoney className='ml-2'/> {totalValorFaturasNaoPagas},00 Mtn</span>
                     
                     </div>
                     
