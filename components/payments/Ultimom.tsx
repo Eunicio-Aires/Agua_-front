@@ -72,7 +72,7 @@ export  async   function  Ultimom(){
                     <div className="flex  justify-between">
                     <span> <TfiNotepad /> {numeroDeFaturasNaoPagas}</span>
 
-                    <span><p className="text-gray-600"><GiReceiveMoney /> {totalValorFaturasNaoPagas}</p></span>
+                    <span><GiReceiveMoney /> {totalValorFaturasNaoPagas}</span>
                     
                     </div>
                     
