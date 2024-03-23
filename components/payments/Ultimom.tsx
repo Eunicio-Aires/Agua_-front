@@ -14,6 +14,8 @@
 // }
  
 import { getCompan, getSession } from '@/lib/cookiesConf'
+import { TfiNotepad } from "react-icons/tfi";
+import { GiReceiveMoney } from "react-icons/gi";
 
 
 export  async   function  Ultimom(){
@@ -68,9 +70,9 @@ export  async   function  Ultimom(){
                     <div className="bg-white rounded-lg shadow-md p-6">
                     <h2 className="text-lg font-bold mb-2">Nao Paga</h2>
                     <div className="flex items-center justify-between">
-                    <span> {numeroDeFaturasNaoPagas}</span>
+                    <span> <TfiNotepad /> {numeroDeFaturasNaoPagas}</span>
 
-                    <span><p className="text-gray-600">{totalValorFaturasNaoPagas}</p></span>
+                    <span><p className="text-gray-600"><GiReceiveMoney /> {totalValorFaturasNaoPagas}</p></span>
                     
                     </div>
                     
