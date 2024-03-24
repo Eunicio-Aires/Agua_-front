@@ -51,9 +51,9 @@ export  async   function  Ultimom(){
 
     return( 
         <div>
-            <h2 className="text-xl font-bold ml-6 mt-9">{nomeMes}</h2>
+            <h2 className="text-xl font-bold ml-6 mt-8">{nomeMes}</h2>
         
-            <section className="flex flex-wrap justify-center  mt-5">
+            <section className="flex flex-wrap justify-center  mt-4">
                 
                 <div className="w-full md:w-1/3 p-4">
                     <div className="bg-white rounded-lg shadow-md p-6">

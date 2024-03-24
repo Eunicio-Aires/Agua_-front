@@ -8,6 +8,7 @@ import Link from "next/link"
 import { getCompan } from '@/lib/cookiesConf'
 // import  Pagamentoss  from "@/lib/pagamentos"
 import { NextResponse } from 'next/server'
+import { GrLinkNext } from "react-icons/gr";
 
 
 interface Fatura {
@@ -72,45 +73,16 @@ export default async  function Pagaments(){
           
             
             <div className=''>
-              {/* <p>{nome}</p> */}
+              
 
            {/* @ts-expect-error Server Component */}
               <Ultimom/>
 
-              {/* <section className="flex flex-wrap justify-center">
-                <div className="w-full md:w-1/3 p-4">
-                    <div className="bg-white rounded-lg shadow-md p-6">
-                    <h2 className="text-xl font-bold mb-2">  </h2>
-                    <p>Ativos</p>
-                    
-                    </div>
-                 </div>
-                 <div className="w-full md:w-1/3 p-4">
-                     <div className="bg-white rounded-lg shadow-md p-6">
-                     <h2 className="text-xl font-bold mb-2">Card 2</h2>
-                     <p>Conteúdo do Card 2...</p>
-                     
-                     </div>
-                 </div>
-                 <div className="w-full md:w-1/3 p-4">
-                     <div className="bg-white rounded-lg shadow-md p-6">
-                     <h2 className="text-xl font-bold mb-2"></h2>
-                     <p>Desativado</p>
-                     
-                     </div>
-                 </div>
-                 </section> */}
-
-
-
-
-
-
-                <section className="flex flex-wrap justify-center">
+                <section className="flex flex-wrap justify-center mt-5">
                 <div className="w-full md:w-1/2 p-4">
                     <div className="bg-white rounded-lg shadow-md p-6">
                     <h2 className="text-xl font-bold mb-2">  </h2>
-                    <p>Ativos</p>
+                    
                     <Chart/>
                     
                     </div>
@@ -137,7 +109,7 @@ export default async  function Pagaments(){
                         <td></td>
                         <td> {mes.mes}</td>
                         <td>{mes.consumo || '-'}</td>
-                        <td>{mes.valor || '-'}</td>
+                        <td className='text-green-500'>{mes.valor || '-'}</td>
                         <td> {mes.formaDePagamento || '-'} </td>
                         {/* <td><Link href={''} className="btn btn-xs">Ver</Link></td> */}
                       </tr>
@@ -171,10 +143,10 @@ export default async  function Pagaments(){
                       <tr key={mes._id}>
                         <td></td>
                         <td> {mes.mes}</td>
-                        <td>{mes.faturas.length || '-'}</td>
-                        <td>{mes.faturas.filter((fatura:any) => fatura.estado === 'Nao pago').length || '-'}</td>
-                        <td> {mes.faturas.filter((fatura:any) => fatura.estado !== 'Nao pago').length || '-'} </td>
-                        <td><Link href={`pagaments/${mes._id}`} className="btn btn-xs">Ver</Link></td>
+                        <td className='text-yellow-500'>{mes.faturas.length || '-'}</td>
+                        <td className='text-red-500'>{mes.faturas.filter((fatura:any) => fatura.estado === 'Nao pago').length || '-'}</td>
+                        <td className='text-green-500'> {mes.faturas.filter((fatura:any) => fatura.estado !== 'Nao pago').length || '-'} </td>
+                        <td><Link href={`pagaments/${mes._id}`} className="btn btn-xs"><GrLinkNext /></Link></td>
                       </tr>
                     ))}
                   </tbody>
@@ -182,7 +154,7 @@ export default async  function Pagaments(){
               </div>
 
 
-              <Chart/>
+              
 
 
 {/* ____________________________________MESES____________________________________ */}
