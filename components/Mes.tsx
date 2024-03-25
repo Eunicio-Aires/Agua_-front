@@ -23,7 +23,7 @@ export  function Mes(){
       mes:(event.target as HTMLFormElement).mes.value
     };
     const  JSONdata = JSON.stringify(data);
-    const endpoint = `https://agua-p.vercel.app/adm/criarMes/${compan}`
+    const endpoint = `https://agua-front.vercel.app/api/configu/mes/${compan}`
 
     const options: RequestInit = {
       method: 'POST',
