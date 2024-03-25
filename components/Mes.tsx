@@ -1,7 +1,8 @@
-"use client"
+"use server"
 import React, { useState } from "react";
 import  { SyntheticEvent } from 'react';
 import { useRouter } from 'next/navigation';
+import { getCompan, getSession } from '@/lib/cookiesConf'
 // import { getId } from '@/lib/cookiesConf'
 // import { Router } from "next/router";
 // import { redirect } from 'next/navigation'
@@ -12,8 +13,8 @@ interface ZonaProps{
 }
 
 
-export  function Mes(idCompam:any){
-  const idCompa = idCompam
+export  function Mes(){
+  const compan =  getCompan()
 
   const handleSubmit = async (event: SyntheticEvent) => {
     event.preventDefault();
@@ -22,7 +23,7 @@ export  function Mes(idCompam:any){
       mes:(event.target as HTMLFormElement).mes.value
     };
     const  JSONdata = JSON.stringify(data);
-    const endpoint = `https://agua-p.vercel.app/adm/criarMes/${idCompa}`
+    const endpoint = `https://agua-p.vercel.app/adm/criarMes/${compan}`
 
     const options: RequestInit = {
       method: 'POST',
