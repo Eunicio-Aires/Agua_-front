@@ -15,8 +15,8 @@ export default async function Configuracoes(){
     return(
        
         <div>
-            <RegistarZona/>
-            <Mes/>
+            {/* <RegistarZona/> */}
+            <Mes idCompam ={compan}/>
         
             
 

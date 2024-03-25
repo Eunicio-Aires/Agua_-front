@@ -12,8 +12,8 @@ interface ZonaProps{
 }
 
 
-export  function Mes(idCompa:any){
-  // const idCompa =  12345;
+export  function Mes(idCompam:any){
+  const idCompa = idCompam
 
   const handleSubmit = async (event: SyntheticEvent) => {
     event.preventDefault();
