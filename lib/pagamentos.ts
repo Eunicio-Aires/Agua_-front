@@ -12,14 +12,14 @@ export  async function Pagamentoss(){
     return res.json()
 }
 
-export  async function MesesDados(){
-  const comp  = await getCompan()
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
-  const res:any = await fetch(`https://agua-p.vercel.app/adm/mesesGetbtcomp/${comp}`,{cache:"no-store"})
-  const ultimosMeses = await res.compan.mes.slice(-7)
-  if(!ultimosMeses.ok){
-    throw new Error('Failed to fetch data')
-  }
-  return ultimosMeses.json()
+// export  async function MesesDados(){
+//   const comp  = await getCompan()
+//   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+//   const res:any = await fetch(`https://agua-p.vercel.app/adm/mesesGetbtcomp/${comp}`,{cache:"no-store"})
+//   const ultimosMeses = await res.compan.mes.slice(-7)
+//   if(!ultimosMeses.ok){
+//     throw new Error('Failed to fetch data')
+//   }
+//   return ultimosMeses.json()
   
-}
+// }

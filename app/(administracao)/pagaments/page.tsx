@@ -6,7 +6,7 @@ import  Pagamentos  from '@/components/payments/Pagamentos'
 import Meses      from '@/components/payments/Meses'
 import Link from "next/link"
 import { getCompan } from '@/lib/cookiesConf'
-// import  Pagamentoss  from "@/lib/pagamentos"
+
 import { NextResponse } from 'next/server'
 import { GrLinkNext } from "react-icons/gr";
 
