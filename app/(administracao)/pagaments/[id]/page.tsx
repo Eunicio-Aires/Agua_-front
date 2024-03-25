@@ -219,13 +219,13 @@ export default async function UnicoMes({ params }: { params: { id: string } }){
                         {/* View all */}
                         </a>
                      </div>
-                     <div className="flow-root">
+                     {/* <div className="flow-root">
                         <ul role="list" className="divide-y divide-gray-200">
                         {faturasPagas.map((mes:any)=>(
                            <li className="py-3 sm:py-4" key={mes._id}>
                               <div className="flex items-center space-x-4">
                                  <div className="flex-shrink-0">
-                                    {/* <img className="h-8 w-8 rounded-full" src="https://demo.themesberg.com/windster/images/users/neil-sims.png" alt="Neil image"> */}
+                                   
                                  </div>
                                  <div className="flex-1 min-w-0">
                                     <p className="text-sm font-medium text-gray-900 truncate">
@@ -243,7 +243,7 @@ export default async function UnicoMes({ params }: { params: { id: string } }){
                             ))}
                            
                         </ul>
-                     </div>
+                     </div> */}
                   </div>
                   <div className="bg-white shadow rounded-lg p-4 sm:p-6 xl:p-8 ">
                      <h3 className="text-xl leading-none font-bold text-gray-900 mb-10">Formas de Pagamento</h3>

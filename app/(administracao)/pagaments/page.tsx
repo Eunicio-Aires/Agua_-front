@@ -80,7 +80,7 @@ export default async  function Pagaments(){
 
                 <section className="flex flex-wrap justify-center mt-5">
                 <div className="w-full md:w-1/2 p-4">
-                    <div className="bg-white rounded-lg shadow-md p-6">
+                    <div className="bg-white rounded-lg shadow-md p-3">
                     <h2 className="text-xl font-bold mb-2">  </h2>
                     
                     <Chart/>

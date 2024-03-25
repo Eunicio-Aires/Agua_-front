@@ -1,5 +1,6 @@
 "use client"
 import React from "react";
+import { MesesDados } from "@/lib/pagamentos";
 import {
   LineChart,
   Line,
@@ -10,9 +11,67 @@ import {
   Legend
 } from "recharts";
 
+interface Fatura {
+  _id: string;
+  mes: string;
+  leitura: number;
+  estado: string;
+  createdAt: string;
+  updatedAt: string;
+  __v: number;
+  consumo?: number;
+  valor: number;
+}
+
+interface Mes {
+  _id: string;
+  mes: string;
+  faturas: Fatura[];
+  createdAt: string;
+  __v: number;
+}
+
+interface Compan {
+  area: any[];
+  _id: string;
+  nome: string;
+  clientes: string[];
+  email: string;
+  admin: any[];
+  createdAt: string;
+  updatedAt: string;
+  __v: number;
+  mes: Mes[];
+}
+
+interface Resultado {
+  name: string;
+  uv: number;
+  pv: number;
+  amt: number;
+}
 
 
 export default function App() {
+//   const meses = MesesDados()
+//   const totalPorMes = meses.compan.mes.map((mes: { faturas: any[]; mes: any; }) => {
+//     const valorNaoPago = mes.faturas
+//         .filter(fatura => fatura.estado === "Nao pago")
+//         .reduce((total, fatura) => total + fatura.valor, 0);
+
+//     const valorPago = mes.faturas
+//         .filter(fatura => fatura.estado !== "Nao pago")
+//         .reduce((total, fatura) => total + fatura.valor, 0);
+    
+//     return { 
+//         name: mes.mes, 
+//         uv: valorNaoPago,
+//         pv: valorPago,
+//         amt: valorNaoPago + valorPago
+//     };
+// });
+  
+
   const data = [
     {
       name: "Page A",
