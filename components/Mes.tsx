@@ -1,4 +1,4 @@
-"use server"
+"use client"
 import React, { useState } from "react";
 import  { SyntheticEvent } from 'react';
 import { useRouter } from 'next/navigation';
@@ -14,7 +14,7 @@ interface ZonaProps{
 
 
 export  function Mes(){
-  const compan =  getCompan()
+  const compan = 'er17324785ksadf';
 
   const handleSubmit = async (event: SyntheticEvent) => {
     event.preventDefault();

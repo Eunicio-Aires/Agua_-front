@@ -15,12 +15,7 @@ export default async function Configuracoes(){
     return(
        
         <div>
-            {/* <RegistarZona/> */}
-            <Mes />
-        
-            
-
-        
+            <Mes/>
         </div>
         
     )
