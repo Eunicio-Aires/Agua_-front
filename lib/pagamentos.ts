@@ -1,5 +1,5 @@
 import { getCompan } from '@/lib/cookiesConf'
-export  async function Pagamentoss(){
+export default  async function Pagamentoss(){
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
 // Use baseUrl conforme necessário em seu código
