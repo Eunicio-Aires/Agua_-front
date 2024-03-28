@@ -114,7 +114,7 @@ export default async function Page({ params }: { params: {pcliente: Cliente}}){
 <h2 className="mt-10 text-center text-gray-600 font-xl">Faturas Pagas</h2>
         <p className="text-xs text-gray-400 text-center">Ultimas 5 faturas pagas</p>
 
-      <table className=" text-center ">
+      <table className=" text-center rounded-lg">
           <thead className="border-b">
             <tr>
               <th scope="col" className="text-sm font-medium text-gray-900 px-3 py-4">
