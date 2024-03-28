@@ -130,70 +130,70 @@ export default async function Page({ params }: { params: {pcliente: Cliente}}){
             </ section >
 
 
-{/* <div className="relative flex min-h-screen flex-col justify-center overflow-hidden bg-gray- py-6 sm:py-12">
-  <div className="mx-auto max-w-screen-xl px-4 w-full">
-    <div className="grid w-full sm:grid-cols-2 xl:grid-cols-4 gap-6">
+// {/* <div className="relative flex min-h-screen flex-col justify-center overflow-hidden bg-gray- py-6 sm:py-12">
+//   <div className="mx-auto max-w-screen-xl px-4 w-full">
+//     <div className="grid w-full sm:grid-cols-2 xl:grid-cols-4 gap-6">
 
-    {fatur.map((zon:any) => ( 
-      <div  key={zon._id}  className="relative flex flex-col shadow-md rounded-xl overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300 max-w-sm">
-        <a href="" className="hover:text-orange-600 absolute z-30 top-2 right-0 mt-2 mr-3">
+//     {fatur.map((zon:any) => ( 
+//       <div  key={zon._id}  className="relative flex flex-col shadow-md rounded-xl overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300 max-w-sm">
+//         <a href="" className="hover:text-orange-600 absolute z-30 top-2 right-0 mt-2 mr-3">
     
-        <div className="h-auto overflow-hidden">
-          <div className="h-44 overflow-hidden relative">
-            <h2 className="text-orange-600 font-bold text-lg text-center mt-3">{zon.mes}</h2>
-            <h4 className="m-2 text-orange-400 font-bold ">{zon.valor} Mt </h4>
+//         <div className="h-auto overflow-hidden">
+//           <div className="h-44 overflow-hidden relative">
+//             <h2 className="text-orange-600 font-bold text-lg text-center mt-3">{zon.mes}</h2>
+//             <h4 className="m-2 text-orange-400 font-bold ">{zon.valor} Mt </h4>
 
-            <table className=" text-center">
-          <thead className="border-b">
-            <tr>
-              <th scope="col" className="text-sm font-medium text-gray-900 px-6 py-4">
-                Consumo/m
-              </th>
-              <th scope="col" className="text-sm font-medium text-gray-900 px-6 py-4">
-              Leitura
-              </th>
-              <th scope="col" className="text-sm font-medium text-gray-900 px-6 py-4">
-                Estado
-              </th>
-            </tr>
-          </thead>
-          <tbody>
+//             <table className=" text-center">
+//           <thead className="border-b">
+//             <tr>
+//               <th scope="col" className="text-sm font-medium text-gray-900 px-6 py-4">
+//                 Consumo/m
+//               </th>
+//               <th scope="col" className="text-sm font-medium text-gray-900 px-6 py-4">
+//               Leitura
+//               </th>
+//               <th scope="col" className="text-sm font-medium text-gray-900 px-6 py-4">
+//                 Estado
+//               </th>
+//             </tr>
+//           </thead>
+//           <tbody>
           
-            <tr className="border-b bg-red-100 border-red-200">
-              <td className="text-sm text-gray-900 font-medium px-6 py-4 whitespace-nowrap">
-              {zon.consumo}
-              </td>
-              <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-              {zon.leitura}
-              </td>
-              <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-              {zon.estado}
-              </td>
-            </tr>
+//             <tr className="border-b bg-red-100 border-red-200">
+//               <td className="text-sm text-gray-900 font-medium px-6 py-4 whitespace-nowrap">
+//               {zon.consumo}
+//               </td>
+//               <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+//               {zon.leitura}
+//               </td>
+//               <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+//               {zon.estado}
+//               </td>
+//             </tr>
             
-          </tbody>
-        </table>
-          </div>
+//           </tbody>
+//         </table>
+//           </div>
          
-        </div>
-        <div className="bg-white py-4 px-3">
-          <h3 className="text-xs mb-2 font-medium">Pagamentos sem Taxas</h3>
-          <div className="flex justify-between items-center">
-            <p className="text-xs text-gray-400">
-            Facilidade de Pagamento.
-          </p>
-          <div className="relative z-40 flex items-center gap-2">
+//         </div>
+//         <div className="bg-white py-4 px-3">
+//           <h3 className="text-xs mb-2 font-medium">Pagamentos sem Taxas</h3>
+//           <div className="flex justify-between items-center">
+//             <p className="text-xs text-gray-400">
+//             Facilidade de Pagamento.
+//           </p>
+//           <div className="relative z-40 flex items-center gap-2">
 
-          </div>
-          </div>
-        </div>
-        <ButPagar _id={zon._id}/>
-      </div>
-      ))}
+//           </div>
+//           </div>
+//         </div>
+//         <ButPagar _id={zon._id}/>
+//       </div>
+//       ))}
       
 
-    </div>
-  </div> */}
+//     </div>
+//   </div> */}
 
 
           <h2 className="mt-10 text-center text-gray-600 font-xl">Faturas Pagas</h2>
