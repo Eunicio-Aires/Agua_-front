@@ -39,7 +39,7 @@ export default async function Page({ params }: { params: {pcliente: Cliente}}){
 
       <div className="pt-1 min-h-screen bg-gradient-to-tr from-gray-50  via-slate-100 to-cyan-200">
 
-          <div className="pt-2 bg-opacity-50 bg-white bg-blur-md shadow-lg rounded-lg fixed w-full mb-8">
+          <div className="pt-2 bg-opacity-60 bg-white bg-blur-md shadow-lg rounded-lg fixed w-full mb-8">
                 <h2 className ="text-center bg-gradient-to-r from-slate-100 to-indigo-700 bg-clip-text text-transparent text-xl font-semibold ">{cliente.client.nome}</h2>
                 <p className ="text-center mb-4" >Aguas Mulungo</p>
 
@@ -116,7 +116,7 @@ export default async function Page({ params }: { params: {pcliente: Cliente}}){
                             <div className="text-red-900">{zon.valor}.00 Mtn</div>
                      </div>
 
-                     {/* <ButPagar _id={zon._id} /> */}
+                     <ButPagar _id={zon._id} />
                      {/* <button className="btn btn-sm mt-3 btn-accent">Accent</button> */}
                     </div>
 
