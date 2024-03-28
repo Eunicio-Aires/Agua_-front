@@ -16,7 +16,7 @@ export default function Figma(){
             
         </div>
 
-        <div className="fixed mt-28">
+        <div className="fixed mt-32">
         <Image className ="opacity-40 "
         alt="hands"
         // Importing an image will
