@@ -38,7 +38,8 @@ export default async function Page({ params }: { params: {pcliente: Cliente}}){
     
     return(
 
-      <div className="pt-1 min-h-screen bg-gradient-to-tr from-gray-50 dark:bg-gray-900 via-slate-100 to-cyan-200">
+      <div className="pt-1 min-h-screen dark:bg-gray-900">
+        {/* bg-gradient-to-tr from-gray-50  via-slate-100 to-cyan-200 */}
           <div className=" bg-opacity-70 bg-white bg-blur-md shadow-lg rounded-lg  min-w-98 max-w-98  mb-8">
           <Link  href={`/`}> <CiMenuBurger className=' '/></Link> 
                 <h2 className ="text-center bg-gradient-to-r from-slate-100 to-indigo-700 bg-clip-text text-transparent text-xl font-bold ">{cliente.client.nome} {cliente.client.apelido}</h2>
@@ -56,8 +57,8 @@ export default async function Page({ params }: { params: {pcliente: Cliente}}){
 
 
 
-          <div className="fixed mt-6">
-          <Image className ="opacity-40 "
+          <div className="fixed mt-6 min-w-full">
+          <Image className ="opacity-40 min-w-full"
           alt="hands"
          
           src={hands}
@@ -75,6 +76,7 @@ export default async function Page({ params }: { params: {pcliente: Cliente}}){
               <div  className="w-full md:w-1/3 p-4">
                 {fatur.map((zon:any) => ( 
                     <div key={zon._id}  className="bg-opacity-30 bg-white bg-blur-md shadow-lg p-6 rounded-lg mt-3">
+                      {/* g-opacity-30 bg-white bg-blur-md */}
                     <h2 className="text-xl font-bold mb-2 text-center ">{zon.mes} </h2>
                     
 
