@@ -16,7 +16,8 @@ export default function Figma(){
             
         </div>
 
-        <Image className ="opacity-40 fixed mt-16"
+        <div className="fixed mt-28">
+        <Image className ="opacity-40 "
         alt="hands"
         // Importing an image will
         // automatically set the width and height
@@ -28,6 +29,8 @@ export default function Figma(){
           height: 'auto',
         }}
       />
+        </div>
+       
 <section className="flex flex-wrap justify-center mt-16 absolute w-full">
                 <div className="w-full md:w-1/3 p-4">
                     <div className="bg-opacity-30 bg-white bg-blur-md shadow-lg p-6 rounded-lg">
