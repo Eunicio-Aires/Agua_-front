@@ -40,7 +40,7 @@ export default async function Page({ params }: { params: {pcliente: Cliente}}){
 
       <div className="pt-1 min-h-screen bg-gradient-to-tr from-gray-50  via-slate-100 to-cyan-200">
           <div className="pt-2 bg-opacity-70 bg-white bg-blur-md shadow-lg rounded-lg  w-full ml-2 mr-2 mb-8">
-          <Link className='w-10' href={`/`}><FcAbout /></Link> 
+          <Link  href={`/`}><FcAbout className='w-10'/></Link> 
                 <h2 className ="text-center bg-gradient-to-r from-slate-100 to-indigo-700 bg-clip-text text-transparent text-xl font-bold ">{cliente.client.nome}</h2>
                 <p className ="text-center mb-1" >Aguas Mulungo</p>
 
@@ -56,7 +56,7 @@ export default async function Page({ params }: { params: {pcliente: Cliente}}){
 
 
 
-          <div className="fixed mt-16">
+          <div className="fixed mt-6">
           <Image className ="opacity-40 "
           alt="hands"
          
@@ -70,7 +70,7 @@ export default async function Page({ params }: { params: {pcliente: Cliente}}){
           />
           </div>
 
-          <section className="flex flex-wrap justify-center mt-12 absolute w-full">
+          <section className="flex flex-wrap justify-center mt-2 absolute w-full">
           
               <div  className="w-full md:w-1/3 p-4">
                 {fatur.map((zon:any) => ( 
