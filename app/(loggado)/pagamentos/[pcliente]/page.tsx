@@ -49,6 +49,8 @@ export default async function Page({ params }: { params: {pcliente: Cliente}}){
                </div>
                 
             </div>
+
+            // <div className='p-2'> <h2 className='text-center text-xl font-bold' >Faturas em <strong>atraso</strong>  </h2></div>
       
       {/* <div className='h-28 bg-gradient-to-r from-indigo-400 to-cyan-400 static'> 
 
@@ -96,19 +98,21 @@ export default async function Page({ params }: { params: {pcliente: Cliente}}){
                     <div key={zon._id}  className="bg-opacity-30 bg-white bg-blur-md shadow-lg p-6 rounded-lg mt-3">
                     <h2 className="text-xl font-bold mb-2 text-center ">{zon.mes} </h2>
                     {/* <p className=''>Conteúdo do Card 1...</p> */}
+
                     <div className="flex justify-between">
                         <div>Leitura atual</div>
                         <div><p >{zon.leitura} m</p></div>
                      </div>
 
-                     <div className="flex justify-between">
-                            <div>Leitura anterior</div>
-                            <div>1212 m</div>
-                     </div>
+                     
 
                      <div className="flex justify-between">
                             <div>Consumo</div>
                             <div>{zon.consumo} m</div>
+                     </div>
+                     <div className="flex justify-between">
+                            <div>Estado</div>
+                            <div>{zon.estado}</div>
                      </div>
 
                      <div className="flex justify-between">
@@ -190,47 +194,51 @@ export default async function Page({ params }: { params: {pcliente: Cliente}}){
 
     </div>
   </div> */}
-  {/* //        <h2 className="mt-10 text-center text-gray-600 font-xl">Faturas Pagas</h2>
-  //         <p className="text-xs text-gray-400 text-center">Ultimas 5 faturas pagas</p>
-  // <table className=" text-center">
-  //         <thead className="border-b">
-  //           <tr>
-  //             <th scope="col" className="text-sm font-medium text-gray-900 px-6 py-4">
-  //               Mes
-  //             </th>
-  //             <th scope="col" className="text-sm font-medium text-gray-900 px-6 py-4">
-  //             Consumo
-  //             </th>
-  //             <th scope="col" className="text-sm font-medium text-gray-900 px-6 py-4">
-  //               Valor
-  //             </th>
-  //             <th scope="col" className="text-sm font-medium text-gray-900 px-6 py-4">
-  //               Pago Por: 
-  //             </th>
-  //           </tr>
-  //         </thead>
-  //         <tbody>
-  //         {faturUl.map((zon:any) => (  */}
-  {/* //           <tr key={zon._id} className="border-b bg-green-100 border-green-200">
-  //             <td className="text-sm text-gray-900 font-bold px-6 py-4 whitespace-nowrap">
-  //             {zon.mes}
-  //             </td>
-  //             <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-  //             {zon.consumo}
-  //             </td>
-  //             <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-  //             {zon.valor}
-  //             </td>
-  //             <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-  //             {zon.formaDePagamento}
-  //             </td>
-  //           </tr>
-  //           ))}
-  //         </tbody>
-  //       </table> */}
+
+
+          <h2 className="mt-10 text-center text-gray-600 font-xl">Faturas Pagas</h2>
+         <p className="text-xs text-gray-400 text-center">Ultimas 5 faturas pagas</p>
+
+      <table className=" text-center m-2">
+          <thead className="border-b">
+            <tr>
+              <th scope="col" className="text-sm font-medium text-gray-900 px-6 py-4">
+                Mes
+              </th>
+              <th scope="col" className="text-sm font-medium text-gray-900 px-6 py-4">
+              Consumo
+              </th>
+              <th scope="col" className="text-sm font-medium text-gray-900 px-6 py-4">
+                Valor
+              </th>
+              <th scope="col" className="text-sm font-medium text-gray-900 px-6 py-4">
+                Pago Por: 
+              </th>
+            </tr>
+          </thead>
+
+          <tbody>
+          {faturUl.map((zon:any) => ( 
+             <tr key={zon._id} className="border-b bg-green-100 border-green-200">
+             <td className="text-sm text-gray-900 font-bold px-6 py-4 whitespace-nowrap">
+             {zon.mes}
+             </td>
+             <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+             {zon.consumo}
+             </td>
+             <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+             {zon.valor}
+             </td>
+             <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+             {zon.formaDePagamento}
+             </td>
+           </tr>
+           ))}
+         </tbody>
+       </table> 
 </div>
 
-// </div>
+
         
     )
 }
