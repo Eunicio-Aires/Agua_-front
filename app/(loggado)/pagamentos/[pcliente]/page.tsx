@@ -7,7 +7,7 @@ import { GiReceiveMoney } from "react-icons/gi";
 import Link from "next/link";
 import ButPagar from '@/components/pagamento/ButPagar';
 import Image from 'next/image'
-import hands from '../../../public/hands4903050-1280e16238370891651090x613removebgpreview-1@2x copy.png';
+import hands from '../../../../public/hands4903050-1280e16238370891651090x613removebgpreview-1@2x copy.png';
 
 
 import {BsPersonFill, BsThreeDotsVertical} from 'react-icons/bs'
