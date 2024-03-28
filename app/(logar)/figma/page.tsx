@@ -8,7 +8,7 @@ export default function Figma(){
 
     <div className="pt-4 min-h-screen bg-gradient-to-tr from-gray-50  via-slate-100 to-cyan-200">
 
-        <div className="pt-2 bg-opacity-50 bg-white bg-blur-md shadow-lg rounded-lg fixed">
+        <div className="pt-2 bg-opacity-50 bg-white bg-blur-md shadow-lg rounded-lg fixed w-full">
             <h2 className ="text-center bg-gradient-to-r from-slate-100 to-indigo-700 bg-clip-text text-transparent text-xl font-semibold ">Eunicio Jose Aires</h2>
             <p className ="text-center mb-4" >Aguas Mulungo</p>
             {/* <p className ="text-center">Bairro Sao Damaso,c-20 q-10 1350 </p>
@@ -16,7 +16,7 @@ export default function Figma(){
             
         </div>
 
-        <Image className ="opacity-40 fixed mt-6"
+        <Image className ="opacity-40 fixed mt-11"
         alt="hands"
         // Importing an image will
         // automatically set the width and height
@@ -28,7 +28,7 @@ export default function Figma(){
           height: 'auto',
         }}
       />
-<section className="flex flex-wrap justify-center mt-6 absolute">
+<section className="flex flex-wrap justify-center mt-10 absolute">
                 <div className="w-full md:w-1/3 p-4">
                     <div className="bg-opacity-30 bg-white bg-blur-md shadow-lg p-6 rounded-lg">
                     <h2 className="text-xl font-bold mb-2 text-center "> Janeiro </h2>
@@ -59,7 +59,7 @@ export default function Figma(){
 
                     
                 </div>
-                <div className="w-full md:w-1/3 p-4">
+                {/* <div className="w-full md:w-1/3 p-4">
                     <div className="bg-white rounded-lg shadow-md p-6">
                     <h2 className="text-xl font-bold mb-2 text-center">Card 2</h2>
                     <p>Conteúdo do Card 2...</p>
@@ -70,7 +70,7 @@ export default function Figma(){
                     <h2 className="text-xl font-bold mb-2">Card 3</h2>
                     <p>Conteúdo do Card 3...</p>
                     </div>
-                </div>
+                </div> */}
             </ section >
 
       
