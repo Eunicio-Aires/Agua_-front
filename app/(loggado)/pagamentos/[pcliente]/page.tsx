@@ -108,27 +108,27 @@ export default async function Page({ params }: { params: {pcliente: Cliente}}){
 
 
                 
-                <div className='m-2'>     
+                <div className='mt-2'>     
 
 <h2 className="mt-10 text-center text-gray-600 font-xl">Faturas Pagas</h2>
         <p className="text-xs text-gray-400 text-center">Ultimas 5 faturas pagas</p>
 
-      <table className=" text-center m-2">
+      <table className=" text-center ">
           <thead className="border-b">
             <tr>
-              <th scope="col" className="text-sm font-medium text-gray-900 px-6 py-4">
+              <th scope="col" className="text-sm font-medium text-gray-900 px-4 py-4">
                 Mes
               </th>
-              <th scope="col" className="text-sm font-medium text-gray-900 px-6 py-4">
+              <th scope="col" className="text-sm font-medium text-gray-900 px-4 py-4">
               Consumo
               </th>
-              <th scope="col" className="text-sm font-medium text-gray-900 px-6 py-4">
+              <th scope="col" className="text-sm font-medium text-gray-900 px-4 py-4">
               Leitura
               </th>
-              <th scope="col" className="text-sm font-medium text-gray-900 px-6 py-4">
+              <th scope="col" className="text-sm font-medium text-gray-900 px-4 py-4">
                 Valor
               </th>
-              <th scope="col" className="text-sm font-medium text-gray-900 px-6 py-4">
+              <th scope="col" className="text-sm font-medium text-gray-900 px-4 py-4">
                 Pago Por: 
               </th>
             </tr>
@@ -137,10 +137,10 @@ export default async function Page({ params }: { params: {pcliente: Cliente}}){
           <tbody>
           {faturUl.map((zon:any) => ( 
             <tr key={zon._id} className="border-b bg-green-100 border-green-200">
-            <td className="text-sm text-gray-900 font-bold px-6 py-4 whitespace-nowrap">
+            <td className="text-sm text-gray-900 font-bold px-4 py-4 whitespace-nowrap">
             {zon.mes}
             </td>
-            <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+            <td className="text-sm text-gray-900 font-light px-4 py-4 whitespace-nowrap">
             {zon.consumo}
             </td>
             <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
