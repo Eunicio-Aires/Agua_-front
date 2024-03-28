@@ -123,6 +123,9 @@ export default async function Page({ params }: { params: {pcliente: Cliente}}){
               Consumo
               </th>
               <th scope="col" className="text-sm font-medium text-gray-900 px-6 py-4">
+              Leitura
+              </th>
+              <th scope="col" className="text-sm font-medium text-gray-900 px-6 py-4">
                 Valor
               </th>
               <th scope="col" className="text-sm font-medium text-gray-900 px-6 py-4">
@@ -139,6 +142,9 @@ export default async function Page({ params }: { params: {pcliente: Cliente}}){
             </td>
             <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
             {zon.consumo}
+            </td>
+            <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+            {zon.leitura}
             </td>
             <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
             {zon.valor}
