@@ -39,13 +39,13 @@ export default async function Page({ params }: { params: {pcliente: Cliente}}){
 
       <div className="pt-1 min-h-screen bg-gradient-to-tr from-gray-50  via-slate-100 to-cyan-200">
 
-          <div className="pt-2 bg-opacity-60 bg-white bg-blur-md shadow-lg rounded-lg fixed w-full mb-8">
-                <h2 className ="text-center bg-gradient-to-r from-slate-100 to-indigo-700 bg-clip-text text-transparent text-xl font-semibold ">{cliente.client.nome}</h2>
-                <p className ="text-center mb-4" >Aguas Mulungo</p>
+          <div className="pt-2 bg-opacity-70 bg-white bg-blur-md shadow-lg rounded-lg fixed w-full ml-2 mr-2 mb-8">
+                <h2 className ="text-center bg-gradient-to-r from-slate-100 to-indigo-700 bg-clip-text text-transparent text-xl font-bold ">{cliente.client.nome}</h2>
+                <p className ="text-center mb-1" >Aguas Mulungo</p>
 
                 <div className='flex justify-between px-4 pt-4 '>
-                  <p className="text-sm">P. Pagar: {fatur.length}</p>
-                  <h2>estado:{cliente.client.estado}</h2>
+                  <p className="text-sm">Faturas {fatur.length}</p>
+                  <h2>{cliente.client.estado}</h2>
                </div>
                 
             </div>
@@ -113,7 +113,7 @@ export default async function Page({ params }: { params: {pcliente: Cliente}}){
 
                      <div className="flex justify-between">
                             <div>Valor a pagar</div>
-                            <div className="text-red-900">{zon.valor}.00 Mtn</div>
+                            <div className="text-red-900 font-bold">{zon.valor}.00 Mtn</div>
                      </div>
 
                      <ButPagar _id={zon._id} />
