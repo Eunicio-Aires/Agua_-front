@@ -31,7 +31,7 @@ export default async function Page({ params }: { params: {pcliente: Cliente}}){
     
     const fatura = await cliente.client.faturas
     const fatur = cliente.client.faturas.filter((fatura:Faturas) => fatura.estado === "Nao pago")
-    const faturUl = cliente.client.faturas;
+    const faturUl = cliente.client.faturas
    .filter((fatura: Faturas) => fatura.estado === "Pago")
     .slice(-5);
    
