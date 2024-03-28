@@ -6,9 +6,9 @@ export default function Figma(){
 
   return(
 
-    <div className="pt-4 min-h-screen bg-gradient-to-tr from-gray-50  via-slate-100 to-cyan-200">
+    <div className="pt-1 min-h-screen bg-gradient-to-tr from-gray-50  via-slate-100 to-cyan-200">
 
-        <div className="pt-2 bg-opacity-50 bg-white bg-blur-md shadow-lg rounded-lg fixed w-full">
+        <div className="pt-2 bg-opacity-50 bg-white bg-blur-md shadow-lg rounded-lg fixed w-full mb-8">
             <h2 className ="text-center bg-gradient-to-r from-slate-100 to-indigo-700 bg-clip-text text-transparent text-xl font-semibold ">Eunicio Jose Aires</h2>
             <p className ="text-center mb-4" >Aguas Mulungo</p>
             {/* <p className ="text-center">Bairro Sao Damaso,c-20 q-10 1350 </p>
