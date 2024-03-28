@@ -31,7 +31,7 @@ export default function Figma(){
       />
         </div>
        
-<section className="flex flex-wrap justify-center mt-16 absolute w-full">
+<section className="flex flex-wrap justify-center mt-28 absolute w-full">
                 <div className="w-full md:w-1/3 p-4">
                     <div className="bg-opacity-30 bg-white bg-blur-md shadow-lg p-6 rounded-lg">
                     <h2 className="text-xl font-bold mb-2 text-center "> Janeiro </h2>
