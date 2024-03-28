@@ -94,7 +94,7 @@ export default async function Page({ params }: { params: {pcliente: Cliente}}){
               <div  className="w-full md:w-1/3 p-4">
                 {fatur.map((zon:any) => ( 
                     <div key={zon._id}  className="bg-opacity-30 bg-white bg-blur-md shadow-lg p-6 rounded-lg mt-3">
-                    <h2 className="text-xl font-bold mb-2 text-center "> {zon.mes} </h2>
+                    <h2 className="text-xl font-bold mb-2 text-center ">{zon.mes} </h2>
                     {/* <p className=''>Conteúdo do Card 1...</p> */}
                     <div className="flex justify-between">
                         <div>Leitura atual</div>
