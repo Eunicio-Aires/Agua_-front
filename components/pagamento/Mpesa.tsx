@@ -50,7 +50,7 @@ export default function Mpesa({_id}:Fatura){
          <div className="flex items-center justify-center mt-7 mb-3">
            <Image src="/Rrrrr.jpg" alt="" width={150} height={85} />
          </div>
-          <div className="flex  items-center justify-center bg-[#fbfbfb]">
+          <div className="flex  items-center justify-center ">
   <form onSubmit={handleSubmi }>          
   <div className="grid w-80 grid-rows-4 gap-1">
     {/* <p className="font-semibold text-gray-700">💌 Get the best of Product Hunt, directly in your inbox.</p> */}
