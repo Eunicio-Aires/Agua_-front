@@ -40,7 +40,8 @@ export  function Log() {
     return(
     
 
-        <div className="hero min-h-screen bg-gradient-to-r from-sky-100 to-indigo-300">
+        <div className="hero min-h-screen bg-gradient-to-tr from-gray-50 via-slate-100 to-cyan-200">
+          {/* bg-gradient-to-r from-sky-100 to-indigo-300 */}
           
       <div className="hero-content flex-col lg:flex-row-reverse">
         <div className="text-center lg:text-left">
