@@ -74,7 +74,7 @@ export default async function Page({ params }: { params: {pcliente: Cliente}}){
 
 
 
-          <div className="fixed mt-32">
+          <div className="fixed mt-36">
           <Image className ="opacity-40 "
           alt="hands"
           // Importing an image will
@@ -89,7 +89,7 @@ export default async function Page({ params }: { params: {pcliente: Cliente}}){
           />
           </div>
 
-          <section className="flex flex-wrap justify-center mt-28 absolute w-full">
+          <section className="flex flex-wrap justify-center mt-32 absolute w-full">
           
               <div  className="w-full md:w-1/3 p-4">
                 {fatur.map((zon:any) => ( 
