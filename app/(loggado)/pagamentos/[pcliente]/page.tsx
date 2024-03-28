@@ -40,7 +40,7 @@ export default async function Page({ params }: { params: {pcliente: Cliente}}){
 
       <div className="pt-1 min-h-screen dark:bg-gray-900">
         {/* bg-gradient-to-tr from-gray-50  via-slate-100 to-cyan-200 */}
-          <div className=" bg-opacity-70 bg-white bg-blur-md shadow-lg rounded-lg  min-w-98 max-w-98  mb-8">
+          <div className="bg-gradient-to-r from-sky-200 to-blue-700 shadow-lg rounded-lg  min-w-98 max-w-98  mb-8">
           <Link  href={`/`}> <CiMenuBurger className=' '/></Link> 
                 <h2 className ="text-center bg-gradient-to-r from-slate-100 to-indigo-700 bg-clip-text text-transparent text-xl font-bold ">{cliente.client.nome} {cliente.client.apelido}</h2>
                 <p className ="text-center mb-1" >Aguas Mulungo</p>
