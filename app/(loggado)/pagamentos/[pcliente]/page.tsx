@@ -143,13 +143,13 @@ export default async function Page({ params }: { params: {pcliente: Cliente}}){
             <td className="text-sm text-gray-900 font-light px-4 py-4 whitespace-nowrap">
             {zon.consumo}
             </td>
-            <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+            <td className="text-sm text-gray-900 font-light px-4 py-4 whitespace-nowrap">
             {zon.leitura}
             </td>
-            <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+            <td className="text-sm text-gray-900 font-light px-4 py-4 whitespace-nowrap">
             {zon.valor}
             </td>
-            <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+            <td className="text-sm text-gray-900 font-light px-4 py-4 whitespace-nowrap">
             {zon.formaDePagamento}
             </td>
           </tr>
