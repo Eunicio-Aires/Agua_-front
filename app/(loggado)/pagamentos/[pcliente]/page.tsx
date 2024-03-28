@@ -8,7 +8,7 @@ import Link from "next/link";
 import ButPagar from '@/components/pagamento/ButPagar';
 import Image from 'next/image'
 import hands from '../../../../public/hands4903050-1280e16238370891651090x613removebgpreview-1@2x copy.png';
-import { FcAbout } from "react-icons/fc";
+import { CiMenuBurger } from "react-icons/ci";
 
 
 import {BsPersonFill, BsThreeDotsVertical} from 'react-icons/bs'
@@ -40,7 +40,7 @@ export default async function Page({ params }: { params: {pcliente: Cliente}}){
 
       <div className="pt-1 min-h-screen bg-gradient-to-tr from-gray-50  via-slate-100 to-cyan-200">
           <div className="pt-2 bg-opacity-70 bg-white bg-blur-md shadow-lg rounded-lg  w-full ml-2 mr-2 mb-8">
-          <Link  href={`/`}><FcAbout className='w-10'/></Link> 
+          <Link  href={`/`}> <CiMenuBurger className='w-14'/></Link> 
                 <h2 className ="text-center bg-gradient-to-r from-slate-100 to-indigo-700 bg-clip-text text-transparent text-xl font-bold ">{cliente.client.nome}</h2>
                 <p className ="text-center mb-1" >Aguas Mulungo</p>
 
