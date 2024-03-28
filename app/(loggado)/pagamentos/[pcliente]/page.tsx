@@ -104,18 +104,14 @@ export default async function Page({ params }: { params: {pcliente: Cliente}}){
 
 ))} 
                 </div>
-              
-            </ section >
 
 
 
-      
+                
+                <div className='m-2'>     
 
-
-
-
-          <h2 className="mt-10 text-center text-gray-600 font-xl">Faturas Pagas</h2>
-         <p className="text-xs text-gray-400 text-center">Ultimas 5 faturas pagas</p>
+<h2 className="mt-10 text-center text-gray-600 font-xl">Faturas Pagas</h2>
+        <p className="text-xs text-gray-400 text-center">Ultimas 5 faturas pagas</p>
 
       <table className=" text-center m-2">
           <thead className="border-b">
@@ -137,23 +133,38 @@ export default async function Page({ params }: { params: {pcliente: Cliente}}){
 
           <tbody>
           {faturUl.map((zon:any) => ( 
-             <tr key={zon._id} className="border-b bg-green-100 border-green-200">
-             <td className="text-sm text-gray-900 font-bold px-6 py-4 whitespace-nowrap">
-             {zon.mes}
-             </td>
-             <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-             {zon.consumo}
-             </td>
-             <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-             {zon.valor}
-             </td>
-             <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-             {zon.formaDePagamento}
-             </td>
-           </tr>
-           ))}
-         </tbody>
-       </table> 
+            <tr key={zon._id} className="border-b bg-green-100 border-green-200">
+            <td className="text-sm text-gray-900 font-bold px-6 py-4 whitespace-nowrap">
+            {zon.mes}
+            </td>
+            <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+            {zon.consumo}
+            </td>
+            <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+            {zon.valor}
+            </td>
+            <td className="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+            {zon.formaDePagamento}
+            </td>
+          </tr>
+          ))}
+        </tbody>
+      </table> 
+
+</div>
+              
+            </ section >
+
+
+
+      
+
+
+
+
+
+
+        
 </div>
 
 
