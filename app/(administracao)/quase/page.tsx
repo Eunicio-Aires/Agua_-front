@@ -1,4 +1,5 @@
 import { getSession } from '@/lib/cookiesConf' 
+import { redirect } from 'next/navigation'
 
 async function getData() {
     const token = await  getSession()
@@ -21,11 +22,17 @@ async function getData() {
     // You can return Date, Map, Set, etc.
    
     if (!res.ok) {
-      // This will activate the closest `error.js` Error Boundary
-      throw new Error('Failed to fetch data')
+        if (res.status === 401) {
+            // Redireciona para a página de login, por exemplo
+            redirect(`/work`)
+            // Alternativamente, você pode usar o hook useRouter do Next.js se estiver dentro de um componente do Next.js
+            // useRouter().push('/login');
+        }
+        // Outros erros de resposta, lança um erro
+        throw new Error('Failed to fetch data');
     }
-   
-    return res.json()
+
+    return res.json();
   }
 
 export default async function Quase(){
