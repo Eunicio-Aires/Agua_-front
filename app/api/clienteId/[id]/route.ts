@@ -16,7 +16,7 @@ export async function GET(request: Request,
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `${tokenCl}`,
+        authorization: `${tokenCl}`,
       },
     //  body: JSON.stringify( resb )
     })

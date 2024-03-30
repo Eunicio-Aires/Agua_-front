@@ -12,6 +12,17 @@ async function getData() {
       })
        
 
+
+    //     headers: {
+    //       'Content-Type': 'application/json',
+    //       'authorization': "token",
+    //     },
+    //   }
+      
+    // The return value is *not* serialized
+    // You can return Date, Map, Set, etc.
+   
+   
     //     headers: {
     //       'Content-Type': 'application/json',
     //       'authorization': "token",
@@ -23,13 +34,13 @@ async function getData() {
    
     if (!res.ok) {
         if (res.status === 401) {
-            // Redireciona para a página de login, por exemplo
+            
             redirect(`/work`)
-            // Alternativamente, você pode usar o hook useRouter do Next.js se estiver dentro de um componente do Next.js
-            // useRouter().push('/login');
+            
         }
         // Outros erros de resposta, lança um erro
-        throw new Error('Failed to fetch data');
+        // throw new Error('Failed to fetch data');
+        redirect(`/work`)
     }
 
     return res.json();
