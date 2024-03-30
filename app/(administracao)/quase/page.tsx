@@ -29,8 +29,10 @@ async function getData() {
   }
 
 export default async function Quase(){
+    
    const data = await getData()
+
     return <div>
-        <h1>ghfgcf</h1>
+        <h1>{data.res}</h1>
     </div>
 }
