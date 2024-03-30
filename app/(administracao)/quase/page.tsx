@@ -5,7 +5,7 @@ async function getData() {
     const authorization = await token
     const res = await fetch('https://agua-p.vercel.app/adm/testeaautenti',{
         headers: {
-        //   'Content-Type': 'application/json',
+        
           authorization: `${token}`,
         },
       })
@@ -31,6 +31,6 @@ async function getData() {
 export default async function Quase(){
    const data = await getData()
     return <div>
-        <h1>{data}</h1>
+        <h1>ghfgcf</h1>
     </div>
 }
