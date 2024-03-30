@@ -22,7 +22,7 @@ export default async function Imprimir({ params }:{ params:{id:any}}){
                 <h1 className="text-center text-3xl mt-4 ">Faturas nao Pagas</h1>
                
                 {faturas.map((fatura:any)=>(
-                    <div key={fatura._id }>
+                    <div key={fatura._id }className="">
                         <div className="text-center"></div>
                         <h2 className="text-center text-2xl font-bold mt-5">{fatura.mes}</h2>
                         <div> <p className="text-2xl font-bold">Leitura:------------------- {fatura.leitura}m3</p> </div>
