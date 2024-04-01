@@ -24,7 +24,7 @@ export default async function Imprimir({ params }:{ params:{id:any}}){
                 <h1 className="text-center bold text-xl mt-4 ">Faturas nao pagas</h1>
                
                 {faturas.map((fatura:any)=>(
-                    <div key={fatura._id } className=" p-7">
+                    <div key={fatura._id } className=" m-3 border-black border-[1px] border-solid p-3">
 
                          <h2 className="text-center text-2xl font-bold mt-5">{fatura.mes}</h2>
                         <div className="flex justify-between"> <span>Leitura</span>    <span>{fatura.leitura}m3</span> </div>
