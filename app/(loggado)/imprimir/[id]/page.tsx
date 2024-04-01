@@ -12,16 +12,16 @@ export default async function Imprimir({ params }:{ params:{id:any}}){
     // alert("operacional")
     return(
         <>
-            <div className="p-2">
+            <div className="p-2 m-4">
                 <h1 className="text-center text-4xl mt-2 mb-4">Aguas da Matola</h1>
                 
                 <div> <span></span> <span></span> </div>
-                <p className="text-2xl">Bairro Sao damaso, q-74, casa-25</p>
-                <p className="text-2xl">Contatos:84 990 34 03</p>
-                <p className="text-2xl">Nuit:258845485</p>
+                <p className="text-lg  text-center">Bairro Sao damaso, q-74, casa-25</p>
+                <p className="text-lg text-center">258-849903403</p>
+                <p className="text-lg text-center">Nuit:258845485</p>
                 
-                <h1 className="text-center text-3xl mt-3 font-bold">{cliente.nome} {cliente.apelido}</h1>
-                <h1 className="text-center text-3xl mt-4 ">Faturas nao Pagas</h1>
+                <h1 className="text-center text-2xl mt-5 font-bold">{cliente.nome} {cliente.apelido}</h1>
+                <h1 className="text-center bold text-xl mt-4 ">Faturas nao pagas</h1>
                
                 {faturas.map((fatura:any)=>(
                     <div key={fatura._id }className="">
