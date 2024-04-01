@@ -53,10 +53,10 @@ async function getData() {
       if (!posts.ok) {
         if (posts.status === 401) {
             
-            redirect(`/work`)
+          redirect(`/work`)
             
         }
-        // redirect(`/work`)
+        redirect(`/work`)
         
     }
     const dados = await posts.clientId.nome
