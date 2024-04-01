@@ -1,5 +1,7 @@
 import { MdPhotoSizeSelectLarge } from "react-icons/md";
 import { cookies } from 'next/headers'
+import Image from 'next/image'
+import qrcode from '../../../../public/hovercode.png';
 
 export default async function Imprimir({ params }:{ params:{id:any}}){
     // const cookieStore = await cookies()
@@ -38,6 +40,20 @@ export default async function Imprimir({ params }:{ params:{id:any}}){
                   ))}
                     <p className="text-center mt-3" >Valor por m3 e de 75Mt</p>
             </div>
+
+            <div className=" mt-6 min-w-full">
+          <Image className =" min-w-[80%]"
+          alt="hands"
+         
+          src={qrcode}
+        //   sizes="100vw"
+         
+          style={{
+            width: '360px',
+            height: '360px',
+          }}
+          />
+          </div>
         </>
     )
 }
