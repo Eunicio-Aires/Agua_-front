@@ -10,27 +10,7 @@ async function getData() {
           authorization: `${token}`,
         },
       })
-       
 
-
-    //     headers: {
-    //       'Content-Type': 'application/json',
-    //       'authorization': "token",
-    //     },
-    //   }
-      
-    // The return value is *not* serialized
-    // You can return Date, Map, Set, etc.
-   
-   
-    //     headers: {
-    //       'Content-Type': 'application/json',
-    //       'authorization': "token",
-    //     },
-    //   }
-      
-    // The return value is *not* serialized
-    // You can return Date, Map, Set, etc.
    
     if (!res.ok) {
         if (res.status === 401) {
@@ -38,8 +18,6 @@ async function getData() {
             redirect(`/work`)
             
         }
-        // Outros erros de resposta, lança um erro
-        // throw new Error('Failed to fetch data');
         redirect(`/work`)
     }
 

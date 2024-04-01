@@ -9,13 +9,11 @@ export async function GET(request: Request,
 
     const tokenCl = getSession()
    
-
-    
     const id = params.id
     const res = await fetch(`https://agua-p.vercel.app/adm/oneclient/${id}`,{
       method: 'GET',
       headers: {
-        'Content-Type': 'application/json',
+        // 'Content-Type': 'application/json',
         authorization: `${tokenCl}`,
       },
     //  body: JSON.stringify( resb )

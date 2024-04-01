@@ -7,11 +7,37 @@ import { ModalNum } from "@/components/payments/ModalNum";
 import { AiTwotoneEdit } from "react-icons/ai";
 import { GiPayMoney } from "react-icons/gi";
 import { MdDone } from "react-icons/md";
-// import {Registar} from '@/components/Registar'
 import Zona from "../page";
 import { TopCards } from '@/components/TopCards'
 import OtherUsers from "@/components/outros";
 import Editar from "@/components/clientes/Editar";
+import { getSession } from '@/lib/cookiesConf' 
+import { redirect } from 'next/navigation'
+
+
+
+// async function getData() {
+//   const token = await  getSession()
+//   const authorization = await token
+//   const res = await fetch('https://agua-p.vercel.app/adm/testeaautenti',{
+//       headers: {
+      
+//         authorization: `${token}`,
+//       },
+//     })
+
+ 
+//   if (!res.ok) {
+//       if (res.status === 401) {
+          
+//           redirect(`/work`)
+          
+//       }
+//       redirect(`/work`)
+//   }
+
+//   return res.json();
+// }
 
 
     export default async function ClienteId({ params }: { params: { id: string } }){
