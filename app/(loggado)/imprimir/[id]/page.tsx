@@ -50,7 +50,7 @@ export default async function Imprimir({ params }:{ params:{id:any}}){
          
           style={{
             width: '260px',
-            height: '660px',
+            height: '260px',
           }}
           />
           </div>
