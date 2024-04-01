@@ -24,16 +24,21 @@ export default async function Imprimir({ params }:{ params:{id:any}}){
                 <h1 className="text-center bold text-xl mt-4 ">Faturas nao pagas</h1>
                
                 {faturas.map((fatura:any)=>(
-                    <div key={fatura._id }className="">
-                        <div className="text-center"></div>
-                        <h2 className="text-center text-2xl font-bold mt-5">{fatura.mes}</h2>
-                        <div> <p className="text-2xl font-bold">Leitura:------------------- {fatura.leitura}m3</p> </div>
-                        <div> <p className="text-2xl font-bold">Consumo:------------------ {fatura.consumo}m3</p> </div>
+                    <div key={fatura._id } className=" p-7">
+
+                         <h2 className="text-center text-2xl font-bold mt-5">{fatura.mes}</h2>
+                        <div className="flex justify-between"> <span>Leitura</span>    <span>{fatura.leitura}m3</span> </div>
+                        <div className="flex justify-between"> <span>Consumo</span>    <span>{fatura.consumo}m3</span> </div>
+                        <div className="flex justify-between"> <span>Valor</span>    <span>{fatura.valor}m3</span> </div>
                         
-                        <div> <p className="text-2xl font-semibold">Estado: ---------------- {fatura.estado}</p> </div>
+                        
+                        {/* <div> <p className="text-2xl font-bold">Leitura:------------------- {fatura.leitura}m3</p> </div> */}
+                        {/* <div> <p className="text-2xl font-bold">Consumo:------------------ {fatura.consumo}m3</p> </div> */}
+                        
+                        {/* <div> <p className="text-2xl font-semibold">Estado: ---------------- {fatura.estado}</p> </div>
                         <div> <p className="text-3xl font-bold mt-2">Valor: ----------- {fatura.valor} mt</p> </div>
 
-                        <div className="text-center mt-3 font-bold">**********************************************</div>
+                        <div className="text-center mt-3 font-bold">**********************************************</div> */}
 
                        
                     </div>
