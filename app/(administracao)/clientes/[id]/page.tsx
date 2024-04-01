@@ -16,28 +16,28 @@ import { redirect } from 'next/navigation'
 
 
 
-async function getData() {
-  const token = await  getSession()
-  const authorization = await token
-  const res = await fetch('https://agua-p.vercel.app/adm/testeaautenti',{
-      headers: {
+// async function getData() {
+//   const token = await  getSession()
+//   const authorization = await token
+//   const res = await fetch('https://agua-p.vercel.app/adm/testeaautenti',{
+//       headers: {
       
-        authorization: `${token}`,
-      },
-    })
+//         authorization: `${token}`,
+//       },
+//     })
 
  
-  if (!res.ok) {
-      if (res.status === 401) {
+//   if (!res.ok) {
+//       if (res.status === 401) {
           
-          redirect(`/work`)
+//           redirect(`/work`)
           
-      }
-      redirect(`/work`)
-  }
+//       }
+//       redirect(`/work`)
+//   }
 
-  return res.json();
-}
+//   return res.json();
+// }
 
 
     export default async function ClienteId({ params }: { params: { id: string } }){
@@ -50,12 +50,8 @@ async function getData() {
         },
       }).then((res) => res.json())
 
-      if (!posts.ok) {
-        if (posts.status === 401) {
-            
-          redirect(`/work`)
-            
-        }
+      if (!posts.ok || posts.status === 401) {
+        
         redirect(`/work`)
         
     }
@@ -64,7 +60,7 @@ async function getData() {
     const faturasNaoPagas = posts.clientId.faturas.filter((fatura: any) => fatura.estado === "Nao pago");
     const faturasPagas = posts.clientId.faturas.filter((fatura: any) => fatura.estado === "Pago").slice(-10);
       
-     
+   
     
     return (
       <div> 
