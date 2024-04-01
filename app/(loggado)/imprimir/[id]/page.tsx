@@ -41,7 +41,7 @@ export default async function Imprimir({ params }:{ params:{id:any}}){
                     <p className="text-center mt-3" >Valor por m3 e de 75Mt</p>
             </div>
 
-            <div className=" mt-6 min-w-full">
+            <div className=" mt-6 flex justify-center">
           <Image className =" min-w-[80%]"
           alt="hands"
          
@@ -49,8 +49,8 @@ export default async function Imprimir({ params }:{ params:{id:any}}){
         //   sizes="100vw"
          
           style={{
-            width: '360px',
-            height: '360px',
+            width: '260px',
+            height: '660px',
           }}
           />
           </div>
