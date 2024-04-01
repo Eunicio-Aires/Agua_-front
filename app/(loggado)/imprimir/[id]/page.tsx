@@ -2,6 +2,7 @@ import { MdPhotoSizeSelectLarge } from "react-icons/md";
 import { cookies } from 'next/headers'
 import Image from 'next/image'
 import qrcode from '../../../../public/hovercode.png';
+import hands from '../../../../public/hands4903050-1280e16238370891651090x613removebgpreview-1@2x copy.png';
 
 export default async function Imprimir({ params }:{ params:{id:any}}){
     // const cookieStore = await cookies()
@@ -12,16 +13,41 @@ export default async function Imprimir({ params }:{ params:{id:any}}){
     // alert("operacional")
     return(
         <>
-            <div className="p-2 m-4">
-                <h1 className="text-center text-4xl mt-2 mb-4">Aguas da Matola</h1>
+        <div className="">
+        <div className="fixed mt-6 min-w-full">
+          <Image className ="opacity-40 min-w-full"
+          alt="hands"
+         
+          src={hands}
+        //   sizes="100vw"
+         
+          style={{
+            width: '100%',
+            height: 'auto',
+          }}
+          />
+          </div>
+
+        <h1 className="text-center text-4xl mt-2 mb-4">Aguas da Matola</h1>
                 
-                <div> <span></span> <span></span> </div>
+                {/* <div> <span></span> <span></span> </div> */}
                 <p className="text-lg  text-center">Bairro Sao damaso, q-74, casa-25</p>
                 <p className="text-lg text-center">258-849903403</p>
                 <p className="text-lg text-center">Nuit:258845485</p>
                 
                 <h1 className="text-center text-2xl mt-5 font-bold">{cliente.nome} {cliente.apelido}</h1>
                 <h1 className="text-center bold text-xl mt-4 ">Faturas nao pagas</h1>
+        </div>
+       
+
+
+
+            <div className="p-2 m-4">
+              
+
+                
+                
+               
                
                 {faturas.map((fatura:any)=>(
                     <div key={fatura._id } className=" m-3 border-black border-[1px] border-solid p-3">
