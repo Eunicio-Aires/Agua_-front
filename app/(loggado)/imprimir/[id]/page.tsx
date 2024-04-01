@@ -42,8 +42,8 @@ export default async function Imprimir({ params }:{ params:{id:any}}){
             </div>
 
             <div className=" mt-6 flex justify-center">
-          <Image className =" min-w-[80%]"
-          alt="hands"
+          <Image className =" "
+          alt="qr-code-agua"
          
           src={qrcode}
         //   sizes="100vw"
