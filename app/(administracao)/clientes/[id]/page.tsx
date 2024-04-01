@@ -16,45 +16,68 @@ import { redirect } from 'next/navigation'
 
 
 
-// async function getData() {
-//   const token = await  getSession()
-//   const authorization = await token
-//   const res = await fetch('https://agua-p.vercel.app/adm/testeaautenti',{
-//       headers: {
+async function getData() {
+  const token = await  getSession()
+  const authorization = await token
+  const res = await fetch('https://agua-p.vercel.app/adm/testeaautenti',{
+      headers: {
       
-//         authorization: `${token}`,
-//       },
-//     })
+        authorization: `${token}`,
+      },
+    })
 
  
-//   if (!res.ok) {
-//       if (res.status === 401) {
+  if (!res.ok) {
+      if (res.status === 401) {
           
-//           redirect(`/work`)
+          redirect(`/work`)
           
-//       }
-//       redirect(`/work`)
-//   }
+      }
+      redirect(`/work`)
+  }
 
-//   return res.json();
-// }
+  return res.json();
+}
 
 
     export default async function ClienteId({ params }: { params: { id: string } }){
-      const token = await  getSession()
-      const baseUrl = process.env.NEXT_LOCAL_BASE_URL;
-      // const posts = await  fetch(`${baseUrl}/api/clienteId/${params.id}`,{ cache: 'no-store'}).then((res) => res.json())
-      const posts = await  fetch(`https://agua-p.vercel.app/adm/oneclient/${params.id}`,{
-        headers: {
-          authorization: `${token}`,
-        },
-      }).then((res) => res.json())
+      const idc = await params.id
+     
+      // const baseUrl = process.env.NEXT_LOCAL_BASE_URL;
 
-      if (!posts.ok || posts.status === 401) {
+      async function getData() {
+        const token = await  getSession()
+        const authorization = await token
+        const res = await fetch(`https://agua-p.vercel.app/adm/oneclient/${idc}`,{
+            headers: {
+              authorization: `${token}`,
+            },
+          })
+        if (!res.ok) {
+            if (res.status === 401) {
+                
+                redirect(`/work`)
+                
+            }
+            redirect(`/work`)
+        }
+      
+        return res.json();
+      }
+
+      const posts = await getData()
+
+      // const posts = await  fetch(`${baseUrl}/api/clienteId/${params.id}`,{ cache: 'no-store'}).then((res) => res.json())
+    //   const posts = await  fetch(`https://agua-p.vercel.app/adm/oneclient/${params.id}`,{
+    //     headers: {
+    //       authorization: `${token}`,
+    //     },
+    //   }).then((res) => res.json())
+
+    //   if (!posts.ok || posts.status === 401) {
+    //     redirect(`/work`)
         
-        redirect(`/work`)
-        
-    }
+    // }
     const dados = await posts.clientId.nome
     const dadosm = await posts.clientId.faturas
     const faturasNaoPagas = posts.clientId.faturas.filter((fatura: any) => fatura.estado === "Nao pago");
