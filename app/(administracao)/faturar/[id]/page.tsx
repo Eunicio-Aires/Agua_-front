@@ -24,7 +24,7 @@ export default async function Page({ params }: { params: { id: string } }) {
     const posts = await fetch(`${baseUrl}/api/mesUnic/${params.id}`,{cache:'no-store'}).then((res) => res.json());
     const mes = await posts.mes._id;
 
-    const idm = await mesId(params.id)
+     mesId(params.id)
     // cookies().set('mesId', `${params.id}`)
 
     return (
