@@ -27,7 +27,7 @@ export default async function Imprimir({ params }:{ params:{id:any}}){
           }}
           />
           </div>
-
+          <h1 className="text-center text-xl mt-2 mb-4">Fatura na mao</h1>
         <h1 className="text-center text-4xl mt-2 mb-4">Aguas da Matola</h1>
                 
                 {/* <div> <span></span> <span></span> </div> */}
