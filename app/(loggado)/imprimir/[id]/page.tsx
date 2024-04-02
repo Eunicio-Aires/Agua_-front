@@ -3,6 +3,7 @@ import { cookies } from 'next/headers'
 import Image from 'next/image'
 import qrcode from '../../../../public/hovercode.png';
 import hands from '../../../../public/hands4903050-1280e16238370891651090x613removebgpreview-1@2x copy.png';
+import Link from "next/link";
 
 export default async function Imprimir({ params }:{ params:{id:any}}){
     // const cookieStore = await cookies()
@@ -27,7 +28,10 @@ export default async function Imprimir({ params }:{ params:{id:any}}){
           }}
           />
           </div>
-          <h1 className="text-center text-xl mt-2 mb-4">Fatura na mao</h1>
+          
+         <Link href='/faturar/'>
+          
+         <h1 className="text-center text-xl mt-2 mb-4">Fatura na mao</h1>
         <h1 className="text-center text-4xl mt-2 mb-4">Aguas da Matola</h1>
                 
                 {/* <div> <span></span> <span></span> </div> */}
@@ -37,6 +41,11 @@ export default async function Imprimir({ params }:{ params:{id:any}}){
                 
                 <h1 className="text-center text-2xl mt-5 font-bold">{cliente.nome} {cliente.apelido}</h1>
                 <h1 className="text-center bold text-xl mt-4 ">Faturas nao pagas</h1>
+           </Link>
+         
+
+          
+         
         </div>
        
 
@@ -50,7 +59,7 @@ export default async function Imprimir({ params }:{ params:{id:any}}){
                
                
                 {faturas.map((fatura:any)=>(
-                    <div key={fatura._id } className=" m-3 border-black border-[0.5px] border-solid p-3 rounded-md">
+                    <div key={fatura._id } className=" m-3 border-black border-[0.5px] border-solid p-3 rounded-md ">
 
                          <h2 className="text-center text-2xl font-bold mt-3">{fatura.mes}</h2>
                         <div className="flex justify-between"> <span>Leitura</span>    <span>{fatura.leitura}m3</span> </div>
