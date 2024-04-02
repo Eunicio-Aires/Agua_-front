@@ -46,3 +46,9 @@ export async function setCook(id:any) {
    
 }
 
+
+export async function mesId(id:any){
+    const mesIdf = await cookies().get('mesId')?.value;
+    if(!mesIdf) return null 
+    return await (mesIdf) 
+}

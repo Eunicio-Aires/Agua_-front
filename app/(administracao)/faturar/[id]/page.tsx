@@ -3,6 +3,7 @@ import React, { SyntheticEvent } from 'react';
 import { Procurarc } from '@/components/Procurarc'
 import { Detalhes } from "@/components/Detalhes";
 import { cookies } from 'next/headers'
+import { mesId } from '@/lib/cookiesConf';
 type faturas={
     _id:String;
     mes:String;
@@ -23,7 +24,8 @@ export default async function Page({ params }: { params: { id: string } }) {
     const posts = await fetch(`${baseUrl}/api/mesUnic/${params.id}`,{cache:'no-store'}).then((res) => res.json());
     const mes = await posts.mes._id;
 
-    cookies().set('mesId', `${params.id}`)
+    const idm = await mesId(params.id)
+    // cookies().set('mesId', `${params.id}`)
 
     return (
        <div  className=" min-h-screen p-4 mb-4" >
