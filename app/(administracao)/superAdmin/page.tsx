@@ -1,5 +1,6 @@
 import DefinirValor from '@/components/DefinirValor';
 import { getId, getSession } from '@/lib/cookiesConf'
+import Link from 'next/link';
 
 
 async function getData() {
@@ -27,9 +28,9 @@ export default async function SuperAdm(){
     return(
        
         <div>
-            {admins.map((companes:any)=>(
-                <div key={companes._id}> {companes.nome} {companes.apelido}</div>
-                ))}
+            
+                {/* <div key={companes._id}> {companes.nome} {companes.apelido}</div> */}
+                
 
 <section className="py-1 bg-blueGray-50">
 <div className="w-full xl:w-8/12 mb-12 xl:mb-0 px-4 mx-auto mt-24">
@@ -65,36 +66,22 @@ export default async function SuperAdm(){
         </thead>
 
         <tbody>
+        {admins.map((companes:any)=>(
           <tr>
             <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700 ">
-              /argon/
+            {companes.nome} {companes.apelido}
             </th>
             <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 ">
-              4,569
+             {companes.email}
             </td>
             <td className="border-t-0 px-6 align-center border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-              340
+              {companes.company.length}
             </td>
             <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-              <i className="fas fa-arrow-up text-emerald-500 mr-4"></i>
-              46,53%
+              <Link href=''> Segmentacao</Link>
             </td>
           </tr>
-          <tr>
-            <th className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left text-blueGray-700">
-              /argon/index.html
-            </th>
-            <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-              3,985
-            </td>
-            <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-              319
-            </td>
-            <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-              <i className="fas fa-arrow-down text-orange-500 mr-4"></i>
-              46,53%
-            </td>
-          </tr>
+         ))}
          
         </tbody>
 
