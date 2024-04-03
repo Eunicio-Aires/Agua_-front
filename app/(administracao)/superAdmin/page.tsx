@@ -21,16 +21,40 @@ async function getData() {
   }
 
 
+  async function getDataFuros() {
+    const token = await  getSession()
+    const res = await fetch('https://agua-p.vercel.app/adm/allCompans',{
+        headers: {
+          authorization: `${token}`,
+        },
+      })
+  
+   
+    if (!res.ok) {
+      
+      throw new Error('Failed to fetch data')
+    }
+   
+    return res.json()
+  }
+
+
 export default async function SuperAdm(){
    const todos = await getData()
    const admins = await todos.allAdmin
+   
+   const fornec = await getDataFuros()
+   const allforne = await fornec.allCompannes
+
     
     return(
        
         <div>
             
-                {/* <div key={companes._id}> {companes.nome} {companes.apelido}</div> */}
-                
+            {allforne.map((compane:any)=>(
+                <div key={compane._id }> {compane.nome}</div>
+
+                ))}
 
 <section className="py-1 bg-blueGray-50">
 <div className="w-full xl:w-8/12 mb-12 xl:mb-0 px-4 mx-auto mt-24">
@@ -51,16 +75,16 @@ export default async function SuperAdm(){
         <thead>
           <tr>
             <th className="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
-                          Page name
+                          Nome
                         </th>
           <th className="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
-                          Visitors
+                          Email
                         </th>
            <th className="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
-                          Unique users
+                          Furos
                         </th>
           <th className="px-6 bg-blueGray-50 text-blueGray-500 align-middle border border-solid border-blueGray-100 py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left">
-                          Bounce rate
+                          Segmentacao
                         </th>
           </tr>
         </thead>
@@ -78,7 +102,7 @@ export default async function SuperAdm(){
               {companes.company.length}
             </td>
             <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-              <Link href=''> Segmentacao</Link>
+              <Link href=''> 1</Link>
             </td>
           </tr>
          ))}
