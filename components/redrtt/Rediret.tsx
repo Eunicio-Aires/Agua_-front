@@ -55,3 +55,4 @@ export default function Redbutton({_id}:Compy){
         </>
     )
 }
+

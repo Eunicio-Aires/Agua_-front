@@ -28,6 +28,7 @@
     "cmdk": "^0.2.1",
     "date-fns": "^3.6.0",
     "dotenv": "^16.3.1",
+    "e2payments": "^1.0.0",
     "eslint": "8.41.0",
     "eslint-config-next": "^13.4.12",
     "lucide-react": "^0.343.0",
