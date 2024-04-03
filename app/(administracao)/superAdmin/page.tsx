@@ -22,12 +22,14 @@ async function getData() {
 
 export default async function SuperAdm(){
    const todos = await getData()
-
+   const admins = await todos.allAdmin
     
     return(
        
         <div>
-            
+            {admins.map((companes:any)=>(
+                <div key={companes._id}> {companes.nome} {companes.apelido}</div>
+                ))}
         </div>
         
     )
