@@ -43,7 +43,7 @@ export  function Log() {
     
 
         <div className="hero min-h-screen bg-gradient-to-tr from-gray-50 via-slate-100 to-cyan-200">
-          <div className="fixed mt-6 min-w-full">
+          <div className="fixed  min-w-full">
           <Image className ="opacity-40 min-w-full"
           alt="hands"
          
