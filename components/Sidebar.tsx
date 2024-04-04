@@ -18,7 +18,7 @@ export default async function SideBar(){
         className="h-[750px]  flex flex-row"
        
       >
-        <button
+        {/* <button
         
           className="p-2 border-2 bg-white rounded-md border-gray-200 shadow-lg text-gray-500 focus:bg-teal-500 focus:outline-none focus:text-white absolute top-0 left-0 sm:hidden"
         >
@@ -34,7 +34,7 @@ export default async function SideBar(){
               clip-rule="evenodd"
             ></path>
           </svg>
-        </button>
+        </button> */}
         <div
           id="sidebar"
           className="bg-white h-screen  shadow-xl px-3 w-30 md:w-60 lg:w-60 overflow-x-hidden transition-transform duration-300 ease-in-out"
