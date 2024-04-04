@@ -1,6 +1,7 @@
 import DefinirValor from '@/components/DefinirValor';
 import { getId, getSession } from '@/lib/cookiesConf'
 import Link from 'next/link';
+import  NewComp   from '@/components/superAdmin/RegistarComp'
 
 
 async function getData() {
@@ -50,7 +51,8 @@ export default async function SuperAdm(){
     return(
        
         <div>
-            
+            <NewComp/>
+
             {allforne.map((compane:any)=>(
                 <div key={compane._id }> {compane.nome}</div>
 

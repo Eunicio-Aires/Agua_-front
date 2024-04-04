@@ -8,6 +8,7 @@ import { redirect } from 'next/navigation'
 
 
 
+
 export default async function ClienteId({ params }: {params:{id: string }}){
     const baseUrl = process.env.NEXT_LOCAL_BASE_URL;
     const compan = await  fetch(`${baseUrl}/api/adminComp/${params.id}`,{cache: 'no-store'}).then((res) => res.json())
