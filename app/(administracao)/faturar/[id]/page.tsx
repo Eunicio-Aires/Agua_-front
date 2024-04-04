@@ -28,7 +28,7 @@ export default async function Page({ params }: { params: { id: string } }) {
     // cookies().set('mesId', `${params.id}`)
 
     return (
-       <div  className=" min-h-screen p-4 mb-4 mt-7" >
+       <div  className=" min-h-screen p-4 mb-4 mt-10" >
            <h1 className="text-center text-xl font-bold tracking-normal sm:text-4xl lg:text-4xl mt-1">{posts.mes.mes}</h1> 
             
         <Procurarc _id={mes}/>
