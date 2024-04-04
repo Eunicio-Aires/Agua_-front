@@ -4,7 +4,7 @@
 import { useRouter } from 'next/navigation';
 // import { useState } from 'react';
 import React, { SyntheticEvent } from 'react';
-import hands from '../../../../public/hands4903050-1280e16238370891651090x613removebgpreview-1@2x copy.png';
+import hands from '../../../public/hands4903050-1280e16238370891651090x613removebgpreview-1@2x copy.png';
 import Image from 'next/image'
 
 export  function Log() {
