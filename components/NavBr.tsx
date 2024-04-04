@@ -18,11 +18,12 @@ export default function NavBr(){
       
       <div className="hidden md:flex md:items-center md:w-auto w-full order-3 md:order-1" id="menu">
          <nav>
-            <ul className="md:flex items-center justify-between text-base text-blue-600 pt-4 md:pt-0">
+            
+            {/* <ul className="md:flex items-center justify-between text-base text-blue-600 pt-4 md:pt-0">
                <li><a className="inline-block no-underline hover:text-black font-medium text-lg py-2 px-4 lg:-ml-2" href="#">Home</a></li>
                <li><a className="inline-block no-underline hover:text-black font-medium text-lg py-2 px-4 lg:-ml-2" href="#">Products</a></li>
                <li><a className="inline-block no-underline hover:text-black font-medium text-lg py-2 px-4 lg:-ml-2" href="#">About</a></li>
-            </ul>
+            </ul> */}
          </nav>
       </div>
       

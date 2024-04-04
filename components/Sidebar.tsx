@@ -1,75 +1,9 @@
-// import Link from "next/link"
-// import React, { Children } from "react"
-// import Header from "./Header" 
-
-// // import BarChart from "./BarChart"
-// import RecentOrders from "./RecentOrders"
-// import Image from "next/image"
-// import {RxSketchLogo, RxDashboard, RxPerson } from 'react-icons/rx' 
-// import { BsGraphUpArrow } from "react-icons/bs"
-// export default function SideBar(props:any){
-//     return( 
-//         // <div className="flex">
-//             <div className="flexed w-20 h-screen p-4 bg-white border-r-[1px] flex flex-col justify-between">
-//                 <div className="flex flex-col items-center">
-//                     <Link href='/'>
-//                         <div className="bg-purple-800 text-white p-3 rounded-lg inline-block"  >
-//                             <RxSketchLogo size={20 } />
-//                         </div>
-//                     </Link >
-//                     <span className="border-b-[1px] border-gray-200-w-full p-2"></span>
-//                     <Link href='/'>
-//                         <div className="bg-gray-100 hover:bg-gray-200 text-black my-4 p-3 rounded-lg inline-block"  >
-//                             <RxDashboard size={20 } />
-//                         </div>
-//                     </Link>
-//                     <Link href='/'>
-//                         <div className="bg-gray-100 hover:bg-gray-200 text-black my-4 p-3 rounded-lg inline-block"  >
-//                             <RxDashboard size={20 } />
-//                         </div>
-//                     </Link>
-//                     <Link href='/Pagamentos'>
-//                         <div className="bg-gray-100 hover:bg-gray-200 text-black my-4 p-3 rounded-lg inline-block"  >
-//                             <BsGraphUpArrow size={20 } />
-//                         </div>
-//                     </Link>
-//                     <Link href='/Clientes'>
-//                         <div className="bg-gray-100 hover:bg-gray-200 text-black my-4 p-3 rounded-lg inline-block"  >
-//                             <RxPerson size={20 } />
-//                         </div>
-//                     </Link>
-//                     <Link href='/admin/consumidores'>
-//                         <div className="bg-gray-100 hover:bg-gray-200 text-black my-4 p-3 rounded-lg inline-block"  >
-//                             <RxPerson size={20 } />
-//                         </div>
-//                     </Link>
-
-//                 </div>
-//             </div>
-            
-//         // </div>
-//     )
-// }
-
 
 'use server'
 import { getCompan, getnome ,getapelido} from '@/lib/cookiesConf'
 import UserItems from '@/components/UserItems'
 
 import Link from "next/link";
-
-// import {
-//     Command,
-//     CommandDialog,
-//     CommandEmpty,
-//     CommandGroup,
-//     CommandInput,
-//     CommandItem,
-//     CommandList,
-//     CommandSeparator,
-//     CommandShortcut,
-//   } from "@/components/ui/command"
-// import { Link } from 'lucide-react'
   
 
 export default async function SideBar(){
@@ -80,10 +14,9 @@ export default async function SideBar(){
     return <div className='fixed flex flex-col gap-3 w-[250px] min-w-[250px]  '>
 
         <div
-        // id="view"
+        
         className="h-[750px]  flex flex-row"
-        // x-data="{ sidenav: true }"
-        // className="{ 'pointer-events-auto': sidenav, 'pointer-events-none': !sidenav }"
+       
       >
         <button
         
@@ -112,12 +45,9 @@ export default async function SideBar(){
             <h1 className="font-bold text-4xl text-center md:hidden">
               D<span className="text-teal-600">.</span>
             </h1>
-            <h1 className="hidden md:block font-bold text-sm md:text-xl text-center">
-              Fatura na Mao<span className="text-teal-600">.</span>
-            </h1>
+            
             <div id="profile" className="space-y-3">
               <img
-                // src="https://images.unsplash.com/photo-1628157588553-5eeea00af15c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
                 alt="Avatar user"
                 className="w-10 md:w-16 rounded-full mx-auto"
                 
@@ -184,7 +114,7 @@ export default async function SideBar(){
                 </svg>
                 <span className="">Pagamentos</span>
               </Link>
-              <Link
+              {/* <Link
                 href={"/"}
                 className="text-sm font-medium text-gray-700 py-2 px-2 hover:bg-teal-500 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out"
               >
@@ -202,8 +132,8 @@ export default async function SideBar(){
                   ></path>
                 </svg>
                 <span className="">Messages</span>
-              </Link>
-              <Link
+              </Link> */}
+              {/* <Link
               href={'/'}
                 className="text-sm font-medium text-gray-700 py-2 px-2 hover:bg-teal-500 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out"
               >
@@ -220,8 +150,8 @@ export default async function SideBar(){
                   ></path>
                 </svg>
                 <span className="">Calendar</span>
-              </Link>
-              <Link
+              </Link> */}
+              {/* <Link
                 href={"/"}
                 className="text-sm font-medium text-gray-700 py-2 px-2 hover:bg-teal-500 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out"
               >
@@ -238,7 +168,7 @@ export default async function SideBar(){
                   ></path>
                 </svg>
                 <span className="">Table</span>
-              </Link>
+              </Link> */}
               <Link
                 href={'/configuracoes'}
                 className="text-sm font-medium text-gray-700 py-2 px-2 hover:bg-teal-500 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out"
@@ -255,7 +185,7 @@ export default async function SideBar(){
                 </svg>
                 <span className="">Configuracoes</span>
               </Link>
-              <Link
+              {/* <Link
                 href={"/"}
                 className="text-sm font-medium text-gray-700 py-2 px-2 hover:bg-teal-500 hover:text-white hover:scale-105 rounded-md transition duration-150 ease-in-out"
               >
@@ -270,7 +200,7 @@ export default async function SideBar(){
                   ></path>
                 </svg>
                 <span className="">Users</span>
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>
