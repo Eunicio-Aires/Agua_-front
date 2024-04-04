@@ -4,6 +4,8 @@
 import { useRouter } from 'next/navigation';
 // import { useState } from 'react';
 import React, { SyntheticEvent } from 'react';
+import hands from '../../../../public/hands4903050-1280e16238370891651090x613removebgpreview-1@2x copy.png';
+import Image from 'next/image'
 
 export  function Log() {
   
@@ -41,6 +43,19 @@ export  function Log() {
     
 
         <div className="hero min-h-screen bg-gradient-to-tr from-gray-50 via-slate-100 to-cyan-200">
+          <div className="fixed mt-6 min-w-full">
+          <Image className ="opacity-40 min-w-full"
+          alt="hands"
+         
+          src={hands}
+          sizes="100vw"
+         
+          style={{
+            width: '100%',
+            height: 'auto',
+          }}
+          />
+          </div>
           {/* bg-gradient-to-r from-sky-100 to-indigo-300 */}
           
       <div className="hero-content flex-col lg:flex-row-reverse">
