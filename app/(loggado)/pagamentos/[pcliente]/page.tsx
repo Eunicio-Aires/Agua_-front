@@ -42,8 +42,10 @@ export default async function Page({ params }: { params: {pcliente: Cliente}}){
         {/* bg-gradient-to-tr from-gray-50  via-slate-100 to-cyan-200 */}
           <div className="bg-gradient-to-r from-cyan-700 to-indigo-700 shadow-lg rounded-lg  min-w-98 max-w-98  mb-8">
           <Link  href={`/`}> <CiMenuBurger className=' '/></Link> 
+          <p className ="text-center text-white mb-1" >Agua da Matola</p>
+          <p className ="text-center text-white mb-1" >Maputo *849903403* Sao Damaso</p>
                 <h2 className ="text-center text-white text-xl font-bold ">{cliente.client.nome} {cliente.client.apelido}</h2>
-                <p className ="text-center text-white mb-1" >Aguas Mulungo</p>
+                
 
                 <div className='flex justify-between px-4 pt-4 '>
                   <p className="text-sm text-white">Faturas {fatur.length}</p>
