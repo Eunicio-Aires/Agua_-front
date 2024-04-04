@@ -47,11 +47,11 @@ export default async function SideBar(){
             </h1>
             
             <div id="profile" className="space-y-3">
-              <img
+              {/* <img
                 alt="Avatar user"
                 className="w-10 md:w-16 rounded-full mx-auto"
                 
-              />
+              /> */}
               <div>
                 <h2
                   className="font-medium text-xs md:text-sm text-center text-teal-500"
