@@ -80,7 +80,7 @@ export default async function UnicoMes({ params }: { params: { id: string } }){
         
             
         
-       <div  className="h-full w-11/12  bg-gray-50 overflow-y-auto lg:ml-7">
+       <div  className="h-full w-full  bg-gray-50 overflow-y-auto lg:ml-7">
          <main>
             <div className="pt-6 px-4">
 
