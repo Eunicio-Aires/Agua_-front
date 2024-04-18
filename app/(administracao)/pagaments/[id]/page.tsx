@@ -212,13 +212,13 @@ export default async function UnicoMes({ params }: { params: { id: string } }){
                </div>
              
                <div className="grid grid-cols-1 2xl:grid-cols-2 xl:gap-4 my-4">
-                  <div className="bg-white shadow rounded-lg mb-4 p-4 sm:p-6 h-full">
+                  {/* <div className="bg-white shadow rounded-lg mb-4 p-4 sm:p-6 h-full">
                      <div className="flex items-center justify-between mb-4">
                         <h3 className="text-xl font-bold leading-none text-gray-900">Latest Customers</h3>
-                        <a href="#" className="text-sm font-medium text-cyan-600 hover:bg-gray-100 rounded-lg inline-flex items-center p-2">
+                        <a href="#" className="text-sm font-medium text-cyan-600 hover:bg-gray-100 rounded-lg inline-flex items-center p-2"> */}
                         {/* View all */}
-                        </a>
-                     </div>
+                        {/* </a>
+                     </div> */}
                      {/* <div className="flow-root">
                         <ul role="list" className="divide-y divide-gray-200">
                         {faturasPagas.map((mes:any)=>(
@@ -244,7 +244,7 @@ export default async function UnicoMes({ params }: { params: { id: string } }){
                            
                         </ul>
                      </div> */}
-                  </div>
+                  {/* </div> */}
                   <div className="bg-white shadow rounded-lg p-4 sm:p-6 xl:p-8 ">
                      <h3 className="text-xl leading-none font-bold text-gray-900 mb-10">Formas de Pagamento</h3>
                      <div className="block w-full overflow-x-auto">
