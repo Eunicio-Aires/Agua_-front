@@ -86,7 +86,7 @@ export default async function UnicoMes({ params }: { params: { id: string } }){
 
                      {/* cards */}
 
-               <div className="mt-4 w-max grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 mb-4">
+               <div className="mt-4  grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 mb-4">
                   <div className="bg-white shadow rounded-lg p-4 sm:p-6 xl:p-8 ">
                      <div className="flex items-center">
                         <div className="flex-shrink-0">
@@ -157,7 +157,7 @@ export default async function UnicoMes({ params }: { params: { id: string } }){
                   <div className="bg-white shadow rounded-lg p-4 sm:p-6 xl:p-8 ">
                      <div className="mb-4 flex items-center justify-between">
                         <div>
-                           <h3 className="text-xl font-bold text-gray-900 mb-2">Ultinas operacoes do Mes</h3>
+                           <h3 className="text-xl font-bold text-gray-900 mb-2">Ultimas operacoes do Mes</h3>
                            <span className="text-base font-normal text-gray-500">Lista</span>
                         </div>
                         <div className="flex-shrink-0">
