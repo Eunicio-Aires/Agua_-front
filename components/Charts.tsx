@@ -1,5 +1,6 @@
 "use client"
 import React from "react";
+import MesesDados from '@/lib/pagamentos'
 
 import {
   LineChart,
@@ -53,7 +54,7 @@ interface Resultado {
 
 
 export default function App() {
-//   const meses = MesesDados()
+  const meses = MesesDados()
 //   const totalPorMes = meses.compan.mes.map((mes: { faturas: any[]; mes: any; }) => {
 //     const valorNaoPago = mes.faturas
 //         .filter(fatura => fatura.estado === "Nao pago")
@@ -74,43 +75,43 @@ export default function App() {
 
   const data = [
     {
-      name: "Page A",
+      name: "Janeiro",
       uv: 4000,
       pv: 2400,
-      amt: 2400
+      amt: 1000000
     },
     {
-      name: "Page B",
+      name: "Fevereiro",
       uv: 3000,
       pv: 1398,
-      amt: 2210
+      amt: 990324
     },
     {
-      name: "Page C",
+      name: "Marco",
       uv: 2000,
       pv: 9800,
-      amt: 2290
+      amt: 103948
     },
     {
-      name: "Page D",
+      name: "Maio",
       uv: 2780,
       pv: 3908,
-      amt: 2000
+      amt: 8403483
     },
     {
-      name: "Page E",
+      name: "Junho",
       uv: 1890,
       pv: 4800,
       amt: 2181
     },
     {
-      name: "Page F",
+      name: "Julho",
       uv: 2390,
       pv: 3800,
       amt: 2500
     },
     {
-      name: "Page G",
+      name: "Agosto",
       uv: 3490,
       pv: 4300,
       amt: 2100

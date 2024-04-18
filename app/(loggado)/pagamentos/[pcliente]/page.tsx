@@ -42,12 +42,12 @@ export default async function Page({ params }: { params: {pcliente: Cliente}}){
         {/* bg-gradient-to-tr from-gray-50  via-slate-100 to-cyan-200 */}
           <div className="bg-gradient-to-r from-cyan-700 to-indigo-700 shadow-lg rounded-lg  min-w-98 max-w-98  mb-8">
           <Link  href={`/`}> <CiMenuBurger className=' '/></Link> 
-          <p className ="text-center text-white mb-1" >Agua da Matola</p>
-          <p className ="text-center text-white mb-1" >Maputo *849903403* Sao Damaso</p>
+          <p className ="text-center text-white mb-1 font-bold" >Agua da Matola</p>
+          <p className ="text-center text-white mb-1 font-extrabold" >Maputo *849903403* Sao Damaso</p>
                 <h2 className ="text-center text-white text-xl font-bold ">{cliente.client.nome} {cliente.client.apelido}</h2>
                 
 
-                <div className='flex justify-between px-4 pt-4 '>
+                <div className='flex justify-between px-4 pt-4  '>
                   <p className="text-sm text-white">Faturas {fatur.length}</p>
                   <h2 className='text-white'>{cliente.client.estado}</h2>
                </div>
@@ -58,7 +58,7 @@ export default async function Page({ params }: { params: {pcliente: Cliente}}){
 
 
 
-
+{/* 
           <div className="fixed mt-6 min-w-full">
           <Image className ="opacity-40 min-w-full"
           alt="hands"
@@ -71,7 +71,7 @@ export default async function Page({ params }: { params: {pcliente: Cliente}}){
             height: 'auto',
           }}
           />
-          </div>
+          </div> */}
 
           <section className="flex flex-wrap justify-center mt-2 absolute w-full">
           
