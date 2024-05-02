@@ -4,9 +4,11 @@ import Image from 'next/image'
 import qrcode from '../../../../public/hovercode.png';
 import hands from '../../../../public/hands4903050-1280e16238370891651090x613removebgpreview-1@2x copy.png';
 import Link from "next/link";
+import { getMesSave } from '@/lib/cookiesConf'
 
 export default async function Imprimir({ params }:{ params:{id:any}}){
     // const cookieStore = await cookies()
+    const idmes = await getMesSave()
    const todosCokies= await cookies().getAll()
     const posts = await fetch(`https://agua-p.vercel.app/adm/clientpr/${params.id}`,{cache:"no-cache"}).then((res) => res.json());
     const cliente = await posts.client;
@@ -29,7 +31,7 @@ export default async function Imprimir({ params }:{ params:{id:any}}){
           />
           </div> */}
           
-         <Link href='/faturar/'>
+         <Link href={`/faturar/${idmes}`}>
           
          <h1 className="text-center text-xl mt-2 mb-4">Fatura na mao</h1>
         <h1 className="text-center text-4xl mt-2 mb-4">Aguas da Matola</h1>

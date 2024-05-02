@@ -41,6 +41,12 @@ export async function getCompan(){
     return await (idComp) 
 }
 
+export async function getMesSave(){
+    const mesid = await cookies().get('MesSave')?.value;
+    if(!mesid) return null
+    return await (mesid)
+}
+
 export async function setCook(id:any) {
     cookies().set('compa', id)
    
