@@ -16,7 +16,7 @@ export default async function Imprimir({ params }:{ params:{id:any}}){
     // alert("operacional")
     return(
         <>
-        <div className="">
+        <div className="mb-9">
         {/* <div className="fixed mt-6 min-w-full">
           <Image className ="opacity-40 min-w-full"
           alt="hands"
