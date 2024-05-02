@@ -2,7 +2,7 @@
 import { Meses }  from '@/components/Meses'
 import Link from 'next/link';
 import { getCompan, getSession } from '@/lib/cookiesConf'
-
+import MesRed from '@/components/redrtt/MesRed'
 
 
 
@@ -90,8 +90,9 @@ export default async function Faturar(){
             </td>
             <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
               <i className="fas fa-arrow-up text-emerald-500 mr-4"></i>
-              <Link href={`/faturar/${mes._id}`} 
-          >Faturar</Link>
+              {/* <Link href={`/faturar/${mes._id}`}  */}
+              <MesRed _id={mes._id}/>
+          {/* >Faturar</Link> */}
             </td> 
 
           </tr>

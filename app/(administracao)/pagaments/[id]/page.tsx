@@ -82,7 +82,7 @@ export default async function UnicoMes({ params }: { params: { id: string } }){
         
        <div  className="h-full   bg-gray-50 overflow-y-auto lg:ml-7">
          <main>
-            <div className="pt-6 px-4">
+            <div className="pt-6 ">
 
                      {/* cards */}
 

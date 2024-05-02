@@ -15,7 +15,7 @@ export default async function Imprimir({ params }:{ params:{id:any}}){
     return(
         <>
         <div className="">
-        <div className="fixed mt-6 min-w-full">
+        {/* <div className="fixed mt-6 min-w-full">
           <Image className ="opacity-40 min-w-full"
           alt="hands"
          
@@ -27,7 +27,7 @@ export default async function Imprimir({ params }:{ params:{id:any}}){
             height: 'auto',
           }}
           />
-          </div>
+          </div> */}
           
          <Link href='/faturar/'>
           
