@@ -124,9 +124,7 @@ export default  function Newd() {
             
 
               
-          {/* <div className="flex justify-between">
-            12/11/2024
-          </div> */}
+        
         </div>
 
 
