@@ -5,7 +5,7 @@ import { MdDone } from "react-icons/md";
 import { CiMenuFries } from "react-icons/ci";
 
 import { IoPersonOutline } from "react-icons/io5";
-import { LiaMoneyBillWaveAltSolid } from "react-icons/lia";
+// import { LiaMoneyBillWaveAltSolid } from "react-icons/lia";
 
 export default  function Newd() {
     return(
@@ -75,9 +75,9 @@ export default  function Newd() {
       <div className="mx-auto w-[90%] h-40 bg-white mt-[-70px] shadow-md rounded-md">
               
             <h3 className="text-center text-xl pt-4 font-sans">Aguas da Matola</h3>
-            <div className="flex"><LiaMoneyBillWaveAltSolid className="text-4xl font-sans text-[#005C53] mt-4 ml-[18px] mr-[-10px]" /> <h1 className="text-2xl  mt-4 ml-5 font-bold text-[#005C53] font-sans">1900.00 MZN</h1></div>
+            <div className="flex"> <h1 className="text-2xl  mt-4 ml-5 font-bold text-[#005C53] font-sans">1900.00 MZN</h1></div>
             
-            
+            {/* <LiaMoneyBillWaveAltSolid className="text-4xl font-sans text-[#005C53] mt-4 ml-[18px] mr-[-10px]" /> */}
             <div className="flex justify-between mt-2 p-3">
               <span className="flex text-xl font-semibold text-gray-600 p-1 font-sans">  Faturas <button className="btn btn-outline btn-error btn-xs ml-1"> 3</button></span>
               <CiMenuFries className="text-white" />
