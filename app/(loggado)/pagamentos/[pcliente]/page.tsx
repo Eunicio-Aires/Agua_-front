@@ -39,8 +39,8 @@ export default async function Page({ params }: { params: {pcliente: Cliente}}){
     return(
 
       <div className="pt-1 min-h-screen dark:bg-gray-900">
-        {/* bg-gradient-to-tr from-gray-50  via-slate-100 to-cyan-200 */}
-          <div className="bg-gradient-to-r from-cyan-700 to-indigo-700 shadow-lg rounded-lg  min-w-98 max-w-98  mb-8">
+        
+          {/* <div className="bg-gradient-to-r from-cyan-700 to-indigo-700 shadow-lg rounded-lg  min-w-98 max-w-98  mb-8">
           <Link  href={`/`}> <CiMenuBurger className=' '/></Link> 
           <p className ="text-center text-white mb-1 font-bold" >Agua da Matola</p>
           <p className ="text-center text-white mb-1 font-extrabold" >Maputo *849903403* Sao Damaso</p>
@@ -52,26 +52,9 @@ export default async function Page({ params }: { params: {pcliente: Cliente}}){
                   <h2 className='text-white'>{cliente.client.estado}</h2>
                </div>
                 
-            </div>
+            </div> */}
 
      
-
-
-
-{/* 
-          <div className="fixed mt-6 min-w-full">
-          <Image className ="opacity-40 min-w-full"
-          alt="hands"
-         
-          src={hands}
-          sizes="100vw"
-         
-          style={{
-            width: '100%',
-            height: 'auto',
-          }}
-          />
-          </div> */}
 
           <section className="flex flex-wrap justify-center mt-2 absolute w-full">
           
