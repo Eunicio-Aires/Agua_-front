@@ -107,7 +107,7 @@ export default  function Newd() {
             <div className="flex justify-between mt-1  pl-4 pr-4 rounded-md">
             <span className="text-[#005C53]">220 m³   </span>
             <span className="text-[#005C53]">210 m³ </span>
-            <span className="text-red-700">10 m³</span>
+            <span className="text-red-700">11 m³</span>
             
             </div>
           </div>
